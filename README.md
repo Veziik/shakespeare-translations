@@ -1,4 +1,6 @@
-\# Manager Agent Instructions - Shakespeare Parallel Translation Demo
+\# Below contains the prompt used to achieve these translations
+
+# Manager Agent Instructions - Shakespeare Parallel Translation Demo
 
 
 
@@ -15,10 +17,6 @@ The manager agent coordinates a parallel translation workflow that transforms Sh
 \- 4 Claude Code proofreading tasks (1 per language)
 
 \- 5 Claude Code JLPT annotation tasks (for Japanese post-processing)
-
-
-
-\# Below contains the prompt used to achieve these translations
 
 \*\*All 25 tasks must be visible and manageable from the manager agent's Claude Code console.\*\*
 
