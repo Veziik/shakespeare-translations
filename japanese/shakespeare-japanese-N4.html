@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア全集 - 日本語N4レベル注釈版</title>
+    <style>
+        body {
+            font-family: 'Hiragino Kaku Gothic Pro', 'Yu Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fafafa;
+            color: #333;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .title {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content-section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .sonnet-title {
+            font-size: 1.5em;
+            color: #4a5568;
+            margin: 30px 0 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .sonnet-number {
+            background: #e2e8f0;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .poem-line {
+            margin: 8px 0;
+            padding: 5px 10px;
+            border-left: 3px solid #e2e8f0;
+        }
+        
+        .poem-line:hover {
+            background-color: #f7fafc;
+            border-left-color: #667eea;
+        }
+        
+        /* Ruby (furigana) styling */
+        ruby {
+            position: relative;
+        }
+        
+        rt {
+            font-size: 0.7em;
+            color: #666;
+        }
+        
+        /* Annotation levels with color coding */
+        .n5-level {
+            background-color: #c6f6d5; /* Light green - beginner */
+        }
+        
+        .n4-level {
+            background-color: #bee3f8; /* Light blue - current level */
+        }
+        
+        .n3-level {
+            background-color: #fef5e7; /* Light yellow - intermediate */
+        }
+        
+        .n2-level {
+            background-color: #fed7d7; /* Light red - advanced */
+        }
+        
+        .n1-level {
+            background-color: #e9d8fd; /* Light purple - expert */
+        }
+        
+        /* Tooltip styling */
+        .tooltip {
+            position: relative;
+            cursor: help;
+            border-bottom: 1px dotted #666;
+        }
+        
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            white-space: nowrap;
+            z-index: 1000;
+        }
+        
+        .tooltip:hover::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: #333;
+            z-index: 1000;
+        }
+        
+        /* Dictionary link styling */
+        .dict-link {
+            color: #3182ce;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .dict-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Grammar explanation boxes */
+        .grammar-note {
+            background: #f0f4f8;
+            border-left: 4px solid #4299e1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .grammar-title {
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+        
+        /* Character and work information */
+        .work-info {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .character-list {
+            columns: 2;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        .character-item {
+            break-inside: avoid;
+            margin-bottom: 10px;
+        }
+        
+        /* Legend for difficulty levels */
+        .legend {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .legend-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .legend-item {
+            display: inline-block;
+            margin: 5px 10px 5px 0;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 200px;
+        }
+        
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav li {
+            margin: 8px 0;
+        }
+        
+        .nav a {
+            color: #4a5568;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        
+        .nav a:hover {
+            color: #667eea;
+        }
+        
+        @media (max-width: 768px) {
+            .nav {
+                position: relative;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .character-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <h3>目次</h3>
+        <ul>
+            <li><a href="#intro">はじめに</a></li>
+            <li><a href="#legend">難易度表示</a></li>
+            <li><a href="#sonnets">ソネット集</a></li>
+            <li><a href="#all-well">終わりよければ全てよし</a></li>
+            <li><a href="#hamlet">ハムレット</a></li>
+            <li><a href="#famous-passages">名場面集</a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <div class="title">
+            <ruby>威<rt>ウィ</rt></ruby><ruby>廉<rt>リアム</rt></ruby>・<ruby>錫<rt>シェイク</rt></ruby><ruby>比<rt>スピ</rt></ruby><ruby>亜<rt>ア</rt></ruby>
+            <ruby>全<rt>ぜん</rt></ruby><ruby>集<rt>しゅう</rt></ruby>
+        </div>
+        <div class="subtitle">
+            <ruby>日<rt>に</rt></ruby><ruby>本<rt>ほん</rt></ruby><ruby>語<rt>ご</rt></ruby>N4<ruby>級<rt>きゅう</rt></ruby><ruby>注<rt>ちゅう</rt></ruby><ruby>釈<rt>しゃく</rt></ruby><ruby>版<rt>ばん</rt></ruby>
+        </div>
+    </div>
+
+    <div id="intro" class="content-section">
+        <h2>はじめに</h2>
+        <p>この<ruby>注<rt>ちゅう</rt></ruby><ruby>釈<rt>しゃく</rt></ruby><ruby>版<rt>ばん</rt></ruby>は、<a href="https://jisho.org/search/日本語能力試験" class="dict-link" target="_blank">JLPT</a> N4<ruby>級<rt>きゅう</rt></ruby>の<ruby>学<rt>がく</rt></ruby><ruby>習<rt>しゅう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>のために<ruby>作<rt>つく</rt></ruby>られました。</p>
+        
+        <div class="grammar-note">
+            <div class="grammar-title">📚 この<ruby>本<rt>ほん</rt></ruby>の<ruby>使<rt>つか</rt></ruby>い<ruby>方<rt>かた</rt></ruby></div>
+            <ul>
+                <li><ruby>漢<rt>かん</rt></ruby><ruby>字<rt>じ</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に<span class="tooltip n4-level" data-tooltip="ひらがなで読み方を示す">ふりがな</span>があります</li>
+                <li><ruby>難<rt>むずか</rt></ruby>しい<ruby>言<rt>こと</rt></ruby><ruby>葉<rt>ば</rt></ruby>にマウスを<ruby>置<rt>お</rt></ruby>くと<ruby>意<rt>い</rt></ruby><ruby>味<rt>み</rt></ruby>が<ruby>出<rt>で</rt></ruby>ます</li>
+                <li><ruby>青<rt>あお</rt></ruby>い<ruby>文<rt>も</rt></ruby><ruby>字<rt>じ</rt></ruby>を<ruby>押<rt>お</rt></ruby>すと<a href="https://jisho.org" class="dict-link" target="_blank">辞書</a>サイトに<ruby>行<rt>い</rt></ruby>けます</li>
+                <li><ruby>色<rt>いろ</rt></ruby>で<ruby>難<rt>なん</rt></ruby><ruby>易<rt>い</rt></ruby><ruby>度<rt>ど</rt></ruby>が<ruby>分<rt>わ</rt></ruby>かります</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="legend" class="legend">
+        <div class="legend-title">📊 <ruby>難<rt>なん</rt></ruby><ruby>易<rt>い</rt></ruby><ruby>度<rt>ど</rt></ruby><ruby>表<rt>ひょう</rt></ruby><ruby>示<rt>じ</rt></ruby></div>
+        <span class="legend-item n5-level">N5級（<ruby>初<rt>しょ</rt></ruby><ruby>級<rt>きゅう</rt></ruby>）</span>
+        <span class="legend-item n4-level">N4級（<ruby>今<rt>いま</rt></ruby>の<ruby>目<rt>もく</rt></ruby><ruby>標<rt>ひょう</rt></ruby>）</span>
+        <span class="legend-item n3-level">N3級（<ruby>中<rt>ちゅう</rt></ruby><ruby>級<rt>きゅう</rt></ruby>）</span>
+        <span class="legend-item n2-level">N2級（<ruby>上<rt>じょう</rt></ruby><ruby>級<rt>きゅう</rt></ruby>）</span>
+        <span class="legend-item n1-level">N1級（<ruby>最<rt>さい</rt></ruby><ruby>上<rt>じょう</rt></ruby><ruby>級<rt>きゅう</rt></ruby>）</span>
+    </div>
+
+    <div id="sonnets" class="content-section">
+        <h2><ruby>詩<rt>し</rt></ruby><ruby>集<rt>しゅう</rt></ruby>（ソネット）</h2>
+        
+        <div class="sonnet-number">
+            <ruby>第<rt>だい</rt></ruby><ruby>一<rt>いち</rt></ruby><ruby>番<rt>ばん</rt></ruby>
+        </div>
+        
+        <div class="poem-line">
+          <ruby>最<rt>もっと</rt></ruby>も<span class="tooltip n3-level" data-tooltip="美しい">美しき</span><ruby>者<rt>もの</rt></ruby>より<ruby>我<rt>われ</rt></ruby>らは<a href="https://jisho.org/search/子孫" class="dict-link" target="_blank"><ruby>子<rt>し</rt></ruby><ruby>孫<rt>そん</rt></ruby></a>を<ruby>望<rt>のぞ</rt></ruby>む、
+        </div>
+        <div class="poem-line">
+          それにより<ruby>美<rt>び</rt></ruby>の<a href="https://jisho.org/search/薔薇" class="dict-link" target="_blank"><span class="tooltip n2-level" data-tooltip="ばら">薔薇</span></a>は<ruby>決<rt>けっ</rt></ruby>して<span class="tooltip n3-level" data-tooltip="かれる">枯れぬ</span>よう、
+        </div>
+        <div class="poem-line">
+          されど<span class="tooltip n2-level" data-tooltip="成熟した">熟したる</span><ruby>者<rt>もの</rt></ruby>が<ruby>時<rt>とき</rt></ruby>により<span class="tooltip n3-level" data-tooltip="死ぬ">逝く</span>とも、
+        </div>
+        <div class="poem-line">
+          その<span class="tooltip n3-level" data-tooltip="やさしい">優しき</span><a href="https://jisho.org/search/後継" class="dict-link" target="_blank"><ruby>後<rt>こう</rt></ruby><ruby>継<rt>けい</rt></ruby>ぎ</a>がその<ruby>記<rt>き</rt></ruby><ruby>憶<rt>おく</rt></ruby>を<ruby>担<rt>にな</rt></ruby>わん。
+        </div>
+
+        <div class="grammar-note">
+            <div class="grammar-title">📝 <ruby>文<rt>ぶん</rt></ruby><ruby>法<rt>ぽう</rt></ruby><ruby>解<rt>かい</rt></ruby><ruby>説<rt>せつ</rt></ruby>：<ruby>古<rt>こ</rt></ruby><ruby>典<rt>てん</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>表<rt>ひょう</rt></ruby><ruby>現<rt>げん</rt></ruby></div>
+            <p>「〜により」= <ruby>現<rt>げん</rt></ruby><ruby>代<rt>だい</rt></ruby><ruby>語<rt>ご</rt></ruby>では「〜によって」</p>
+            <p>「されど」= <ruby>現<rt>げん</rt></ruby><ruby>代<rt>だい</rt></ruby><ruby>語<rt>ご</rt></ruby>では「しかし」</p>
+            <p>「〜わん」= <ruby>古<rt>こ</rt></ruby><ruby>語<rt>ご</rt></ruby>の<ruby>推<rt>すい</rt></ruby><ruby>量<rt>りょう</rt></ruby><ruby>表<rt>ひょう</rt></ruby><ruby>現<rt>げん</rt></ruby>「〜だろう」</p>
+        </div>
+
+        <div class="poem-line">
+          しかし<ruby>汝<rt>なんじ</rt></ruby>は<ruby>己<rt>おのれ</rt></ruby>が<span class="tooltip n3-level" data-tooltip="光る、輝く">輝く</span><ruby>瞳<rt>ひとみ</rt></ruby>とのみ<span class="tooltip n2-level" data-tooltip="約束、契約">契り</span>、
+        </div>
+        <div class="poem-line">
+          <ruby>自<rt>みずか</rt></ruby>らの<a href="https://jisho.org/search/本質" class="dict-link" target="_blank"><ruby>本<rt>ほん</rt></ruby><ruby>質<rt>しつ</rt></ruby></a>より<ruby>成<rt>な</rt></ruby>る<a href="https://jisho.org/search/燃料" class="dict-link" target="_blank"><ruby>燃<rt>ねん</rt></ruby><ruby>料<rt>りょう</rt></ruby></a>で<ruby>光<rt>ひかり</rt></ruby>の<ruby>炎<rt>ほのお</rt></ruby>を<ruby>養<rt>やしな</rt></ruby>い、
+        </div>
+        <div class="poem-line">
+          <span class="tooltip n3-level" data-tooltip="豊かな">豊かなる</span><ruby>処<rt>ところ</rt></ruby>に<a href="https://jisho.org/search/飢饉" class="dict-link" target="_blank"><span class="tooltip n2-level" data-tooltip="食べ物がない状態">飢饉</span></a>を<ruby>作<rt>つく</rt></ruby>り<ruby>出<rt>だ</rt></ruby>し、
+        </div>
+        <div class="poem-line">
+          <ruby>己<rt>おのれ</rt></ruby>が<ruby>敵<rt>てき</rt></ruby>となり、<ruby>甘<rt>あま</rt></ruby>き<ruby>己<rt>おのれ</rt></ruby>に<ruby>余<rt>あま</rt></ruby>りに<span class="tooltip n3-level" data-tooltip="ひどい、厳しい">残酷</span>なり。
+        </div>
+
+        <div class="sonnet-number">
+            <ruby>第<rt>だい</rt></ruby><ruby>二<rt>に</rt></ruby><ruby>番<rt>ばん</rt></ruby>
+        </div>
+        
+        <div class="poem-line">
+          <ruby>四<rt>よん</rt></ruby><ruby>十<rt>じゅう</rt></ruby>の<ruby>冬<rt>ふゆ</rt></ruby>が<ruby>汝<rt>なんじ</rt></ruby>の<ruby>額<rt>ひたい</rt></ruby>を<a href="https://jisho.org/search/包囲" class="dict-link" target="_blank"><span class="tooltip n2-level" data-tooltip="囲む">包囲</span></a>せし<ruby>時<rt>とき</rt></ruby>、
+        </div>
+        <div class="poem-line">
+          <ruby>汝<rt>なんじ</rt></ruby>の<ruby>美<rt>び</rt></ruby>の<ruby>野<rt>の</rt></ruby>に<ruby>深<rt>ふか</rt></ruby>き<a href="https://jisho.org/search/塹壕" class="dict-link" target="_blank"><span class="tooltip n1-level" data-tooltip="戦争で掘る穴">塹壕</span></a>を<ruby>掘<rt>ほ</rt></ruby>らん<ruby>時<rt>とき</rt></ruby>、
+        </div>
+        <div class="poem-line">
+          <ruby>今<rt>いま</rt></ruby>かくも<ruby>見<rt>み</rt></ruby>つめられし<ruby>汝<rt>なんじ</rt></ruby>の<ruby>若<rt>わか</rt></ruby>さの<span class="tooltip n3-level" data-tooltip="自慢できる">誇らしき</span><ruby>衣<rt>ころも</rt></ruby>は、
+        </div>
+        <div class="poem-line">
+          <ruby>価<rt>か</rt></ruby><ruby>値<rt>ち</rt></ruby>なき<a href="https://jisho.org/search/襤褸" class="dict-link" target="_blank"><span class="tooltip n1-level" data-tooltip="ぼろ、破れた服">襤褸</span></a>として<ruby>扱<rt>あつか</rt></ruby>われん。
+        </div>
+
+        <div class="grammar-note">
+            <div class="grammar-title">📝 <ruby>詩<rt>し</rt></ruby>の<ruby>技<rt>ぎ</rt></ruby><ruby>法<rt>ほう</rt></ruby>：<ruby>比<rt>ひ</rt></ruby><ruby>喩<rt>ゆ</rt></ruby>と<ruby>擬<rt>ぎ</rt></ruby><ruby>人<rt>じん</rt></ruby><ruby>法<rt>ほう</rt></ruby></div>
+            <p>「<ruby>冬<rt>ふゆ</rt></ruby>が<ruby>包<rt>ほう</rt></ruby><ruby>囲<rt>い</rt></ruby>する」→ <ruby>老<rt>ろう</rt></ruby><ruby>化<rt>か</rt></ruby>を<ruby>戦<rt>せん</rt></ruby><ruby>争<rt>そう</rt></ruby>に<ruby>例<rt>たと</rt></ruby>えている</p>
+            <p>「<ruby>美<rt>び</rt></ruby>の<ruby>野<rt>の</rt></ruby>」→ <ruby>美<rt>うつく</rt></ruby>しい<ruby>顔<rt>かお</rt></ruby>を<ruby>野<rt>の</rt></ruby><ruby>原<rt>はら</rt></ruby>に<ruby>例<rt>たと</rt></ruby>えている</p>
+            <p>「<ruby>塹<rt>ざん</rt></ruby><ruby>壕<rt>ごう</rt></ruby>」→ <ruby>皺<rt>しわ</rt></ruby>（しわ）を<ruby>意<rt>い</rt></ruby><ruby>味<rt>み</rt></ruby>している</p>
+        </div>
+    </div>
+
+    <div id="all-well" class="content-section">
+        <h2><ruby>終<rt>お</rt></ruby>わりよければ<ruby>全<rt>すべ</rt></ruby>てよし</h2>
+        
+        <div class="work-info">
+            <h3><ruby>登<rt>とう</rt></ruby><ruby>場<rt>じょう</rt></ruby><ruby>人<rt>じん</rt></ruby><ruby>物<rt>ぶつ</rt></ruby></h3>
+            <div class="character-list">
+                <div class="character-item">
+                    <strong><a href="https://jisho.org/search/フランス王" class="dict-link" target="_blank">フランス<ruby>王<rt>おう</rt></ruby></a></strong>
+                </div>
+                <div class="character-item">
+                    <strong><a href="https://jisho.org/search/フィレンツェ公爵" class="dict-link" target="_blank">フィレンツェ<ruby>公<rt>こう</rt></ruby><ruby>爵<rt>しゃく</rt></ruby></a></strong>
+                </div>
+                <div class="character-item">
+                    <strong><ruby>ベルトラム</ruby></strong>、<a href="https://jisho.org/search/ルシヨン伯爵" class="dict-link" target="_blank">ルシヨン<ruby>伯<rt>はく</rt></ruby><ruby>爵<rt>しゃく</rt></ruby></a>
+                </div>
+                <div class="character-item">
+                    <strong><ruby>ラフュー</ruby></strong>、<ruby>老<rt>ろう</rt></ruby><a href="https://jisho.org/search/貴族" class="dict-link" target="_blank"><ruby>貴<rt>き</rt></ruby><ruby>族<rt>ぞく</rt></ruby></a>
+                </div>
+                <div class="character-item">
+                    <strong><ruby>パロルス</ruby></strong>、ベルトラムの<a href="https://jisho.org/search/従者" class="dict-link" target="_blank"><ruby>従<rt>じゅう</rt></ruby><ruby>者<rt>しゃ</rt></ruby></a>
+                </div>
+                <div class="character-item">
+                    <strong><ruby>ヘレナ</ruby></strong>、<ruby>伯<rt>はく</rt></ruby><ruby>爵<rt>しゃく</rt></ruby><ruby>夫<rt>ふ</rt></ruby><ruby>人<rt>じん</rt></ruby>に<a href="https://jisho.org/search/庇護" class="dict-link" target="_blank"><span class="tooltip n2-level" data-tooltip="守られる">庇護</span></a>される<a href="https://jisho.org/search/淑女" class="dict-link" target="_blank"><span class="tooltip n2-level" data-tooltip="上品な女性">淑女</span></a>
+                </div>
+            </div>
+        </div>
+
+        <h3><ruby>第<rt>だい</rt></ruby><ruby>一<rt>いち</rt></ruby><ruby>幕<rt>まく</rt></ruby> <ruby>第<rt>だい</rt></ruby><ruby>一<rt>いち</rt></ruby><ruby>場<rt>ば</rt></ruby></h3>
+        <p><em>ルシヨン。<ruby>伯<rt>はく</rt></ruby><ruby>爵<rt>しゃく</rt></ruby>の<ruby>宮<rt>きゅう</rt></ruby><ruby>殿<rt>でん</rt></ruby></em></p>
+        
+        <div class="poem-line">
+          <strong><ruby>伯<rt>はく</rt></ruby><ruby>爵<rt>しゃく</rt></ruby><ruby>夫<rt>ふ</rt></ruby><ruby>人<rt>じん</rt></ruby></strong>　<ruby>息<rt>むす</rt></ruby><ruby>子<rt>こ</rt></ruby>を<ruby>私<rt>わたし</rt></ruby>から<ruby>送<rt>おく</rt></ruby>り<ruby>出<rt>だ</rt></ruby>すことで、<ruby>私<rt>わたし</rt></ruby>は<ruby>二<rt>に</rt></ruby><ruby>度<rt>ど</rt></ruby><ruby>目<rt>め</rt></ruby>の<ruby>夫<rt>おっと</rt></ruby>を<a href="https://jisho.org/search/葬る" class="dict-link" target="_blank"><ruby>葬<rt>ほうむ</rt></ruby>ります</a>。
+        </div>
+        <div class="poem-line">
+          <strong>ベルトラム</strong>　そして<ruby>私<rt>わたし</rt></ruby>は<ruby>行<rt>い</rt></ruby>くにあたり、<ruby>母<rt>はは</rt></ruby><ruby>上<rt>うえ</rt></ruby>、<ruby>父<rt>ちち</rt></ruby>の<ruby>死<rt>し</rt></ruby>を<ruby>新<rt>あら</rt></ruby>たに<ruby>嘆<rt>なげ</rt></ruby>きます。
+        </div>
+
+        <div class="grammar-note">
+            <div class="grammar-title">📝 <ruby>敬<rt>けい</rt></ruby><ruby>語<rt>ご</rt></ruby>と<ruby>謙<rt>けん</rt></ruby><ruby>譲<rt>じょう</rt></ruby><ruby>語<rt>ご</rt></ruby></div>
+            <p>「<ruby>母<rt>はは</rt></ruby><ruby>上<rt>うえ</rt></ruby>」= <ruby>母<rt>はは</rt></ruby>への<ruby>敬<rt>けい</rt></ruby><ruby>語<rt>ご</rt></ruby></p>
+            <p>「<ruby>送<rt>おく</rt></ruby>り<ruby>出<rt>だ</rt></ruby>す」= <ruby>謙<rt>けん</rt></ruby><ruby>譲<rt>じょう</rt></ruby><ruby>語<rt>ご</rt></ruby>「<ruby>行<rt>い</rt></ruby>かせる」</p>
+            <p>「<ruby>葬<rt>ほうむ</rt></ruby>る」= <ruby>比<rt>ひ</rt></ruby><ruby>喩<rt>ゆ</rt></ruby><ruby>的<rt>てき</rt></ruby><ruby>表<rt>ひょう</rt></ruby><ruby>現<rt>げん</rt></ruby>「<ruby>失<rt>うしな</rt></ruby>う」</p>
+        </div>
+    </div>
+
+    <div id="hamlet" class="content-section">
+        <h2>ハムレット - デンマークの<ruby>王<rt>おう</rt></ruby><ruby>子<rt>し</rt></ruby>の<ruby>悲<rt>ひ</rt></ruby><ruby>劇<rt>げき</rt></ruby></h2>
+        
+        <div class="work-info">
+            <h3><ruby>主<rt>しゅ</rt></ruby>な<ruby>登<rt>とう</rt></ruby><ruby>場<rt>じょう</rt></ruby><ruby>人<rt>じん</rt></ruby><ruby>物<rt>ぶつ</rt></ruby></h3>
+            <div class="character-list">
+                <div class="character-item">
+                    <strong><ruby>ハムレット</ruby></strong>、デンマークの<ruby>王<rt>おう</rt></ruby><ruby>子<rt>し</rt></ruby>
+                </div>
+                <div class="character-item">
+                    <strong><ruby>クローディアス</ruby></strong>、デンマーク<ruby>王<rt>おう</rt></ruby>、ハムレットの<ruby>叔<rt>おじ</rt></ruby><ruby>父<rt></rt></ruby>
+                </div>
+                <div class="character-item">
+                    <strong><ruby>ガートルード</ruby></strong>、<ruby>王<rt>おう</rt></ruby><ruby>妃<rt>ひ</rt></ruby>、ハムレットの<ruby>母<rt>はは</rt></ruby>
+                </div>
+                <div class="character-item">
+                    <strong><ruby>ポローニアス</ruby></strong>、<a href="https://jisho.org/search/侍従長" class="dict-link" target="_blank"><ruby>侍<rt>じ</rt></ruby><ruby>従<rt>じゅう</rt></ruby><ruby>長<rt>ちょう</rt></ruby></a>
+                </div>
+                <div class="character-item">
+                    <strong><ruby>オフィーリア</ruby></strong>、ポローニアスの<ruby>娘<rt>むすめ</rt></ruby>
+                </div>
+                <div class="character-item">
+                    <strong><ruby>ホレーシオ</ruby></strong>、ハムレットの<ruby>友<rt>とも</rt></ruby><ruby>人<rt>だち</rt></ruby>
+                </div>
+            </div>
+        </div>
+
+        <h3><ruby>第<rt>だい</rt></ruby><ruby>一<rt>いち</rt></ruby><ruby>幕<rt>まく</rt></ruby> <ruby>第<rt>だい</rt></ruby><ruby>一<rt>いち</rt></ruby><ruby>場<rt>ば</rt></ruby></h3>
+        <p><em>エルシノア。<ruby>城<rt>しろ</rt></ruby>の<a href="https://jisho.org/search/胸壁" class="dict-link" target="_blank"><span class="tooltip n1-level" data-tooltip="城の壁">胸壁</span></a></em></p>
+
+        <div class="poem-line">
+          <strong>ベルナード</strong>　<ruby>言<rt>い</rt></ruby>え―<ruby>誰<rt>だれ</rt></ruby>だ、ホレーシオか？
+        </div>
+        <div class="poem-line">
+          <strong>ホレーシオ</strong>　<ruby>彼<rt>かれ</rt></ruby>の<ruby>一<rt>いち</rt></ruby><ruby>部<rt>ぶ</rt></ruby>だ。
+        </div>
+        <div class="poem-line">
+          <strong>ベルナード</strong>　ようこそ、ホレーシオ。ようこそ、<ruby>良<rt>よ</rt></ruby>きマーセラス。
+        </div>
+        <div class="poem-line">
+          <strong>マーセラス</strong>　どうだ、あの<ruby>物<rt>もの</rt></ruby>は<ruby>今<rt>こん</rt></ruby><ruby>夜<rt>や</rt></ruby>も<ruby>現<rt>あらわ</rt></ruby>れたか？
+        </div>
+
+        <div class="grammar-note">
+            <div class="grammar-title">📝 <ruby>会<rt>かい</rt></ruby><ruby>話<rt>わ</rt></ruby>の<ruby>特<rt>とく</rt></ruby><ruby>徴<rt>ちょう</rt></ruby></div>
+            <p>「<ruby>言<rt>い</rt></ruby>え」= <ruby>古<rt>こ</rt></ruby><ruby>語<rt>ご</rt></ruby>の<ruby>命<rt>めい</rt></ruby><ruby>令<rt>れい</rt></ruby><ruby>形<rt>けい</rt></ruby>「<ruby>言<rt>い</rt></ruby>いなさい」</p>
+            <p>「あの<ruby>物<rt>もの</rt></ruby>」= <ruby>亡<rt>ぼう</rt></ruby><ruby>霊<rt>れい</rt></ruby>を<ruby>指<rt>さ</rt></ruby>している</p>
+            <p>「<ruby>現<rt>あらわ</rt></ruby>れる」= <ruby>姿<rt>すがた</rt></ruby>を<ruby>見<rt>み</rt></ruby>せる</p>
+        </div>
+    </div>
+
+    <div id="famous-passages" class="content-section">
+        <h2><ruby>名<rt>めい</rt></ruby><ruby>場<rt>ば</rt></ruby><ruby>面<rt>めん</rt></ruby><ruby>集<rt>しゅう</rt></ruby></h2>
+
+        <h3>ハムレット「<ruby>生<rt>い</rt></ruby>きるべきか、<ruby>死<rt>し</rt></ruby>ぬべきか」</h3>
+        <div class="poem-line">
+          「<ruby>生<rt>い</rt></ruby>きるべきか、<ruby>死<rt>し</rt></ruby>ぬべきか、それが<ruby>問<rt>もん</rt></ruby><ruby>題<rt>だい</rt></ruby>だ。
+        </div>
+        <div class="poem-line">
+          <span class="tooltip n3-level" data-tooltip="激しい">激しき</span><ruby>運<rt>うん</rt></ruby><ruby>命<rt>めい</rt></ruby>の<a href="https://jisho.org/search/矢弾" class="dict-link" target="_blank"><span class="tooltip n2-level" data-tooltip="矢と弾丸">矢弾</span></a>を<ruby>心<rt>こころ</rt></ruby>に<ruby>耐<rt>た</rt></ruby>え<ruby>忍<rt>しの</rt></ruby>ぶことが<a href="https://jisho.org/search/高貴" class="dict-link" target="_blank"><span class="tooltip n3-level" data-tooltip="立派な">高貴</span></a>なのか、
+        </div>
+        <div class="poem-line">
+          それとも<ruby>苦<rt>く</rt></ruby><ruby>難<rt>なん</rt></ruby>の<ruby>海<rt>うみ</rt></ruby>に<ruby>対<rt>たい</rt></ruby>して<ruby>武<rt>ぶ</rt></ruby><ruby>器<rt>き</rt></ruby>を<ruby>取<rt>と</rt></ruby>り、
+        </div>
+        <div class="poem-line">
+          <ruby>戦<rt>たたか</rt></ruby>いによってそれらを<ruby>終<rt>お</rt></ruby>わらせることが<ruby>高<rt>こう</rt></ruby><ruby>貴<rt>き</rt></ruby>なのか。」
+        </div>
+
+        <div class="grammar-note">
+            <div class="grammar-title">📝 <ruby>哲<rt>てつ</rt></ruby><ruby>学<rt>がく</rt></ruby><ruby>的<rt>てき</rt></ruby><ruby>思<rt>し</rt></ruby><ruby>考<rt>こう</rt></ruby></div>
+            <p>この<ruby>場<rt>ば</rt></ruby><ruby>面<rt>めん</rt></ruby>は「<ruby>人<rt>じん</rt></ruby><ruby>生<rt>せい</rt></ruby>の<ruby>選<rt>せん</rt></ruby><ruby>択<rt>たく</rt></ruby>」について<ruby>考<rt>かんが</rt></ruby>えている</p>
+            <p>「<ruby>生<rt>い</rt></ruby>きる」vs「<ruby>死<rt>し</rt></ruby>ぬ」</p>
+            <p>「<ruby>耐<rt>た</rt></ruby>える」vs「<ruby>戦<rt>たたか</rt></ruby>う」</p>
+            <p><ruby>現<rt>げん</rt></ruby><ruby>代<rt>だい</rt></ruby>でも<ruby>使<rt>つか</rt></ruby>える<ruby>深<rt>ふか</rt></ruby>い<ruby>言<rt>こと</rt></ruby><ruby>葉<rt>ば</rt></ruby>です</p>
+        </div>
+
+        <h3>ロミオとジュリエット（バルコニーの<ruby>場<rt>ば</rt></ruby><ruby>面<rt>めん</rt></ruby>）</h3>
+        <div class="poem-line">
+          <strong>ジュリエット</strong>：「おお、ロミオ、ロミオ！<ruby>何<rt>なぜ</rt></ruby><ruby>故<rt></rt></ruby>あなたはロミオなの？
+        </div>
+        <div class="poem-line">
+          あなたの<ruby>父<rt>ちち</rt></ruby>を<a href="https://jisho.org/search/否定" class="dict-link" target="_blank"><ruby>否<rt>ひ</rt></ruby><ruby>定<rt>てい</rt></ruby></a>し、あなたの<ruby>名<rt>な</rt></ruby>を<ruby>捨<rt>す</rt></ruby>てて。
+        </div>
+        <div class="poem-line">
+          もしそれが<ruby>嫌<rt>いや</rt></ruby>なら、<ruby>私<rt>わたし</rt></ruby>の<ruby>愛<rt>あい</rt></ruby>を<ruby>誓<rt>ちか</rt></ruby>って、
+        </div>
+        <div class="poem-line">
+          そうすれば<ruby>私<rt>わたし</rt></ruby>はもうキャピュレットではなくなる。」
+        </div>
+
+        <div class="poem-line">
+          <strong>ロミオ</strong>：「もっと<ruby>聞<rt>き</rt></ruby>こうか、それとも<ruby>話<rt>はな</rt></ruby>そうか？」
+        </div>
+
+        <div class="grammar-note">
+            <div class="grammar-title">📝 <ruby>恋<rt>こい</rt></ruby><ruby>愛<rt>あい</rt></ruby>の<ruby>言<rt>こと</rt></ruby><ruby>葉<rt>ば</rt></ruby></div>
+            <p>「<ruby>何<rt>なぜ</rt></ruby><ruby>故<rt></rt></ruby>」= <ruby>現<rt>げん</rt></ruby><ruby>代<rt>だい</rt></ruby><ruby>語<rt>ご</rt></ruby>では「なぜ」「どうして」</p>
+            <p>「<ruby>誓<rt>ちか</rt></ruby>う」= <ruby>約<rt>やく</rt></ruby><ruby>束<rt>そく</rt></ruby>する、<ruby>約<rt>やく</rt></ruby><ruby>束<rt>そく</rt></ruby>
+            <p><ruby>家<rt>か</rt></ruby><ruby>族<rt>ぞく</rt></ruby>の<ruby>名<rt>な</rt></ruby><ruby>前<rt>まえ</rt></ruby>より<ruby>愛<rt>あい</rt></ruby>が<ruby>大<rt>たい</rt></ruby><ruby>切<rt>せつ</rt></ruby>という<ruby>意<rt>い</rt></ruby><ruby>味<rt>み</rt></ruby></p>
+        </div>
+
+        <h3>マクベス「<ruby>明<rt>あ</rt></ruby><ruby>日<rt>した</rt></ruby>、また<ruby>明<rt>あ</rt></ruby><ruby>日<rt>した</rt></ruby>」</h3>
+        <div class="poem-line">
+          「<ruby>明<rt>あ</rt></ruby><ruby>日<rt>した</rt></ruby>、また<ruby>明<rt>あ</rt></ruby><ruby>日<rt>した</rt></ruby>、また<ruby>明<rt>あ</rt></ruby><ruby>日<rt>した</rt></ruby>と、
+        </div>
+        <div class="poem-line">
+          <span class="tooltip n3-level" data-tooltip="細かく">小刻み</span>に<ruby>一<rt>いち</rt></ruby><ruby>日<rt>にち</rt></ruby><ruby>一<rt>いち</rt></ruby><ruby>日<rt>にち</rt></ruby>が<ruby>這<rt>は</rt></ruby>い<ruby>進<rt>すす</rt></ruby>む、
+        </div>
+        <div class="poem-line">
+          <a href="https://jisho.org/search/記録" class="dict-link" target="_blank"><ruby>記<rt>き</rt></ruby><ruby>録<rt>ろく</rt></ruby></a>された<ruby>時<rt>とき</rt></ruby>の<ruby>最<rt>さい</rt></ruby><ruby>後<rt>ご</rt></ruby>の<a href="https://jisho.org/search/音節" class="dict-link" target="_blank"><span class="tooltip n2-level" data-tooltip="音の単位">音節</span></a>まで。
+        </div>
+        <div class="poem-line">
+          そして<ruby>我<rt>われ</rt></ruby>らの<ruby>全<rt>すべ</rt></ruby>ての<ruby>昨<rt>きの</rt></ruby><ruby>日<rt>う</rt></ruby>は、<span class="tooltip n3-level" data-tooltip="ばかな人">愚か者</span>たちに
+        </div>
+        <div class="poem-line">
+          <ruby>塵<rt>ちり</rt></ruby>の<ruby>死<rt>し</rt></ruby>への<ruby>道<rt>みち</rt></ruby>を<ruby>照<rt>て</rt></ruby>らしてきた。<ruby>消<rt>き</rt></ruby>えろ、<ruby>消<rt>き</rt></ruby>えろ、<ruby>短<rt>みじか</rt></ruby>い<a href="https://jisho.org/search/蝋燭" class="dict-link" target="_blank"><ruby>蝋<rt>ろう</rt></ruby><ruby>燭<rt>そく</rt></ruby></a>！」
+        </div>
+
+        <div class="grammar-note">
+            <div class="grammar-title">📝 <ruby>人<rt>じん</rt></ruby><ruby>生<rt>せい</rt></ruby>への<ruby>虚<rt>きょ</rt></ruby><ruby>無<rt>む</rt></ruby><ruby>感<rt>かん</rt></ruby></div>
+            <p>この<ruby>詩<rt>し</rt></ruby>は<ruby>人<rt>じん</rt></ruby><ruby>生<rt>せい</rt></ruby>の<ruby>無<rt>む</rt></ruby><ruby>意<rt>い</rt></ruby><ruby>味<rt>み</rt></ruby>さを<ruby>表<rt>あらわ</rt></ruby>している</p>
+            <p>「<ruby>這<rt>は</rt></ruby>い<ruby>進<rt>すす</rt></ruby>む」= ゆっくり<ruby>進<rt>すす</rt></ruby>む</p>
+            <p>「<ruby>蝋<rt>ろう</rt></ruby><ruby>燭<rt>そく</rt></ruby>」= <ruby>人<rt>じん</rt></ruby><ruby>生<rt>せい</rt></ruby>の<ruby>短<rt>みじか</rt></ruby>さを<ruby>表<rt>あらわ</rt></ruby>す<ruby>比<rt>ひ</rt></ruby><ruby>喩<rt>ゆ</rt></ruby></p>
+            <p><ruby>繰<rt>く</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>しで<ruby>退<rt>たい</rt></ruby><ruby>屈<rt>くつ</rt></ruby>さを<ruby>強<rt>きょう</rt></ruby><ruby>調<rt>ちょう</rt></ruby></p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2><ruby>学<rt>がく</rt></ruby><ruby>習<rt>しゅう</rt></ruby>のためのリンク</h2>
+        <ul>
+            <li><a href="https://jisho.org" class="dict-link" target="_blank">Jisho.org - <ruby>日<rt>に</rt></ruby><ruby>本<rt>ほん</rt></ruby><ruby>語<rt>ご</rt></ruby><ruby>辞<rt>じ</rt></ruby><ruby>書<rt>しょ</rt></ruby></a></li>
+            <li><a href="https://jisho.org/search/JLPT%20N4" class="dict-link" target="_blank">JLPT N4 <ruby>語<rt>ご</rt></ruby><ruby>彙<rt>い</rt></ruby><ruby>リスト</ruby></a></li>
+            <li><a href="https://jisho.org/search/シェイクスピア" class="dict-link" target="_blank">シェイクスピアについて</a></li>
+            <li><a href="https://jisho.org/search/古典文学" class="dict-link" target="_blank"><ruby>古<rt>こ</rt></ruby><ruby>典<rt>てん</rt></ruby><ruby>文<rt>ぶん</rt></ruby><ruby>学<rt>がく</rt></ruby>について</a></li>
+        </ul>
+
+        <div class="grammar-note">
+            <div class="grammar-title">🎯 <ruby>学<rt>がく</rt></ruby><ruby>習<rt>しゅう</rt></ruby>のコツ</div>
+            <ul>
+                <li><ruby>毎<rt>まい</rt></ruby><ruby>日<rt>にち</rt></ruby><ruby>少<rt>すこ</rt></ruby>しずつ<ruby>読<rt>よ</rt></ruby>む</li>
+                <li><ruby>知<rt>し</rt></ruby>らない<ruby>言<rt>こと</rt></ruby><ruby>葉<rt>ば</rt></ruby>は<ruby>辞<rt>じ</rt></ruby><ruby>書<rt>しょ</rt></ruby>で<ruby>調<rt>しら</rt></ruby>べる</li>
+                <li><ruby>声<rt>こえ</rt></ruby>に<ruby>出<rt>だ</rt></ruby>して<ruby>読<rt>よ</rt></ruby>む<ruby>練<rt>れん</rt></ruby><ruby>習<rt>しゅう</rt></ruby>をする</li>
+                <li><ruby>現<rt>げん</rt></ruby><ruby>代<rt>だい</rt></ruby><ruby>語<rt>ご</rt></ruby>に<ruby>直<rt>なお</rt></ruby>して<ruby>理<rt>り</rt></ruby><ruby>解<rt>かい</rt></ruby>する</li>
+                <li><ruby>背<rt>はい</rt></ruby><ruby>景<rt>けい</rt></ruby>や<ruby>歴<rt>れき</rt></ruby><ruby>史<rt>し</rt></ruby>も<ruby>学<rt>まな</rt></ruby>ぶ</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 50px; padding: 20px; color: #666; border-top: 1px solid #e2e8f0;">
+        <p><ruby>翻<rt>ほん</rt></ruby><ruby>訳<rt>やく</rt></ruby><ruby>統<rt>とう</rt></ruby><ruby>合<rt>ごう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>：proofreader_japanese</p>
+        <p><ruby>N4<rt></rt></ruby><ruby>注<rt>ちゅう</rt></ruby><ruby>釈<rt>しゃく</rt></ruby><ruby>版<rt>ばん</rt></ruby><ruby>作<rt>さく</rt></ruby><ruby>成<rt>せい</rt></ruby>：jlpt_n4</p>
+        <p><ruby>協<rt>きょう</rt></ruby><ruby>力<rt>りょく</rt></ruby>：Claude Code (https://claude.ai/code)</p>
+        <p><ruby>完<rt>かん</rt></ruby><ruby>成<rt>せい</rt></ruby><ruby>日<rt>び</rt></ruby>：2025<ruby>年<rt>ねん</rt></ruby>7<ruby>月<rt>がつ</rt></ruby>12<ruby>日<rt>にち</rt></ruby></p>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add reading progress indicator
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            
+            // Create progress bar if it doesn't exist
+            let progressBar = document.getElementById('progress-bar');
+            if (!progressBar) {
+                progressBar = document.createElement('div');
+                progressBar.id = 'progress-bar';
+                progressBar.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 3px;
+                    background: linear-gradient(90deg, #667eea, #764ba2);
+                    z-index: 9999;
+                    transition: width 0.2s ease;
+                `;
+                document.body.appendChild(progressBar);
+            }
+            
+            progressBar.style.width = scrolled + '%';
+        });
+
+        // Add click tracking for dictionary links
+        document.querySelectorAll('.dict-link').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Dictionary lookup:', this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>

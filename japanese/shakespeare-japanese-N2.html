@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア全集 日本語版 (JLPT N2対応)</title>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', 'Yu Gothic', 'Hiragino Sans', sans-serif;
+            line-height: 1.8;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fafafa;
+            color: #333;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #8B4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .title {
+            font-size: 2.5em;
+            color: #8B4513;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .translation-info {
+            background: linear-gradient(135deg, #f5f5dc, #e6e6fa);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border-left: 5px solid #8B4513;
+        }
+        
+        .content-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #8B4513;
+            border-bottom: 2px solid #8B4513;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .sonnet-number {
+            font-size: 1.3em;
+            color: #4A90E2;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            text-align: center;
+        }
+        
+        .sonnet-text {
+            font-size: 1.1em;
+            line-height: 2;
+            text-indent: 1em;
+            margin-bottom: 15px;
+        }
+        
+        .play-title {
+            font-size: 2em;
+            color: #8B4513;
+            text-align: center;
+            margin: 30px 0 20px 0;
+            font-weight: bold;
+        }
+        
+        .character-list {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .dialogue {
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+        
+        .character-name {
+            font-weight: bold;
+            color: #4A90E2;
+            margin-right: 10px;
+        }
+        
+        /* JLPT Level Color Coding */
+        .jlpt-n5 { color: #4CAF50; font-weight: normal; }
+        .jlpt-n4 { color: #8BC34A; font-weight: normal; }
+        .jlpt-n3 { color: #FF9800; font-weight: normal; }
+        .jlpt-n2 { color: #FF5722; font-weight: bold; }
+        .jlpt-n1 { color: #F44336; font-weight: bold; }
+        .above-n1 { color: #9C27B0; font-weight: bold; }
+        
+        /* Ruby (Furigana) styling */
+        ruby {
+            ruby-align: center;
+        }
+        
+        rt {
+            font-size: 0.7em;
+            color: #666;
+        }
+        
+        /* Tooltip styling */
+        .tooltip {
+            position: relative;
+            cursor: help;
+            border-bottom: 1px dotted #999;
+        }
+        
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            white-space: nowrap;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .tooltip:hover::before {
+            content: '';
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: #333;
+            z-index: 1000;
+        }
+        
+        /* Jisho link styling */
+        .jisho-link {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.3s ease;
+        }
+        
+        .jisho-link:hover {
+            border-bottom: 1px solid #4A90E2;
+        }
+        
+        /* Literary explanation boxes */
+        .literary-note {
+            background: #e8f4fd;
+            border-left: 4px solid #4A90E2;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+            font-size: 0.95em;
+        }
+        
+        .cultural-note {
+            background: #fff3e0;
+            border-left: 4px solid #FF9800;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+            font-size: 0.95em;
+        }
+        
+        .grammar-note {
+            background: #f3e5f5;
+            border-left: 4px solid #9C27B0;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+            font-size: 0.95em;
+        }
+        
+        .legend {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-size: 0.9em;
+        }
+        
+        .legend-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .legend-item {
+            margin: 5px 0;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">ウィリアム・シェイクスピア全集</h1>
+        <h2 class="subtitle">日本語完全統合版 (JLPT N2対応注釈付き)</h2>
+        <p>William Shakespeare Complete Works - Japanese Unified Translation with N2 Annotations</p>
+    </div>
+    
+    <div class="translation-info">
+        <strong>翻訳統合者：</strong>proofreader_japanese<br>
+        <strong>原翻訳者：</strong>translator_japanese_1, translator_japanese_2, translator_japanese_3, translator_japanese_4<br>
+        <strong>協力：</strong>Claude Code (https://claude.ai/code)<br>
+        <strong>完成日：</strong>2025年7月12日<br>
+        <strong>注釈レベル：</strong>JLPT N2対応
+    </div>
+    
+    <div class="legend">
+        <div class="legend-title">注釈凡例 (Annotation Legend)</div>
+        <div class="legend-item"><span class="jlpt-n5">■ N5レベル語彙</span> - 基本的な語彙</div>
+        <div class="legend-item"><span class="jlpt-n4">■ N4レベル語彙</span> - やや基本的な語彙</div>
+        <div class="legend-item"><span class="jlpt-n3">■ N3レベル語彙</span> - 中級語彙</div>
+        <div class="legend-item"><span class="jlpt-n2">■ N2レベル語彙</span> - 上級語彙</div>
+        <div class="legend-item"><span class="jlpt-n1">■ N1レベル語彙</span> - 最上級語彙</div>
+        <div class="legend-item"><span class="above-n1">■ N1以上</span> - 古典・専門語彙</div>
+        <div class="legend-item">📖 青いボックス: 文学的解説</div>
+        <div class="legend-item">🏛️ オレンジのボックス: 文化的背景</div>
+        <div class="legend-item">📝 紫のボックス: 文法解説</div>
+        <div class="legend-item">🔗 クリックで辞書サイト(Jisho.org)へ</div>
+    </div>
+    
+    <div class="content-section">
+        <h2 class="section-title">翻訳統合方針</h2>
+        <p>本<a href="https://jisho.org/search/翻訳" class="jisho-link" target="_blank"><ruby class="jlpt-n3">翻<rt>ほん</rt></ruby><ruby class="jlpt-n3">訳</ruby></a>は、4つの<ruby class="jlpt-n2">独<rt>どく</rt></ruby><ruby class="jlpt-n2">立</ruby>した<span class="jlpt-n4">日本語</span><ruby class="jlpt-n3">翻<rt>ほん</rt></ruby><ruby class="jlpt-n3">訳</ruby>を<a href="https://jisho.org/search/統合" class="jisho-link" target="_blank"><ruby class="above-n1">統<rt>とう</rt></ruby><ruby class="above-n1">合</ruby></a>・<a href="https://jisho.org/search/調和" class="jisho-link" target="_blank"><ruby class="jlpt-n2">調<rt>ちょう</rt></ruby><ruby class="jlpt-n2">和</ruby></a>させ、<ruby class="jlpt-n1">最<rt>さい</rt></ruby><ruby class="jlpt-n1">高</ruby><ruby class="jlpt-n2">品<rt>ひん</rt></ruby><ruby class="jlpt-n2">質</ruby>の<span class="jlpt-n4">日本語</span><ruby class="jlpt-n4">版</ruby>シェイクスピア<ruby class="above-n1">全<rt>ぜん</rt></ruby><ruby class="above-n1">集</ruby>を<a href="https://jisho.org/search/創出" class="jisho-link" target="_blank"><ruby class="above-n1">創<rt>そう</rt></ruby><ruby class="above-n1">出</ruby></a>したものである。</p>
+        
+        <div class="grammar-note">
+            <strong>文法解説：</strong>「〜したものである」は書き言葉で使われる断定的な表現で、「〜したことだ」「〜したのだ」という意味を表します。学術的な文章でよく使用されます。
+        </div>
+        
+        <p><a href="https://jisho.org/search/文学的" class="jisho-link" target="_blank"><ruby class="above-n1">文<rt>ぶん</rt></ruby><ruby class="above-n1">学<rt>がく</rt></ruby><ruby class="above-n1">的</ruby></a><ruby class="jlpt-n2">品<rt>ひん</rt></ruby><ruby class="jlpt-n2">質</ruby>、<a href="https://jisho.org/search/言語的" class="jisho-link" target="_blank"><ruby class="above-n1">言<rt>げん</rt></ruby><ruby class="above-n1">語<rt>ご</rt></ruby><ruby class="above-n1">的</ruby></a><ruby class="above-n1">正<rt>せい</rt></ruby><ruby class="above-n1">確<rt>かく</rt></ruby><ruby class="above-n1">性</ruby>、<a href="https://jisho.org/search/文化的" class="jisho-link" target="_blank"><ruby class="above-n1">文<rt>ぶん</rt></ruby><ruby class="above-n1">化<rt>か</rt></ruby><ruby class="above-n1">的</ruby></a><a href="https://jisho.org/search/適応" class="jisho-link" target="_blank"><ruby class="above-n1">適<rt>てき</rt></ruby><ruby class="above-n1">応</ruby></a>、<a href="https://jisho.org/search/一貫性" class="jisho-link" target="_blank"><ruby class="above-n1">一<rt>いっ</rt></ruby><ruby class="above-n1">貫<rt>かん</rt></ruby><ruby class="above-n1">性</ruby></a>の<ruby class="jlpt-n2">観<rt>かん</rt></ruby><ruby class="jlpt-n2">点</ruby>から<ruby class="jlpt-n2">最<rt>さい</rt></ruby><ruby class="jlpt-n2">適</ruby>な<ruby class="jlpt-n2">選<rt>せん</rt></ruby><ruby class="jlpt-n2">択</ruby>を<ruby class="jlpt-n3">行</ruby>い、<a href="https://jisho.org/search/古典的" class="jisho-link" target="_blank"><ruby class="above-n1">古<rt>こ</rt></ruby><ruby class="above-n1">典<rt>てん</rt></ruby><ruby class="above-n1">的</ruby></a>な<a href="https://jisho.org/search/文語体" class="jisho-link" target="_blank"><ruby class="above-n1">文<rt>ぶん</rt></ruby><ruby class="above-n1">語<rt>ご</rt></ruby><ruby class="above-n1">体</ruby></a>と<a href="https://jisho.org/search/現代的" class="jisho-link" target="_blank"><ruby class="jlpt-n2">現<rt>げん</rt></ruby><ruby class="jlpt-n2">代<rt>だい</rt></ruby><ruby class="jlpt-n2">的</ruby></a>な<ruby class="jlpt-n3">理<rt>り</rt></ruby><ruby class="jlpt-n3">解</ruby>しやすさの<ruby class="jlpt-n2">バランス</ruby>を<ruby class="jlpt-n3">保</ruby>った。</p>
+        
+        <div class="cultural-note">
+            <strong>文化的背景：</strong>「文語体」とは、古典的な書き言葉の文体で、現代の話し言葉（口語体）と対比されます。格調高い印象を与えるため、文学作品や格式ある文書で使用されます。
+        </div>
+    </div>
+    
+    <div class="content-section page-break">
+        <h2 class="section-title">ソネット集</h2>
+        <p class="subtitle">1609年</p>
+        
+        <div class="sonnet-number">第一番</div>
+        <div class="sonnet-text">
+            <ruby class="jlpt-n1">最</ruby>も<ruby class="jlpt-n2">美</ruby>しき<ruby class="jlpt-n3">者</ruby>より<span class="jlpt-n5">我</span>らは<a href="https://jisho.org/search/子孫" class="jisho-link" target="_blank"><ruby class="above-n1">子<rt>し</rt></ruby><ruby class="above-n1">孫</ruby></a>を<ruby class="jlpt-n3">望</ruby>む、<br>
+            それにより<ruby class="jlpt-n2">美</ruby>の<a href="https://jisho.org/search/薔薇" class="jisho-link" target="_blank"><ruby class="above-n1">薔<rt>ば</rt></ruby><ruby class="above-n1">薇</ruby></a>は<ruby class="jlpt-n3">決</ruby>して<ruby class="jlpt-n3">枯</ruby>れぬよう、<br>
+            されど<a href="https://jisho.org/search/熟したる" class="jisho-link" target="_blank"><ruby class="above-n1">熟</ruby>したる</a><ruby class="jlpt-n3">者</ruby>が<ruby class="jlpt-n4">時</ruby>により<a href="https://jisho.org/search/逝く" class="jisho-link" target="_blank"><ruby class="above-n1">逝</ruby>く</a>とも、<br>
+            その<a href="https://jisho.org/search/優しき" class="jisho-link" target="_blank"><ruby class="jlpt-n2">優</ruby>しき</a><a href="https://jisho.org/search/後継ぎ" class="jisho-link" target="_blank"><ruby class="above-n1">後<rt>こう</rt></ruby><ruby class="above-n1">継</ruby>ぎ</a>がその<ruby class="jlpt-n3">記<rt>き</rt></ruby><ruby class="jlpt-n3">憶</ruby>を<a href="https://jisho.org/search/担わん" class="jisho-link" target="_blank"><ruby class="above-n1">担</ruby>わん</a>。
+        </div>
+        
+        <div class="literary-note">
+            <strong>文学的解説：</strong>この冒頭のソネットは、シェイクスピアの「結婚の勧め」を主題とした作品群の始まりです。「薔薇」は美の象徴として使われており、時の流れと美の永続性というテーマが表現されています。
+        </div>
+        
+        <div class="grammar-note">
+            <strong>文法解説：</strong>「〜により」は原因・理由を表す表現で、「〜によって」「〜のために」という意味です。「されど」は古典的な逆接の接続詞で、現代語では「しかし」「けれども」に相当します。
+        </div>
+        
+        <div class="sonnet-text">
+            しかし<span class="jlpt-n4">汝</span>は<ruby class="jlpt-n4">己</ruby>が<a href="https://jisho.org/search/輝く" class="jisho-link" target="_blank"><ruby class="jlpt-n2">輝</ruby>く</a><ruby class="jlpt-n4">瞳</ruby>とのみ<a href="https://jisho.org/search/契り" class="jisho-link" target="_blank"><ruby class="above-n1">契</ruby>り</a>、<br>
+            <ruby class="jlpt-n4">自</ruby>らの<a href="https://jisho.org/search/本質" class="jisho-link" target="_blank"><ruby class="jlpt-n1">本<rt>ほん</rt></ruby><ruby class="jlpt-n1">質</ruby></a>より<ruby class="jlpt-n3">成</ruby>る<a href="https://jisho.org/search/燃料" class="jisho-link" target="_blank"><ruby class="jlpt-n2">燃<rt>ねん</rt></ruby><ruby class="jlpt-n2">料</ruby></a>で<ruby class="jlpt-n4">光</ruby>の<ruby class="jlpt-n4">炎</ruby>を<a href="https://jisho.org/search/養い" class="jisho-link" target="_blank"><ruby class="jlpt-n2">養</ruby>い</a>、<br>
+            <a href="https://jisho.org/search/豊かなる" class="jisho-link" target="_blank"><ruby class="jlpt-n2">豊</ruby>かなる</a><ruby class="jlpt-n3">処</ruby>に<a href="https://jisho.org/search/飢饉" class="jisho-link" target="_blank"><ruby class="above-n1">飢<rt>き</rt></ruby><ruby class="above-n1">饉</ruby></a>を<ruby class="jlpt-n3">作</ruby>り<ruby class="jlpt-n4">出</ruby>し、<br>
+            <ruby class="jlpt-n4">己</ruby>が<ruby class="jlpt-n3">敵</ruby>となり、<a href="https://jisho.org/search/甘き" class="jisho-link" target="_blank"><ruby class="jlpt-n2">甘</ruby>き</a><ruby class="jlpt-n4">己</ruby>に<ruby class="jlpt-n3">余</ruby>りに<a href="https://jisho.org/search/残酷" class="jisho-link" target="_blank"><ruby class="jlpt-n2">残<rt>ざん</rt></ruby><ruby class="jlpt-n2">酷</ruby></a>なり。
+        </div>
+        
+        <div class="cultural-note">
+            <strong>文化的背景：</strong>「汝（なんじ）」は古語の二人称代名詞で、現代語の「あなた」「君」に相当します。シェイクスピア時代の英語"thou"の翻訳として使われています。
+        </div>
+        
+        <div class="sonnet-text">
+            <span class="jlpt-n4">汝</span>は<ruby class="jlpt-n4">今</ruby>や<ruby class="jlpt-n3">世<rt>せ</rt></ruby><ruby class="jlpt-n3">界</ruby>の<a href="https://jisho.org/search/新鮮なる" class="jisho-link" target="_blank"><ruby class="jlpt-n2">新<rt>しん</rt></ruby><ruby class="jlpt-n2">鮮</ruby>なる</a><a href="https://jisho.org/search/装飾品" class="jisho-link" target="_blank"><ruby class="above-n1">装<rt>そう</rt></ruby><ruby class="above-n1">飾<rt>しょく</rt></ruby><ruby class="above-n1">品</ruby></a>、<br>
+            そして<a href="https://jisho.org/search/華やかなる" class="jisho-link" target="_blank"><ruby class="jlpt-n1">華</ruby>やかなる</a><ruby class="jlpt-n4">春</ruby>への<a href="https://jisho.org/search/唯一" class="jisho-link" target="_blank"><ruby class="jlpt-n2">唯<rt>ゆい</rt></ruby><ruby class="jlpt-n2">一</ruby></a>の<a href="https://jisho.org/search/使者" class="jisho-link" target="_blank"><ruby class="above-n1">使<rt>し</rt></ruby><ruby class="above-n1">者</ruby></a>なり、<br>
+            <ruby class="jlpt-n4">己</ruby>の<a href="https://jisho.org/search/蕾" class="jisho-link" target="_blank"><ruby class="above-n1">蕾</ruby></a>の<ruby class="jlpt-n4">内</ruby>に<a href="https://jisho.org/search/満足" class="jisho-link" target="_blank"><ruby class="jlpt-n3">満<rt>まん</rt></ruby><ruby class="jlpt-n3">足</ruby></a>を<a href="https://jisho.org/search/葬り" class="jisho-link" target="_blank"><ruby class="above-n1">葬</ruby>り</a>、<br>
+            <a href="https://jisho.org/search/優しき" class="jisho-link" target="_blank"><ruby class="jlpt-n2">優</ruby>しき</a><a href="https://jisho.org/search/吝嗇家" class="jisho-link" target="_blank"><ruby class="above-n1">吝<rt>りん</rt></ruby><ruby class="above-n1">嗇<rt>しょく</rt></ruby><ruby class="above-n1">家</ruby></a>よ、<a href="https://jisho.org/search/出し惜しみ" class="jisho-link" target="_blank"><ruby class="above-n1">出</ruby>し<ruby class="above-n1">惜</ruby>しみ</a>て<a href="https://jisho.org/search/浪費" class="jisho-link" target="_blank"><ruby class="jlpt-n1">浪<rt>ろう</rt></ruby><ruby class="jlpt-n1">費</ruby></a>す。
+        </div>
+        
+        <div class="grammar-note">
+            <strong>文法解説：</strong>「〜なり」は古典的な断定の助動詞で、現代語の「である」「だ」に相当します。格調高い表現として文学作品で使われます。
+        </div>
+        
+        <div class="sonnet-text">
+            <span class="tooltip" data-tooltip="世界を憐れみなさい"><ruby class="jlpt-n4">世</ruby>を<a href="https://jisho.org/search/憐れめ" class="jisho-link" target="_blank"><ruby class="above-n1">憐</ruby>れめ</a></span>、さもなくば<a href="https://jisho.org/search/貪欲者" class="jisho-link" target="_blank"><ruby class="above-n1">貪<rt>どん</rt></ruby><ruby class="above-n1">欲<rt>よく</rt></ruby><ruby class="above-n1">者</ruby></a>となれ、<br>
+            <ruby class="jlpt-n4">墓</ruby>と<span class="jlpt-n4">汝</span>により<ruby class="jlpt-n4">世</ruby>の<ruby class="jlpt-n4">分</ruby>を<a href="https://jisho.org/search/食い尽くす" class="jisho-link" target="_blank"><ruby class="jlpt-n2">食</ruby>い<ruby class="jlpt-n2">尽</ruby>くす</a>べし。
+        </div>
+        
+        <div class="literary-note">
+            <strong>文学的解説：</strong>この結句は選択の二分法を提示しています。美しい人は世界への慈悲（子孫を残すこと）か貪欲（自己愛）かを選ばなければならないという、シェイクスピア特有の道徳的ジレンマが表現されています。
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <div class="sonnet-number">第二番</div>
+        <div class="sonnet-text">
+            <a href="https://jisho.org/search/四十" class="jisho-link" target="_blank"><ruby class="jlpt-n4">四<rt>よん</rt></ruby><ruby class="jlpt-n4">十</ruby></a>の<ruby class="jlpt-n4">冬</ruby>が<span class="jlpt-n4">汝</span>の<ruby class="jlpt-n3">額</ruby>を<a href="https://jisho.org/search/包囲" class="jisho-link" target="_blank"><ruby class="above-n1">包<rt>ほう</rt></ruby><ruby class="above-n1">囲</ruby></a>せし<ruby class="jlpt-n4">時</ruby>、<br>
+            <span class="jlpt-n4">汝</span>の<ruby class="jlpt-n2">美</ruby>の<ruby class="jlpt-n3">野</ruby>に<ruby class="jlpt-n2">深</ruby>き<a href="https://jisho.org/search/塹壕" class="jisho-link" target="_blank"><ruby class="above-n1">塹<rt>ざん</rt></ruby><ruby class="above-n1">壕</ruby></a>を<ruby class="jlpt-n3">掘</ruby>らん<ruby class="jlpt-n4">時</ruby>、<br>
+            <ruby class="jlpt-n4">今</ruby>かくも<ruby class="jlpt-n3">見</ruby>つめられし<span class="jlpt-n4">汝</span>の<a href="https://jisho.org/search/若さ" class="jisho-link" target="_blank"><ruby class="jlpt-n3">若</ruby>さ</a>の<a href="https://jisho.org/search/誇らしき" class="jisho-link" target="_blank"><ruby class="jlpt-n2">誇</ruby>らしき</a><ruby class="jlpt-n3">衣</ruby>は、<br>
+            <a href="https://jisho.org/search/価値なき" class="jisho-link" target="_blank"><ruby class="jlpt-n2">価<rt>か</rt></ruby><ruby class="jlpt-n2">値</ruby>なき</a><a href="https://jisho.org/search/襤褸" class="jisho-link" target="_blank"><ruby class="above-n1">襤<rt>らん</rt></ruby><ruby class="above-n1">褸</ruby></a>として<a href="https://jisho.org/search/扱われん" class="jisho-link" target="_blank"><ruby class="jlpt-n2">扱</ruby>われん</a>。
+        </div>
+        
+        <div class="cultural-note">
+            <strong>文化的背景：</strong>「四十の冬」は中年を表す詩的表現です。シェイクスピアの時代、40歳は現代よりもずっと「老年」に近い年齢と考えられていました。平均寿命が短かったためです。
+        </div>
+        
+        <div class="grammar-note">
+            <strong>文法解説：</strong>「〜せし」「〜らん」は古典語の活用形です。「せし」は過去・完了、「らん」は推量・意志を表します。現代語では「した」「するだろう」に相当します。
+        </div>
+        
+        <div class="sonnet-text">
+            その<ruby class="jlpt-n4">時</ruby><ruby class="jlpt-n3">問</ruby>われて、<span class="jlpt-n4">汝</span>の<ruby class="jlpt-n2">美</ruby>は<a href="https://jisho.org/search/何処" class="jisho-link" target="_blank"><ruby class="jlpt-n2">何<rt>いず</rt></ruby><ruby class="jlpt-n2">処</ruby></a>にありやと、<br>
+            <span class="jlpt-n4">汝</span>の<a href="https://jisho.org/search/力強き" class="jisho-link" target="_blank"><ruby class="jlpt-n2">力<rt>ちから</rt></ruby><ruby class="jlpt-n2">強</ruby>き</a><ruby class="jlpt-n4">日</ruby>々の<ruby class="jlpt-n3">宝</ruby>は<a href="https://jisho.org/search/何処" class="jlpt-n2">何<rt>いず</rt></ruby><ruby class="jlpt-n2">処</ruby></a>にと、<br>
+            <ruby class="jlpt-n4">己</ruby>の<ruby class="jlpt-n2">深</ruby>く<a href="https://jisho.org/search/落ち窪みし" class="jisho-link" target="_blank"><ruby class="above-n1">落</ruby>ち<ruby class="above-n1">窪</ruby>みし</a><ruby class="jlpt-n4">瞳</ruby>の<ruby class="jlpt-n4">内</ruby>にと<ruby class="jlpt-n3">言</ruby>うは、<br>
+            <a href="https://jisho.org/search/全てを食い尽くす" class="jisho-link" target="_blank"><ruby class="jlpt-n4">全</ruby>てを<ruby class="jlpt-n2">食</ruby>い<ruby class="jlpt-n2">尽</ruby>くす</a><ruby class="jlpt-n3">恥</ruby>と<a href="https://jisho.org/search/無益なる" class="jisho-link" target="_blank"><ruby class="jlpt-n1">無<rt>む</rt></ruby><ruby class="jlpt-n1">益</ruby>なる</a><a href="https://jisho.org/search/賛美" class="jisho-link" target="_blank"><ruby class="jlpt-n1">賛<rt>さん</rt></ruby><ruby class="jlpt-n1">美</ruby></a>なり。
+        </div>
+        
+        <div class="literary-note">
+            <strong>文学的解説：</strong>「落ち窪みし瞳」は老年の身体的変化を表しています。美しさが失われた時、過去の栄光を語ることの虚しさを「無益なる賛美」と表現しています。
+        </div>
+    </div>
+    
+    <div class="content-section page-break">
+        <h2 class="section-title">戯曲作品</h2>
+        
+        <div class="play-title">終わりよければ全てよし</div>
+        <p class="subtitle">All's Well That Ends Well</p>
+        
+        <div class="character-list">
+            <h3>登場人物</h3>
+            <p><strong><a href="https://jisho.org/search/フランス王" class="jisho-link" target="_blank"><ruby class="jlpt-n2">フランス</ruby><ruby class="jlpt-n3">王</ruby></a></strong></p>
+            <p><strong><a href="https://jisho.org/search/フィレンツェ公爵" class="jisho-link" target="_blank"><ruby class="above-n1">フィレンツェ</ruby><ruby class="above-n1">公<rt>こう</rt></ruby><ruby class="above-n1">爵</ruby></a></strong></p>
+            <p><strong><a href="https://jisho.org/search/ベルトラム" class="jisho-link" target="_blank">ベルトラム</a></strong>、<a href="https://jisho.org/search/ルシヨン伯爵" class="jisho-link" target="_blank">ルシヨン<ruby class="above-n1">伯<rt>はく</rt></ruby><ruby class="above-n1">爵</ruby></a></p>
+            <p><strong><a href="https://jisho.org/search/ラフュー" class="jisho-link" target="_blank">ラフュー</a></strong>、<a href="https://jisho.org/search/老貴族" class="jisho-link" target="_blank"><ruby class="jlpt-n2">老</ruby><ruby class="above-n1">貴<rt>き</rt></ruby><ruby class="above-n1">族</ruby></a></p>
+        </div>
+        
+        <div class="cultural-note">
+            <strong>文化的背景：</strong>「伯爵」「公爵」などの爵位は、ヨーロッパの封建制度における貴族の階級を示します。公爵が最高位で、以下、侯爵、伯爵、子爵、男爵の順になります。
+        </div>
+        
+        <div class="dialogue">
+            <span class="character-name"><a href="https://jisho.org/search/伯爵夫人" class="jisho-link" target="_blank"><ruby class="above-n1">伯<rt>はく</rt></ruby><ruby class="above-n1">爵<rt>しゃく</rt></ruby><ruby class="above-n1">夫<rt>ふ</rt></ruby><ruby class="above-n1">人</ruby></a></span>
+            <ruby class="jlpt-n4">息<rt>むす</rt></ruby><ruby class="jlpt-n4">子</ruby>を<span class="jlpt-n4">私</span>から<a href="https://jisho.org/search/送り出す" class="jisho-link" target="_blank"><ruby class="jlpt-n2">送</ruby>り<ruby class="jlpt-n2">出</ruby>す</a>ことで、<span class="jlpt-n4">私</span>は<a href="https://jisho.org/search/二度目" class="jisho-link" target="_blank"><ruby class="jlpt-n3">二<rt>に</rt></ruby><ruby class="jlpt-n3">度<rt>ど</rt></ruby><ruby class="jlpt-n3">目</ruby></a>の<ruby class="jlpt-n4">夫</ruby>を<a href="https://jisho.org/search/葬ります" class="jisho-link" target="_blank"><ruby class="above-n1">葬</ruby>ります</a>。
+        </div>
+        
+        <div class="grammar-note">
+            <strong>文法解説：</strong>「〜ことで」は手段・方法を表す表現です。ここでは息子を送り出すという行為によって、夫を失った時と同じような悲しみを経験するという意味を表しています。
+        </div>
+        
+        <div class="dialogue">
+            <span class="character-name">ベルトラム</span>
+            そして<span class="jlpt-n4">私</span>は<ruby class="jlpt-n3">行</ruby>くにあたり、<a href="https://jisho.org/search/母上" class="jisho-link" target="_blank"><ruby class="jlpt-n2">母<rt>はは</rt></ruby><ruby class="jlpt-n2">上</ruby></a>、<ruby class="jlpt-n4">父</ruby>の<ruby class="jlpt-n4">死</ruby>を<ruby class="jlpt-n2">新</ruby>たに<a href="https://jisho.org/search/嘆きます" class="jisho-link" target="_blank"><ruby class="jlpt-n2">嘆</ruby>きます</a>。しかし<span class="jlpt-n4">私</span>は<a href="https://jisho.org/search/陛下" class="jisho-link" target="_blank"><ruby class="above-n1">陛<rt>へい</rt></ruby><ruby class="above-n1">下</ruby></a>の<a href="https://jisho.org/search/命令" class="jisho-link" target="_blank"><ruby class="jlpt-n3">命<rt>めい</rt></ruby><ruby class="jlpt-n3">令</ruby></a>に<ruby class="jlpt-n3">従</ruby>わねばなりません、<span class="jlpt-n4">私</span>は<ruby class="jlpt-n4">今</ruby>や<ruby class="jlpt-n2">陛<rt>へい</rt></ruby><ruby class="jlpt-n2">下</ruby>の<a href="https://jisho.org/search/被後見人" class="jisho-link" target="_blank"><ruby class="above-n1">被<rt>ひ</rt></ruby><ruby class="above-n1">後<rt>こう</rt></ruby><ruby class="above-n1">見<rt>けん</rt></ruby><ruby class="above-n1">人</ruby></a>として、<a href="https://jisho.org/search/永遠に" class="jisho-link" target="_blank"><ruby class="jlpt-n2">永<rt>えい</rt></ruby><ruby class="jlpt-n2">遠</ruby>に</a><a href="https://jisho.org/search/服従" class="jisho-link" target="_blank"><ruby class="above-n1">服<rt>ふく</rt></ruby><ruby class="above-n1">従</ruby></a>の<ruby class="jlpt-n4">身</ruby>なのです。
+        </div>
+        
+        <div class="cultural-note">
+            <strong>文化的背景：</strong>「被後見人」は、父親を失った貴族の子どもが王の保護下に置かれることを指します。中世ヨーロッパの封建制度では、領主が亡くなると、その子は王の直接的な保護と指導を受けることになりました。
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <div class="play-title">ハムレット</div>
+        <p class="subtitle">デンマークの王子の悲劇</p>
+        
+        <div class="dialogue">
+            <span class="character-name">ベルナード</span>
+            <ruby class="jlpt-n3">言</ruby>え―<span class="jlpt-n5">誰</span>だ、<a href="https://jisho.org/search/ホレーシオ" class="jisho-link" target="_blank">ホレーシオ</a>か？
+        </div>
+        
+        <div class="dialogue">
+            <span class="character-name">ホレーシオ</span>
+            <ruby class="jlpt-n3">彼</ruby>の<a href="https://jisho.org/search/一部" class="jisho-link" target="_blank"><ruby class="jlpt-n2">一<rt>いち</rt></ruby><ruby class="jlpt-n2">部</ruby></a>だ。
+        </div>
+        
+        <div class="literary-note">
+            <strong>文学的解説：</strong>「彼の一部だ」は、ホレーシオの機知に富んだ返答です。自分を完全には名乗らず、謙遜しながらも身元を明かしています。シェイクスピア劇の特徴である、言葉遊びと機知の例です。
+        </div>
+        
+        <div class="dialogue">
+            <span class="character-name">マーセラス</span>
+            どうだ、あの<ruby class="jlpt-n4">物</ruby>は<ruby class="jlpt-n4">今<rt>こん</rt></ruby><ruby class="jlpt-n4">夜</ruby>も<a href="https://jisho.org/search/現れた" class="jisho-link" target="_blank"><ruby class="jlpt-n3">現</ruby>れた</a>か？
+        </div>
+        
+        <div class="dialogue">
+            <span class="character-name">ベルナード</span>
+            <span class="jlpt-n4">私</span>は<ruby class="jlpt-n4">何</ruby>も<ruby class="jlpt-n3">見</ruby>ていない。
+        </div>
+        
+        <div class="dialogue">
+            <span class="character-name">マーセラス</span>
+            ホレーシオは<span class="jlpt-n5">我</span>らの<a href="https://jisho.org/search/幻想" class="jisho-link" target="_blank"><ruby class="jlpt-n1">幻<rt>げん</rt></ruby><ruby class="jlpt-n1">想</ruby></a>だと<ruby class="jlpt-n3">言</ruby>い、<span class="jlpt-n5">我</span>らが<a href="https://jisho.org/search/二度" class="jisho-link" target="_blank"><ruby class="jlpt-n3">二<rt>に</rt></ruby><ruby class="jlpt-n3">度</ruby></a><ruby class="jlpt-n3">見</ruby>たこの<a href="https://jisho.org/search/恐ろしき" class="jisho-link" target="_blank"><ruby class="jlpt-n2">恐</ruby>ろしき</a><a href="https://jisho.org/search/光景" class="jisho-link" target="_blank"><ruby class="jlpt-n2">光<rt>こう</rt></ruby><ruby class="jlpt-n2">景</ruby></a>について<ruby class="jlpt-n3">信</ruby>じようとしない。
+        </div>
+        
+        <div class="cultural-note">
+            <strong>文化的背景：</strong>この場面では先王ハムレットの亡霊について語られています。シェイクスピア時代、幽霊や超自然現象は現実的な脅威として信じられており、劇場でも人気のある題材でした。
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h3 class="section-title">主要作品からの統合抜粋</h3>
+        
+        <h4>【ハムレット】第三幕第一場より</h4>
+        <div class="sonnet-text">
+            「<a href="https://jisho.org/search/生きる" class="jisho-link" target="_blank"><ruby class="jlpt-n4">生</ruby>きる</a>べきか、<ruby class="jlpt-n4">死</ruby>ぬべきか、それが<ruby class="jlpt-n3">問<rt>もん</rt></ruby><ruby class="jlpt-n3">題</ruby>だ。<br>
+            <a href="https://jisho.org/search/激しき" class="jisho-link" target="_blank"><ruby class="jlpt-n2">激</ruby>しき</a><a href="https://jisho.org/search/運命" class="jisho-link" target="_blank"><ruby class="jlpt-n2">運<rt>うん</rt></ruby><ruby class="jlpt-n2">命</ruby></a>の<a href="https://jisho.org/search/矢弾" class="jisho-link" target="_blank"><ruby class="above-n1">矢<rt>し</rt></ruby><ruby class="above-n1">弾</ruby></a>を<ruby class="jlpt-n4">心</ruby>に<a href="https://jisho.org/search/耐え忍ぶ" class="jisho-link" target="_blank"><ruby class="jlpt-n1">耐</ruby>え<ruby class="jlpt-n1">忍</ruby>ぶ</a>ことが<a href="https://jisho.org/search/高貴" class="jisho-link" target="_blank"><ruby class="above-n1">高<rt>こう</rt></ruby><ruby class="above-n1">貴</ruby></a>なのか、<br>
+            それとも<a href="https://jisho.org/search/苦難" class="jisho-link" target="_blank"><ruby class="jlpt-n1">苦<rt>く</rt></ruby><ruby class="jlpt-n1">難</ruby></a>の<ruby class="jlpt-n4">海</ruby>に<ruby class="jlpt-n3">対</ruby>して<a href="https://jisho.org/search/武器" class="jisho-link" target="_blank"><ruby class="jlpt-n2">武<rt>ぶ</rt></ruby><ruby class="jlpt-n2">器</ruby></a>を<ruby class="jlpt-n3">取</ruby>り、<br>
+            <a href="https://jisho.org/search/戦い" class="jisho-link" target="_blank"><ruby class="jlpt-n3">戦</ruby>い</a>によってそれらを<a href="https://jisho.org/search/終わらせる" class="jisho-link" target="_blank"><ruby class="jlpt-n3">終</ruby>わらせる</a>ことが<ruby class="above-n1">高<rt>こう</rt></ruby><ruby class="above-n1">貴</ruby>なのか。」
+        </div>
+        
+        <div class="literary-note">
+            <strong>文学的解説：</strong>これは英文学史上最も有名な独白の一つです。"To be, or not to be, that is the question"の翻訳で、存在論的な問いを投げかけています。ハムレットの内的葛藤が凝縮された名場面です。
+        </div>
+        
+        <div class="grammar-note">
+            <strong>文法解説：</strong>「〜べきか」は当然・義務・推量を表す助動詞「べし」の疑問形です。「〜すべきか」「〜した方がよいか」という意味で、選択に迷う気持ちを表現しています。
+        </div>
+        
+        <h4>【ロミオとジュリエット】第二幕第二場より（バルコニーの場面）</h4>
+        <div class="dialogue">
+            <span class="character-name">ジュリエット</span>
+            「おお、ロミオ、ロミオ！<a href="https://jisho.org/search/何故" class="jisho-link" target="_blank"><ruby class="jlpt-n2">何<rt>なに</rt></ruby><ruby class="jlpt-n2">故</ruby></a>あなたはロミオなの？あなたの<ruby class="jlpt-n4">父</ruby>を<a href="https://jisho.org/search/否定" class="jisho-link" target="_blank"><ruby class="jlpt-n2">否<rt>ひ</rt></ruby><ruby class="jlpt-n2">定</ruby></a>し、あなたの<ruby class="jlpt-n4">名</ruby>を<a href="https://jisho.org/search/捨てて" class="jisho-link" target="_blank"><ruby class="jlpt-n3">捨</ruby>てて</a>。もしそれが<ruby class="jlpt-n4">嫌</ruby>なら、<span class="jlpt-n4">私</span>の<ruby class="jlpt-n4">愛</ruby>を<a href="https://jisho.org/search/誓って" class="jisho-link" target="_blank"><ruby class="jlpt-n2">誓</ruby>って</a>、そうすれば<span class="jlpt-n4">私</span>はもうキャピュレットではなくなる。」
+        </div>
+        
+        <div class="cultural-note">
+            <strong>文化的背景：</strong>この場面は「バルコニーの場面」として世界的に有名です。ロミオとジュリエットの愛を阻む家同士の対立（モンタギュー家とキャピュレット家）が背景にあります。
+        </div>
+        
+        <div class="dialogue">
+            <span class="character-name">ジュリエット</span>
+            「<ruby class="jlpt-n4">名<rt>な</rt></ruby><ruby class="jlpt-n4">前</ruby>に<ruby class="jlpt-n4">何</ruby>があるというの？<a href="https://jisho.org/search/薔薇" class="jisho-link" target="_blank"><ruby class="above-n1">薔<rt>ば</rt></ruby><ruby class="above-n1">薇</ruby></a>と<ruby class="jlpt-n3">呼</ruby>ばれるものは、<ruby class="jlpt-n4">他</ruby>のどんな<ruby class="jlpt-n4">名<rt>な</rt></ruby><ruby class="jlpt-n4">前</ruby>で<ruby class="jlpt-n3">呼</ruby>ばれても<ruby class="jlpt-n4">同</ruby>じように<ruby class="jlpt-n2">甘</ruby>く<a href="https://jisho.org/search/香る" class="jisho-link" target="_blank"><ruby class="jlpt-n2">香</ruby>る</a>でしょう。」
+        </div>
+        
+        <div class="literary-note">
+            <strong>文学的解説：</strong>「薔薇の名前」の比喩は、本質と名前の関係について述べた哲学的な表現です。愛する人の家名（名前）は、その人の本質とは関係ないという普遍的なテーマを表現しています。
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h4>【マクベス】第五幕第五場より</h4>
+        <div class="sonnet-text">
+            「<ruby class="jlpt-n4">明<rt>あ</rt></ruby><ruby class="jlpt-n4">日</ruby>、また<ruby class="jlpt-n4">明<rt>あ</rt></ruby><ruby class="jlpt-n4">日</ruby>、また<ruby class="jlpt-n4">明<rt>あ</rt></ruby><ruby class="jlpt-n4">日</ruby>と、<br>
+            <a href="https://jisho.org/search/小刻み" class="jisho-link" target="_blank"><ruby class="jlpt-n1">小<rt>こ</rt></ruby><ruby class="jlpt-n1">刻</ruby>み</a>に<a href="https://jisho.org/search/一日一日" class="jisho-link" target="_blank"><ruby class="jlpt-n4">一<rt>いち</rt></ruby><ruby class="jlpt-n4">日<rt>にち</rt></ruby><ruby class="jlpt-n4">一<rt>いち</rt></ruby><ruby class="jlpt-n4">日</ruby></a>が<a href="https://jisho.org/search/這い進む" class="jisho-link" target="_blank"><ruby class="above-n1">這</ruby>い<ruby class="jlpt-n2">進</ruby>む</a>、<br>
+            <a href="https://jisho.org/search/記録された" class="jisho-link" target="_blank"><ruby class="jlpt-n2">記<rt>き</rt></ruby><ruby class="jlpt-n2">録</ruby>された</a><ruby class="jlpt-n4">時</ruby>の<ruby class="jlpt-n1">最<rt>さい</rt></ruby><ruby class="jlpt-n1">後</ruby>の<a href="https://jisho.org/search/音節" class="jisho-link" target="_blank"><ruby class="above-n1">音<rt>おん</rt></ruby><ruby class="above-n1">節</ruby></a>まで。<br>
+            そして<span class="jlpt-n5">我</span>らの<ruby class="jlpt-n4">全</ruby>ての<ruby class="jlpt-n4">昨<rt>きの</rt></ruby><ruby class="jlpt-n4">日</ruby>は、<a href="https://jisho.org/search/愚か者" class="jisho-link" target="_blank"><ruby class="jlpt-n2">愚</ruby>か<ruby class="jlpt-n3">者</ruby></a>たちに<a href="https://jisho.org/search/塵" class="jisho-link" target="_blank"><ruby class="above-n1">塵</ruby></a>の<ruby class="jlpt-n4">死</ruby>への<ruby class="jlpt-n4">道</ruby>を<a href="https://jisho.org/search/照らして" class="jisho-link" target="_blank"><ruby class="jlpt-n2">照</ruby>らして</a>きた。<ruby class="jlpt-n3">消</ruby>えろ、<ruby class="jlpt-n3">消</ruby>えろ、<ruby class="jlpt-n2">短</ruby>い<a href="https://jisho.org/search/蝋燭" class="jisho-link" target="_blank"><ruby class="above-n1">蝋<rt>ろう</rt></ruby><ruby class="above-n1">燭</ruby></a>！」
+        </div>
+        
+        <div class="literary-note">
+            <strong>文学的解説：</strong>これはマクベスの絶望的な独白で、人生の無意味さを表現した名場面です。「明日、また明日、また明日」の反復は時間の単調さを、「短い蝋燭」は人生のはかなさを象徴しています。
+        </div>
+        
+        <div class="grammar-note">
+            <strong>文法解説：</strong>「〜てきた」は継続の意味を表す文法形式です。過去から現在まで続いている状態や動作を表現します。ここでは人類の歴史が愚かな歩みを続けてきたことを示しています。
+        </div>
+        
+        <div class="sonnet-text">
+            「<ruby class="jlpt-n2">人<rt>じん</rt></ruby><ruby class="jlpt-n2">生</ruby>は<a href="https://jisho.org/search/歩く" class="jisho-link" target="_blank"><ruby class="jlpt-n4">歩</ruby>く</a><a href="https://jisho.org/search/影" class="jisho-link" target="_blank"><ruby class="jlpt-n3">影</ruby></a>に<ruby class="jlpt-n3">過</ruby>ぎぬ、<a href="https://jisho.org/search/哀れな" class="jisho-link" target="_blank"><ruby class="jlpt-n2">哀</ruby>れな</a><a href="https://jisho.org/search/役者" class="jisho-link" target="_blank"><ruby class="jlpt-n2">役<rt>やく</rt></ruby><ruby class="jlpt-n2">者</ruby></a>が<a href="https://jisho.org/search/舞台" class="jisho-link" target="_blank"><ruby class="jlpt-n2">舞<rt>ぶ</rt></ruby><ruby class="jlpt-n2">台</ruby></a>で<ruby class="jlpt-n4">自<rt>じ</rt></ruby><ruby class="jlpt-n4">分</ruby>の<ruby class="jlpt-n4">時<rt>じ</rt></ruby><ruby class="jlpt-n4">間</ruby>を<a href="https://jisho.org/search/大げさに" class="jisho-link" target="_blank"><ruby class="jlpt-n2">大</ruby>げさに</a><ruby class="jlpt-n4">歩</ruby>き<ruby class="jlpt-n3">回</ruby>り、そして<a href="https://jisho.org/search/二度と" class="jisho-link" target="_blank"><ruby class="jlpt-n3">二<rt>に</rt></ruby><ruby class="jlpt-n3">度</ruby>と</a><ruby class="jlpt-n3">聞</ruby>かれることはない。それは<ruby class="jlpt-n2">愚</ruby>か<ruby class="jlpt-n3">者</ruby>が<ruby class="jlpt-n3">語</ruby>る<a href="https://jisho.org/search/物語" class="jisho-link" target="_blank"><ruby class="jlpt-n3">物<rt>もの</rt></ruby><ruby class="jlpt-n3">語</ruby></a>、<ruby class="jlpt-n4">音</ruby>と<ruby class="jlpt-n2">怒</ruby>りに<ruby class="jlpt-n4">満</ruby>ちて、<ruby class="jlpt-n4">何</ruby>も<a href="https://jisho.org/search/意味しない" class="jisho-link" target="_blank"><ruby class="jlpt-n3">意<rt>い</rt></ruby><ruby class="jlpt-n3">味</ruby>しない</a>。」
+        </div>
+        
+        <div class="literary-note">
+            <strong>文学的解説：</strong>この独白は存在の虚無感を表現したシェイクスピア文学の頂点の一つです。人生を「歩く影」「哀れな役者」「愚か者の物語」と比喩的に表現し、存在の無意味さを強調しています。
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h2 class="section-title">翻訳統合に関する詳細記録</h2>
+        
+        <p>本<a href="https://jisho.org/search/統合版" class="jisho-link" target="_blank"><ruby class="above-n1">統<rt>とう</rt></ruby><ruby class="above-n1">合<rt>ごう</rt></ruby><ruby class="above-n1">版</ruby></a>は<ruby class="jlpt-n4">以<rt>い</rt></ruby><ruby class="jlpt-n4">下</ruby>の<a href="https://jisho.org/search/方針" class="jisho-link" target="_blank"><ruby class="jlpt-n2">方<rt>ほう</rt></ruby><ruby class="jlpt-n2">針</ruby></a>により<a href="https://jisho.org/search/作成" class="jisho-link" target="_blank"><ruby class="jlpt-n3">作<rt>さく</rt></ruby><ruby class="jlpt-n3">成</ruby></a>された：</p>
+        
+        <div class="cultural-note">
+            <strong>文化的背景：</strong>この翻訳プロジェクトは、現代のAI技術を使用して複数の翻訳エージェントが協力して作成したシェイクスピア作品集です。従来の単独翻訳者による作品とは異なる、新しい翻訳手法の試みです。
+        </div>
+        
+        <p><strong>1. ソネット集：</strong><a href="https://jisho.org/search/Agent" class="jisho-link" target="_blank">Agent</a> 1の<a href="https://jisho.org/search/詩的" class="jisho-link" target="_blank"><ruby class="above-n1">詩<rt>し</rt></ruby><ruby class="above-n1">的</ruby></a><ruby class="jlpt-n2">美</ruby>しさと<a href="https://jisho.org/search/Agent" class="jisho-link" target="_blank">Agent</a> 3の<ruby class="above-n1">文<rt>ぶん</rt></ruby><ruby class="above-n1">化<rt>か</rt></ruby><ruby class="above-n1">的</ruby><ruby class="above-n1">適<rt>てき</rt></ruby><ruby class="above-n1">応</ruby>を<a href="https://jisho.org/search/基調" class="jisho-link" target="_blank"><ruby class="above-n1">基<rt>き</rt></ruby><ruby class="above-n1">調</ruby></a>とし、<a href="https://jisho.org/search/Agent" class="jisho-link" target="_blank">Agent</a> 2の<a href="https://jisho.org/search/明確性" class="jisho-link" target="_blank"><ruby class="above-n1">明<rt>めい</rt></ruby><ruby class="above-n1">確<rt>かく</rt></ruby><ruby class="above-n1">性</ruby></a>と<a href="https://jisho.org/search/Agent" class="jisho-link" target="_blank">Agent</a> 4の<ruby class="above-n1">一<rt>いっ</rt></ruby><ruby class="above-n1">貫<rt>かん</rt></ruby><ruby class="above-n1">性</ruby>で<a href="https://jisho.org/search/補完" class="jisho-link" target="_blank"><ruby class="above-n1">補<rt>ほ</rt></ruby><ruby class="above-n1">完</ruby></a>。</p>
+        
+        <p><strong>2. <a href="https://jisho.org/search/戯曲作品" class="jisho-link" target="_blank"><ruby class="above-n1">戯<rt>ぎ</rt></ruby><ruby class="above-n1">曲<rt>きょく</rt></ruby><ruby class="above-n1">作<rt>さく</rt></ruby><ruby class="above-n1">品</ruby></a>：</strong><a href="https://jisho.org/search/劇的効果" class="jisho-link" target="_blank"><ruby class="above-n1">劇<rt>げき</rt></ruby><ruby class="above-n1">的<rt>てき</rt></ruby><ruby class="above-n1">効<rt>こう</rt></ruby><ruby class="above-n1">果</ruby></a>を<ruby class="jlpt-n2">重<rt>じゅう</rt></ruby><ruby class="jlpt-n2">視</ruby>し、<a href="https://jisho.org/search/Agent" class="jisho-link" target="_blank">Agent</a> 1の<ruby class="above-n1">古<rt>こ</rt></ruby><ruby class="above-n1">典<rt>てん</rt></ruby><ruby class="above-n1">的</ruby><ruby class="jlpt-n2">美</ruby>しさと<a href="https://jisho.org/search/Agent" class="jisho-link" target="_blank">Agent</a> 2の<ruby class="jlpt-n3">理<rt>り</rt></ruby><ruby class="jlpt-n3">解</ruby>しやすさの<ruby class="jlpt-n2">バランス</ruby>を<a href="https://jisho.org/search/追求" class="jisho-link" target="_blank"><ruby class="jlpt-n1">追<rt>つい</rt></ruby><ruby class="jlpt-n1">求</ruby></a>。</p>
+        
+        <div class="grammar-note">
+            <strong>文法解説：</strong>「を重視し」「のバランスを追求」など、学術的な文章では動詞の連体修飾や複合語が多用されます。これらは格式高い文体の特徴です。
+        </div>
+        
+        <p><a href="https://jisho.org/search/統合作業" class="jisho-link" target="_blank"><ruby class="above-n1">統<rt>とう</rt></ruby><ruby class="above-n1">合<rt>ごう</rt></ruby><ruby class="above-n1">作<rt>さ</rt></ruby><ruby class="above-n1">業</ruby></a>により、シェイクスピアの<a href="https://jisho.org/search/普遍的" class="jisho-link" target="_blank"><ruby class="above-n1">普<rt>ふ</rt></ruby><ruby class="above-n1">遍<rt>へん</rt></ruby><ruby class="above-n1">的</ruby></a>な<ruby class="jlpt-n2">美</ruby>と<span class="jlpt-n4">日本語</span>の<a href="https://jisho.org/search/豊かな" class="jisho-link" target="_blank"><ruby class="jlpt-n2">豊</ruby>かな</a><a href="https://jisho.org/search/表現力" class="jisho-link" target="_blank"><ruby class="jlpt-n1">表<rt>ひょう</rt></ruby><ruby class="jlpt-n1">現<rt>げん</rt></ruby><ruby class="jlpt-n1">力</ruby></a>が<ruby class="jlpt-n2">調<rt>ちょう</rt></ruby><ruby class="jlpt-n2">和</ruby>した<ruby class="jlpt-n1">最<rt>さい</rt></ruby><ruby class="jlpt-n1">高</ruby><ruby class="jlpt-n2">品<rt>ひん</rt></ruby><ruby class="jlpt-n2">質</ruby>の<span class="jlpt-n4">日本語</span><ruby class="jlpt-n4">版</ruby>を<a href="https://jisho.org/search/実現" class="jisho-link" target="_blank"><ruby class="jlpt-n2">実<rt>じつ</rt></ruby><ruby class="jlpt-n2">現</ruby></a>した。</p>
+        
+        <div class="literary-note">
+            <strong>文学的解説：</strong>この注釈版の目的は、JLPT N2レベルの学習者がシェイクスピアの文学的美しさと深い意味を理解できるよう支援することです。古典文学の現代的理解と言語学習を両立させた革新的な試みです。
+        </div>
+        
+        <p class="subtitle"><strong>完成：</strong>2025年7月12日<br>
+        🤖 Generated with <a href="https://claude.ai/code" target="_blank">Claude Code</a><br>
+        Co-Authored-By: Claude &lt;noreply@anthropic.com&gt;</p>
+    </div>
+    
+    <div class="content-section">
+        <h3>学習ガイド</h3>
+        <p>この注釈版は以下のように活用できます：</p>
+        <ul>
+            <li><strong>語彙学習：</strong>色分けされた単語で自分のレベルを確認</li>
+            <li><strong>読解練習：</strong>古典的な文体に慣れる</li>
+            <li><strong>文化理解：</strong>西洋文学の背景知識を習得</li>
+            <li><strong>文法強化：</strong>高度な日本語表現を学習</li>
+            <li><strong>辞書活用：</strong>クリックで詳細な語彙情報を確認</li>
+        </ul>
+        
+        <div class="cultural-note">
+            <strong>学習のコツ：</strong>最初は注釈を頼りに読み進め、慣れてきたら注釈なしで挑戦してみましょう。シェイクスピアの美しい日本語を通じて、高度な文学的表現を身につけることができます。
+        </div>
+    </div>
+</body>
+</html>

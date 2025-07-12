@@ -1,0 +1,1299 @@
+ENOBARBO. Esto es viejo. ¿Cuál es el éxito?
+  EROS. César, habiéndolo usado en las guerras contra Pompeyo,
+    al presente le negó la rivalidad, no le dejó participar en la
+    gloria de la acción; y no descansando aquí, lo acusa de cartas
+    que había escrito anteriormente a Pompeyo; por su propia apelación, lo captura.
+    Así el pobre tercero está encerrado, hasta que la muerte amplíe su confín.
+  ENOBARBO. Entonces, mundo, tienes un par de mandíbulas—no más;
+    Y arroja entre ellas todo el alimento que tienes,
+    Molerán la una a la otra. ¿Dónde está Antonio?
+  EROS. Camina en el jardín—así, y rechaza
+    El junco que yace ante él; grita '¡Necio Lépido!'
+    Y amenaza la garganta de aquel oficial suyo
+    Que asesinó a Pompeyo.
+  ENOBARBO. Nuestra gran flota está aparejada.
+  EROS. Para Italia y César. Más, Domicio:
+    Mi señor te desea al presente; mis noticias
+    Podría haberlas contado después.
+  ENOBARBO. No será nada;
+    Pero que sea. Llévame a Antonio.
+  EROS. Ven, señor.                                    Salen
+
+ACTO_3|ESC_6
+                          ESCENA VI.
+                   Roma. Casa de CÉSAR
+
+             Entran CÉSAR, AGRIPA, y MECENAS
+
+  CÉSAR. Despreciando a Roma, ha hecho todo esto y más
+    En Alejandría. Aquí está la manera:
+    En la plaza del mercado, en un tribunal plateado,
+    Cleopatra y él mismo en sillas de oro
+    Fueron públicamente entronizados; a los pies se sentaba
+    Cesarión, a quien llaman hijo de mi padre,
+    Y toda la descendencia ilegítima que su lujuria
+    Desde entonces ha engendrado entre ellos. A ella
+    Le dio el establecimiento de Egipto; la hizo
+    De la Siria inferior, Chipre, Lidia,
+    Reina absoluta.
+  MECENAS. ¿Esto ante el ojo público?
+  CÉSAR. En el lugar común de espectáculos, donde ejercitan.
+    A sus hijos allí proclamó reyes de reyes:
+    La gran Media, Partia, y Armenia,
+    Se las dio a Alejandro; a Ptolomeo asignó
+    Siria, Cilicia, y Fenicia. Ella
+    Con los atavíos de la diosa Isis
+    Aquel día apareció; y a menudo antes dio audiencia,
+    Como se reporta, así.
+  MECENAS. Que Roma sea así
+    Informada.
+  AGRIPA. Quien, fastidiado ya con su insolencia,
+    Les quitará sus buenos pensamientos de él.
+  CÉSAR. El pueblo lo sabe, y ha recibido ahora
+    Sus acusaciones.
+  AGRIPA. ¿A quién acusa?
+  CÉSAR. A César; y que, habiendo en Sicilia
+    Saqueado a Sexto Pompeyo, no le habíamos tasado
+    Su parte de la isla. Luego dice que me prestó
+    Algunas naves, no restauradas. Por último, se irrita
+    Porque Lépido del triunvirato
+    Debería ser depuesto; y, siendo así, que retenemos
+    Todos sus ingresos.
+  AGRIPA. Señor, esto debe ser respondido.
+  CÉSAR. Ya está hecho, y el mensajero partió.
+    Le he dicho que Lépido se había vuelto demasiado cruel,
+    Que abusó de su alta autoridad,
+    Y mereció su cambio. Por lo que he conquistado
+    Le concedo parte; pero entonces, en su Armenia
+    Y otros de sus reinos conquistados,
+    Demando lo mismo.
+  MECENAS. Nunca cederá a eso.
+  CÉSAR. Ni debe entonces cedérsele en esto.
+
+                Entra OCTAVIA, con su séquito
+
+  OCTAVIA. ¡Salve, César, y mi señor! ¡Salve, queridísimo César!
+  CÉSAR. ¡Que alguna vez deba llamarte desechada!
+  OCTAVIA. No me has llamado así, ni tienes causa.
+  CÉSAR. ¿Por qué nos has llegado así a hurtadillas? No vienes
+    Como hermana de César. La esposa de Antonio
+    Debería tener un ejército por ujier, y
+    Los relinchos de caballos que anuncien su llegada
+    Mucho antes de que apareciera. Los árboles del camino
+    Deberían haber llevado hombres, y la expectación desmayado,
+    Anhelando lo que no tenía. No, el polvo
+    Debería haber ascendido al techo del cielo,
+    Levantado por tus numerosas tropas. Pero has venido
+    Como una doncella de mercado a Roma, y has impedido
+    La ostentación de nuestro amor, que dejado sin mostrar
+    A menudo se queda sin amar. Deberíamos haberte encontrado
+    Por mar y tierra, supliendo cada etapa
+    Con un saludo aumentado.
+  OCTAVIA. Mi buen señor,
+    Venir así no fui obligada, sino que lo hice
+    Por mi libre voluntad. Mi señor, Marco Antonio,
+    Oyendo que te preparabas para la guerra, informó
+    Mi oído afligido; por lo cual le rogué
+    Su perdón para regresar.
+  CÉSAR. El cual pronto concedió,
+    Siendo un obstáculo entre su lujuria y él.
+  OCTAVIA. No digas eso, mi señor.
+  CÉSAR. Tengo ojos sobre él,
+    Y sus asuntos me llegan por el viento.
+    ¿Dónde está ahora?
+  OCTAVIA. Mi señor, en Atenas.
+  CÉSAR. No, mi hermana más agraviada: Cleopatra
+    Lo ha hecho señas hacia ella. Ha entregado su imperio
+    A una ramera, quien ahora está reclutando
+    Los reyes de la tierra para la guerra. Ha reunido
+    A Boco, rey de Libia; Arquelao
+    De Capadocia; Filadelfo, rey
+    De Paflagonia; el rey tracio, Adalas;
+    Rey Mancho de Arabia; Rey del Ponto;
+    Herodes de Judea; Mitrídates, rey
+    De Comagene; Polemón y Amintas,
+    Los reyes de Media y Licaonia, con
+    Lista más larga de cetros.
+  OCTAVIA. ¡Ay de mí, más desdichada,
+    Que tengo mi corazón partido entre dos amigos,
+    Que se afligen el uno al otro!
+  CÉSAR. Bienvenida aquí.
+    Tus cartas retuvieron nuestro avance,
+    Hasta que percibimos tanto cómo fuiste mal guiada
+    Como nosotros en peligro negligente. Alegra tu corazón;
+    No te turbes con el tiempo, que empuja
+    Sobre tu contentamiento estas fuertes necesidades,
+    Sino deja que las cosas determinadas al destino
+    Mantengan sin lamento su camino. Bienvenida a Roma;
+    Nada más querido para mí. Eres ultrajada
+    Más allá de la marca del pensamiento, y los altos dioses,
+    Para hacerte justicia, hacen sus ministros
+    De nosotros y aquellos que te aman. El mejor consuelo,
+    Y siempre bienvenida para nosotros.
+  AGRIPA. Bienvenida, señora.
+  MECENAS. Bienvenida, querida señora.
+    Cada corazón en Roma te ama y compadece;
+    Solo el adúltero Antonio, muy abundante
+    En sus abominaciones, te rechaza,
+    Y entrega su potente regimiento a una ramera
+    Que hace ruido contra nosotros.
+  OCTAVIA. ¿Es así, señor?
+  CÉSAR. Muy cierto. Hermana, bienvenida. Te ruego
+    Sé siempre conocida por la paciencia. ¡Mi queridísima hermana!  Salen
+
+ACTO_3|ESC_7
+                          ESCENA VII.
+                  Campamento de ANTONIO cerca de Accio
+
+                Entran CLEOPATRA y ENOBARBO
+
+  CLEOPATRA. Estaré a mano contigo, no lo dudes.
+  ENOBARBO. Pero ¿por qué, por qué?
+  CLEOPATRA. Has hablado en contra de mi presencia en estas guerras,
+    Y dices que no es apropiado.
+  ENOBARBO. Bien, ¿lo es, lo es?
+  CLEOPATRA. ¿No está denunciado contra nosotros? ¿Por qué no deberíamos
+    Estar allí en persona?
+  ENOBARBO. [Aparte] Bien, podría responder:
+    Si sirviéramos con caballos y yeguas juntos
+    Los caballos se perderían meramente; las yeguas cargarían
+    Un soldado y su caballo.
+  CLEOPATRA. ¿Qué es lo que dices?
+  ENOBARBO. Tu presencia necesariamente debe confundir a Antonio;
+    Quitar de su corazón, quitar de su cerebro, de su tiempo,
+    Lo que entonces no debería ser gastado. Ya está
+    Difamado por ligereza; y se dice en Roma
+    Que Fotino un eunuco y tus doncellas
+    Manejan esta guerra.
+  CLEOPATRA. ¡Que se hunda Roma, y que se pudran sus lenguas
+    Que hablan contra nosotros! Una carga llevamos en la guerra,
+    Y, como presidenta de mi reino,
+    Apareceré allí como un hombre. No hables contra ello;
+    No me quedaré atrás.
+
+                   Entran ANTONIO y CANIDIO
+
+  ENOBARBO. No, he terminado.
+    Aquí viene el Emperador.
+  ANTONIO. ¿No es extraño, Canidio,
+    Que desde Tarento y Brindisi
+    Pudiera cortar tan rápidamente el mar Jónico,
+    Y tomar Torina?—¿Has oído de ello, dulce?
+  CLEOPATRA. La celeridad nunca es más admirada
+    Que por el negligente.
+  ANTONIO. Una buena reprimenda,
+    Que bien podría haber convenido al mejor de los hombres
+    Para burlarse de la pereza. Canidio,
+    Lucharemos con él por mar.
+  CLEOPATRA. ¡Por mar! ¿Qué más?
+  CANIDIO. ¿Por qué hará eso mi señor?
+  ANTONIO. Porque nos desafía a ello.
+  ENOBARBO. Así mi señor lo ha desafiado a combate singular.
+  CANIDIO. Sí, y a librar esta batalla en Farsalia,
+    Donde César luchó con Pompeyo. Pero estas ofertas,
+    Que no sirven para su ventaja, las rechaza;
+    Y así deberías tú.
+  ENOBARBO. Tus naves no están bien tripuladas;
+    Tus marineros son muleros, segadores, gente
+    Reclutada por rápida leva. En la flota de César
+    Están aquellos que a menudo han luchado contra Pompeyo;
+    Sus naves son ágiles; las tuyas pesadas. Ninguna deshonra
+    Te caerá por rechazarlo en el mar,
+    Estando preparado para tierra.
+  ANTONIO. Por mar, por mar.
+  ENOBARBO. Muy digno señor, en eso desechas
+    La absoluta soldadesca que tienes por tierra;
+    Distraes tu ejército, que consiste principalmente
+    De infantes marcados por la guerra; dejas sin ejecutar
+    Tu propio conocimiento renombrado; abandovas completamente
+    El camino que promete seguridad; y
+    Te entregas meramente al azar y la suerte
+    Desde firme seguridad.
+  ANTONIO. Lucharé en el mar.
+  CLEOPATRA. Tengo sesenta velas, César ninguna mejor.
+  ANTONIO. Nuestro exceso de navíos lo quemaremos,
+    Y, con el resto completamente tripulado, desde la punta de Accio
+    Golpearemos al César que se acerca. Pero si fallamos,
+    Entonces podemos hacerlo en tierra.
+
+                       Entra un MENSAJERO
+
+    ¿Tu asunto?
+  MENSAJERO. Las noticias son verdad, mi señor: es avistado;
+    César ha tomado Torina.
+  ANTONIO. ¿Puede estar allí en persona? Es imposible—
+    Extraño que su poder debería estar. Canidio,
+    Nuestras diecinueve legiones mantendrás por tierra,
+    Y nuestros doce mil caballos. Iremos a nuestro barco.
+    ¡Vamos, mi Tetis!
+
+                       Entra un SOLDADO
+
+    ¿Cómo ahora, digno soldado?
+  SOLDADO. Oh noble Emperador, no luches por mar;
+    No confíes en tablas podridas. ¿Dudas acaso
+    De esta espada y estas mis heridas? Deja que los egipcios
+    Y los fenicios vayan chapoteando; nosotros
+    Hemos acostumbrado conquistar parados en la tierra
+    Y luchando pie a pie.
+  ANTONIO. Bien, bien—vamos.
+                         Salen ANTONIO, CLEOPATRA, y ENOBARBO
+  SOLDADO. Por Hércules, creo que tengo razón.
+  CANIDIO. Soldado, la tienes; pero toda su acción crece
+    No en el poder de ella. Así nuestro líder es dirigido,
+    Y somos hombres de mujeres.
+  SOLDADO. Mantienes por tierra
+    Las legiones y la caballería completas, ¿no es así?
+  CANIDIO. Marco Octavio, Marco Justeyo,
+    Publícola, y Celio son para el mar;
+    Pero mantenemos completos por tierra. Esta velocidad de César
+    Supera la creencia.
+  SOLDADO. Mientras él aún estaba en Roma,
+    Su poder salió en tales distracciones que
+    Engañó a todos los espías.
+  CANIDIO. ¿Quién es su lugarteniente, oyes?
+  SOLDADO. Dicen que uno llamado Tauro.
+  CANIDIO. Bien conozco al hombre.
+
+                        Entra un MENSAJERO
+
+  MENSAJERO. El Emperador llama a Canidio.
+  CANIDIO. Con noticias el tiempo está con dolores de parto y da a luz
+    Cada minuto algo.                                     Salen
+
+ACTO_3|ESC_8
+                          ESCENA VIII.
+                      Una llanura cerca de Accio
+
+             Entra CÉSAR, con su ejército, marchando
+
+  CÉSAR. ¡Tauro!
+  TAURO. ¿Mi señor?
+  CÉSAR. No golpees por tierra; mantente entero; no provoques batalla
+    Hasta que hayamos terminado en el mar. No excedas
+    El precepto de este pergamino. Nuestra fortuna yace
+    En este salto.                                       Salen
+
+ACTO_3|ESC_9
+                           ESCENA IX.
+                  Otra parte de la llanura
+
+                  Entran ANTONIO y ENOBARBO
+
+  ANTONIO. Pongamos nuestros escuadrones en aquel lado de la colina,
+    A la vista de la batalla de César; desde cuyo lugar
+    Podemos contemplar el número de las naves,
+    Y proceder en consecuencia.                           Salen
+
+ACTO_3|ESC_10
+                           ESCENA X.
+                 Otra parte de la llanura
+
+        CANIDIO marcha con su ejército terrestre por un lado
+        del escenario, y TAURO, el Lugarteniente de
+      CÉSAR, por el otro lado. Después de su salida se oye
+                   el ruido de una batalla naval
+
+                    Alarma. Entra ENOBARBO
+
+  ENOBARBO. ¡Nada, nada, todo nada! No puedo contemplar más.
+    La Antoniada, el almirante egipcio,
+    Con todas sus sesenta, huyen y voltean el timón.
+    Al verlo mis ojos quedan cegados.
+
+                        Entra ESCARO
+
+  ESCARO. ¡Dioses y diosas,
+    Todo el sínodo entero de ellos!
+  ENOBARBO. ¿Cuál es tu pasión?
+  ESCARO. La mayor parte del mundo se ha perdido
+    Con pura ignorancia; hemos besado
+    Reinos y provincias.
+  ENOBARBO. ¿Cómo parece la lucha?
+  ESCARO. En nuestro lado como la pestilencia marcada,
+    Donde la muerte es segura. Esa yegua desvergonzada de Egipto—
+    ¡Que la lepra la alcance!—en medio de la lucha,
+    Cuando la ventaja como un par de gemelos apareció,
+    Ambos iguales, o más bien el nuestro el mayor—
+    El tábano sobre ella, como una vaca en junio—
+    Iza velas y huye.
+  ENOBARBO. Eso contemplé;
+    Mis ojos se enfermaron con la vista y no pudieron
+    Soportar más vista.
+  ESCARO. Una vez que ella se alejó,
+    La noble ruina de su magia, Antonio,
+    Se pone sus alas marinas, y, como un ánade enamorado,
+    Dejando la lucha en su punto más alto, vuela tras ella.
+    Nunca vi una acción de tal vergüenza;
+    Experiencia, hombría, honor, nunca antes
+    Se violaron tanto a sí mismos.
+  ENOBARBO. ¡Ay, ay!
+
+                       Entra CANIDIO
+
+  CANIDIO. Nuestra fortuna en el mar está sin aliento,
+    Y se hunde muy lamentablemente. Si nuestro general
+    Hubiera sido lo que se conocía a sí mismo, habría ido bien.
+    ¡Oh, ha dado ejemplo para nuestra huida
+    Muy groseramente por la suya propia!
+  ENOBARBO. Sí, ¿estás por ahí?
+    ¿Por qué entonces, buenas noches en verdad.
+  CANIDIO. Hacia el Peloponeso han huido.
+  ESCARO. Es fácil llegar allí; y allí esperaré
+    Lo que venga después.
+  CANIDIO. A César entregaré
+    Mis legiones y mi caballería; seis reyes ya
+    Me muestran el camino de rendirse.
+  ENOBARBO. Aún seguiré
+    La herida suerte de Antonio, aunque mi razón
+    Se sienta en el viento contra mí.                     Salen
+
+ACTO_3|ESC_11
+                         ESCENA XI.
+              Alejandría. Palacio de CLEOPATRA
+
+               Entra ANTONIO con asistentes
+
+  ANTONIO. ¡Escucha! la tierra me ordena no pisar más sobre ella;
+    Se avergüenza de cargarme. Amigos, vengan aquí.
+    Estoy tan tardío en el mundo que
+    He perdido mi camino para siempre. Tengo una nave
+    Cargada de oro; tómala; divídela. Huyan,
+    Y hagan las paces con César.
+  TODOS. ¿Huir? ¡No nosotros!
+  ANTONIO. Yo mismo he huido, y he instruido a cobardes
+    A correr y mostrar sus hombros. Amigos, váyanse;
+    He resuelto por mí mismo un curso
+    Que no tiene necesidad de ustedes; váyanse.
+    Mi tesoro está en el puerto, tómenlo. Oh,
+    Seguí lo que me sonrojo de mirar.
+    Mis mismos cabellos se amotinan; pues los blancos
+    Reprenden a los castaños por temeridad, y ellos a ellos
+    Por miedo y chochez. Amigos, váyanse; tendrán
+    Cartas mías para algunos amigos que
+    Barrerán su camino para ustedes. Les ruego no se vean tristes,
+    Ni hagan respuestas de disgusto; tomen la indirecta
+    Que mi desesperación proclama. Que se quede eso
+    Que se abandona a sí mismo. Al lado del mar directamente.
+    Los poseeré de esa nave y tesoro.
+    Déjenme, les ruego, un poco; les ruego ahora;
+    No, háganlo, pues en verdad he perdido el mando;
+    Por eso les ruego. Los veré pronto.    [Se sienta]
+
+            Entra CLEOPATRA, conducida por CARMIANA e IRAS,
+                         EROS siguiendo
+
+  EROS. No, gentil señora, ¡hacia él! Consuélalo.
+  IRAS. Hazlo, queridísima Reina.
+  CARMIANA. ¿Hacerlo? ¿Por qué, qué más?
+  CLEOPATRA. Déjame sentarme. ¡Oh Juno!
+  ANTONIO. No, no, no, no, no.
+  EROS. ¿Ve usted aquí, señor?
+  ANTONIO. ¡Oh, fie, fie, fie!
+  CARMIANA. ¡Señora!
+  IRAS. ¡Señora, oh buena Emperatriz!
+  EROS. ¡Señor, señor!
+  ANTONIO. Sí, mi señor, sí. Él en Filipos mantuvo
+    Su espada como un bailarín, mientras yo golpeé
+    Al flaco y arrugado Casio; y fui yo
+    Quien terminó con el loco Bruto; él solo
+    Trató con lugartenientes, y no tuvo práctica
+    En los valientes cuadrados de guerra. Sin embargo ahora—no importa.
+  CLEOPATRA. ¡Ah, apártate!
+  EROS. ¡La Reina, mi señor, la Reina!
+  IRAS. Ve a él, señora, háblale.
+    Está descalificado con pura vergüenza.
+  CLEOPATRA. Bien entonces, sosténme. ¡Oh!
+  EROS. Muy noble señor, levántese; la Reina se acerca.
+    Su cabeza está declinada, y la muerte la tomará pero
+    Su consuelo hace el rescate.
+  ANTONIO. He ofendido la reputación—
+    Un muy ignominioso desvío.
+  EROS. Señor, la Reina.
+  ANTONIO. Oh, ¿adónde me has llevado, Egipto? Mira
+    Cómo transporto mi vergüenza fuera de tus ojos
+    Mirando atrás lo que he dejado detrás
+    Destruido en deshonor.
+  CLEOPATRA. Oh mi señor, mi señor,
+    ¡Perdona mis velas temerosas! Poco pensé
+    Que habrías seguido.
+  ANTONIO. Egipto, sabías demasiado bien
+    Que mi corazón estaba atado a tu timón por las cuerdas,
+    Y que deberías remolcarme tras de ti. Sobre mi espíritu
+    Tu plena supremacía conocías, y que
+    Tu señal podría de la orden de los dioses
+    Comandarme.
+  CLEOPATRA. ¡Oh, mi perdón!
+  ANTONIO. Ahora debo
+    Al joven enviar humildes tratados, esquivar
+    Y paliar en los cambios de la bajeza, quien
+    Con la mitad del volumen del mundo jugué como me placía,
+    Haciendo y deshaciendo fortunas. Sabías
+    Cuánto eras mi conquistadora, y que
+    Mi espada, debilitada por mi afecto,
+    Le obedecería en toda causa.
+  CLEOPATRA. ¡Perdón, perdón!
+  ANTONIO. No derrames ni una lágrima, digo; una de ellas vale
+    Todo lo que se gana y se pierde. Dame un beso;
+    Aun esto me repaga.
+    Enviamos a nuestro maestro de escuela; ¿ha vuelto?
+    Amor, estoy lleno de plomo. Algo de vino,
+    ¡Allá dentro, y nuestros víveres! La Fortuna sabe
+    Que la despreciamos más cuando más golpes ofrece.         Salen
+
+ACTO_3|ESC_12
+                         ESCENA XII.
+                   Campamento de CÉSAR en Egipto
+
+   Entran CÉSAR, AGRIPA, DOLABELA, TIREO, con otros
+
+  CÉSAR. Que aparezca el que viene de Antonio.
+    ¿Lo conoces?
+  DOLABELA. César, es su maestro de escuela:
+    Un argumento de que está desplumado, cuando acá
+    Envía tan pobre pluma de su ala,
+    Que tenía reyes superfluos por mensajeros
+    No hace muchas lunas.
+
+            Entra EUFRONIO, Embajador de ANTONIO
+
+  CÉSAR. Acércate, y habla.
+  EUFRONIO. Tal como soy, vengo de Antonio.
+    Era hasta hace poco tan pequeño para sus fines
+    Como es el rocío matutino en la hoja del mirto
+    Para su gran mar.
+  CÉSAR. Que sea así. Declara tu oficio.
+  EUFRONIO. Señor de sus fortunas te saluda, y
+    Requiere vivir en Egipto; lo cual no concedido,
+    Disminuye sus peticiones y a ti suplica
+    Dejarlo respirar entre los cielos y la tierra,
+    Un hombre privado en Atenas. Esto por él.
+    Luego, Cleopatra confiesa tu grandeza,
+    Se somete a tu poder, y de ti implora
+    El círculo de los Ptolomeos para sus herederos,
+    Ahora puesto en peligro a tu gracia.
+  CÉSAR. Por Antonio,
+    No tengo oídos para su petición. La Reina
+    De audiencia ni deseo fallará, así ella
+    De Egipto expulse a su completamente deshonrado amigo,
+    O tome su vida allí. Si ella hace esto,
+    No suplicará sin ser oída. Así a ambos.
+  EUFRONIO. ¡Que la Fortuna te persiga!
+  CÉSAR. Llévalo por las filas.           Sale EUFRONIO
+    [A TIREO] Para probar tu elocuencia, ahora es tiempo. Despacha;
+    De Antonio gana a Cleopatra. Promete,
+    Y en nuestro nombre, lo que ella requiera; añade más,
+    De tu invención, ofertas. Las mujeres no están
+    En sus mejores fortunas fuertes; pero la necesidad perjurará
+    A la vestal nunca tocada. Prueba tu astucia, Tireo;
+    Haz tu propio edicto por tus dolores, que nosotros
+    Responderemos como ley.
+  TIREO. César, voy.
+  CÉSAR. Observa cómo Antonio se convierte en su falla,
+    Y lo que piensas que su misma acción habla
+    En cada poder que se mueve.
+  TIREO. César, lo haré.                               Salen
+
+ACTO_3|ESC_13
+                           ESCENA XIII.
+               Alejandría. Palacio de CLEOPATRA
+
+        Entran CLEOPATRA, ENOBARBO, CARMIANA e IRAS
+
+  CLEOPATRA. ¿Qué haremos, Enobarbo?
+  ENOBARBO. Pensar, y morir.
+  CLEOPATRA. ¿Está en falta Antonio o nosotros por esto?
+  ENOBARBO. Solo Antonio, que haría de su voluntad
+    Señora de su razón. ¿Qué importa que huyeras
+    De esa gran faz de guerra, cuyos varios rangos
+    Se asustaron unos a otros? ¿Por qué debería seguir?
+    La comezón de su afecto no debería entonces
+    Haber mellado su capitanía, en tal punto,
+    Cuando mitad a mitad del mundo se opuso, siendo él
+    La mera cuestión. Fue una vergüenza no menor
+    Que su pérdida, perseguir tus banderas huyentes
+    Y dejar su flota mirando.
+  CLEOPATRA. Te ruego, paz.
+
+          Entra EUFRONIO, el Embajador; con ANTONIO
+
+  ANTONIO. ¿Es esa su respuesta?
+  EUFRONIO. Sí, mi señor.
+  ANTONIO. La Reina tendrá entonces cortesía, así ella
+    Nos entregue.
+  EUFRONIO. Así dice.
+  ANTONIO. Hazle saber.
+    Al muchacho César envía esta cabeza canosa,
+    Y él llenará tus deseos hasta el borde
+    Con principados.
+  CLEOPATRA. ¿Esa cabeza, mi señor?
+  ANTONIO. A él otra vez. Dile que lleva la rosa
+    De la juventud sobre él; de la cual el mundo debería notar
+    Algo particular. Sus monedas, naves, legiones,
+    Pueden ser de un cobarde cuyos ministros prevalecerían
+    Bajo el servicio de un niño tan pronto
+    Como en el mando de César. Lo desafío por tanto
+    A dejar aparte sus alegres comparaciones,
+    Y responderme declinado, espada contra espada,
+    Nosotros solos. Lo escribiré. Sígueme.
+                                    Salen ANTONIO y EUFRONIO
+  EUFRONIO. [Aparte] Sí, como es probable que César de alta batalla
+    Desestabilice su felicidad, y sea puesto en escena para el espectáculo
+    ¡Contra un espadachín! Veo que los juicios de los hombres son
+    Una parcela de sus fortunas, y las cosas externas
+    Arrastran la calidad interna tras ellas,
+    A sufrir todo por igual. Que debería soñar,
+    Conociendo todas las medidas, que el César pleno
+    ¡Responderá a su vacío! César, has sojuzgado
+    También su juicio.
+
+                       Entra un CRIADO
+
+  CRIADO. Un mensajero de César.
+  CLEOPATRA. ¿Qué, no más ceremonia? ¡Miren, mis mujeres!
+    Contra la rosa marchita pueden tapar su nariz
+    Los que se arrodillaron ante los capullos. Admítelo, señor.     Sale CRIADO
+  ENOBARBO. [Aparte] Mi honestidad y yo empezamos a reñir.
+    La lealtad bien mantenida a necios hace
+    Nuestra fe mera locura. Sin embargo, aquel que puede soportar
+    Seguir con lealtad a un señor caído
+    Conquista a aquel que conquistó a su maestro,
+    Y gana un lugar en la historia.
+
+                       Entra TIREO
+
+  CLEOPATRA. ¿La voluntad de César?
+  TIREO. Óyela aparte.
+  CLEOPATRA. Solo amigos: habla con audacia.
+  TIREO. Así, por ventura, son amigos de Antonio.
+  ENOBARBO. Necesita tantos, señor, como tiene César,
+    O no nos necesita. Si César gusta, nuestro maestro
+    Saltará a ser su amigo. Por nosotros, sabes
+    De quién somos, y eso es de César.
+  TIREO. Así.
+    Entonces así, tú muy renombrada: César suplica
+    No considerar en qué caso te hallas
+    Más allá de que él es César.
+  CLEOPATRA. Continúa. ¡Muy real!
+  TIREO. Sabe que no abrazas a Antonio
+    Como lo amaste, sino como lo temiste.
+  CLEOPATRA. ¡Oh!
+  TIREO. Las cicatrices sobre tu honor, por tanto, él
+    Las compadece, como manchas forzadas,
+    No como merecidas.
+  CLEOPATRA. Es un dios, y sabe
+    Lo que es más correcto. Mi honor no fue rendido,
+    Sino conquistado meramente.
+  ENOBARBO. [Aparte] Para estar seguro de eso,
+    Preguntaré a Antonio. Señor, señor, eres tan permeable
+    Que debemos dejarte a tu hundimiento, pues
+    Tus más queridos te abandonan.                                  Sale
+  TIREO. ¿Diré a César
+    Lo que requieres de él? Pues él en parte ruega
+    Ser deseado dar. Mucho le agradaría
+    Que de sus fortunas hicieras un bastón
+    En que apoyarte. Pero calentaría sus espíritus
+    Oír de mí que habías dejado a Antonio,
+    Y te pusieras bajo su manto,
+    El señor universal.
+  CLEOPATRA. ¿Cuál es tu nombre?
+  TIREO. Mi nombre es Tireo.
+  CLEOPATRA. Muy amable mensajero,
+    Di al gran César esto: en representación
+    Beso su mano conquistadora. Dile que estoy pronta
+    A poner mi corona a sus pies, y allí arrodillarme.
+    Dile que de su aliento que todo obedece oigo
+    La sentencia de Egipto.
+  TIREO. Es tu curso más noble.
+    Sabiduría y fortuna combatiendo juntas,
+    Si la primera se atreve solo a lo que puede,
+    Ningún azar puede sacudirla. Dame gracia para poner
+    Mi deber en tu mano.
+  CLEOPATRA. Tu padre César a menudo,
+    Cuando había meditado en tomar reinos,
+    Otorgó sus labios a ese lugar indigno,
+    Como si llovieran besos.
+
+                Re-entra ANTONIO y ENOBARBO
+
+  ANTONIO. ¡Favores, por Júpiter que truena!
+    ¿Qué eres tú, tipo?
+  TIREO. Uno que solo ejecuta
+    Las órdenes del hombre más pleno, y más digno
+    De tener obediencia al mando.
+  ENOBARBO. [Aparte] Serás azotado.
+  ANTONIO. Acércate.—¡Ah, milano!—¡Ahora, dioses y demonios!
+    La autoridad se derrite de mí. Últimamente, cuando gritaba '¡Ho!'
+    Como muchachos a una riña, los reyes saltaban
+    Y gritaban '¿Tu voluntad?' ¿No tienes oídos? Soy
+    Antonio todavía.
+
+                       Entran criados
+
+    Llévense a este granuja y azótenlo.
+  ENOBARBO. Es mejor jugar con un cachorro de león
+    Que con uno viejo muriendo.
+  ANTONIO. ¡Luna y estrellas!
+    Azótenlo. Si fueran veinte de los mayores tributarios
+    Que reconocen a César, si los encontrara
+    Tan descarados con la mano de ella aquí—¿cómo se llama
+    Desde que era Cleopatra? Azótenlo, compañeros,
+    Hasta que como un muchacho vean que arruga su cara,
+    Y gime en voz alta por misericordia. Llévenlo.
+  TIREO. Marco Antonio—
+  ANTONIO. Arrástralo. Siendo azotado,
+    Tráiganlo de vuelta: el lacayo de César
+    Nos llevará un mensaje a él.       Salen criados con TIREO
+    Estabas medio marchita antes de que te conociera. ¡Ja!
+    ¿He dejado mi almohada sin comprimir en Roma,
+    Absteniéndome de engendrar una raza legítima,
+    Y por una gema de mujeres, ser ultrajado
+    Por una que mira a sirvientes?
+  CLEOPATRA. Mi buen señor—
+  ANTONIO. Has sido siempre una vacilante.
+    Pero cuando en nuestro vicio nos endurecemos—
+    ¡Oh miseria!—los dioses sabios sellan nuestros ojos,
+    En nuestra propia inmundicia dejan caer nuestros juicios claros, nos hacen
+    Adorar nuestros errores, reírse de nosotros mientras nos pavoneamos
+    Hacia nuestra confusión.
+  CLEOPATRA. ¡Oh, ¿ha llegado a esto?
+  ANTONIO. Te encontré como un bocado frío sobre
+    La bandeja del César muerto. No, eras un fragmento
+    De Cneo Pompeyo, además de qué horas más ardientes,
+    No registradas en la fama vulgar, has
+    Lujuriosamente escogido; pues estoy seguro,
+    Aunque puedes adivinar lo que debería ser la templanza,
+    No sabes lo que es.
+  CLEOPATRA. ¿Por qué es esto?
+  ANTONIO. Para dejar que un tipo que tome recompensas,
+    Y diga '¡Dios te pague!' sea familiar con
+    Mi compañera de juegos, tu mano, este sello real
+    Y promesa de altos corazones. ¡Oh, que estuviera
+    Sobre la colina de Basán para rugir más fuerte
+    Que la manada cornuda! Pues tengo causa salvaje,
+    Y proclamarla civilmente sería como
+    Un cuello con soga que agradece al verdugo
+    Por ser diligente con él.
+
+              Re-entra un CRIADO con TIREO
+
+    ¿Está azotado?
+  CRIADO. Duramente, mi señor.
+  ANTONIO. ¿Lloró? ¿y rogó perdón?
+  CRIADO. Pidió favor.
+  ANTONIO. Si tu padre vive, que se arrepienta
+    De que no fueras hecha su hija; y lamentate tú
+    De seguir a César en su triunfo, ya que
+    Has sido azotado por seguirlo. De aquí en adelante
+    ¡Que la blanca mano de una dama te dé fiebre!
+    Tiembla al mirarla. Vuelve a César;
+    Cuéntale tu entretenimiento; mira que digas
+    Que me pone furioso con él; pues parece
+    Orgulloso y desdeñoso, insistiendo en lo que soy,
+    No en lo que sabía que era. Me pone furioso;
+    Y en este momento es muy fácil hacerlo,
+    Cuando mis buenas estrellas, que fueron mis guías anteriores,
+    Han dejado vacías sus órbitas y disparado sus fuegos
+    Al abismo del infierno. Si le disgusta
+    Mi discurso y lo que se hace, dile que tiene
+    A Hiparco, mi esclavo liberado, a quien
+    Puede a placer azotar o colgar o torturar,
+    Como guste, para vengarse de mí. Instáselo.
+    Vete con tus rayas, márchate.                Sale TIREO
+  CLEOPATRA. ¿Has terminado ya?
+  ANTONIO. ¡Ay!, nuestra luna terrena
+    Está ahora eclipsada, y presagia solo
+    La caída de Antonio.
+  CLEOPATRA. Debo esperar su tiempo.
+  ANTONIO. Para halagar a César, ¿mezclarías ojos
+    Con uno que ata sus cordones?
+  CLEOPATRA. ¿Aún no me conoces?
+  ANTONIO. ¿De corazón frío hacia mí?
+  CLEOPATRA. Ah, querido, si lo soy,
+    De mi corazón frío que el cielo engendre granizo,
+    Y lo envenene en la fuente, y la primera piedra
+    Caiga en mi cuello; según se determine, así
+    ¡Disuelva mi vida! ¡Al próximo Cesarión golpee!
+    Hasta que por grados la memoria de mi vientre,
+    Junto con todos mis valientes egipcios,
+    Por el descandidar de esta tormenta granizada,
+    Yazgan sin tumba, hasta que las moscas y mosquitos del Nilo
+    Los hayan enterrado por presa.
+  ANTONIO. Estoy satisfecho.
+    César se asienta en Alejandría, donde
+    Opondré su destino. Nuestra fuerza por tierra
+    Ha resistido noblemente; nuestra armada separada
+    Se ha unido otra vez, y navega, amenazando muy marítimamente.
+    ¿Dónde has estado, mi corazón? ¿Oyes, señora?
+    Si del campo regreso una vez más
+    A besar estos labios, apareceré en sangre.
+    Yo y mi espada ganaremos nuestra crónica.
+    Hay esperanza en ello aún.
+  CLEOPATRA. ¡Ese es mi valiente señor!
+  ANTONIO. Seré de triple nervio, corazón, aliento,
+    Y lucharé maliciosamente. Pues cuando mis horas
+    Eran delicadas y afortunadas, los hombres rescataban vidas
+    De mí por bromas; pero ahora afilaré mis dientes,
+    Y enviaré a la oscuridad todo lo que me detenga. Ven,
+    Tengamos otra noche de gala. Llama
+    A todos mis tristes capitanes; llena nuestras copas una vez más;
+    Burlemos la campana de medianoche.
+  CLEOPATRA. Es mi cumpleaños.
+    Había pensado celebrarlo pobremente; pero como mi señor
+    Es Antonio otra vez, seré Cleopatra.
+  ANTONIO. Aún lo haremos bien.
+  CLEOPATRA. Llama a todos sus nobles capitanes a mi señor.
+  ANTONIO. Hazlo, les hablaremos; y esta noche forzaré
+    El vino a asomar por sus cicatrices. Ven, mi reina,
+    Hay savia en ello aún. La próxima vez que luche
+    Haré que la muerte me ame; pues contenderé
+    Aun con su pestilente guadaña.     Salen todos excepto ENOBARBO
+  ENOBARBO. Ahora desafiará al rayo con la mirada. Estar furioso
+    Es ser asustado fuera del miedo, y en ese humor
+    La paloma picoteará al avestruz; y veo aún
+    Una disminución en el cerebro de nuestro capitán
+    Restaura su corazón. Cuando el valor se alimenta de la razón,
+    Se come la espada con que lucha. Buscaré
+    Alguna manera de dejarlo.                                  Sale
+
+ACTO_4|ESC_1
+                      ACTO IV. ESCENA I.
+              Campamento de CÉSAR ante Alejandría
+
+      Entran CÉSAR, AGRIPA, y MECENAS, con su ejército;
+                 CÉSAR leyendo una carta
+
+  CÉSAR. Me llama muchacho, y regaña como si tuviera poder
+    Para echarme de Egipto. A mi mensajero
+    Lo ha azotado con varas; me desafía a combate personal,
+    César contra Antonio. Que sepa el viejo rufián
+    Que tengo muchas otras maneras de morir, mientras tanto
+    Ríanse de su desafío.
+  MECENAS. César debe pensar
+    Que cuando uno tan grande empieza a enfurecerse, es cazado
+    Hasta caer. No le des respiro, sino ahora
+    Aprovecha su distracción. Nunca la ira
+    Hizo buena guardia para sí misma.
+  CÉSAR. Que nuestras mejores cabezas
+    Sepan que mañana la última de muchas batallas
+    Pretendemos luchar. Dentro de nuestras filas hay
+    De aquellos que sirvieron a Marco Antonio hasta hace poco
+    Suficientes para traerlo. Véanlo hecho;
+    Y festejen el ejército; tenemos provisiones para hacerlo,
+    Y han ganado el gasto. ¡Pobre Antonio!          Salen
+
+ACTO_4|ESC_2
+                          ESCENA II.
+               Alejandría. Palacio de CLEOPATRA
+
+      Entran ANTONIO, CLEOPATRA, ENOBARBO, CARMIANA, IRAS,
+                     ALEJAS, con otros
+
+  ANTONIO. No luchará conmigo, ¿Domicio?
+  ENOBARBO. No.
+  ANTONIO. ¿Por qué no debería?
+  ENOBARBO. Piensa, siendo veinte veces de mejor fortuna,
+    Que es veinte hombres contra uno.
+  ANTONIO. Mañana, soldado,
+    Por mar y tierra lucharé. O viviré,
+    O bañaré mi honor moribundo en la sangre
+    Que lo hará vivir de nuevo. ¿Lucharás bien?
+  ENOBARBO. Golpearé, y gritaré 'Tómalo todo.'
+  ANTONIO. Bien dicho; ven.
+    Llama a mis criados domésticos; esta noche
+    Seamos generosos en nuestra comida.
+
+                Entran tres o cuatro servidores
+
+    Dame tu mano,
+    Has sido rectamente honesto. Así has sido tú;
+    Tú, y tú, y tú. Me han servido bien,
+    Y los reyes han sido sus compañeros.
+  CLEOPATRA. [Aparte a ENOBARBO] ¿Qué significa esto?
+  ENOBARBO. [Aparte a CLEOPATRA] Es uno de esos trucos extraños que la pena
+      dispara
+    Fuera de la mente.
+  ANTONIO. Y tú también eres honesto.
+    Ojalá pudiera hacerme tantos hombres,
+    Y todos ustedes juntados
+    En un Antonio, para poder servirles
+    Tan bien como ustedes me han servido.
+  CRIADO. ¡Los dioses lo prohíban!
+  ANTONIO. Bien, mis buenos compañeros, atiéndanme esta noche.
+    No escatimen mis copas, y hagan tanto de mí
+    Como cuando mi imperio era también su compañero,
+    Y sufrió mi mando.
+  CLEOPATRA. [Aparte a ENOBARBO] ¿Qué quiere decir?
+  ENOBARBO. [Aparte a CLEOPATRA] Hacer llorar a sus seguidores.
+  ANTONIO. Atiéndanme esta noche;
+    Tal vez sea el período de su deber.
+    Quizás no me vean más; o si acaso,
+    Una sombra mutilada. Tal vez mañana
+    Sirvan a otro maestro. Los miro
+    Como uno que se despide. Mis honestos amigos,
+    No los echo; pero, como un maestro
+    Casado con su buen servicio, quédense hasta la muerte.
+    Atiéndanme esta noche dos horas, no pido más,
+    ¡Y que los dioses los recompensen por ello!
+  ENOBARBO. ¿Qué quiere decir, señor,
+    Darles este desconsuelo? Miren, lloran;
+    Y yo, un asno, tengo ojos de cebolla. ¡Por vergüenza!
+    No nos transformes en mujeres.
+  ANTONIO. ¡Jo, jo, jo!
+    ¡Que me lleve la bruja si lo dije en serio!
+    ¡Que crezca gracia donde caen esas gotas! Mis entrañables amigos,
+    Me toman en sentido demasiado doloroso;
+    Pues les hablé para su consuelo, deseé
+    Que ardieran esta noche con antorchas. Sepan, mis corazones,
+    Que espero bien del mañana, y los guiaré
+    Donde más bien esperaré vida victoriosa
+    Que muerte y honor. Vamos a cenar, vengan,
+    Y ahoguen la consideración.                              Salen
+
+ACTO_4|ESC_3
+                          ESCENA III.
+             Alejandría. Ante el palacio de CLEOPATRA
+
+                 Entra una compañía de soldados
+
+  PRIMER SOLDADO. Hermano, buenas noches. Mañana es el día.
+  SEGUNDO SOLDADO. Se determinará de una manera. Que te vaya bien.
+    ¿Oíste algo extraño por las calles?
+  PRIMER SOLDADO. Nada. ¿Qué noticias?
+  SEGUNDO SOLDADO. Parece que es solo un rumor. Buenas noches.
+  PRIMER SOLDADO. Bien, señor, buenas noches.
+                                      [Se encuentran con otros soldados]
+  SEGUNDO SOLDADO. Soldados, tengan guardia cuidadosa.
+  PRIMER SOLDADO. Y ustedes. Buenas noches, buenas noches.
+                [Las dos compañías se separan y se colocan
+                                   en cada esquina del escenario]
+  SEGUNDO SOLDADO. Aquí estamos. Y si mañana
+    Nuestra armada prospera, tengo esperanza absoluta
+    De que nuestros hombres de tierra resistirán.
+  TERCER SOLDADO. Es un ejército valiente,
+    Y lleno de propósito.
+                      [Música de oboes suena bajo el escenario]
+  SEGUNDO SOLDADO. Paz, ¿qué ruido?
+  TERCER SOLDADO. ¡Escuchen, escuchen!
+  SEGUNDO SOLDADO. ¡Oigan!
+  TERCER SOLDADO. Música en el aire.
+  CUARTO SOLDADO. Bajo la tierra.
+  TERCER SOLDADO. Es buen presagio, ¿no es así?
+  CUARTO SOLDADO. No.
+  TERCER SOLDADO. ¡Paz, digo!
+    ¿Qué debería significar esto?
+  SEGUNDO SOLDADO. Es el dios Hércules, a quien amó Antonio,
+    Que ahora lo abandona.
+  TERCER SOLDADO. Caminen; veamos si otros centinelas
+    Oyen lo que nosotros.
+  SEGUNDO SOLDADO. ¿Cómo ahora, maestros?
+  SOLDADOS. [Hablando juntos] ¿Cómo ahora?
+    ¿Cómo ahora? ¿Oyen esto?
+  PRIMER SOLDADO. Sí; ¿no es extraño?
+  TERCER SOLDADO. ¿Oyen, maestros? ¿Oyen?
+  PRIMER SOLDADO. Sigan el ruido hasta donde tenemos guardia;
+    Veamos cómo cesa.
+  SOLDADOS. De acuerdo. Es extraño.                        Salen
+
+ACTO_4|ESC_4
+                           ESCENA IV.
+               Alejandría. Palacio de CLEOPATRA
+
+         Entran ANTONIO y CLEOPATRA, CARMIANA, IRAS,
+                          con otros
+
+  ANTONIO. ¡Eros! mi armadura, ¡Eros!
+  CLEOPATRA. Duerme un poco.
+  ANTONIO. No, mi pollo. ¡Eros! ¡Ven, mi armadura, Eros!
+
+                   Entra EROS con armadura
+
+    Ven, buen compañero, ponme mi hierro.
+    Si la fortuna no es nuestra hoy, es
+    Porque la desafiamos. Ven.
+  CLEOPATRA. No, yo también ayudaré.
+    ¿Para qué es esto?
+  ANTONIO. ¡Ah, déjalo, déjalo! Eres
+    La armera de mi corazón. Falso, falso; esto, esto.
+  CLEOPATRA. En verdad, la, ayudaré. Así debe ser.
+  ANTONIO. Bien, bien;
+    Ahora prosperaremos. ¿Ves, mi buen compañero?
+    Ve a ponerte tus defensas.
+  EROS. Brevemente, señor.
+  CLEOPATRA. ¿No está esto bien abrochado?
+  ANTONIO. ¡Raramente, raramente!
+    El que desabroche esto, hasta que nos plazca
+    Quitárnoslo para nuestro descanso, oirá una tormenta.
+    Tanteas, Eros, y mi reina es un escudero
+    Más hábil en esto que tú. Despacha. Oh amor,
+    Que pudieras ver mis guerras hoy, y supieras
+    ¡La ocupación real! Deberías ver
+    Un trabajador en ello.
+
+                   Entra un SOLDADO armado
+
+    Buenos días. Bienvenido.
+    Te ves como quien conoce una carga guerrera.
+    Al negocio que amamos nos levantamos temprano,
+    Y vamos a él con deleite.
+  SOLDADO. Mil, señor,
+    Aunque temprano sea, tienen puesta su armadura remachada,
+    Y en el puerto lo esperan.
+                            [Grito. Floreo de trompetas dentro]
+
+                 Entran CAPITANES y soldados
+
+  CAPITÁN. La mañana es hermosa. Buenos días, General.
+  TODOS. Buenos días, General.
+  ANTONIO. Está bien soplado, muchachos.
+    Esta mañana, como el espíritu de un joven
+    Que pretende ser notable, comienza temprano.
+    Así, así. Ven, dame eso. Por aquí. Bien dicho.
+    Adiós, dama, pase lo que pase conmigo.
+    Este es el beso de un soldado. Reprensible,
+    Y digno de vergonzosa corrección sería, detenerse
+    En más cortesía mecánica; te dejo
+    Ahora como un hombre de acero. Ustedes que lucharán,
+    Síganme de cerca; los llevaré a ello. Adiós.
+                      Salen ANTONIO, EROS, CAPITANES y soldados
+  CARMIANA. ¿Le place retirarse a su cámara?
+  CLEOPATRA. Guíame.
+    Sale gallardamente. ¡Que él y César pudieran
+    Determinar esta gran guerra en combate singular!
+    Entonces, Antonio—pero ahora. Bien, adelante.                      Salen
+
+ACTO_4|ESC_5
+                          ESCENA V.
+                  Alejandría. Campamento de ANTONIO
+
+        Suenan trompetas. Entran ANTONIO y EROS, un SOLDADO
+                       encontrándoselos
+
+  SOLDADO. ¡Que los dioses hagan de este un día feliz para Antonio!
+  ANTONIO. Ojalá tú y esas tus cicatrices hubieran prevalecido una vez
+    ¡Para hacerme luchar en tierra!
+  SOLDADO. Si lo hubieras hecho,
+    Los reyes que se han rebelado, y el soldado
+    Que esta mañana te ha dejado, habrían aún
+    Seguido tus talones.
+  ANTONIO. ¿Quién se ha ido esta mañana?
+  SOLDADO. ¿Quién?
+    Uno siempre cerca de ti. Llama a Enobarbo,
+    No te oirá; o desde el campamento de César
+    Di 'No soy tuyo.'
+  ANTONIO. ¿Qué dices?
+  SOLDADO. Señor,
+    Está con César.
+  EROS. Señor, sus cofres y tesoro
+    No los tiene consigo.
+  ANTONIO. ¿Se ha ido?
+  SOLDADO. Muy cierto.
+  ANTONIO. Ve, Eros, envía su tesoro tras él; hazlo;
+    No retengas ni una jota, te ordeno. Escríbele—
+    Yo firmaré—gentiles adioses y saludos;
+    Di que deseo que nunca encuentre más causa
+    Para cambiar de maestro. ¡Oh, mis fortunas han
+    Corrompido a hombres honestos! Despacha. ¡Enobarbo!            Salen
+
+ACTO_4|ESC_6
+                         ESCENA VI.
+                 Alejandría. Campamento de CÉSAR
+
+       Floreo. Entran AGRIPA, CÉSAR, con DOLABELA
+                       y ENOBARBO
+
+  CÉSAR. Ve adelante, Agripa, y comienza la lucha.
+    Nuestra voluntad es que Antonio sea tomado vivo;
+    Hazlo saber.
+  AGRIPA. César, lo haré.                                 Sale
+  CÉSAR. El tiempo de paz universal está cerca.
+    Si este resulta un día próspero, el mundo de tres esquinas
+    Llevará libremente el olivo.
+
+                     Entra UN MENSAJERO
+
+  MENSAJERO. Antonio
+    Ha venido al campo.
+  CÉSAR. Ve a ordenar a Agripa
+    Que coloque a aquellos que se han rebelado en la vanguardia,
+    Para que Antonio parezca gastar su furia
+    En sí mismo.                       Salen todos excepto ENOBARBO
+  ENOBARBO. Alejas se rebeló y fue a Judea por
+    Asuntos de Antonio; allí disuadió
+    Al gran Herodes de inclinarse hacia César
+    Y dejar a su maestro Antonio. Por estos dolores
+    César lo ha colgado. Canidio y el resto
+    Que se alejaron tienen entretenimiento, pero
+    Ninguna confianza honorable. He hecho mal,
+    De lo cual me acuso tan duramente
+    Que no me alegraré más.
+
+                  Entra un SOLDADO de CÉSAR
+
+  SOLDADO. Enobarbo, Antonio
+    Te ha enviado todo tu tesoro, con
+    Su generosidad sobrante. El mensajero
+    Vino a mi guardia, y en tu tienda está ahora
+    Descargando sus mulas.
+  ENOBARBO. Te lo doy.
+  SOLDADO. No te burles, Enobarbo.
+    Te digo la verdad. Mejor que protejas al portador
+    Fuera del ejército. Debo atender mi oficio,
+    O lo habría hecho yo mismo. Tu emperador
+    Continúa siendo un Júpiter.                                 Sale
+  ENOBARBO. Soy solo el villano de la tierra,
+    Y siento que lo soy más que todos. Oh Antonio,
+    Tú mina de generosidad, ¿cómo habrías pagado
+    Mi mejor servicio, cuando mi vileza
+    ¡Coronas así con oro! Esto me revienta el corazón.
+    Si el pensamiento veloz no lo rompe, un medio más veloz
+    Superará al pensamiento; pero el pensamiento lo hará, lo siento.
+    ¿Lucho contra ti? ¡No! Iré a buscar
+    Alguna zanja donde morir; la más sucia conviene mejor
+    A mi última parte de vida.                                 Sale
+
+ACTO_4|ESC_7
+                          ESCENA VII.
+             Campo de batalla entre los campamentos
+
+         Alarma. Tambores y trompetas. Entran AGRIPA
+                        y otros
+
+  AGRIPA. Retírense. Nos hemos comprometido demasiado lejos.
+    El mismo César tiene trabajo, y nuestra opresión
+    Excede lo que esperábamos.                             Salen
+
+          Alarmas. Entran ANTONIO, y ESCARO herido
+
+  ESCARO. ¡Oh mi valiente Emperador, esto sí está luchado en verdad!
+    Si lo hubiéramos hecho así al principio, los habríamos echado a casa
+    Con trapos alrededor de sus cabezas.
+  ANTONIO. Sangras a raudales.
+  ESCARO. Tenía una herida aquí que era como una T,
+    Pero ahora se ha hecho una H.
+  ANTONIO. Se retiran.
+  ESCARO. Los golpearemos hasta meterlos en agujeros de bancos. Aún tengo
+    Espacio para seis cortes más.
+
+                        Entra EROS
+
+  EROS. Están vencidos, señor, y nuestra ventaja sirve
+    Para una hermosa victoria.
+  ESCARO. Marquemos sus espaldas
+    Y atrapémoslos, como tomamos liebres, por detrás.
+    Es deporte maltratar a uno que huye.
+  ANTONIO. Te recompensaré
+    Una vez por tu vivaz consuelo, y diez veces
+    Por tu buen valor. Ven conmigo.
+  ESCARO. Renquearé detrás.                              Salen
+
+ACTO_4|ESC_8
+                         ESCENA VIII.
+               Bajo los muros de Alejandría
+
+        Alarma. Entra ANTONIO, otra vez en marcha; ESCARO
+                        con otros
+
+  ANTONIO. Lo hemos golpeado hasta su campamento. Que uno corra adelante
+    Y haga saber a la Reina de nuestras hazañas. Mañana,
+    Antes de que nos vea el sol, derramaremos la sangre
+    Que hoy ha escapado. Les agradezco a todos;
+    Pues son de manos valientes, y han luchado
+    No como sirvieron a la causa, sino como si hubiera sido
+    De cada hombre como la mía; han mostrado todos ser Héctores.
+    Entren en la ciudad, abracen a sus esposas, sus amigos,
+    Cuéntenles sus hazañas; mientras ellos con lágrimas gozosas
+    Laven la coagulación de sus heridas y besen
+    Los honrosos tajos hasta sanarlos.
+
+                 Entra CLEOPATRA, acompañada
+
+    [A ESCARO] Dame tu mano—
+    A esta gran hada encomendaré tus actos,
+    Haré que su agradecimiento te bendiga. Oh tú día del mundo,
+    Encadena mi cuello armado. Salta tú, atavío y todo,
+    A través de la prueba de arnés a mi corazón, y allí
+    Cabalga sobre los jadeos triunfando.
+  CLEOPATRA. ¡Señor de señores!
+    Oh virtud infinita, ¿vienes sonriendo de
+    La gran trampa del mundo sin ser atrapado?
+  ANTONIO. Mi ruiseñor,
+    Los hemos golpeado hasta sus camas. ¡Qué, muchacha! aunque gris
+    Se mezcle algo con nuestro castaño más joven, sin embargo tenemos
+    Un cerebro que nutre nuestros nervios, y puede
+    Obtener gol por gol de la juventud. Contempla a este hombre;
+    Encomienda a sus labios tu mano favorecedora—
+    Bésala, mi guerrero—ha luchado hoy
+    Como si un dios en odio a la humanidad hubiera
+    Destruido en tal forma.
+  CLEOPATRA. Te daré, amigo,
+    Una armadura toda de oro; era de un rey.
+  ANTONIO. Se la ha ganado, aunque fuera engastada con carbunclos
+    Como el carro del santo Febo. Dame tu mano.
+    Por Alejandría hagan una marcha alegre;
+    Lleven nuestros escudos mellados como los hombres que los poseen.
+    Si nuestro gran palacio tuviera la capacidad
+    Para acampar este ejército, todos cenaríamos juntos,
+    Y beberíamos brindis al destino del día siguiente,
+    Que promete peligro real. Trompetistas,
+    Con estrépito bronceado hagan sonar el oído de la ciudad;
+    Mezclen con nuestros tamborcillos resonantes,
+    Que cielo y tierra puedan golpear sus sonidos juntos
+    Aplaudiendo nuestro acercamiento.                              Salen
+
+ACTO_4|ESC_9
+                         ESCENA IX.
+                      Campamento de CÉSAR
+
+      Entran un CENTURIÓN y su compañía; ENOBARBO los sigue
+
+  CENTURIÓN. Si no somos relevados dentro de esta hora,
+    Debemos regresar al patio de guardia. La noche
+    Es brillante, y dicen que batallaremos
+    Para la segunda hora de la mañana.
+  PRIMERA GUARDIA. Este último día fue
+    Astuto para nosotros.
+  ENOBARBO. Oh, sé testigo de mí, noche—
+  SEGUNDA GUARDIA. ¿Qué hombre es este?
+  PRIMERA GUARDIA. Mantente cerca y escúchalo.
+  ENOBARBO. Sé testigo de mí, oh tú luna bendita,
+    Cuando los hombres rebeldes queden en registro
+    Con memoria odiosa, ¡el pobre Enobarbo se
+    Arrepintió ante tu faz!
+  CENTURIÓN. ¿Enobarbo?
+  SEGUNDA GUARDIA. ¡Paz!
+    Escucha más.
+  ENOBARBO. Oh soberana señora de verdadera melancolía,
+    Que la húmeda venenosa de la noche se extienda sobre mí,
+    Para que la vida, muy rebelde a mi voluntad,
+    No cuelgue más de mí. Arroja mi corazón
+    Contra el pedernal y dureza de mi falta,
+    Que, estando seco de pena, se romperá en polvo,
+    Y acabará todos los pensamientos sucios. Oh Antonio,
+    Más noble que mi rebelión es infame,
+    Perdóname en tu particular,
+    Pero deja que el mundo me clasifique en registro
+    ¡Como maestro desertor y fugitivo!
+    ¡Oh Antonio! ¡Oh Antonio!                                   [Muere]
+  PRIMERA GUARDIA. Hablémosle.
+  CENTURIÓN. Escuchémoslo, pues las cosas que habla
+    Pueden concernir a César.
+  SEGUNDA GUARDIA. Hagámoslo. Pero duerme.
+  CENTURIÓN. Se desmaya más bien; pues una oración tan mala como la suya
+    Nunca fue para dormir.
+  PRIMERA GUARDIA. Vayamos a él.
+  SEGUNDA GUARDIA. Despierta, señor, despierta; háblanos.
+  PRIMERA GUARDIA. ¿Nos oye, señor?
+  CENTURIÓN. La mano de la muerte lo ha alcanzado.
+    [Tambores a lo lejos] ¡Escuchen! los tambores
+    Despiertan decorosamente a los que duermen. Llevémoslo
+    Al patio de guardia; es de nota. Nuestra hora
+    Ha terminado completamente.
+  SEGUNDA GUARDIA. Vengan entonces;
+    Puede que se recupere aún.                     Salen con el cuerpo
+
+ACTO_4|ESC_10
+                          ESCENA X.
+                    Entre los dos campamentos
+
+            Entran ANTONIO y ESCARO, con su ejército
+
+  ANTONIO. Su preparación es hoy por mar;
+    No les complacemos por tierra.
+  ESCARO. Por ambos, mi señor.
+  ANTONIO. Ojalá lucharan en el fuego o en el aire;
+    Lucharíamos allí también. Pero esto es, nuestro pie
+    Sobre las colinas adyacentes a la ciudad
+    Se quedará con nosotros—Se ha dado orden para el mar;
+    Han salido del puerto—
+    Donde su disposición podemos mejor descubrir
+    Y observar su esfuerzo.                          Salen
+
+ACTO_4|ESC_11
+                         ESCENA XI.
+                    Entre los campamentos
+
+                Entra CÉSAR y su ejército
+
+  CÉSAR. Pero siendo atacados, nos mantendremos quietos por tierra,
+    Lo cual, según entiendo, haremos; pues su mejor fuerza
+    Ha salido a tripular sus galeras. A los valles,
+    Y mantengamos nuestra mejor ventaja.                          Salen
+
+ACTO_4|ESC_12
+                         ESCENA XII.
+                  Una colina cerca de Alejandría
+
+                  Entran ANTONIO y ESCARO
+
+  ANTONIO. Aún no se han unido. Donde está aquel pino
+    Descubriré todo. Te traeré noticias
+    Enseguida de cómo es probable que vaya.                           Sale
+  ESCARO. Las golondrinas han construido
+    En las velas de Cleopatra sus nidos. Los augures
+    Dicen que no saben, no pueden decir; se ven sombríos,
+    Y no se atreven a hablar su conocimiento. Antonio
+    Es valiente y abatido; y por arranques
+    Sus fortunas irritadas le dan esperanza y temor
+    De lo que tiene y no tiene.
+                            [Alarma a lo lejos, como en una batalla naval]
+
+                      Re-entra ANTONIO
+
+  ANTONIO. ¡Todo está perdido!
+    Esta sucia egipcia me ha traicionado.
+    Mi flota se ha rendido al enemigo, y allá
+    Lanzan sus gorras al aire y brindan juntos
+    Como amigos perdidos hace tiempo. ¡Ramera de triple vuelta! eres tú
+    Quien me has vendido a este novato; y mi corazón
+    Solo hace guerras contra ti. Ordena que todos huyan;
+    Pues cuando me vengue de mi hechizo,
+    Habré terminado todo. Ordena que todos huyan; vete.       Sale ESCARO
+    ¡Oh sol, tu salida no veré más!
+    Fortuna y Antonio se separan aquí; aquí mismo
+    Nos damos la mano. ¿Todo llega a esto? Los corazones
+    Que me siguieron como perros falderos, a quienes di
+    Sus deseos, se deshacen, derriten sus dulzuras
+    Sobre César floreciente; y este pino está descortezado
+    Que los sobrepasó a todos. Traicionado estoy.
+    ¡Oh esta alma falsa de Egipto! este grave hechizo—
+    Cuyo ojo convocó mis guerras y las llamó a casa,
+    Cuyo seno fue mi corona, mi fin principal—
+    Como una verdadera gitana ha en juego rápido y suelto
+    Me ha engañado hasta el mismísimo corazón de la pérdida.
+    ¡Qué, Eros, Eros!
+
+                      Entra CLEOPATRA
+
+    ¡Ah, hechizo! ¡Fuera!
+  CLEOPATRA. ¿Por qué está mi señor enfurecido contra su amor?
+  ANTONIO. Desaparece, o te daré tu merecido
+    Y mancharé el triunfo de César. Que te tome
+    Y te alce a los plebeyos gritones;
+    Sigue su carro, como la mayor mancha
+    De todo tu sexo; muy monstruosamente, sé mostrada
+    Por los más pobres diminutivos, por moneditas, y deja
+    Que la paciente Octavia are tu rostro
+    Con sus uñas preparadas.                      Sale CLEOPATRA
+    Está bien que te hayas ido,
+    Si está bien vivir; pero mejor sería
+    Que cayeras en mi furia, pues una muerte
+    Podría haber impedido muchas. ¡Eros, ho!
+    La camisa de Neso está sobre mí; enséñame,
+    Alcides, tú mi ancestro, tu ira;
+    Déjame alojar a Licas en los cuernos de la luna,
+    Y con esas manos que empuñaron el bastón más pesado
+    Someter mi yo más digno. La bruja morirá.
+    Al muchacho romano me ha vendido, y caigo
+    Bajo esta trama. Muere por ello. ¡Eros, ho!              Sale
+
+ACTO_4|ESC_13
+                          ESCENA XIII.
+               Alejandría. Palacio de CLEOPATRA
+
+      Entran CLEOPATRA, CARMIANA, IRAS, y MARDIÁN
+
+  CLEOPATRA. Ayúdenme, mis mujeres. Oh, está más loco
+    Que Telamón por su escudo; el jabalí de Tesalia
+    Nunca estuvo tan encarnizado.
+  CARMIANA. ¡Al monumento!

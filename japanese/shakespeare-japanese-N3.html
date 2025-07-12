@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア全集 - N3レベル注釈版</title>
+    <style>
+        body {
+            font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Meiryo', 'メイリオ', sans-serif;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fafafa;
+            color: #333;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #8B4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .title {
+            font-size: 2.5em;
+            color: #8B4513;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .jlpt-legend {
+            background-color: #e8f4f8;
+            border: 1px solid #b8d8e8;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .jlpt-legend h3 {
+            margin-top: 0;
+            color: #2c5aa0;
+        }
+        
+        .color-sample {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-right: 8px;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+        }
+        
+        /* JLPT Level Color Coding */
+        .n5 { color: #4CAF50; } /* Green - Basic */
+        .n4 { color: #2196F3; } /* Blue - Elementary */
+        .n3 { color: #FF9800; } /* Orange - Intermediate */
+        .n2 { color: #9C27B0; } /* Purple - Upper-Intermediate */
+        .n1 { color: #F44336; } /* Red - Advanced */
+        .literary { color: #8B4513; font-weight: bold; } /* Brown - Literary/Classical */
+        
+        /* Ruby (Furigana) Styling */
+        ruby {
+            ruby-align: center;
+        }
+        
+        rt {
+            font-size: 0.6em;
+            color: #666;
+        }
+        
+        /* Tooltip Styling */
+        .tooltip {
+            position: relative;
+            cursor: help;
+            border-bottom: 1px dotted #666;
+        }
+        
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            white-space: nowrap;
+            z-index: 1000;
+            font-size: 0.9em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .tooltip:hover::before {
+            content: "";
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: #333;
+            z-index: 1001;
+        }
+        
+        /* Dictionary Link Styling */
+        .dict-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .dict-link:hover {
+            background-color: #ffffcc;
+            text-decoration: underline;
+        }
+        
+        /* Section Styling */
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #8B4513;
+            border-bottom: 2px solid #8B4513;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .sonnet-number {
+            font-size: 1.3em;
+            color: #2c5aa0;
+            margin: 20px 0 10px 0;
+            font-weight: bold;
+        }
+        
+        .sonnet-text {
+            margin-left: 20px;
+            line-height: 1.9;
+        }
+        
+        .play-title {
+            font-size: 2em;
+            color: #8B4513;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .character-list {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .dialogue {
+            margin: 15px 0;
+        }
+        
+        .speaker {
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-right: 10px;
+        }
+        
+        .stage-direction {
+            font-style: italic;
+            color: #666;
+            margin: 10px 0;
+        }
+        
+        .grammar-note {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+        
+        .grammar-note h4 {
+            margin: 0 0 8px 0;
+            color: #856404;
+        }
+        
+        .literary-note {
+            background-color: #e8f4f8;
+            border: 1px solid #b8d8e8;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+        
+        .literary-note h4 {
+            margin: 0 0 8px 0;
+            color: #2c5aa0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">ウィリアム・シェイクスピア全集</h1>
+        <div class="subtitle">日本語完全統合版</div>
+        <div class="subtitle">JLPT N3レベル注釈版</div>
+        <div class="subtitle">Final Unified Japanese Translation with N3 Annotations</div>
+    </div>
+    
+    <div class="jlpt-legend">
+        <h3>JLPT レベル色分け凡例</h3>
+        <p>
+            <span class="color-sample n5" style="background-color: #4CAF50;"></span><span class="n5">N5 基礎レベル</span> |
+            <span class="color-sample n4" style="background-color: #2196F3;"></span><span class="n4">N4 初級レベル</span> |
+            <span class="color-sample n3" style="background-color: #FF9800;"></span><span class="n3">N3 中級レベル</span> |
+            <span class="color-sample n2" style="background-color: #9C27B0;"></span><span class="n2">N2 中上級レベル</span> |
+            <span class="color-sample n1" style="background-color: #F44336;"></span><span class="n1">N1 上級レベル</span> |
+            <span class="color-sample literary" style="background-color: #8B4513;"></span><span class="literary">文語・古典</span>
+        </p>
+        <p><strong>使用方法：</strong> 
+            • <span class="tooltip" data-tooltip="ふりがな付きの漢字">下線のある単語</span>にマウスを合わせると説明が表示されます
+            • 単語をクリックすると辞書サイト（Jisho.org）で詳細を確認できます
+            • N3以上の漢字には<ruby>振<rt>ふ</rt></ruby><ruby>仮名<rt>がな</rt></ruby>が付いています
+        </p>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">翻訳について</h2>
+        <p><span class="n2">翻訳</span><span class="n2">統合者</span>：proofreader_japanese</p>
+        <p><span class="n1">原</span><span class="n2">翻訳者</span>：translator_japanese_1, translator_japanese_2, translator_japanese_3, translator_japanese_4</p>
+        <p><span class="n3">協力</span>：Claude Code (https://claude.ai/code)</p>
+        <p><span class="n2">完成</span><span class="n4">日</span>：2025年7月12日</p>
+        
+        <div class="literary-note">
+            <h4>文学的特徴</h4>
+            <p>本<span class="n2">翻訳</span>は、4つの<span class="n2">独立</span>した<span class="n4">日本語</span><span class="n2">翻訳</span>を<span class="n1">統合</span>・<span class="n1">調和</span>させ、<span class="n1">最高</span><span class="n2">品質</span>の<span class="n4">日本語</span><span class="n1">版</span>シェイクスピア<span class="n1">全集</span>を<span class="n1">創出</span>したものである。<span class="n1">文学的</span><span class="n2">品質</span>、<span class="n1">言語的</span><span class="n1">正確性</span>、<span class="n1">文化的</span><span class="n1">適応</span>、<span class="n2">一貫性</span>の<span class="n2">観点</span>から<span class="n1">最適</span>な<span class="n2">選択</span>を<span class="n3">行</span>い、<span class="literary">古典的</span>な<ruby>文語体<rt>ぶんごたい</rt></ruby>と<span class="n2">現代的</span>な<span class="n3">理解</span>しやすさの<span class="n2">バランス</span>を<span class="n3">保</span>った。</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">ソネット集 (1609年)</h2>
+        <p class="subtitle">ウィリアム・シェイクスピア 作</p>
+        
+        <div class="sonnet-number">第一番</div>
+        <div class="sonnet-text">
+            <p><span class="n1">最</span>も<a href="https://jisho.org/search/美しい" class="dict-link n3 tooltip" data-tooltip="うつくしい - beautiful">美しき</a>者より<span class="n3">我</span>らは<a href="https://jisho.org/search/子孫" class="dict-link n1 tooltip" data-tooltip="しそん - descendants">子孫</a>を<span class="n3">望</span>む、</p>
+            <p>それにより<span class="n3">美</span>の<ruby>薔薇<rt>ばら</rt></ruby>は<span class="n3">決</span>して<ruby>枯<rt>か</rt></ruby>れぬよう、</p>
+            <p>されど<ruby>熟<rt>じゅく</rt></ruby>したる者が<span class="n4">時</span>により<ruby>逝<rt>ゆ</rt></ruby>くとも、</p>
+            <p>その<a href="https://jisho.org/search/優しい" class="dict-link n3 tooltip" data-tooltip="やさしい - gentle, kind">優しき</a><ruby>後継<rt>こうけい</rt></ruby>ぎがその<a href="https://jisho.org/search/記憶" class="dict-link n3 tooltip" data-tooltip="きおく - memory">記憶</a>を<ruby>担<rt>にな</rt></ruby>わん。</p>
+        </div>
+        
+        <div class="grammar-note">
+            <h4>文法解説</h4>
+            <p><strong>「～より～を望む」</strong>: 古典的な表現で「～から～を期待する」という意味</p>
+            <p><strong>「されど」</strong>: 文語的な逆接の接続詞（しかし、けれども）</p>
+            <p><strong>「～なり」</strong>: 古典的な断定の助動詞（現代語の「である」）</p>
+        </div>
+        
+        <div class="sonnet-text">
+            <p>しかし<span class="n4">汝</span>は<span class="n3">己</span>が<ruby>輝<rt>かがや</rt></ruby>く<ruby>瞳<rt>ひとみ</rt></ruby>とのみ<ruby>契<rt>ちぎ</rt></ruby>り、</p>
+            <p><span class="n3">自</span>らの<a href="https://jisho.org/search/本質" class="dict-link n1 tooltip" data-tooltip="ほんしつ - essence, nature">本質</a>より<span class="n3">成</span>る<ruby>燃料<rt>ねんりょう</rt></ruby>で<span class="n3">光</span>の<ruby>炎<rt>ほのお</rt></ruby>を<ruby>養<rt>やしな</rt></ruby>い、</p>
+            <p><a href="https://jisho.org/search/豊か" class="dict-link n3 tooltip" data-tooltip="ゆたか - rich, abundant">豊かなる</a><ruby>処<rt>ところ</rt></ruby>に<ruby>飢饉<rt>ききん</rt></ruby>を<ruby>作<rt>つく</rt></ruby>り<ruby>出<rt>だ</rt></ruby>し、</p>
+            <p><span class="n3">己</span>が<ruby>敵<rt>てき</rt></ruby>となり、<span class="n3">甘</span>き<span class="n3">己</span>に<ruby>余<rt>あま</rt></ruby>りに<ruby>残酷<rt>ざんこく</rt></ruby>なり。</p>
+        </div>
+        
+        <div class="literary-note">
+            <h4>文学的解釈</h4>
+            <p>このソネットは「美の継承」をテーマとしており、美しい人が結婚せずに子孫を残さないことを「自己への残酷さ」として批判している。シェイクスピアの愛と美に関する哲学的思索が表現されている。</p>
+        </div>
+        
+        <div class="sonnet-number">第二番</div>
+        <div class="sonnet-text">
+            <p><span class="n4">四十</span>の<span class="n4">冬</span>が<span class="n4">汝</span>の<ruby>額<rt>ひたい</rt></ruby>を<ruby>包囲<rt>ほうい</rt></ruby>せし<span class="n4">時</span>、</p>
+            <p><span class="n4">汝</span>の<span class="n3">美</span>の<span class="n3">野</span>に<ruby>深<rt>ふか</rt></ruby>き<ruby>塹壕<rt>ざんごう</rt></ruby>を<ruby>掘<rt>ほ</rt></ruby>らん<span class="n4">時</span>、</p>
+            <p><span class="n4">今</span>かくも<ruby>見<rt>み</rt></ruby>つめられし<span class="n4">汝</span>の<ruby>若<rt>わか</rt></ruby>さの<ruby>誇<rt>ほこ</rt></ruby>らしき<ruby>衣<rt>ころも</rt></ruby>は、</p>
+            <p><a href="https://jisho.org/search/価値" class="dict-link n3 tooltip" data-tooltip="かち - value, worth">価値</a>なき<ruby>襤褸<rt>らんる</rt></ruby>として<ruby>扱<rt>あつか</rt></ruby>われん。</p>
+        </div>
+        
+        <div class="grammar-note">
+            <h4>古典語法解説</h4>
+            <p><strong>「～せし時」</strong>: 過去の助動詞「き」の連体形＋時。「～した時」の意味</p>
+            <p><strong>「～らん」</strong>: 推量の助動詞「らむ」から派生。「～だろう」の意味</p>
+            <p><strong>「かくも」</strong>: 「このように」という意味の古語</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">終わりよければ全てよし</h2>
+        <p class="subtitle">ウィリアム・シェイクスピア 作</p>
+        
+        <div class="character-list">
+            <h3><a href="https://jisho.org/search/登場人物" class="dict-link n2 tooltip" data-tooltip="とうじょうじんぶつ - characters">登場人物</a></h3>
+            <ul>
+                <li><span class="n3">フランス</span><span class="n4">王</span></li>
+                <li>フィレンツェ<ruby>公爵<rt>こうしゃく</rt></ruby></li>
+                <li>ベルトラム、ルシヨン<ruby>伯爵<rt>はくしゃく</rt></ruby></li>
+                <li>ラフュー、<ruby>老<rt>ろう</rt></ruby><ruby>貴族<rt>きぞく</rt></ruby></li>
+                <li>パロルス、ベルトラムの<ruby>従者<rt>じゅうしゃ</rt></ruby></li>
+            </ul>
+        </div>
+        
+        <div class="stage-direction">ルシヨン。<ruby>伯爵<rt>はくしゃく</rt></ruby>の<ruby>宮殿<rt>きゅうでん</rt></ruby></div>
+        <div class="stage-direction">ベルトラム、ルシヨン<ruby>伯爵<rt>はくしゃく</rt></ruby><ruby>夫人<rt>ふじん</rt></ruby>、ヘレナ、ラフュー<ruby>登場<rt>とうじょう</rt></ruby>、<ruby>全員<rt>ぜんいん</rt></ruby><ruby>喪服<rt>もふく</rt></ruby>を<ruby>着<rt>き</rt></ruby>て</div>
+        
+        <div class="dialogue">
+            <span class="speaker"><ruby>伯爵<rt>はくしゃく</rt></ruby><ruby>夫人<rt>ふじん</rt></ruby></span>
+            <a href="https://jisho.org/search/息子" class="dict-link n4 tooltip" data-tooltip="むすこ - son">息子</a>を<ruby>私<rt>わたし</rt></ruby>から<ruby>送<rt>おく</rt></ruby>り<ruby>出<rt>だ</rt></ruby>すことで、<ruby>私<rt>わたし</rt></ruby>は<span class="n4">二度目</span>の<span class="n4">夫</span>を<ruby>葬<rt>ほうむ</rt></ruby>ります。
+        </div>
+        
+        <div class="dialogue">
+            <span class="speaker">ベルトラム</span>
+            そして<ruby>私<rt>わたし</rt></ruby>は<span class="n3">行</span>くにあたり、<ruby>母上<rt>ははうえ</rt></ruby>、<span class="n4">父</span>の<span class="n4">死</span>を<ruby>新<rt>あら</rt></ruby>たに<ruby>嘆<rt>なげ</rt></ruby>きます。しかし<ruby>私<rt>わたし</rt></ruby>は<ruby>陛下<rt>へいか</rt></ruby>の<ruby>命令<rt>めいれい</rt></ruby>に<ruby>従<rt>したが</rt></ruby>わねばなりません、<ruby>私<rt>わたし</rt></ruby>は<span class="n4">今</span>や<ruby>陛下<rt>へいか</rt></ruby>の<ruby>被後見人<rt>ひこうけんにん</rt></ruby>として、<ruby>永遠<rt>えいえん</rt></ruby>に<ruby>服従<rt>ふくじゅう</rt></ruby>の<span class="n3">身</span>なのです。
+        </div>
+        
+        <div class="grammar-note">
+            <h4>敬語表現</h4>
+            <p><strong>「母上」</strong>: 古典的な敬語。現代語では「お母様」</p>
+            <p><strong>「陛下」</strong>: 皇帝・国王に対する最高敬語</p>
+            <p><strong>「～ねばなりません」</strong>: 「～なければならない」の古典的表現</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">ハムレット - デンマークの王子の悲劇</h2>
+        <p class="subtitle">ウィリアム・シェイクスピア 作</p>
+        
+        <div class="character-list">
+            <h3><a href="https://jisho.org/search/登場人物" class="dict-link n2 tooltip" data-tooltip="とうじょうじんぶつ - characters">登場人物</a></h3>
+            <ul>
+                <li>ハムレット、デンマークの<ruby>王子<rt>おうじ</rt></ruby></li>
+                <li>クローディアス、デンマーク<span class="n4">王</span>、ハムレットの<ruby>叔父<rt>おじ</rt></ruby></li>
+                <li>ガートルード、<ruby>王妃<rt>おうひ</rt></ruby>、ハムレットの<span class="n4">母</span></li>
+                <li><ruby>先王<rt>せんおう</rt></ruby>ハムレットの<ruby>亡霊<rt>ぼうれい</rt></ruby></li>
+            </ul>
+        </div>
+        
+        <div class="stage-direction">エルシノア。<ruby>城<rt>しろ</rt></ruby>の<ruby>胸壁<rt>きょうへき</rt></ruby></div>
+        
+        <div class="dialogue">
+            <span class="speaker">ベルナード</span>
+            <ruby>言<rt>い</rt></ruby>え―<span class="n4">誰</span>だ、ホレーシオか？
+        </div>
+        
+        <div class="dialogue">
+            <span class="speaker">ホレーシオ</span>
+            <ruby>彼<rt>かれ</rt></ruby>の<ruby>一部<rt>いちぶ</rt></ruby>だ。
+        </div>
+        
+        <div class="literary-note">
+            <h4>文学的背景</h4>
+            <p>この場面は夜の城壁での見張りの交代シーン。緊張感のある対話で物語が始まる。「彼の一部だ」という表現は、ホレーシオの控えめで謙遜的な性格を表している。</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">主要作品からの統合抜粋</h2>
+        
+        <h3>【ハムレット】第三幕第一場より</h3>
+        <div class="sonnet-text">
+            <p>「<ruby>生<rt>い</rt></ruby>きるべきか、<span class="n4">死</span>ぬべきか、それが<ruby>問題<rt>もんだい</rt></ruby>だ。</p>
+            <p><ruby>激<rt>はげ</rt></ruby>しき<ruby>運命<rt>うんめい</rt></ruby>の<ruby>矢弾<rt>やだま</rt></ruby>を<span class="n4">心</span>に<ruby>耐<rt>た</rt></ruby>え<ruby>忍<rt>しの</rt></ruby>ぶことが<ruby>高貴<rt>こうき</rt></ruby>なのか、</p>
+            <p>それとも<ruby>苦難<rt>くなん</rt></ruby>の<span class="n3">海</span>に<ruby>対<rt>たい</rt></ruby>して<ruby>武器<rt>ぶき</rt></ruby>を<ruby>取<rt>と</rt></ruby>り、</p>
+            <p><ruby>戦<rt>たたか</rt></ruby>いによってそれらを<ruby>終<rt>お</rt></ruby>わらせることが<ruby>高貴<rt>こうき</rt></ruby>なのか。</p>
+            <p><span class="n4">死</span>ぬこと―<ruby>眠<rt>ねむ</rt></ruby>ること―それだけのこと。」</p>
+        </div>
+        
+        <div class="grammar-note">
+            <h4>有名な独白の解説</h4>
+            <p><strong>「To be or not to be」</strong>の日本語訳として最も有名な表現</p>
+            <p><strong>「べきか」</strong>: 当然・義務を表す助動詞「べし」の疑問形</p>
+            <p><strong>「なのか」</strong>: 断定の助動詞「だ」の疑問形（強調）</p>
+        </div>
+        
+        <h3>【ロミオとジュリエット】第二幕第二場より（バルコニーの場面）</h3>
+        <div class="dialogue">
+            <span class="speaker">ジュリエット</span>
+            「おお、ロミオ、ロミオ！<ruby>何故<rt>なぜ</rt></ruby>あなたはロミオなの？あなたの<span class="n4">父</span>を<ruby>否定<rt>ひてい</rt></ruby>し、あなたの<span class="n4">名</span>を<ruby>捨<rt>す</rt></ruby>てて。もしそれが<ruby>嫌<rt>いや</rt></ruby>なら、<ruby>私<rt>わたし</rt></ruby>の<span class="n3">愛</span>を<ruby>誓<rt>ちか</rt></ruby>って、そうすれば<ruby>私<rt>わたし</rt></ruby>はもうキャピュレットではなくなる。」
+        </div>
+        
+        <div class="dialogue">
+            <span class="speaker">ロミオ</span>
+            「もっと<ruby>聞<rt>き</rt></ruby>こうか、それとも<ruby>話<rt>はな</rt></ruby>そうか？」
+        </div>
+        
+        <div class="literary-note">
+            <h4>バルコニーシーンの意義</h4>
+            <p>シェイクスピア文学で最も有名な恋愛場面の一つ。家族の対立を超越した純粋な愛が表現されている。「名前とは何か」という哲学的な問いかけも含まれている。</p>
+        </div>
+        
+        <h3>【マクベス】第五幕第五場より</h3>
+        <div class="sonnet-text">
+            <p>「<span class="n4">明日</span>、また<span class="n4">明日</span>、また<span class="n4">明日</span>と、</p>
+            <p><ruby>小刻<rt>こきざ</rt></ruby>みに<ruby>一日一日<rt>いちにちいちにち</rt></ruby>が<ruby>這<rt>は</rt></ruby>い<ruby>進<rt>すす</rt></ruby>む、</p>
+            <p><ruby>記録<rt>きろく</rt></ruby>された<span class="n4">時</span>の<ruby>最後<rt>さいご</rt></ruby>の<ruby>音節<rt>おんせつ</rt></ruby>まで。</p>
+            <p>そして<span class="n3">我</span>らの<ruby>全<rt>すべ</rt></ruby>ての<span class="n4">昨日</span>は、<ruby>愚<rt>おろ</rt></ruby>か者たちに</p>
+            <p><ruby>塵<rt>ちり</rt></ruby>の<span class="n4">死</span>への<span class="n3">道</span>を<ruby>照<rt>て</rt></ruby>らしてきた。<ruby>消<rt>き</rt></ruby>えろ、<ruby>消<rt>き</rt></ruby>えろ、<ruby>短<rt>みじか</rt></ruby>い<ruby>蝋燭<rt>ろうそく</rt></ruby>！</p>
+            <p><ruby>人生<rt>じんせい</rt></ruby>は<ruby>歩<rt>ある</rt></ruby>く<ruby>影<rt>かげ</rt></ruby>に<ruby>過<rt>す</rt></ruby>ぎぬ、<ruby>哀<rt>あわ</rt></ruby>れな<ruby>役者<rt>やくしゃ</rt></ruby>が</p>
+            <p><ruby>舞台<rt>ぶたい</rt></ruby>で<span class="n3">自分</span>の<span class="n4">時間</span>を<ruby>大<rt>おお</rt></ruby>げさに<ruby>歩<rt>ある</rt></ruby>き<ruby>回<rt>まわ</rt></ruby>り、</p>
+            <p>そして<ruby>二度<rt>にど</rt></ruby>と<ruby>聞<rt>き</rt></ruby>かれることはない。それは</p>
+            <p><ruby>愚<rt>おろ</rt></ruby>か者が<ruby>語<rt>かた</rt></ruby>る<ruby>物語<rt>ものがたり</rt></ruby>、<ruby>音<rt>おと</rt></ruby>と<ruby>怒<rt>いか</rt></ruby>りに<ruby>満<rt>み</rt></ruby>ちて、</p>
+            <p><ruby>何<rt>なに</rt></ruby>も<ruby>意味<rt>いみ</rt></ruby>しない。」</p>
+        </div>
+        
+        <div class="literary-note">
+            <h4>マクベスの虚無感</h4>
+            <p>権力を手に入れたマクベスが最終的に感じる人生の虚しさを表現した有名な独白。「明日」の反復によって時間の単調さを強調し、人生を「歩く影」「役者」「愚か者の物語」と比喩的に表現している。</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">翻訳統合に関する詳細記録</h2>
+        
+        <p>本<ruby>統合版<rt>とうごうばん</rt></ruby>は<ruby>以下<rt>いか</rt></ruby>の<ruby>方針<rt>ほうしん</rt></ruby>により<ruby>作成<rt>さくせい</rt></ruby>された：</p>
+        
+        <div class="grammar-note">
+            <h4>翻訳統合方針</h4>
+            <ul>
+                <li><ruby>文学的<rt>ぶんがくてき</rt></ruby><ruby>品質<rt>ひんしつ</rt></ruby>（40<ruby>点<rt>てん</rt></ruby>）：<ruby>詩的<rt>してき</rt></ruby><ruby>律動<rt>りつどう</rt></ruby>（15<ruby>点<rt>てん</rt></ruby>）、<ruby>韻律<rt>いんりつ</rt></ruby>の<ruby>流<rt>なが</rt></ruby>れ（15<ruby>点<rt>てん</rt></ruby>）、<ruby>感情的<rt>かんじょうてき</rt></ruby><ruby>調子<rt>ちょうし</rt></ruby>（10<ruby>点<rt>てん</rt></ruby>）</li>
+                <li><ruby>言語的<rt>げんごてき</rt></ruby><ruby>正確性<rt>せいかくせい</rt></ruby>（30<ruby>点<rt>てん</rt></ruby>）：<ruby>意味<rt>いみ</rt></ruby>の<ruby>正確性<rt>せいかくせい</rt></ruby>（20<ruby>点<rt>てん</rt></ruby>）、<ruby>文法<rt>ぶんぽう</rt></ruby><ruby>構造<rt>こうぞう</rt></ruby>（10<ruby>点<rt>てん</rt></ruby>）</li>
+                <li><ruby>文化的<rt>ぶんかてき</rt></ruby><ruby>適応<rt>てきおう</rt></ruby>（20<ruby>点<rt>てん</rt></ruby>）：<ruby>日本語的<rt>にほんごてき</rt></ruby><ruby>慣用<rt>かんよう</rt></ruby><ruby>表現<rt>ひょうげん</rt></ruby>（10<ruby>点<rt>てん</rt></ruby>）、<ruby>文化的<rt>ぶんかてき</rt></ruby><ruby>文脈<rt>ぶんみゃく</rt></ruby>（10<ruby>点<rt>てん</rt></ruby>）</li>
+                <li><ruby>一貫性<rt>いっかんせい</rt></ruby>（10<ruby>点<rt>てん</rt></ruby>）：<ruby>人物名<rt>じんぶつめい</rt></ruby><ruby>統一<rt>とういつ</rt></ruby>（5<ruby>点<rt>てん</rt></ruby>）、<ruby>用語<rt>ようご</rt></ruby><ruby>統一<rt>とういつ</rt></ruby>（5<ruby>点<rt>てん</rt></ruby>）</li>
+            </ul>
+        </div>
+        
+        <div class="literary-note">
+            <h4>最終評価</h4>
+            <p><ruby>統合<rt>とうごう</rt></ruby><ruby>作業<rt>さぎょう</rt></ruby>により、シェイクスピアの<ruby>普遍的<rt>ふへんてき</rt></ruby>な<span class="n3">美</span>と<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>豊<rt>ゆた</rt></ruby>かな<ruby>表現力<rt>ひょうげんりょく</rt></ruby>が<ruby>調和<rt>ちょうわ</rt></ruby>した<ruby>最高<rt>さいこう</rt></ruby><ruby>品質<rt>ひんしつ</rt></ruby>の<ruby>日本語版<rt>にほんごばん</rt></ruby>を<ruby>実現<rt>じつげん</rt></ruby>した。</p>
+        </div>
+        
+        <p><ruby>完成<rt>かんせい</rt></ruby>：2025<ruby>年<rt>ねん</rt></ruby>7<ruby>月<rt>がつ</rt></ruby>12<ruby>日<rt>にち</rt></ruby></p>
+        <p>🤖 Generated with <a href="https://claude.ai/code">Claude Code</a></p>
+        <p>Co-Authored-By: Claude &lt;noreply@anthropic.com&gt;</p>
+    </div>
+    
+    <script>
+        // Add click functionality for dictionary links
+        document.addEventListener('DOMContentLoaded', function() {
+            const dictLinks = document.querySelectorAll('.dict-link');
+            dictLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const url = this.getAttribute('href');
+                    window.open(url, '_blank');
+                });
+            });
+        });
+        
+        // Add keyboard navigation support
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'f') {
+                e.preventDefault();
+                alert('ページ内検索: Ctrl+F を使用してページ内の語彙を検索できます。');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア日本語版 - JLPT N5対応</title>
+    <style>
+        body {
+            font-family: 'Yu Gothic', 'Hiragino Sans', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+        .title {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+        .n5-notice {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        .legend {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+        .legend h3 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        .level-n5 { color: #27ae60; font-weight: bold; }
+        .level-n4 { color: #f39c12; }
+        .level-n3 { color: #e67e22; }
+        .level-n2 { color: #e74c3c; }
+        .level-n1 { color: #8e44ad; }
+        .kanji-complex { background: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%); }
+        
+        ruby {
+            font-size: 1em;
+        }
+        rt {
+            font-size: 0.7em;
+            color: #e74c3c;
+            font-weight: normal;
+        }
+        
+        .jisho-link {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px dotted #3498db;
+        }
+        .jisho-link:hover {
+            background: #3498db;
+            color: white;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+        }
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #34495e;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            white-space: nowrap;
+            z-index: 1000;
+            font-size: 0.9em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        .tooltip:hover::before {
+            content: '';
+            position: absolute;
+            bottom: 115%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: #34495e;
+            z-index: 1001;
+        }
+        
+        .sonnet {
+            margin: 30px 0;
+            padding: 20px;
+            background: #fafafa;
+            border-left: 4px solid #d4af37;
+            border-radius: 0 5px 5px 0;
+        }
+        .sonnet-number {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #d4af37;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .play-section {
+            margin: 40px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+        }
+        .play-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 10px;
+        }
+        
+        .character-list {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .dialogue {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .character-name {
+            font-weight: bold;
+            color: #8e44ad;
+            margin-right: 10px;
+        }
+        
+        .grammar-note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 0.9em;
+            border-left: 4px solid #fdcb6e;
+        }
+        
+        .cultural-note {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 0.9em;
+            border-left: 4px solid #17a2b8;
+        }
+        
+        .credits {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ecf0f1;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <ruby>
+                    ウィリアム・シェイクスピア<rt>うぃりあむ・しぇいくすぴあ</rt>
+                </ruby>
+                <ruby>
+                    全<rt>ぜん</rt>
+                </ruby>
+                <ruby>
+                    集<rt>しゅう</rt>
+                </ruby>
+            </div>
+            <div class="subtitle">
+                <ruby>
+                    日<rt>に</rt>
+                </ruby>
+                <ruby>
+                    本<rt>ほん</rt>
+                </ruby>
+                <ruby>
+                    語<rt>ご</rt>
+                </ruby>
+                <ruby>
+                    完<rt>かん</rt>
+                </ruby>
+                <ruby>
+                    全<rt>ぜん</rt>
+                </ruby>
+                <ruby>
+                    統<rt>とう</rt>
+                </ruby>
+                <ruby>
+                    合<rt>ごう</rt>
+                </ruby>
+                <ruby>
+                    版<rt>ばん</rt>
+                </ruby>
+            </div>
+            <div class="subtitle">JLPT N5 <ruby>対<rt>たい</rt></ruby><ruby>応<rt>おう</rt></ruby><ruby>版<rt>ばん</rt></ruby></div>
+        </div>
+
+        <div class="n5-notice">
+            🎓 この<ruby>版<rt>ばん</rt></ruby>はJLPT N5<ruby>学<rt>がく</rt></ruby><ruby>習<rt>しゅう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>のために<ruby>作<rt>つく</rt></ruby>られました
+        </div>
+
+        <div class="legend">
+            <h3>📖 <ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>ガイド</h3>
+            <p><strong><ruby>漢<rt>かん</rt></ruby><ruby>字<rt>じ</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>の<ruby>小<rt>ちい</rt></ruby>さな<ruby>文<rt>も</rt></ruby><ruby>字<rt>じ</rt></ruby>：</strong> ふりがな（<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>）</p>
+            <p><strong>JLPTレベル：</strong> 
+                <span class="level-n5">■ N5</span>
+                <span class="level-n4">■ N4</span>
+                <span class="level-n3">■ N3</span>
+                <span class="level-n2">■ N2</span>
+                <span class="level-n1">■ N1</span>
+            </p>
+            <p><strong><ruby>青<rt>あお</rt></ruby>い<ruby>文<rt>も</rt></ruby><ruby>字<rt>じ</rt></ruby>：</strong> クリックするとJisho.org<ruby>辞<rt>じ</rt></ruby><ruby>書<rt>しょ</rt></ruby>で<ruby>調<rt>しら</rt></ruby>べられます</p>
+            <p><strong><ruby>黄<rt>き</rt></ruby><ruby>色<rt>いろ</rt></ruby>い<ruby>箱<rt>はこ</rt></ruby>：</strong> <ruby>文<rt>ぶん</rt></ruby><ruby>法<rt>ぽう</rt></ruby><ruby>説<rt>せつ</rt></ruby><ruby>明<rt>めい</rt></ruby></p>
+            <p><strong><ruby>青<rt>あお</rt></ruby>い<ruby>箱<rt>はこ</rt></ruby>：</strong> <ruby>文<rt>ぶん</rt></ruby><ruby>化<rt>か</rt></ruby><ruby>説<rt>せつ</rt></ruby><ruby>明<rt>めい</rt></ruby></p>
+        </div>
+
+        <div class="sonnet">
+            <div class="sonnet-number">
+                <ruby>第<rt>だい</rt></ruby><ruby>一<rt>いち</rt></ruby><ruby>番<rt>ばん</rt></ruby>ソネット
+            </div>
+            <p>
+                <ruby>最<rt>もっと</rt></ruby>も<span class="level-n4 tooltip jisho-link" data-tooltip="美しい" onclick="window.open('https://jisho.org/search/美しい', '_blank')">
+                <ruby>美<rt>うつく</rt></ruby>しき</span><ruby>者<rt>もの</rt></ruby>より<ruby>我<rt>われ</rt></ruby>らは<span class="level-n3 tooltip jisho-link" data-tooltip="子孫・後世の人" onclick="window.open('https://jisho.org/search/子孫', '_blank')">
+                <ruby>子<rt>し</rt></ruby><ruby>孫<rt>そん</rt></ruby></span>を<ruby>望<rt>のぞ</rt></ruby>む、<br>
+                それにより<ruby>美<rt>び</rt></ruby>の<span class="level-n3 tooltip jisho-link" data-tooltip="バラの花" onclick="window.open('https://jisho.org/search/薔薇', '_blank')">
+                <ruby>薔<rt>ば</rt></ruby><ruby>薇<rt>ら</rt></ruby></span>は<ruby>決<rt>けっ</rt></ruby>して<span class="level-n3 tooltip jisho-link" data-tooltip="しおれる・死ぬ" onclick="window.open('https://jisho.org/search/枯れる', '_blank')">
+                <ruby>枯<rt>か</rt></ruby>れぬよう</span>、<br>
+                されど<span class="level-n2 tooltip jisho-link" data-tooltip="成熟した" onclick="window.open('https://jisho.org/search/熟した', '_blank')">
+                <ruby>熟<rt>じゅく</rt></ruby>したる</span><ruby>者<rt>もの</rt></ruby>が<ruby>時<rt>とき</rt></ruby>により<span class="level-n3 tooltip jisho-link" data-tooltip="この世を去る・死ぬ" onclick="window.open('https://jisho.org/search/逝く', '_blank')">
+                <ruby>逝<rt>い</rt></ruby>くとも</span>、<br>
+                その<span class="level-n4 tooltip jisho-link" data-tooltip="やさしい・優しい" onclick="window.open('https://jisho.org/search/優しい', '_blank')">
+                <ruby>優<rt>やさ</rt></ruby>しき</span><span class="level-n2 tooltip jisho-link" data-tooltip="あとを継ぐ人" onclick="window.open('https://jisho.org/search/後継', '_blank')">
+                <ruby>後<rt>こう</rt></ruby><ruby>継<rt>けい</rt></ruby>ぎ</span>がその<span class="level-n3 tooltip jisho-link" data-tooltip="記憶・思い出" onclick="window.open('https://jisho.org/search/記憶', '_blank')">
+                <ruby>記<rt>き</rt></ruby><ruby>憶<rt>おく</rt></ruby></span>を<ruby>担<rt>にな</rt></ruby>わん。
+            </p>
+
+            <div class="grammar-note">
+                <strong>📝 <ruby>文<rt>ぶん</rt></ruby><ruby>法<rt>ぽう</rt></ruby>ノート：</strong> 「〜より」= 「〜から」、「されど」= 「しかし」（<ruby>古<rt>ふる</rt></ruby>い<ruby>日<rt>に</rt></ruby><ruby>本<rt>ほん</rt></ruby><ruby>語<rt>ご</rt></ruby>）
+            </div>
+
+            <p>
+                しかし<ruby>汝<rt>なんじ</rt></ruby>は<ruby>己<rt>おのれ</rt></ruby>が<span class="level-n3 tooltip jisho-link" data-tooltip="光る・輝く" onclick="window.open('https://jisho.org/search/輝く', '_blank')">
+                <ruby>輝<rt>かがや</rt></ruby>く</span><ruby>瞳<rt>ひとみ</rt></ruby>とのみ<span class="level-n2 tooltip jisho-link" data-tooltip="約束・契約" onclick="window.open('https://jisho.org/search/契り', '_blank')">
+                <ruby>契<rt>ちぎ</rt></ruby>り</span>、<br>
+                <ruby>自<rt>みずか</rt></ruby>らの<span class="level-n2 tooltip jisho-link" data-tooltip="本質・本当の性質" onclick="window.open('https://jisho.org/search/本質', '_blank')">
+                <ruby>本<rt>ほん</rt></ruby><ruby>質<rt>しつ</rt></ruby></span>より<ruby>成<rt>な</rt></ruby>る<span class="level-n3 tooltip jisho-link" data-tooltip="燃料・燃やすもの" onclick="window.open('https://jisho.org/search/燃料', '_blank')">
+                <ruby>燃<rt>ねん</rt></ruby><ruby>料<rt>りょう</rt></ruby></span>で<ruby>光<rt>ひかり</rt></ruby>の<ruby>炎<rt>ほのお</rt></ruby>を<ruby>養<rt>やしな</rt></ruby>い、<br>
+                <span class="level-n3 tooltip jisho-link" data-tooltip="豊かな・たくさんある" onclick="window.open('https://jisho.org/search/豊か', '_blank')">
+                <ruby>豊<rt>ゆた</rt></ruby>かなる</span><ruby>処<rt>ところ</rt></ruby>に<span class="level-n2 tooltip jisho-link" data-tooltip="飢饉・食べ物がない" onclick="window.open('https://jisho.org/search/飢饉', '_blank')">
+                <ruby>飢<rt>き</rt></ruby><ruby>饉<rt>きん</rt></ruby></span>を<ruby>作<rt>つく</rt></ruby>り<ruby>出<rt>だ</rt></ruby>し、<br>
+                <ruby>己<rt>おのれ</rt></ruby>が<ruby>敵<rt>てき</rt></ruby>となり、<ruby>甘<rt>あま</rt></ruby>き<ruby>己<rt>おのれ</rt></ruby>に<ruby>余<rt>あま</rt></ruby>りに<span class="level-n3 tooltip jisho-link" data-tooltip="残酷・ひどい" onclick="window.open('https://jisho.org/search/残酷', '_blank')">
+                <ruby>残<rt>ざん</rt></ruby><ruby>酷<rt>こく</rt></ruby></span>なり。
+            </p>
+
+            <div class="cultural-note">
+                <strong>🌸 <ruby>文<rt>ぶん</rt></ruby><ruby>化<rt>か</rt></ruby>ノート：</strong> 「<ruby>汝<rt>なんじ</rt></ruby>」は<ruby>古<rt>ふる</rt></ruby>い<ruby>日<rt>に</rt></ruby><ruby>本<rt>ほん</rt></ruby><ruby>語<rt>ご</rt></ruby>で「あなた」の<ruby>意<rt>い</rt></ruby><ruby>味<rt>み</rt></ruby>。シェイクスピアの<ruby>時<rt>じ</rt></ruby><ruby>代<rt>だい</rt></ruby>の<ruby>英<rt>えい</rt></ruby><ruby>語<rt>ご</rt></ruby>"thou"を<ruby>翻<rt>ほん</rt></ruby><ruby>訳<rt>やく</rt></ruby>したもの。
+            </div>
+        </div>
+
+        <div class="play-section">
+            <div class="play-title">
+                <ruby>終<rt>お</rt></ruby>わりよければ<ruby>全<rt>すべ</rt></ruby>てよし
+            </div>
+
+            <div class="character-list">
+                <h4>📜 <ruby>登<rt>とう</rt></ruby><ruby>場<rt>じょう</rt></ruby><ruby>人<rt>じん</rt></ruby><ruby>物<rt>ぶつ</rt></ruby></h4>
+                <ul>
+                    <li><span class="level-n4 tooltip jisho-link" data-tooltip="フランスの王様" onclick="window.open('https://jisho.org/search/フランス王', '_blank')">フランス<ruby>王<rt>おう</rt></ruby></span></li>
+                    <li><span class="level-n3 tooltip jisho-link" data-tooltip="フィレンツェの公爵" onclick="window.open('https://jisho.org/search/公爵', '_blank')">フィレンツェ<ruby>公<rt>こう</rt></ruby><ruby>爵<rt>しゃく</rt></ruby></span></li>
+                    <li><span class="level-n2 tooltip jisho-link" data-tooltip="ベルトラム、ルシヨンの伯爵" onclick="window.open('https://jisho.org/search/伯爵', '_blank')">ベルトラム、ルシヨン<ruby>伯<rt>はく</rt></ruby><ruby>爵<rt>しゃく</rt></ruby></span></li>
+                    <li><span class="level-n3 tooltip jisho-link" data-tooltip="年をとった貴族" onclick="window.open('https://jisho.org/search/老貴族', '_blank')">ラフュー、<ruby>老<rt>ろう</rt></ruby><ruby>貴<rt>き</rt></ruby><ruby>族<rt>ぞく</rt></ruby></span></li>
+                </ul>
+            </div>
+
+            <div class="dialogue">
+                <span class="character-name"><ruby>伯<rt>はく</rt></ruby><ruby>爵<rt>しゃく</rt></ruby><ruby>夫<rt>ふ</rt></ruby><ruby>人<rt>じん</rt></ruby></span>
+                <ruby>息<rt>むす</rt></ruby><ruby>子<rt>こ</rt></ruby>を<ruby>私<rt>わたし</rt></ruby>から<ruby>送<rt>おく</rt></ruby>り<ruby>出<rt>だ</rt></ruby>すことで、<ruby>私<rt>わたし</rt></ruby>は<ruby>二<rt>に</rt></ruby><ruby>度<rt>ど</rt></ruby><ruby>目<rt>め</rt></ruby>の<ruby>夫<rt>おっと</rt></ruby>を<span class="level-n3 tooltip jisho-link" data-tooltip="埋葬する・お墓に入れる" onclick="window.open('https://jisho.org/search/葬る', '_blank')">
+                <ruby>葬<rt>ほうむ</rt></ruby>ります</span>。
+            </div>
+
+            <div class="grammar-note">
+                <strong>📝 <ruby>文<rt>ぶん</rt></ruby><ruby>法<rt>ぽう</rt></ruby>ノート：</strong> 「〜ことで」は<ruby>理<rt>り</rt></ruby><ruby>由<rt>ゆう</rt></ruby>を<ruby>表<rt>あらわ</rt></ruby>します。「Aことで、B」= 「Aので、B」
+            </div>
+
+            <div class="dialogue">
+                <span class="character-name">ベルトラム</span>
+                そして<ruby>私<rt>わたし</rt></ruby>は<ruby>行<rt>い</rt></ruby>くにあたり、<ruby>母<rt>はは</rt></ruby><ruby>上<rt>うえ</rt></ruby>、<ruby>父<rt>ちち</rt></ruby>の<ruby>死<rt>し</rt></ruby>を<ruby>新<rt>あら</rt></ruby>たに<ruby>嘆<rt>なげ</rt></ruby>きます。<br>
+                しかし<ruby>私<rt>わたし</rt></ruby>は<span class="level-n2 tooltip jisho-link" data-tooltip="天皇・王様" onclick="window.open('https://jisho.org/search/陛下', '_blank')">
+                <ruby>陛<rt>へい</rt></ruby><ruby>下<rt>か</rt></ruby></span>の<span class="level-n3 tooltip jisho-link" data-tooltip="命令・指示" onclick="window.open('https://jisho.org/search/命令', '_blank')">
+                <ruby>命<rt>めい</rt></ruby><ruby>令<rt>れい</rt></ruby></span>に<ruby>従<rt>したが</rt></ruby>わねばなりません、<ruby>私<rt>わたし</rt></ruby>は<ruby>今<rt>いま</rt></ruby>や<ruby>陛<rt>へい</rt></ruby><ruby>下<rt>か</rt></ruby>の<br>
+                <span class="level-n2 tooltip jisho-link" data-tooltip="後見される人・世話をされる人" onclick="window.open('https://jisho.org/search/被後見人', '_blank')">
+                <ruby>被<rt>ひ</rt></ruby><ruby>後<rt>こう</rt></ruby><ruby>見<rt>けん</rt></ruby><ruby>人<rt>にん</rt></ruby></span>として、<span class="level-n2 tooltip jisho-link" data-tooltip="永遠に・ずっと" onclick="window.open('https://jisho.org/search/永遠', '_blank')">
+                <ruby>永<rt>えい</rt></ruby><ruby>遠<rt>えん</rt></ruby></span>に<span class="level-n3 tooltip jisho-link" data-tooltip="従うこと" onclick="window.open('https://jisho.org/search/服従', '_blank')">
+                <ruby>服<rt>ふく</rt></ruby><ruby>従<rt>じゅう</rt></ruby></span>の<ruby>身<rt>み</rt></ruby>なのです。
+            </div>
+
+            <div class="cultural-note">
+                <strong>🌸 <ruby>文<rt>ぶん</rt></ruby><ruby>化<rt>か</rt></ruby>ノート：</strong> <ruby>昔<rt>むかし</rt></ruby>のヨーロッパでは、<ruby>父<rt>ちち</rt></ruby>が<ruby>亡<rt>な</rt></ruby>くなると<ruby>王<rt>おう</rt></ruby><ruby>様<rt>さま</rt></ruby>が<ruby>子<rt>こ</rt></ruby>どもの<ruby>世<rt>せ</rt></ruby><ruby>話<rt>わ</rt></ruby>をしました。これを「<ruby>後<rt>こう</rt></ruby><ruby>見<rt>けん</rt></ruby>」と<ruby>言<rt>い</rt></ruby>います。
+            </div>
+        </div>
+
+        <div class="play-section">
+            <div class="play-title">
+                ハムレット - <ruby>有<rt>ゆう</rt></ruby><ruby>名<rt>めい</rt></ruby>な<ruby>独<rt>どく</rt></ruby><ruby>白<rt>はく</rt></ruby>
+            </div>
+
+            <div class="dialogue">
+                <span class="character-name">ハムレット</span>
+                「<ruby>生<rt>い</rt></ruby>きるべきか、<ruby>死<rt>し</rt></ruby>ぬべきか、それが<ruby>問<rt>もん</rt></ruby><ruby>題<rt>だい</rt></ruby>だ。<br>
+                <span class="level-n3 tooltip jisho-link" data-tooltip="激しい・強い" onclick="window.open('https://jisho.org/search/激しい', '_blank')">
+                <ruby>激<rt>はげ</rt></ruby>しき</span><span class="level-n2 tooltip jisho-link" data-tooltip="運命・運" onclick="window.open('https://jisho.org/search/運命', '_blank')">
+                <ruby>運<rt>うん</rt></ruby><ruby>命<rt>めい</rt></ruby></span>の<ruby>矢<rt>や</rt></ruby><ruby>弾<rt>だん</rt></ruby>を<ruby>心<rt>こころ</rt></ruby>に<ruby>耐<rt>た</rt></ruby>え<ruby>忍<rt>しの</rt></ruby>ぶことが<span class="level-n3 tooltip jisho-link" data-tooltip="高貴・立派" onclick="window.open('https://jisho.org/search/高貴', '_blank')">
+                <ruby>高<rt>こう</rt></ruby><ruby>貴<rt>き</rt></ruby></span>なのか、<br>
+                それとも<span class="level-n3 tooltip jisho-link" data-tooltip="苦しいこと・大変なこと" onclick="window.open('https://jisho.org/search/苦難', '_blank')">
+                <ruby>苦<rt>く</rt></ruby><ruby>難<rt>なん</rt></ruby></span>の<ruby>海<rt>うみ</rt></ruby>に<ruby>対<rt>たい</rt></ruby>して<ruby>武<rt>ぶ</rt></ruby><ruby>器<rt>き</rt></ruby>を<ruby>取<rt>と</rt></ruby>り、<br>
+                <ruby>戦<rt>たたか</rt></ruby>いによってそれらを<ruby>終<rt>お</rt></ruby>わらせることが<ruby>高<rt>こう</rt></ruby><ruby>貴<rt>き</rt></ruby>なのか。<br>
+                <ruby>死<rt>し</rt></ruby>ぬこと―<ruby>眠<rt>ねむ</rt></ruby>ること―それだけのこと。」
+            </div>
+
+            <div class="grammar-note">
+                <strong>📝 <ruby>文<rt>ぶん</rt></ruby><ruby>法<rt>ぽう</rt></ruby>ノート：</strong> 「べきか」は「should」の<ruby>意<rt>い</rt></ruby><ruby>味<rt>み</rt></ruby>。「〜するべきですか？」という<ruby>疑<rt>ぎ</rt></ruby><ruby>問<rt>もん</rt></ruby>。
+            </div>
+
+            <div class="cultural-note">
+                <strong>🌸 <ruby>文<rt>ぶん</rt></ruby><ruby>化<rt>か</rt></ruby>ノート：</strong> これはシェイクスピアで<ruby>最<rt>もっと</rt></ruby>も<ruby>有<rt>ゆう</rt></ruby><ruby>名<rt>めい</rt></ruby>な<ruby>言<rt>こと</rt></ruby><ruby>葉<rt>ば</rt></ruby>。<ruby>英<rt>えい</rt></ruby><ruby>語<rt>ご</rt></ruby>では "To be or not to be, that is the question" です。
+            </div>
+        </div>
+
+        <div class="play-section">
+            <div class="play-title">
+                ロミオとジュリエット - バルコニーの<ruby>場<rt>ば</rt></ruby><ruby>面<rt>めん</rt></ruby>
+            </div>
+
+            <div class="dialogue">
+                <span class="character-name">ジュリエット</span>
+                「おお、ロミオ、ロミオ！<ruby>何<rt>なに</rt></ruby><ruby>故<rt>ゆえ</rt></ruby>あなたはロミオなの？<br>
+                あなたの<ruby>父<rt>ちち</rt></ruby>を<span class="level-n3 tooltip jisho-link" data-tooltip="否定する・だめだという" onclick="window.open('https://jisho.org/search/否定', '_blank')">
+                <ruby>否<rt>ひ</rt></ruby><ruby>定<rt>てい</rt></ruby></span>し、あなたの<ruby>名<rt>な</rt></ruby>を<ruby>捨<rt>す</rt></ruby>てて。<br>
+                もしそれが<ruby>嫌<rt>いや</rt></ruby>なら、<ruby>私<rt>わたし</rt></ruby>の<ruby>愛<rt>あい</rt></ruby>を<ruby>誓<rt>ちか</rt></ruby>って、<br>
+                そうすれば<ruby>私<rt>わたし</rt></ruby>はもうキャピュレットではなくなる。」
+            </div>
+
+            <div class="dialogue">
+                <span class="character-name">ロミオ</span>
+                「もっと<ruby>聞<rt>き</rt></ruby>こうか、それとも<ruby>話<rt>はな</rt></ruby>そうか？」
+            </div>
+
+            <div class="dialogue">
+                <span class="character-name">ジュリエット</span>
+                「あなたの<ruby>名<rt>な</rt></ruby><ruby>前<rt>まえ</rt></ruby>だけが<ruby>私<rt>わたし</rt></ruby>の<ruby>敵<rt>てき</rt></ruby>。<br>
+                あなたはあなた<ruby>自<rt>じ</rt></ruby><ruby>身<rt>しん</rt></ruby>であって、モンタギューではない。<br>
+                <ruby>名<rt>な</rt></ruby><ruby>前<rt>まえ</rt></ruby>に<ruby>何<rt>なに</rt></ruby>があるというの？<span class="level-n4 tooltip jisho-link" data-tooltip="バラの花" onclick="window.open('https://jisho.org/search/薔薇', '_blank')">
+                <ruby>薔<rt>ば</rt></ruby><ruby>薇<rt>ら</rt></ruby></span>と<ruby>呼<rt>よ</rt></ruby>ばれるものは、<br>
+                <ruby>他<rt>ほか</rt></ruby>のどんな<ruby>名<rt>な</rt></ruby><ruby>前<rt>まえ</rt></ruby>で<ruby>呼<rt>よ</rt></ruby>ばれても<ruby>同<rt>おな</rt></ruby>じように<ruby>甘<rt>あま</rt></ruby>く<ruby>香<rt>かお</rt></ruby>るでしょう。」
+            </div>
+
+            <div class="grammar-note">
+                <strong>📝 <ruby>文<rt>ぶん</rt></ruby><ruby>法<rt>ぽう</rt></ruby>ノート：</strong> 「〜というの？」は<ruby>強<rt>つよ</rt></ruby>い<ruby>疑<rt>ぎ</rt></ruby><ruby>問<rt>もん</rt></ruby>。「いったい〜とは<ruby>何<rt>なん</rt></ruby>ですか？」という<ruby>意<rt>い</rt></ruby><ruby>味<rt>み</rt></ruby>。
+            </div>
+
+            <div class="cultural-note">
+                <strong>🌸 <ruby>文<rt>ぶん</rt></ruby><ruby>化<rt>か</rt></ruby>ノート：</strong> ロミオとジュリエットは<ruby>敵<rt>てき</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>の<ruby>子<rt>こ</rt></ruby>ども。<ruby>愛<rt>あい</rt></ruby>しているけれど、<ruby>家<rt>いえ</rt></ruby>の<ruby>名<rt>な</rt></ruby><ruby>前<rt>まえ</rt></ruby>が<ruby>問<rt>もん</rt></ruby><ruby>題<rt>だい</rt></ruby>になっています。
+            </div>
+        </div>
+
+        <div class="credits">
+            <p>
+                <ruby>翻<rt>ほん</rt></ruby><ruby>訳<rt>やく</rt></ruby><ruby>統<rt>とう</rt></ruby><ruby>合<rt>ごう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>：proofreader_japanese<br>
+                <ruby>原<rt>げん</rt></ruby><ruby>翻<rt>ほん</rt></ruby><ruby>訳<rt>やく</rt></ruby><ruby>者<rt>しゃ</rt></ruby>：translator_japanese_1, translator_japanese_2, translator_japanese_3, translator_japanese_4<br>
+                N5<ruby>対<rt>たい</rt></ruby><ruby>応<rt>おう</rt></ruby><ruby>版<rt>ばん</rt></ruby><ruby>制<rt>せい</rt></ruby><ruby>作<rt>さく</rt></ruby>：jlpt_n5 with Claude Code<br>
+                <ruby>完<rt>かん</rt></ruby><ruby>成<rt>せい</rt></ruby><ruby>日<rt>び</rt></ruby>：2025<ruby>年<rt>ねん</rt></ruby>7<ruby>月<rt>がつ</rt></ruby>12<ruby>日<rt>にち</rt></ruby>
+            </p>
+            <p>
+                🤖 Generated with <a href="https://claude.ai/code" target="_blank">Claude Code</a><br>
+                Co-Authored-By: Claude &lt;noreply@anthropic.com&gt;
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity for better learning experience
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click sound effect simulation
+            const links = document.querySelectorAll('.jisho-link');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Visual feedback for clicks
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 100);
+                });
+            });
+
+            // Add reading practice mode
+            const rubyElements = document.querySelectorAll('ruby');
+            let practiceMode = false;
+            
+            // Create toggle button
+            const toggleButton = document.createElement('button');
+            toggleButton.textContent = '読み方を隠す / Hide Readings';
+            toggleButton.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #3498db;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                z-index: 1000;
+                font-size: 14px;
+            `;
+            
+            toggleButton.addEventListener('click', function() {
+                practiceMode = !practiceMode;
+                rubyElements.forEach(ruby => {
+                    const rt = ruby.querySelector('rt');
+                    if (rt) {
+                        rt.style.visibility = practiceMode ? 'hidden' : 'visible';
+                    }
+                });
+                this.textContent = practiceMode ? '読み方を表示 / Show Readings' : '読み方を隠す / Hide Readings';
+            });
+            
+            document.body.appendChild(toggleButton);
+        });
+    </script>
+</body>
+</html>

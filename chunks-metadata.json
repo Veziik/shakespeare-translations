@@ -1,0 +1,160 @@
+[
+  {
+    "chunk_id": 1,
+    "filename": "chunk_01.txt",
+    "start_position": 0,
+    "end_position": 342134,
+    "character_count": 342134,
+    "first_50_chars": "This is the 100th Etext file presented by Project "
+  },
+  {
+    "chunk_id": 2,
+    "filename": "chunk_02.txt",
+    "start_position": 341110,
+    "end_position": 684549,
+    "character_count": 343439,
+    "first_50_chars": "ARBUS. This is old. What is the success?\\n  EROS. C",
+    "overlap_start": 683525,
+    "overlap_size": 1024
+  },
+  {
+    "chunk_id": 3,
+    "filename": "chunk_03.txt",
+    "start_position": 683525,
+    "end_position": 1023924,
+    "character_count": 340399,
+    "first_50_chars": " O, good madam, there can be none yet.\\n  VALERIA. ",
+    "overlap_start": 1022900,
+    "overlap_size": 1024
+  },
+  {
+    "chunk_id": 4,
+    "filename": "chunk_04.txt",
+    "start_position": 1022900,
+    "end_position": 1365258,
+    "character_count": 342358,
+    "first_50_chars": "rnardo!\\n  Ber. Say-\\n    What, is Horatio there ?\\n ",
+    "overlap_start": 1364234,
+    "overlap_size": 1024
+  },
+  {
+    "chunk_id": 5,
+    "filename": "chunk_05.txt",
+    "start_position": 1364234,
+    "end_position": 1707642,
+    "character_count": 343408,
+    "first_50_chars": "for it was too small a bound;\\n    But now two pace",
+    "overlap_start": 1706618,
+    "overlap_size": 1024
+  },
+  {
+    "chunk_id": 6,
+    "filename": "chunk_06.txt",
+    "start_position": 1706618,
+    "end_position": 2047473,
+    "character_count": 340855,
+    "first_50_chars": "leeding sword 'twixt England and fair France.\\n  LO",
+    "overlap_start": 2046449,
+    "overlap_size": 1024
+  },
+  {
+    "chunk_id": 7,
+    "filename": "chunk_07.txt",
+    "start_position": 2046449,
+    "end_position": 2389473,
+    "character_count": 343024,
+    "first_50_chars": "mes did Richard make a lane to me,\\n    And thrice ",
+    "overlap_start": 2388449,
+    "overlap_size": 1024
+  },
+  {
+    "chunk_id": 8,
+    "filename": "chunk_08.txt",
+    "start_position": 2388449,
+    "end_position": 2729355,
+    "character_count": 340906,
+    "first_50_chars": "en ground,\\n    Till this advantage, this vile-draw",
+    "overlap_start": 2728331,
+    "overlap_size": 1024
+  },
+  {
+    "chunk_id": 9,
+    "filename": "chunk_09.txt",
+    "start_position": 2728331,
+    "end_position": 3073304,
+    "character_count": 344973,
+    "first_50_chars": "er!\\n     Lose he his other eye?\\n  Gent. Both, both",
+    "overlap_start": 3072280,
+    "overlap_size": 1024
+  },
+  {
+    "chunk_id": 10,
+    "filename": "chunk_10.txt",
+    "start_position": 3072280,
+    "end_position": 3414903,
+    "character_count": 342623,
+    "first_50_chars": "r.\\n  ESCALUS. Alas, it hath been great pains to yo",
+    "overlap_start": 3413879,
+    "overlap_size": 1024
+  },
+  {
+    "chunk_id": 11,
+    "filename": "chunk_11.txt",
+    "start_position": 3413879,
+    "end_position": 3755761,
+    "character_count": 341882,
+    "first_50_chars": "t abide the old woman of Brainford; he\\n    swears ",
+    "overlap_start": 3754737,
+    "overlap_size": 1024
+  },
+  {
+    "chunk_id": 12,
+    "filename": "chunk_12.txt",
+    "start_position": 3754737,
+    "end_position": 4095412,
+    "character_count": 340675,
+    "first_50_chars": "O.                  But is he often thus?\\n  IAGO. ",
+    "overlap_start": 4094388,
+    "overlap_size": 1024
+  },
+  {
+    "chunk_id": 13,
+    "filename": "chunk_13.txt",
+    "start_position": 4094388,
+    "end_position": 4436135,
+    "character_count": 341747,
+    "first_50_chars": "t more uncles here to welcome me.\\n  GLOUCESTER. Sw",
+    "overlap_start": 4435111,
+    "overlap_size": 1024
+  },
+  {
+    "chunk_id": 14,
+    "filename": "chunk_14.txt",
+    "start_position": 4435111,
+    "end_position": 4777395,
+    "character_count": 342284,
+    "first_50_chars": "o'd in haste and means to wed at leisure.\\n    I to",
+    "overlap_start": 4776371,
+    "overlap_size": 1024
+  },
+  {
+    "chunk_id": 15,
+    "filename": "chunk_15.txt",
+    "start_position": 4776371,
+    "end_position": 5119584,
+    "character_count": 343213,
+    "first_50_chars": " goodly gift in horning,\\n    And to be doubted tha",
+    "overlap_start": 5118560,
+    "overlap_size": 1024
+  },
+  {
+    "chunk_id": 16,
+    "filename": "chunk_16.txt",
+    "start_position": 5118560,
+    "end_position": 5458199,
+    "character_count": 339639,
+    "first_50_chars": "f his people.\\n  ANTONIO.Th' offence is not of such",
+    "overlap_start": 5457175,
+    "overlap_size": 1024
+  }
+]

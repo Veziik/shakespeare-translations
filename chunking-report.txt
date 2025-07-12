@@ -1,0 +1,45 @@
+Shakespeare Text Chunking Report
+================================
+
+Date: 2025-07-11
+Source File: /workspace/shakespeare-translations/shakespeare-complete.txt
+Total File Size: 5,458,199 characters
+
+Chunking Parameters:
+- Number of chunks: 16
+- Target overlap: 1,024 characters (1KB)
+- Average chunk size: ~342KB (342,097 characters)
+
+Results:
+- Successfully created 16 text chunks
+- Each chunk saved as chunk_01.txt through chunk_16.txt
+- Metadata file created: chunks-metadata.json
+- Total characters with overlaps: 5,473,559
+
+Chunk Breakdown:
+1. chunk_01.txt: 342,134 chars (positions 0 - 342,134)
+2. chunk_02.txt: 343,439 chars (positions 341,110 - 684,549)
+3. chunk_03.txt: 340,399 chars (positions 683,525 - 1,023,924)
+4. chunk_04.txt: 342,358 chars (positions 1,022,900 - 1,365,258)
+5. chunk_05.txt: 343,408 chars (positions 1,364,234 - 1,707,642)
+6. chunk_06.txt: 340,855 chars (positions 1,706,618 - 2,047,473)
+7. chunk_07.txt: 343,024 chars (positions 2,046,449 - 2,389,473)
+8. chunk_08.txt: 340,906 chars (positions 2,388,449 - 2,729,355)
+9. chunk_09.txt: 344,973 chars (positions 2,728,331 - 3,073,304)
+10. chunk_10.txt: 342,623 chars (positions 3,072,280 - 3,414,903)
+11. chunk_11.txt: 341,882 chars (positions 3,413,879 - 3,755,761)
+12. chunk_12.txt: 340,675 chars (positions 3,754,737 - 4,095,412)
+13. chunk_13.txt: 341,747 chars (positions 4,094,388 - 4,436,135)
+14. chunk_14.txt: 342,284 chars (positions 4,435,111 - 4,777,395)
+15. chunk_15.txt: 343,213 chars (positions 4,776,371 - 5,119,584)
+16. chunk_16.txt: 339,639 chars (positions 5,118,560 - 5,458,199)
+
+Algorithm Features:
+- Clean break detection at paragraph boundaries (preferred) or sentence endings
+- Consistent 1KB overlaps between consecutive chunks
+- No data loss - all content preserved
+- Metadata includes validation information (first 50 characters of each chunk)
+
+The chunking algorithm successfully processed the complete Shakespeare text,
+creating 16 evenly-sized chunks suitable for parallel processing or 
+independent analysis while maintaining context through overlapping regions.
