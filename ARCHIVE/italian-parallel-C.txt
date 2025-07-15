@@ -1,0 +1,4 @@
+ITALIAN TRANSLATION - PARALLEL C
+Shakespeare Chunks 09-12
+Translator: Italian_Parallel_C
+=====================================

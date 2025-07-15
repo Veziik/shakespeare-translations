@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア日本語訳 - JLPT N4 注釈版 第二部</title>
+    <style>
+        body {
+            font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Sans", sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: "Noto Serif JP", serif;
+            color: #333;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #333;
+            padding-bottom: 15px;
+        }
+        
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #444;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        h4 {
+            font-size: 1.2em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #666;
+            text-align: center;
+        }
+        
+        /* Table of Contents */
+        .toc {
+            background-color: #f9f9f9;
+            border: 2px solid #ddd;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 5px;
+        }
+        
+        .toc h2 {
+            margin-top: 0;
+            border-bottom: 2px solid #333;
+        }
+        
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .toc a {
+            text-decoration: none;
+            color: #0066cc;
+            font-size: 1.1em;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+            color: #0044aa;
+        }
+        
+        /* Ruby annotations */
+        ruby {
+            font-size: 1.2em;
+            line-height: 2;
+        }
+        
+        rt {
+            font-size: 0.6em;
+            color: #666;
+        }
+        
+        /* Kanji highlighting */
+        .n4-kanji {
+            color: #228B22;
+            font-weight: bold;
+            position: relative;
+            cursor: help;
+        }
+        
+        .n3-kanji {
+            color: #FFD700;
+            font-weight: bold;
+            position: relative;
+            cursor: help;
+            text-decoration: underline dotted;
+        }
+        
+        .n2-kanji {
+            color: #FF8C00;
+            font-weight: bold;
+            position: relative;
+            cursor: help;
+            text-decoration: underline dotted;
+        }
+        
+        .n1-kanji {
+            color: #DC143C;
+            font-weight: bold;
+            position: relative;
+            cursor: help;
+            text-decoration: underline dotted;
+        }
+        
+        /* Tooltips */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: left;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -125px;
+            font-size: 0.9em;
+            line-height: 1.5;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+        
+        .tooltiptext a {
+            color: #87CEEB;
+            text-decoration: none;
+        }
+        
+        .tooltiptext a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Text sections */
+        .text-section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fafafa;
+            border-left: 4px solid #ddd;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .sonnet {
+            margin: 30px 0;
+            padding: 25px;
+            background-color: #f8f8f8;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
+        
+        .play-section {
+            margin: 30px 0;
+            padding: 25px;
+            background-color: #fafafa;
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+        }
+        
+        .line {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        
+        .stage-direction {
+            font-style: italic;
+            color: #666;
+            margin: 15px 0;
+        }
+        
+        .character-name {
+            font-weight: bold;
+            color: #444;
+            margin-top: 15px;
+        }
+        
+        /* Navigation buttons */
+        .nav-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .nav-button {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            background-color: #0044aa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        /* Introduction section */
+        .intro {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .intro h3 {
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+        
+        /* Grammar notes */
+        .grammar-note {
+            background-color: #e8f0ff;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #0066cc;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .grammar-note h5 {
+            margin-top: 0;
+            color: #0066cc;
+        }
+        
+        /* Legend styling */
+        .legend {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+        }
+        
+        .legend h3 {
+            margin-top: 0;
+            color: #0066cc;
+        }
+        
+        .legend-item {
+            margin: 10px 0;
+            padding: 5px 0;
+        }
+        
+        .color-sample {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>シェイクスピア日本語訳 - JLPT N4 注釈版</h1>
+        <h2 style="text-align: center; color: #666;">第二部（行 1501-3000）</h2>
+        
+        <div class="intro">
+            <h3>JLPT N4レベル学習者の皆様へ</h3>
+            <p>この注釈版は、JLPT N4レベルの学習者向けに作成されています。N4・N5レベルの漢字にはふりがなを付けていませんが、N3以上の漢字にはふりがなと色分けで難易度を示しています。各漢字にマウスを合わせると、意味と辞書へのリンクが表示されます。</p>
+        </div>
+        
+        <div class="legend">
+            <h3>漢字レベルの色分け</h3>
+            <div class="legend-item">
+                <span class="color-sample" style="background-color: #228B22;"></span>
+                <span class="n4-kanji">N4・N5漢字</span> - ふりがななし（学習済みと想定）
+            </div>
+            <div class="legend-item">
+                <span class="color-sample" style="background-color: #FFD700;"></span>
+                <span class="n3-kanji">N3漢字</span> - 黄色・ふりがな付き
+            </div>
+            <div class="legend-item">
+                <span class="color-sample" style="background-color: #FF8C00;"></span>
+                <span class="n2-kanji">N2漢字</span> - オレンジ色・ふりがな付き
+            </div>
+            <div class="legend-item">
+                <span class="color-sample" style="background-color: #DC143C;"></span>
+                <span class="n1-kanji">N1漢字</span> - 赤色・ふりがな付き
+            </div>
+        </div>
+        
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>目次</h2>
+            <ul>
+                <li><a href="#macbeth">マクベス スコットランド王の<span class="tooltip n3-kanji"><ruby>悲劇<rt>ひげき</rt></ruby><span class="tooltiptext">ひげき - tragedy<br><a href="https://jisho.org/search/悲劇" target="_blank">Jisho で見る</a></span></span></a></li>
+                <li><a href="#romeo-juliet">ロミオとジュリエット</a></li>
+                <li><a href="#othello">オセロー ヴェニスの<span class="tooltip n2-kanji"><ruby>摩爾人<rt>ムーアじん</rt></ruby><span class="tooltiptext">ムーアじん - Moor<br><a href="https://jisho.org/search/摩爾人" target="_blank">Jisho で見る</a></span></span></a></li>
+            </ul>
+        </div>
+        
+        <!-- Plays Section -->
+        <section id="plays">
+            <h2>シェイクスピア<span class="tooltip n3-kanji"><ruby>戯曲<rt>ぎきょく</rt></ruby><span class="tooltiptext">ぎきょく - drama, play<br><a href="https://jisho.org/search/戯曲" target="_blank">Jisho で見る</a></span></span><span class="tooltip n3-kanji"><ruby>選集<rt>せんしゅう</rt></ruby><span class="tooltiptext">せんしゅう - anthology<br><a href="https://jisho.org/search/選集" target="_blank">Jisho で見る</a></span></span></h2>
+            
+            <div class="play-section" id="macbeth">
+                <h3>マクベス スコットランド王の<span class="tooltip n3-kanji"><ruby>悲劇<rt>ひげき</rt></ruby><span class="tooltiptext">ひげき - tragedy<br><a href="https://jisho.org/search/悲劇" target="_blank">Jisho で見る</a></span></span></h3>
+                
+                <h4>第三<span class="n4-kanji">場</span></h4>
+                <p class="stage-direction"><span class="tooltip n3-kanji"><ruby>荒野<rt>こうや</rt></ruby><span class="tooltiptext">こうや - wilderness<br><a href="https://jisho.org/search/荒野" target="_blank">Jisho で見る</a></span></span>。<span class="tooltip n3-kanji"><ruby>雷鳴<rt>らいめい</rt></ruby><span class="tooltiptext">らいめい - thunder<br><a href="https://jisho.org/search/雷鳴" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="stage-direction">三人の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span>たち入場</p>
+                
+                <p class="character-name">第一の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="line">姉妹よ、どこに行っていた？</p>
+                
+                <p class="character-name">第二の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="line"><span class="tooltip n2-kanji"><ruby>豚<rt>ぶた</rt></ruby><span class="tooltiptext">ぶた - pig<br><a href="https://jisho.org/search/豚" target="_blank">Jisho で見る</a></span></span>を殺していた。</p>
+                
+                <p class="character-name">第三の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="line">姉妹、あなたは？</p>
+                
+                <p class="character-name">第一の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>船乗<rt>ふなの</rt></ruby><span class="tooltiptext">ふなのり - sailor<br><a href="https://jisho.org/search/船乗り" target="_blank">Jisho で見る</a></span></span>りの妻が<span class="tooltip n2-kanji"><ruby>栗<rt>くり</rt></ruby><span class="tooltiptext">くり - chestnut<br><a href="https://jisho.org/search/栗" target="_blank">Jisho で見る</a></span></span>を<span class="tooltip n2-kanji"><ruby>膝<rt>ひざ</rt></ruby><span class="tooltiptext">ひざ - knee<br><a href="https://jisho.org/search/膝" target="_blank">Jisho で見る</a></span></span>に持ち、</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>噛<rt>か</rt></ruby><span class="tooltiptext">かむ - to bite<br><a href="https://jisho.org/search/噛む" target="_blank">Jisho で見る</a></span></span>み、<span class="tooltip n3-kanji"><ruby>噛<rt>か</rt></ruby><span class="tooltiptext">かむ - to bite<br><a href="https://jisho.org/search/噛む" target="_blank">Jisho で見る</a></span></span>み、<span class="tooltip n3-kanji"><ruby>噛<rt>か</rt></ruby><span class="tooltiptext">かむ - to bite<br><a href="https://jisho.org/search/噛む" target="_blank">Jisho で見る</a></span></span>んでいた。</p>
+                <p class="line">「わしにもくれ」と言ったら、</p>
+                <p class="line">「あっちへ行け、<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span>め！」と<span class="tooltip n2-kanji"><ruby>太<rt>ふと</rt></ruby><span class="tooltiptext">ふとった - fat<br><a href="https://jisho.org/search/太った" target="_blank">Jisho で見る</a></span></span>った<span class="tooltip n2-kanji"><ruby>臀部<rt>でんぶ</rt></ruby><span class="tooltiptext">でんぶ - buttocks<br><a href="https://jisho.org/search/臀部" target="_blank">Jisho で見る</a></span></span>の<span class="n4-kanji">悪人</span>が<span class="tooltip n3-kanji"><ruby>叫<rt>さけ</rt></ruby><span class="tooltiptext">さけぶ - to shout<br><a href="https://jisho.org/search/叫ぶ" target="_blank">Jisho で見る</a></span></span>んだ。</p>
+                <p class="line">彼女の夫は<span class="tooltip n3-kanji"><ruby>大型<rt>おおがた</rt></ruby><span class="tooltiptext">おおがた - large<br><a href="https://jisho.org/search/大型" target="_blank">Jisho で見る</a></span></span><span class="tooltip n3-kanji"><ruby>帆船<rt>はんせん</rt></ruby><span class="tooltiptext">はんせん - sailing ship<br><a href="https://jisho.org/search/帆船" target="_blank">Jisho で見る</a></span></span>タイガー号の<span class="tooltip n3-kanji"><ruby>船長<rt>せんちょう</rt></ruby><span class="tooltiptext">せんちょう - captain<br><a href="https://jisho.org/search/船長" target="_blank">Jisho で見る</a></span></span>でアレッポへと<span class="tooltip n3-kanji"><ruby>航海<rt>こうかい</rt></ruby><span class="tooltiptext">こうかい - voyage<br><a href="https://jisho.org/search/航海" target="_blank">Jisho で見る</a></span></span>に出た。</p>
+                <p class="line">だが私は<span class="tooltip n2-kanji"><ruby>篩<rt>ふるい</rt></ruby><span class="tooltiptext">ふるい - sieve<br><a href="https://jisho.org/search/篩" target="_blank">Jisho で見る</a></span></span>に乗ってそこへ行き、</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>尾<rt>お</rt></ruby><span class="tooltiptext">お - tail<br><a href="https://jisho.org/search/尾" target="_blank">Jisho で見る</a></span></span>のない<span class="tooltip n2-kanji"><ruby>鼠<rt>ねずみ</rt></ruby><span class="tooltiptext">ねずみ - mouse<br><a href="https://jisho.org/search/鼠" target="_blank">Jisho で見る</a></span></span>のように、やってやる、やってやる。</p>
+                
+                <p class="character-name">第二の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="line">私は風をあげよう。</p>
+                
+                <p class="character-name">第一の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="line"><span class="n4-kanji">親切</span>だね。</p>
+                
+                <p class="character-name">第三の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="line">私も別の風を。</p>
+                
+                <p class="character-name">第一の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="line">私も<span class="n4-kanji">全</span>ての他の風を持っている、</p>
+                <p class="line">そして彼らが<span class="tooltip n3-kanji"><ruby>吹<rt>ふ</rt></ruby><span class="tooltiptext">ふく - to blow<br><a href="https://jisho.org/search/吹く" target="_blank">Jisho で見る</a></span></span>く<span class="tooltip n3-kanji"><ruby>港<rt>みなと</rt></ruby><span class="tooltiptext">みなと - harbor<br><a href="https://jisho.org/search/港" target="_blank">Jisho で見る</a></span></span>も。</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>海図<rt>かいず</rt></ruby><span class="tooltiptext">かいず - nautical chart<br><a href="https://jisho.org/search/海図" target="_blank">Jisho で見る</a></span></span>の<span class="tooltip n2-kanji"><ruby>記載<rt>きさい</rt></ruby><span class="tooltiptext">きさい - record<br><a href="https://jisho.org/search/記載" target="_blank">Jisho で見る</a></span></span>された<span class="n4-kanji">全</span>ての<span class="n4-kanji">場所</span>も。</p>
+                <p class="line">私は彼を<span class="tooltip n2-kanji"><ruby>乾草<rt>かんそう</rt></ruby><span class="tooltiptext">かんそう - hay<br><a href="https://jisho.org/search/乾草" target="_blank">Jisho で見る</a></span></span>のように<span class="tooltip n3-kanji"><ruby>乾<rt>かわ</rt></ruby><span class="tooltiptext">かわかす - to dry<br><a href="https://jisho.org/search/乾かす" target="_blank">Jisho で見る</a></span></span>かせてやる。</p>
+                <p class="line"><span class="n4-kanji">眠</span>りは<span class="n4-kanji">夜</span>も<span class="n4-kanji">昼</span>も彼の<span class="tooltip n2-kanji"><ruby>瞼<rt>まぶた</rt></ruby><span class="tooltiptext">まぶた - eyelid<br><a href="https://jisho.org/search/瞼" target="_blank">Jisho で見る</a></span></span>に<span class="tooltip n3-kanji"><ruby>宿<rt>やど</rt></ruby><span class="tooltiptext">やどる - to dwell<br><a href="https://jisho.org/search/宿る" target="_blank">Jisho で見る</a></span></span>らぬ。</p>
+                <p class="line">彼は<span class="tooltip n2-kanji"><ruby>呪<rt>のろ</rt></ruby><span class="tooltiptext">のろわれた - cursed<br><a href="https://jisho.org/search/呪われた" target="_blank">Jisho で見る</a></span></span>われたように生き、<span class="tooltip n3-kanji"><ruby>衰弱<rt>すいじゃく</rt></ruby><span class="tooltiptext">すいじゃく - weakening<br><a href="https://jisho.org/search/衰弱" target="_blank">Jisho で見る</a></span></span>し、</p>
+                <p class="line"><span class="tooltip n1-kanji"><ruby>憔悴<rt>しょうすい</rt></ruby><span class="tooltiptext">しょうすい - emaciation<br><a href="https://jisho.org/search/憔悴" target="_blank">Jisho で見る</a></span></span>してゆく。</p>
+                <p class="line">九かける九の<span class="tooltip n2-kanji"><ruby>退屈<rt>たいくつ</rt></ruby><span class="tooltiptext">たいくつ - tedious<br><a href="https://jisho.org/search/退屈" target="_blank">Jisho で見る</a></span></span>な<span class="n4-kanji">週</span>が<span class="n4-kanji">過</span>ぎても。</p>
+                <p class="line">彼の<span class="tooltip n3-kanji"><ruby>船<rt>ふね</rt></ruby><span class="tooltiptext">ふね - ship<br><a href="https://jisho.org/search/船" target="_blank">Jisho で見る</a></span></span>は<span class="tooltip n2-kanji"><ruby>沈<rt>しず</rt></ruby><span class="tooltiptext">しずまない - will not sink<br><a href="https://jisho.org/search/沈む" target="_blank">Jisho で見る</a></span></span>まないけれど、</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>嵐<rt>あらし</rt></ruby><span class="tooltiptext">あらし - storm<br><a href="https://jisho.org/search/嵐" target="_blank">Jisho で見る</a></span></span>に<span class="tooltip n3-kanji"><ruby>翻弄<rt>ほんろう</rt></ruby><span class="tooltiptext">ほんろう - toss about<br><a href="https://jisho.org/search/翻弄" target="_blank">Jisho で見る</a></span></span>されるだろう。</p>
+                <p class="line">見ろ、私が持っているものを。</p>
+                
+                <p class="character-name">第二の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="line">見せて、見せて。</p>
+                
+                <p class="character-name">第一の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="line">ここに<span class="tooltip n3-kanji"><ruby>水先<rt>みずさき</rt></ruby><span class="tooltiptext">みずさき - pilot<br><a href="https://jisho.org/search/水先" target="_blank">Jisho で見る</a></span></span><span class="tooltip n3-kanji"><ruby>案内人<rt>あんないにん</rt></ruby><span class="tooltiptext">あんないにん - guide<br><a href="https://jisho.org/search/案内人" target="_blank">Jisho で見る</a></span></span>の<span class="n4-kanji">親指</span>がある、</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>帰国<rt>きこく</rt></ruby><span class="tooltiptext">きこく - return to country<br><a href="https://jisho.org/search/帰国" target="_blank">Jisho で見る</a></span></span>の<span class="tooltip n3-kanji"><ruby>途中<rt>とちゅう</rt></ruby><span class="tooltiptext">とちゅう - on the way<br><a href="https://jisho.org/search/途中" target="_blank">Jisho で見る</a></span></span>で<span class="tooltip n3-kanji"><ruby>難破<rt>なんぱ</rt></ruby><span class="tooltiptext">なんぱ - shipwreck<br><a href="https://jisho.org/search/難破" target="_blank">Jisho で見る</a></span></span>した者の。</p>
+                
+                <p class="stage-direction"><span class="tooltip n3-kanji"><ruby>太鼓<rt>たいこ</rt></ruby><span class="tooltiptext">たいこ - drum<br><a href="https://jisho.org/search/太鼓" target="_blank">Jisho で見る</a></span></span>の音</p>
+                
+                <p class="character-name">第三の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>太鼓<rt>たいこ</rt></ruby><span class="tooltiptext">たいこ - drum<br><a href="https://jisho.org/search/太鼓" target="_blank">Jisho で見る</a></span></span>、<span class="tooltip n3-kanji"><ruby>太鼓<rt>たいこ</rt></ruby><span class="tooltiptext">たいこ - drum<br><a href="https://jisho.org/search/太鼓" target="_blank">Jisho で見る</a></span></span>！</p>
+                <p class="line">マクベスが来る。</p>
+                
+                <p class="character-name"><span class="n4-kanji">全員</span></p>
+                <p class="line"><span class="tooltip n1-kanji"><ruby>変幻<rt>へんげん</rt></ruby><span class="tooltiptext">へんげん - transformation<br><a href="https://jisho.org/search/変幻" target="_blank">Jisho で見る</a></span></span>の姉妹たち、<span class="n4-kanji">手</span>に<span class="n4-kanji">手</span>を<span class="n4-kanji">取</span>って、</p>
+                <p class="line"><span class="n4-kanji">海</span>を<span class="n4-kanji">越</span>え、<span class="tooltip n3-kanji"><ruby>陸<rt>りく</rt></ruby><span class="tooltiptext">りく - land<br><a href="https://jisho.org/search/陸" target="_blank">Jisho で見る</a></span></span>を<span class="n4-kanji">越</span>えて<span class="n4-kanji">走</span>る者たち。</p>
+                <p class="line">かくして<span class="n4-kanji">回</span>り、<span class="n4-kanji">回</span>り、<span class="n4-kanji">回</span>る。</p>
+                <p class="line">三<span class="n4-kanji">度</span>あなたに、三<span class="n4-kanji">度</span>私に、</p>
+                <p class="line">そして三<span class="n4-kanji">度</span>また、九となる。</p>
+                <p class="line"><span class="n4-kanji">静</span>まれ！<span class="tooltip n2-kanji"><ruby>呪文<rt>じゅもん</rt></ruby><span class="tooltiptext">じゅもん - spell<br><a href="https://jisho.org/search/呪文" target="_blank">Jisho で見る</a></span></span>は<span class="tooltip n3-kanji"><ruby>完成<rt>かんせい</rt></ruby><span class="tooltiptext">かんせい - completion<br><a href="https://jisho.org/search/完成" target="_blank">Jisho で見る</a></span></span>した。</p>
+                
+                <p class="stage-direction">マクベス、バンクォー入場</p>
+                
+                <p class="character-name">マクベス</p>
+                <p class="line">これほど<span class="tooltip n3-kanji"><ruby>醜<rt>みにく</rt></ruby><span class="tooltiptext">みにくい - ugly<br><a href="https://jisho.org/search/醜い" target="_blank">Jisho で見る</a></span></span>く、かつ<span class="n4-kanji">美</span>しい<span class="n4-kanji">日</span>を私は見たことがない。</p>
+                
+                <p class="character-name">バンクォー</p>
+                <p class="line">フォーレスまでどれくらいあるだろうか？何だ、これらは、</p>
+                <p class="line">かくも<span class="tooltip n2-kanji"><ruby>萎<rt>しな</rt></ruby><span class="tooltiptext">しなびた - withered<br><a href="https://jisho.org/search/萎びた" target="_blank">Jisho で見る</a></span></span>び、かくも<span class="tooltip n3-kanji"><ruby>野蛮<rt>やばん</rt></ruby><span class="tooltiptext">やばん - savage<br><a href="https://jisho.org/search/野蛮" target="_blank">Jisho で見る</a></span></span>な<span class="tooltip n3-kanji"><ruby>装<rt>よそお</rt></ruby><span class="tooltiptext">よそおい - attire<br><a href="https://jisho.org/search/装い" target="_blank">Jisho で見る</a></span></span>いで、</p>
+                <p class="line">地上に<span class="n4-kanji">住</span>む者とは<span class="n4-kanji">見</span>えず、</p>
+                <p class="line">しかもその上にいる？<span class="n4-kanji">生</span>きているのか？</p>
+                <p class="line">それとも<span class="n4-kanji">人</span>が<span class="n4-kanji">問</span>いかけられるものなのか？</p>
+                <p class="line">お前たちは私を<span class="tooltip n3-kanji"><ruby>理解<rt>りかい</rt></ruby><span class="tooltiptext">りかい - understanding<br><a href="https://jisho.org/search/理解" target="_blank">Jisho で見る</a></span></span>するようだ、</p>
+                <p class="line">それぞれがすぐに<span class="tooltip n3-kanji"><ruby>骨<rt>ほね</rt></ruby><span class="tooltiptext">ほね - bone<br><a href="https://jisho.org/search/骨" target="_blank">Jisho で見る</a></span></span>ばった<span class="n4-kanji">指</span>を</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>干<rt>ひ</rt></ruby><span class="tooltiptext">ひからびた - dried up<br><a href="https://jisho.org/search/干からびた" target="_blank">Jisho で見る</a></span></span>からびた<span class="tooltip n2-kanji"><ruby>唇<rt>くちびる</rt></ruby><span class="tooltiptext">くちびる - lips<br><a href="https://jisho.org/search/唇" target="_blank">Jisho で見る</a></span></span>に<span class="n4-kanji">当</span>てるゆえ。</p>
+                <p class="line"><span class="n4-kanji">女</span>たちであるべきだが、</p>
+                <p class="line">お前たちの<span class="tooltip n2-kanji"><ruby>髭<rt>ひげ</rt></ruby><span class="tooltiptext">ひげ - beard<br><a href="https://jisho.org/search/髭" target="_blank">Jisho で見る</a></span></span>が私にそうと<span class="tooltip n3-kanji"><ruby>解釈<rt>かいしゃく</rt></ruby><span class="tooltiptext">かいしゃく - interpretation<br><a href="https://jisho.org/search/解釈" target="_blank">Jisho で見る</a></span></span>することを<span class="tooltip n3-kanji"><ruby>禁<rt>きん</rt></ruby><span class="tooltiptext">きんじる - to forbid<br><a href="https://jisho.org/search/禁じる" target="_blank">Jisho で見る</a></span></span>ずる。</p>
+                
+                <p class="character-name">マクベス</p>
+                <p class="line"><span class="n4-kanji">語</span>れ、もしお前たちが<span class="n4-kanji">語</span>れるなら。お前たちは何者だ？</p>
+                
+                <p class="character-name">第一の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="line"><span class="tooltip n1-kanji"><ruby>万歳<rt>ばんざい</rt></ruby><span class="tooltiptext">ばんざい - long live<br><a href="https://jisho.org/search/万歳" target="_blank">Jisho で見る</a></span></span>、マクベス！<span class="tooltip n1-kanji"><ruby>万歳<rt>ばんざい</rt></ruby><span class="tooltiptext">ばんざい - hail<br><a href="https://jisho.org/search/万歳" target="_blank">Jisho で見る</a></span></span>、グラミスの<span class="tooltip n3-kanji"><ruby>領主<rt>りょうしゅ</rt></ruby><span class="tooltiptext">りょうしゅ - lord<br><a href="https://jisho.org/search/領主" target="_blank">Jisho で見る</a></span></span>！</p>
+                
+                <p class="character-name">第二の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="line"><span class="tooltip n1-kanji"><ruby>万歳<rt>ばんざい</rt></ruby><span class="tooltiptext">ばんざい - hail<br><a href="https://jisho.org/search/万歳" target="_blank">Jisho で見る</a></span></span>、マクベス！<span class="tooltip n1-kanji"><ruby>万歳<rt>ばんざい</rt></ruby><span class="tooltiptext">ばんざい - hail<br><a href="https://jisho.org/search/万歳" target="_blank">Jisho で見る</a></span></span>、コーダーの<span class="tooltip n3-kanji"><ruby>領主<rt>りょうしゅ</rt></ruby><span class="tooltiptext">りょうしゅ - lord<br><a href="https://jisho.org/search/領主" target="_blank">Jisho で見る</a></span></span>！</p>
+                
+                <p class="character-name">第三の<span class="tooltip n3-kanji"><ruby>魔女<rt>まじょ</rt></ruby><span class="tooltiptext">まじょ - witch<br><a href="https://jisho.org/search/魔女" target="_blank">Jisho で見る</a></span></span></p>
+                <p class="line"><span class="tooltip n1-kanji"><ruby>万歳<rt>ばんざい</rt></ruby><span class="tooltiptext">ばんざい - hail<br><a href="https://jisho.org/search/万歳" target="_blank">Jisho で見る</a></span></span>、マクベス、いずれは王となる者！</p>
+                
+                <p class="character-name">バンクォー</p>
+                <p class="line"><span class="n4-kanji">良</span>き<span class="n4-kanji">君</span>よ、なぜそなたは<span class="tooltip n3-kanji"><ruby>驚<rt>おどろ</rt></ruby><span class="tooltiptext">おどろく - to be surprised<br><a href="https://jisho.org/search/驚く" target="_blank">Jisho で見る</a></span></span>き、<span class="tooltip n3-kanji"><ruby>恐<rt>おそ</rt></ruby><span class="tooltiptext">おそれる - to fear<br><a href="https://jisho.org/search/恐れる" target="_blank">Jisho で見る</a></span></span>れるように見えるのか</p>
+                <p class="line">かくも<span class="tooltip n3-kanji"><ruby>麗<rt>うるわ</rt></ruby><span class="tooltiptext">うるわしい - beautiful<br><a href="https://jisho.org/search/麗しい" target="_blank">Jisho で見る</a></span></span>しく<span class="tooltip n3-kanji"><ruby>響<rt>ひび</rt></ruby><span class="tooltiptext">ひびく - to sound<br><a href="https://jisho.org/search/響く" target="_blank">Jisho で見る</a></span></span>くものに？私の名において、</p>
+                <p class="line"><span class="n4-kanji">真実</span>を<span class="n4-kanji">語</span>る者なのか、</p>
+                <p class="line">それとも<span class="tooltip n3-kanji"><ruby>幻想<rt>げんそう</rt></ruby><span class="tooltiptext">げんそう - illusion<br><a href="https://jisho.org/search/幻想" target="_blank">Jisho で見る</a></span></span>の<span class="tooltip n3-kanji"><ruby>泡<rt>あわ</rt></ruby><span class="tooltiptext">あわ - bubble<br><a href="https://jisho.org/search/泡" target="_blank">Jisho で見る</a></span></span>にすぎぬのか？</p>
+                
+                <div class="grammar-note">
+                    <h5>文法ポイント：「かくも」</h5>
+                    <p>「かくも」は「このように」「これほど」という意味の古語です。現代語では「こんなに」「これほど」と表現します。シェイクスピアの翻訳では格調高い表現として使われています。</p>
+                </div>
+            </div>
+            
+            <div class="play-section" id="romeo-juliet">
+                <h3>ロミオとジュリエット</h3>
+                
+                <h4>第二<span class="tooltip n3-kanji"><ruby>幕<rt>まく</rt></ruby><span class="tooltiptext">まく - act<br><a href="https://jisho.org/search/幕" target="_blank">Jisho で見る</a></span></span> 第二<span class="n4-kanji">場</span></h4>
+                <p class="stage-direction">カプレット家の<span class="tooltip n3-kanji"><ruby>果樹園<rt>かじゅえん</rt></ruby><span class="tooltiptext">かじゅえん - orchard<br><a href="https://jisho.org/search/果樹園" target="_blank">Jisho で見る</a></span></span></p>
+                
+                <p class="stage-direction">ロミオ入場</p>
+                
+                <p class="character-name">ロミオ</p>
+                <p class="line">彼は<span class="tooltip n3-kanji"><ruby>傷<rt>きず</rt></ruby><span class="tooltiptext">きず - wound<br><a href="https://jisho.org/search/傷" target="_blank">Jisho で見る</a></span></span>を<span class="n4-kanji">受</span>けたことのない者を<span class="tooltip n3-kanji"><ruby>嘲笑<rt>ちょうしょう</rt></ruby><span class="tooltiptext">ちょうしょう - ridicule<br><a href="https://jisho.org/search/嘲笑" target="_blank">Jisho で見る</a></span></span>う。</p>
+                
+                <p class="stage-direction">ジュリエット、上の<span class="tooltip n3-kanji"><ruby>窓辺<rt>まどべ</rt></ruby><span class="tooltiptext">まどべ - window<br><a href="https://jisho.org/search/窓辺" target="_blank">Jisho で見る</a></span></span>に<span class="tooltip n3-kanji"><ruby>現<rt>あらわ</rt></ruby><span class="tooltiptext">あらわれる - to appear<br><a href="https://jisho.org/search/現れる" target="_blank">Jisho で見る</a></span></span>れる</p>
+                
+                <p class="line">しかし、<span class="n4-kanji">静</span>かに！あの<span class="n4-kanji">窓</span>から<span class="tooltip n3-kanji"><ruby>漏<rt>も</rt></ruby><span class="tooltiptext">もれる - to leak<br><a href="https://jisho.org/search/漏れる" target="_blank">Jisho で見る</a></span></span>れる<span class="n4-kanji">光</span>は何だ？</p>
+                <p class="line">あれは<span class="n4-kanji">東</span>、そしてジュリエットは<span class="n4-kanji">太陽</span>だ！</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>昇<rt>のぼ</rt></ruby><span class="tooltiptext">のぼれ - rise (imperative)<br><a href="https://jisho.org/search/昇る" target="_blank">Jisho で見る</a></span></span>れ、<span class="tooltip n3-kanji"><ruby>美<rt>うつく</rt></ruby><span class="tooltiptext">うつくしい - beautiful<br><a href="https://jisho.org/search/美しい" target="_blank">Jisho で見る</a></span></span>しき<span class="n4-kanji">太陽</span>よ、そして<span class="tooltip n3-kanji"><ruby>嫉妬深<rt>しっとぶか</rt></ruby><span class="tooltiptext">しっとぶかい - jealous<br><a href="https://jisho.org/search/嫉妬深い" target="_blank">Jisho で見る</a></span></span>い<span class="n4-kanji">月</span>を殺せ。</p>
+                <p class="line">彼女はすでに<span class="tooltip n3-kanji"><ruby>病<rt>や</rt></ruby><span class="tooltiptext">やんで - sick<br><a href="https://jisho.org/search/病む" target="_blank">Jisho で見る</a></span></span>んで<span class="tooltip n3-kanji"><ruby>青白<rt>あおじろ</rt></ruby><span class="tooltiptext">あおじろい - pale<br><a href="https://jisho.org/search/青白い" target="_blank">Jisho で見る</a></span></span>い、</p>
+                <p class="line">お前が彼女の<span class="tooltip n3-kanji"><ruby>侍女<rt>じじょ</rt></ruby><span class="tooltiptext">じじょ - lady's maid<br><a href="https://jisho.org/search/侍女" target="_blank">Jisho で見る</a></span></span>でありながら彼女より<span class="tooltip n3-kanji"><ruby>遥<rt>はる</rt></ruby><span class="tooltiptext">はるかに - far more<br><a href="https://jisho.org/search/遥かに" target="_blank">Jisho で見る</a></span></span>かに<span class="n4-kanji">美</span>しいゆえ<span class="tooltip n3-kanji"><ruby>悲<rt>かな</rt></ruby><span class="tooltiptext">かなしみ - grief<br><a href="https://jisho.org/search/悲しみ" target="_blank">Jisho で見る</a></span></span>しみに。</p>
+                <p class="line">彼女の<span class="tooltip n3-kanji"><ruby>侍女<rt>じじょ</rt></ruby><span class="tooltiptext">じじょ - maid<br><a href="https://jisho.org/search/侍女" target="_blank">Jisho で見る</a></span></span>になるな、彼女は<span class="tooltip n3-kanji"><ruby>嫉妬深<rt>しっとぶか</rt></ruby><span class="tooltiptext">しっとぶかい - jealous<br><a href="https://jisho.org/search/嫉妬深い" target="_blank">Jisho で見る</a></span></span>いゆえ。</p>
+                <p class="line">彼女の<span class="tooltip n2-kanji"><ruby>処女<rt>しょじょ</rt></ruby><span class="tooltiptext">しょじょ - virgin<br><a href="https://jisho.org/search/処女" target="_blank">Jisho で見る</a></span></span>の<span class="tooltip n3-kanji"><ruby>衣装<rt>いしょう</rt></ruby><span class="tooltiptext">いしょう - clothing<br><a href="https://jisho.org/search/衣装" target="_blank">Jisho で見る</a></span></span>は<span class="tooltip n3-kanji"><ruby>病<rt>や</rt></ruby><span class="tooltiptext">やんだ - sick<br><a href="https://jisho.org/search/病む" target="_blank">Jisho で見る</a></span></span>んだ<span class="n4-kanji">緑</span>にすぎぬ、</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>愚者<rt>ぐしゃ</rt></ruby><span class="tooltiptext">ぐしゃ - fool<br><a href="https://jisho.org/search/愚者" target="_blank">Jisho で見る</a></span></span>のみがそれを<span class="n4-kanji">着</span>る。それを<span class="tooltip n3-kanji"><ruby>脱<rt>ぬ</rt></ruby><span class="tooltiptext">ぬぎすてよ - cast off<br><a href="https://jisho.org/search/脱ぎ捨てる" target="_blank">Jisho で見る</a></span></span>ぎ<span class="tooltip n3-kanji"><ruby>捨<rt>す</rt></ruby><span class="tooltiptext">すてる - to throw away<br><a href="https://jisho.org/search/捨てる" target="_blank">Jisho で見る</a></span></span>てよ。</p>
+                <p class="line">あれは私の<span class="tooltip n3-kanji"><ruby>恋人<rt>こいびと</rt></ruby><span class="tooltiptext">こいびと - lover<br><a href="https://jisho.org/search/恋人" target="_blank">Jisho で見る</a></span></span>だ、ああ、あれは私の<span class="n4-kanji">愛</span>だ！</p>
+                <p class="line">ああ、彼女がそれを<span class="n4-kanji">知</span>っていたなら！</p>
+                <p class="line">彼女は<span class="n4-kanji">話</span>しているが、しかし何も<span class="n4-kanji">言</span>わない。それが何だというのだ？</p>
+                <p class="line">彼女の<span class="n4-kanji">目</span>が<span class="n4-kanji">話</span>している。私は<span class="n4-kanji">答</span>えよう。</p>
+                <p class="line">私は<span class="tooltip n2-kanji"><ruby>厚顔<rt>こうがん</rt></ruby><span class="tooltiptext">こうがん - impudent<br><a href="https://jisho.org/search/厚顔" target="_blank">Jisho で見る</a></span></span>すぎる。彼女は私に<span class="n4-kanji">話</span>しているのではない。</p>
+                <p class="line"><span class="n4-kanji">天</span>の<span class="n4-kanji">二</span>つの最も<span class="tooltip n3-kanji"><ruby>輝<rt>かがや</rt></ruby><span class="tooltiptext">かがやく - to shine<br><a href="https://jisho.org/search/輝く" target="_blank">Jisho で見る</a></span></span>く<span class="n4-kanji">星</span>が、</p>
+                <p class="line">何か<span class="n4-kanji">用事</span>があって、彼女の<span class="n4-kanji">目</span>に<span class="tooltip n3-kanji"><ruby>頼<rt>たの</rt></ruby><span class="tooltiptext">たのむ - to request<br><a href="https://jisho.org/search/頼む" target="_blank">Jisho で見る</a></span></span>んでいる</p>
+                <p class="line">彼らが<span class="tooltip n3-kanji"><ruby>戻<rt>もど</rt></ruby><span class="tooltiptext">もどる - to return<br><a href="https://jisho.org/search/戻る" target="_blank">Jisho で見る</a></span></span>るまで彼らの<span class="tooltip n3-kanji"><ruby>天球<rt>てんきゅう</rt></ruby><span class="tooltiptext">てんきゅう - celestial sphere<br><a href="https://jisho.org/search/天球" target="_blank">Jisho で見る</a></span></span>で<span class="tooltip n3-kanji"><ruby>輝<rt>かがや</rt></ruby><span class="tooltiptext">かがやく - to shine<br><a href="https://jisho.org/search/輝く" target="_blank">Jisho で見る</a></span></span>くことを。</p>
+                
+                <p class="character-name">ジュリエット</p>
+                <p class="line">ああ、私！</p>
+                
+                <p class="character-name">ロミオ</p>
+                <p class="line">彼女が<span class="n4-kanji">話</span>す！</p>
+                <p class="line">ああ、<span class="n4-kanji">再</span>び<span class="n4-kanji">話</span>せ、<span class="tooltip n3-kanji"><ruby>輝<rt>かがや</rt></ruby><span class="tooltiptext">かがやく - bright<br><a href="https://jisho.org/search/輝く" target="_blank">Jisho で見る</a></span></span>く<span class="n4-kanji">天使</span>よ！なぜならお前は</p>
+                <p class="line">この<span class="n4-kanji">夜</span>、私の<span class="n4-kanji">頭上</span>に<span class="tooltip n2-kanji"><ruby>栄光<rt>えいこう</rt></ruby><span class="tooltiptext">えいこう - glory<br><a href="https://jisho.org/search/栄光" target="_blank">Jisho で見る</a></span></span>のように<span class="tooltip n3-kanji"><ruby>現<rt>あらわ</rt></ruby><span class="tooltiptext">あらわれる - to appear<br><a href="https://jisho.org/search/現れる" target="_blank">Jisho で見る</a></span></span>れる、</p>
+                <p class="line"><span class="n4-kanji">天</span>の<span class="tooltip n3-kanji"><ruby>翼<rt>つばさ</rt></ruby><span class="tooltiptext">つばさ - wing<br><a href="https://jisho.org/search/翼" target="_blank">Jisho で見る</a></span></span>ある<span class="tooltip n3-kanji"><ruby>使者<rt>ししゃ</rt></ruby><span class="tooltiptext">ししゃ - messenger<br><a href="https://jisho.org/search/使者" target="_blank">Jisho で見る</a></span></span>のように</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>仰<rt>あお</rt></ruby><span class="tooltiptext">あおぎみる - to look up<br><a href="https://jisho.org/search/仰ぎ見る" target="_blank">Jisho で見る</a></span></span>ぎ見る<span class="tooltip n2-kanji"><ruby>驚嘆<rt>きょうたん</rt></ruby><span class="tooltiptext">きょうたん - wonder<br><a href="https://jisho.org/search/驚嘆" target="_blank">Jisho で見る</a></span></span>の<span class="n4-kanji">目</span>に、</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>死<rt>し</rt></ruby><span class="tooltiptext">しすべき - mortal<br><a href="https://jisho.org/search/死すべき" target="_blank">Jisho で見る</a></span></span>すべき者たちが<span class="tooltip n3-kanji"><ruby>後<rt>うし</rt></ruby><span class="tooltiptext">うしろに - backward<br><a href="https://jisho.org/search/後ろに" target="_blank">Jisho で見る</a></span></span>ろに<span class="tooltip n3-kanji"><ruby>倒<rt>たお</rt></ruby><span class="tooltiptext">たおれる - to fall<br><a href="https://jisho.org/search/倒れる" target="_blank">Jisho で見る</a></span></span>れて彼を<span class="n4-kanji">見上</span>げる時、</p>
+                <p class="line">彼が<span class="tooltip n3-kanji"><ruby>怠惰<rt>たいだ</rt></ruby><span class="tooltiptext">たいだな - lazy<br><a href="https://jisho.org/search/怠惰" target="_blank">Jisho で見る</a></span></span>な<span class="tooltip n3-kanji"><ruby>雲<rt>くも</rt></ruby><span class="tooltiptext">くも - cloud<br><a href="https://jisho.org/search/雲" target="_blank">Jisho で見る</a></span></span>を<span class="n4-kanji">押</span>し分けて</p>
+                <p class="line"><span class="n4-kanji">空</span>の<span class="tooltip n2-kanji"><ruby>胸<rt>むね</rt></ruby><span class="tooltiptext">むね - breast<br><a href="https://jisho.org/search/胸" target="_blank">Jisho で見る</a></span></span>に<span class="tooltip n3-kanji"><ruby>帆<rt>ほ</rt></ruby><span class="tooltiptext">ほをかける - to sail<br><a href="https://jisho.org/search/帆" target="_blank">Jisho で見る</a></span></span>をかける時。</p>
+                
+                <p class="character-name">ジュリエット</p>
+                <p class="line">ああ、ロミオ、ロミオ！なぜあなたはロミオなの？</p>
+                <p class="line">あなたの<span class="n4-kanji">父</span>を<span class="tooltip n3-kanji"><ruby>否定<rt>ひてい</rt></ruby><span class="tooltiptext">ひてい - denial<br><a href="https://jisho.org/search/否定" target="_blank">Jisho で見る</a></span></span>し、あなたの名を<span class="tooltip n3-kanji"><ruby>拒<rt>こば</rt></ruby><span class="tooltiptext">こばむ - to refuse<br><a href="https://jisho.org/search/拒む" target="_blank">Jisho で見る</a></span></span>んで。</p>
+                <p class="line">あるいは、もしそれが<span class="tooltip n3-kanji"><ruby>嫌<rt>いや</rt></ruby><span class="tooltiptext">いや - disagreeable<br><a href="https://jisho.org/search/嫌" target="_blank">Jisho で見る</a></span></span>なら、私の<span class="n4-kanji">愛</span>を<span class="tooltip n3-kanji"><ruby>誓<rt>ちか</rt></ruby><span class="tooltiptext">ちかって - swear<br><a href="https://jisho.org/search/誓う" target="_blank">Jisho で見る</a></span></span>って、</p>
+                <p class="line">そうすれば私はもうカプレットではなくなる。</p>
+                
+                <p class="character-name">ロミオ</p>
+                <p class="line">もっと<span class="n4-kanji">聞</span>こうか、それとも<span class="n4-kanji">話</span>しかけようか？</p>
+                
+                <p class="character-name">ジュリエット</p>
+                <p class="line">あなたの名だけが私の<span class="tooltip n3-kanji"><ruby>敵<rt>てき</rt></ruby><span class="tooltiptext">てき - enemy<br><a href="https://jisho.org/search/敵" target="_blank">Jisho で見る</a></span></span>。</p>
+                <p class="line">あなたはあなた自身、モンタギューでなくても。</p>
+                <p class="line">モンタギューとは何？<span class="n4-kanji">手</span>でも<span class="n4-kanji">足</span>でもない、</p>
+                <p class="line"><span class="tooltip n2-kanji"><ruby>腕<rt>うで</rt></ruby><span class="tooltiptext">うで - arm<br><a href="https://jisho.org/search/腕" target="_blank">Jisho で見る</a></span></span>でも<span class="tooltip n3-kanji"><ruby>顔<rt>かお</rt></ruby><span class="tooltiptext">かお - face<br><a href="https://jisho.org/search/顔" target="_blank">Jisho で見る</a></span></span>でも、<span class="n4-kanji">人間</span>に<span class="tooltip n3-kanji"><ruby>属<rt>ぞく</rt></ruby><span class="tooltiptext">ぞくする - to belong<br><a href="https://jisho.org/search/属する" target="_blank">Jisho で見る</a></span></span>する他のどんな部分でもない。</p>
+                <p class="line">ああ、何か他の名であって！</p>
+                <p class="line">名前に何があるというの？私たちが<span class="tooltip n2-kanji"><ruby>薔薇<rt>ばら</rt></ruby><span class="tooltiptext">ばら - rose<br><a href="https://jisho.org/search/薔薇" target="_blank">Jisho で見る</a></span></span>と<span class="tooltip n3-kanji"><ruby>呼<rt>よ</rt></ruby><span class="tooltiptext">よぶ - to call<br><a href="https://jisho.org/search/呼ぶ" target="_blank">Jisho で見る</a></span></span>ぶものは</p>
+                <p class="line">他のどんな名で<span class="tooltip n3-kanji"><ruby>呼<rt>よ</rt></ruby><span class="tooltiptext">よばれても - even if called<br><a href="https://jisho.org/search/呼ぶ" target="_blank">Jisho で見る</a></span></span>ばれても同じように<span class="tooltip n3-kanji"><ruby>甘<rt>あま</rt></ruby><span class="tooltiptext">あまい - sweet<br><a href="https://jisho.org/search/甘い" target="_blank">Jisho で見る</a></span></span>く<span class="tooltip n3-kanji"><ruby>香<rt>かお</rt></ruby><span class="tooltiptext">かおる - to smell sweet<br><a href="https://jisho.org/search/香る" target="_blank">Jisho で見る</a></span></span>るでしょう。</p>
+                <p class="line">だからロミオも、もし彼がロミオと<span class="tooltip n3-kanji"><ruby>呼<rt>よ</rt></ruby><span class="tooltiptext">よばれなくても - even if not called<br><a href="https://jisho.org/search/呼ぶ" target="_blank">Jisho で見る</a></span></span>ばれなくても、</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>称号<rt>しょうごう</rt></ruby><span class="tooltiptext">しょうごう - title<br><a href="https://jisho.org/search/称号" target="_blank">Jisho で見る</a></span></span>なしに<span class="tooltip n3-kanji"><ruby>所有<rt>しょゆう</rt></ruby><span class="tooltiptext">しょゆう - possession<br><a href="https://jisho.org/search/所有" target="_blank">Jisho で見る</a></span></span>するその<span class="tooltip n3-kanji"><ruby>大切<rt>たいせつ</rt></ruby><span class="tooltiptext">たいせつな - precious<br><a href="https://jisho.org/search/大切" target="_blank">Jisho で見る</a></span></span>な<span class="tooltip n2-kanji"><ruby>完璧<rt>かんぺき</rt></ruby><span class="tooltiptext">かんぺき - perfection<br><a href="https://jisho.org/search/完璧" target="_blank">Jisho で見る</a></span></span>さを<span class="n4-kanji">保</span>つでしょう。</p>
+                <p class="line">ロミオ、あなたの名を<span class="tooltip n3-kanji"><ruby>捨<rt>す</rt></ruby><span class="tooltiptext">すてて - throw away<br><a href="https://jisho.org/search/捨てる" target="_blank">Jisho で見る</a></span></span>てて、</p>
+                <p class="line">そしてその名の<span class="n4-kanji">代</span>わりに、あなたの一部でないその名の<span class="n4-kanji">代</span>わりに、</p>
+                <p class="line">私の<span class="n4-kanji">全</span>てを<span class="n4-kanji">取</span>って。</p>
+                
+                <div class="grammar-note">
+                    <h5>文法ポイント：「〜べき」</h5>
+                    <p>「死すべき者」の「べき」は、古典的な表現で「〜するはずの」「〜する運命の」という意味です。現代語では「〜すべき」として義務や当然を表しますが、ここでは運命的な意味で使われています。</p>
+                </div>
+            </div>
+            
+            <div class="play-section" id="othello">
+                <h3>オセロー ヴェニスの<span class="tooltip n2-kanji"><ruby>摩爾人<rt>ムーアじん</rt></ruby><span class="tooltiptext">ムーアじん - Moor<br><a href="https://jisho.org/search/摩爾人" target="_blank">Jisho で見る</a></span></span></h3>
+                
+                <h4>第三<span class="tooltip n3-kanji"><ruby>幕<rt>まく</rt></ruby><span class="tooltiptext">まく - act<br><a href="https://jisho.org/search/幕" target="_blank">Jisho で見る</a></span></span> 第三<span class="n4-kanji">場</span></h4>
+                <p class="stage-direction">キプロス。<span class="tooltip n2-kanji"><ruby>城<rt>しろ</rt></ruby><span class="tooltiptext">しろ - castle<br><a href="https://jisho.org/search/城" target="_blank">Jisho で見る</a></span></span>の前の<span class="n4-kanji">庭</span></p>
+                
+                <p class="stage-direction">デズデモーナ、カッシオー、エミリア入場</p>
+                
+                <p class="character-name">デズデモーナ</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>確<rt>たし</rt></ruby><span class="tooltiptext">たしかに - certainly<br><a href="https://jisho.org/search/確かに" target="_blank">Jisho で見る</a></span></span>かに、<span class="n4-kanji">良</span>きカッシオー、私はできることを<span class="n4-kanji">全</span>てするわ。</p>
+                
+                <p class="character-name">エミリア</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>奥方<rt>おくがた</rt></ruby><span class="tooltiptext">おくがた - madam<br><a href="https://jisho.org/search/奥方" target="_blank">Jisho で見る</a></span></span>様、<span class="n4-kanji">良</span>くなさってください。<span class="tooltip n3-kanji"><ruby>将軍<rt>しょうぐん</rt></ruby><span class="tooltiptext">しょうぐん - general<br><a href="https://jisho.org/search/将軍" target="_blank">Jisho で見る</a></span></span>と私の夫は</p>
+                <p class="line">まるで<span class="tooltip n3-kanji"><ruby>仲違<rt>なかたが</rt></ruby><span class="tooltiptext">なかたがい - discord<br><a href="https://jisho.org/search/仲違い" target="_blank">Jisho で見る</a></span></span>いしているかのようです。</p>
+                
+                <p class="character-name">デズデモーナ</p>
+                <p class="line">あなたは<span class="n4-kanji">間違</span>っているでしょうか？</p>
+                
+                <p class="character-name">エミリア</p>
+                <p class="line">私は<span class="tooltip n3-kanji"><ruby>賭<rt>か</rt></ruby><span class="tooltiptext">かける - to bet<br><a href="https://jisho.org/search/賭ける" target="_blank">Jisho で見る</a></span></span>けてもいいです、この<span class="n4-kanji">件</span>です、</p>
+                <p class="line">カッシオー様に<span class="n4-kanji">対</span>するある種の<span class="tooltip n3-kanji"><ruby>不満<rt>ふまん</rt></ruby><span class="tooltiptext">ふまん - dissatisfaction<br><a href="https://jisho.org/search/不満" target="_blank">Jisho で見る</a></span></span>です。</p>
+                
+                <p class="character-name">デズデモーナ</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>不幸<rt>ふこう</rt></ruby><span class="tooltiptext">ふこうな - unhappy<br><a href="https://jisho.org/search/不幸" target="_blank">Jisho で見る</a></span></span>な私！私は<span class="n4-kanji">知</span>らずに</p>
+                <p class="line">あの<span class="tooltip n3-kanji"><ruby>紳士<rt>しんし</rt></ruby><span class="tooltiptext">しんし - gentleman<br><a href="https://jisho.org/search/紳士" target="_blank">Jisho で見る</a></span></span>への<span class="n4-kanji">愛</span>を<span class="n4-kanji">失</span>ってしまった。</p>
+                
+                <p class="character-name">カッシオー</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>奥方<rt>おくがた</rt></ruby><span class="tooltiptext">おくがた - madam<br><a href="https://jisho.org/search/奥方" target="_blank">Jisho で見る</a></span></span>様、そうではありません。私が<span class="tooltip n3-kanji"><ruby>保証<rt>ほしょう</rt></ruby><span class="tooltiptext">ほしょう - guarantee<br><a href="https://jisho.org/search/保証" target="_blank">Jisho で見る</a></span></span>いたします、</p>
+                <p class="line">あなた様は<span class="n4-kanji">再</span>び彼の<span class="n4-kanji">愛</span>を<span class="n4-kanji">得</span>るでしょう。</p>
+                <p class="line">彼は<span class="tooltip n3-kanji"><ruby>政治<rt>せいじ</rt></ruby><span class="tooltiptext">せいじ - politics<br><a href="https://jisho.org/search/政治" target="_blank">Jisho で見る</a></span></span>から<span class="tooltip n3-kanji"><ruby>離<rt>はな</rt></ruby><span class="tooltiptext">はなれて - apart from<br><a href="https://jisho.org/search/離れる" target="_blank">Jisho で見る</a></span></span>れては<span class="n4-kanji">何</span>も<span class="n4-kanji">行</span>いません、</p>
+                <p class="line">そして<span class="tooltip n3-kanji"><ruby>政策<rt>せいさく</rt></ruby><span class="tooltiptext">せいさく - policy<br><a href="https://jisho.org/search/政策" target="_blank">Jisho で見る</a></span></span>は<span class="n4-kanji">自</span>らを<span class="n4-kanji">安全</span>な<span class="tooltip n3-kanji"><ruby>距離<rt>きょり</rt></ruby><span class="tooltiptext">きょり - distance<br><a href="https://jisho.org/search/距離" target="_blank">Jisho で見る</a></span></span>に<span class="n4-kanji">保</span>つために</p>
+                <p class="line">より<span class="n4-kanji">長</span>く<span class="tooltip n3-kanji"><ruby>継続<rt>けいぞく</rt></ruby><span class="tooltiptext">けいぞく - continuation<br><a href="https://jisho.org/search/継続" target="_blank">Jisho で見る</a></span></span>する<span class="tooltip n3-kanji"><ruby>怒<rt>いか</rt></ruby><span class="tooltiptext">いかり - anger<br><a href="https://jisho.org/search/怒り" target="_blank">Jisho で見る</a></span></span>りを<span class="tooltip n3-kanji"><ruby>演<rt>えん</rt></ruby><span class="tooltiptext">えんじる - to perform<br><a href="https://jisho.org/search/演じる" target="_blank">Jisho で見る</a></span></span>じさせますが、</p>
+                <p class="line">それは<span class="n4-kanji>愛情</span>や<span class="tooltip n3-kanji"><ruby>義務<rt>ぎむ</rt></ruby><span class="tooltiptext">ぎむ - duty<br><a href="https://jisho.org/search/義務" target="_blank">Jisho で見る</a></span></span>から<span class="n4-kanji">出</span>たものではありません。</p>
+                
+                <p class="character-name">デズデモーナ</p>
+                <p class="line">そうであって<span class="tooltip n3-kanji"><ruby>欲<rt>ほ</rt></ruby><span class="tooltiptext">ほしい - want<br><a href="https://jisho.org/search/欲しい" target="_blank">Jisho で見る</a></span></span>しい！</p>
+                
+                <p class="stage-direction">オセロー、イアーゴー入場</p>
+                
+                <p class="character-name">エミリア</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>奥方<rt>おくがた</rt></ruby><span class="tooltiptext">おくがた - madam<br><a href="https://jisho.org/search/奥方" target="_blank">Jisho で見る</a></span></span>様、こちらに<span class="tooltip n3-kanji"><ruby>将軍<rt>しょうぐん</rt></ruby><span class="tooltiptext">しょうぐん - general<br><a href="https://jisho.org/search/将軍" target="_blank">Jisho で見る</a></span></span>がいらっしゃいます。</p>
+                
+                <p class="character-name">カッシオー</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>奥方<rt>おくがた</rt></ruby><span class="tooltiptext">おくがた - madam<br><a href="https://jisho.org/search/奥方" target="_blank">Jisho で見る</a></span></span>様、私は<span class="tooltip n3-kanji"><ruby>謙虚<rt>けんきょ</rt></ruby><span class="tooltiptext">けんきょに - humbly<br><a href="https://jisho.org/search/謙虚" target="_blank">Jisho で見る</a></span></span>に<span class="n4-kanji">去</span>ります。</p>
+                
+                <p class="character-name">デズデモーナ</p>
+                <p class="line">なぜですか、<span class="n4-kanji">待</span>って、<span class="n4-kanji">聞</span>いてください。</p>
+                
+                <p class="character-name">カッシオー</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>奥方<rt>おくがた</rt></ruby><span class="tooltiptext">おくがた - madam<br><a href="https://jisho.org/search/奥方" target="_blank">Jisho で見る</a></span></span>様、今は<span class="tooltip n2-kanji"><ruby>駄目<rt>だめ</rt></ruby><span class="tooltiptext">だめ - no good<br><a href="https://jisho.org/search/駄目" target="_blank">Jisho で見る</a></span></span>です。私は<span class="n4-kanji">大変</span><span class="tooltip n3-kanji"><ruby>不安<rt>ふあん</rt></ruby><span class="tooltiptext">ふあん - uneasy<br><a href="https://jisho.org/search/不安" target="_blank">Jisho で見る</a></span></span>です。</p>
+                <p class="line">それは私に<span class="n4-kanji">良</span>くありません。</p>
+                
+                <p class="character-name">デズデモーナ</p>
+                <p class="line">でも、<span class="n4-kanji">待</span>ってください。</p>
+                
+                <p class="stage-direction">カッシオー<span class="tooltip n3-kanji"><ruby>退場<rt>たいじょう</rt></ruby><span class="tooltiptext">たいじょう - exit<br><a href="https://jisho.org/search/退場" target="_blank">Jisho で見る</a></span></span></p>
+                
+                <p class="character-name">オセロー</p>
+                <p class="line">何だ、お前は今何をしていたのだ？</p>
+                
+                <p class="character-name">デズデモーナ</p>
+                <p class="line">あら、あなたの<span class="tooltip n3-kanji"><ruby>不興<rt>ふきょう</rt></ruby><span class="tooltiptext">ふきょう - displeasure<br><a href="https://jisho.org/search/不興" target="_blank">Jisho で見る</a></span></span>を<span class="n4-kanji">受</span>けた<span class="tooltip n3-kanji"><ruby>哀<rt>あわ</rt></ruby><span class="tooltiptext">あわれな - pitiful<br><a href="https://jisho.org/search/哀れ" target="_blank">Jisho で見る</a></span></span>れな<span class="tooltip n3-kanji"><ruby>嘆願者<rt>たんがんしゃ</rt></ruby><span class="tooltiptext">たんがんしゃ - petitioner<br><a href="https://jisho.org/search/嘆願者" target="_blank">Jisho で見る</a></span></span>でした。</p>
+                <p class="line"><span class="n4-kanji">良</span>き<span class="n4-kanji">夫</span>よ、彼をあなたの<span class="tooltip n3-kanji"><ruby>好意<rt>こうい</rt></ruby><span class="tooltiptext">こうい - favor<br><a href="https://jisho.org/search/好意" target="_blank">Jisho で見る</a></span></span>に<span class="tooltip n3-kanji"><ruby>呼<rt>よ</rt></ruby><span class="tooltiptext">よびもどして - call back<br><a href="https://jisho.org/search/呼び戻す" target="_blank">Jisho で見る</a></span></span>び<span class="tooltip n3-kanji"><ruby>戻<rt>もど</rt></ruby><span class="tooltiptext">もどす - to return<br><a href="https://jisho.org/search/戻す" target="_blank">Jisho で見る</a></span></span>してください。</p>
+                
+                <p class="character-name">オセロー</p>
+                <p class="line">今<span class="n4-kanji">話</span>していたのはカッシオーか？</p>
+                
+                <p class="character-name">デズデモーナ</p>
+                <p class="line">カッシオー？いいえ、あなた。<span class="tooltip n3-kanji"><ruby>確<rt>たし</rt></ruby><span class="tooltiptext">たしかに - surely<br><a href="https://jisho.org/search/確かに" target="_blank">Jisho で見る</a></span></span>かに<span class="tooltip n3-kanji"><ruby>悲<rt>かな</rt></ruby><span class="tooltiptext">かなしみ - sorrow<br><a href="https://jisho.org/search/悲しみ" target="_blank">Jisho で見る</a></span></span>しみで<span class="tooltip n3-kanji"><ruby>弱<rt>よわ</rt></ruby><span class="tooltiptext">よわっている - weakened<br><a href="https://jisho.org/search/弱る" target="_blank">Jisho で見る</a></span></span>っている者です、</p>
+                <p class="line">彼は<span class="n4-kanji">全</span>ての<span class="tooltip n3-kanji"><ruby>感覚<rt>かんかく</rt></ruby><span class="tooltiptext">かんかく - sense<br><a href="https://jisho.org/search/感覚" target="_blank">Jisho で見る</a></span></span>を<span class="n4-kanji">失</span>っています。私は彼のために<span class="n4-kanji>話</span>しました、</p>
+                <p class="line">そしてあなたは私に<span class="tooltip n3-kanji"><ruby>約束<rt>やくそく</rt></ruby><span class="tooltiptext">やくそく - promise<br><a href="https://jisho.org/search/約束" target="_blank">Jisho で見る</a></span></span>してくださいました、</p>
+                <p class="line">彼を<span class="tooltip n3-kanji"><ruby>呼<rt>よ</rt></ruby><span class="tooltiptext">よびもどす - to call back<br><a href="https://jisho.org/search/呼び戻す" target="_blank">Jisho で見る</a></span></span>び<span class="tooltip n3-kanji"><ruby>戻<rt>もど</rt></ruby><span class="tooltiptext">もどす - to return<br><a href="https://jisho.org/search/戻す" target="_blank">Jisho で見る</a></span></span>すと。いつ彼は<span class="tooltip n3-kanji"><ruby>戻<rt>もど</rt></ruby><span class="tooltiptext">もどってくる - to come back<br><a href="https://jisho.org/search/戻る" target="_blank">Jisho で見る</a></span></span>ってきますか？</p>
+                
+                <p class="character-name">オセロー</p>
+                <p class="line">すぐにだ、<span class="n4-kanji>愛</span>しい人よ。</p>
+                <p class="line"><span class="n4-kanji">夕食</span>に、<span class="n4-kanji">今夜</span>は<span class="tooltip n2-kanji"><ruby>無理<rt>むり</rt></ruby><span class="tooltiptext">むり - impossible<br><a href="https://jisho.org/search/無理" target="_blank">Jisho で見る</a></span></span>だ。</p>
+                
+                <p class="character-name">デズデモーナ</p>
+                <p class="line"><span class="n4-kanji">明日</span>の<span class="n4-kanji">朝食</span>なら？</p>
+                
+                <p class="character-name">オセロー</p>
+                <p class="line">いや、<span class="tooltip n2-kanji"><ruby>城塞<rt>じょうさい</rt></ruby><span class="tooltiptext">じょうさい - fortress<br><a href="https://jisho.org/search/城塞" target="_blank">Jisho で見る</a></span></span>で<span class="tooltip n3-kanji"><ruby>将校<rt>しょうこう</rt></ruby><span class="tooltiptext">しょうこう - officer<br><a href="https://jisho.org/search/将校" target="_blank">Jisho で見る</a></span></span>たちに<span class="n4-kanji">会</span>わねばならない。</p>
+                
+                <p class="character-name">デズデモーナ</p>
+                <p class="line">では<span class="n4-kanji">明日</span>の<span class="n4-kanji">夕食</span>か、<span class="n4-kanji">火曜日</span>の<span class="n4-kanji>朝</span>か、</p>
+                <p class="line"><span class="n4-kanji">正午</span>か、<span class="n4-kanji">夜</span>か、<span class="n4-kanji">水曜日</span>の<span class="n4-kanji">朝</span>か。</p>
+                <p class="line"><span class="n4-kanji">時間</span>を<span class="n4-kanji">教</span>えてください、でも三<span class="n4-kanji">日</span>を<span class="n4-kanji">超</span>えないで。</p>
+                <p class="line"><span class="tooltip n3-kanji"><ruby>確<rt>たし</rt></ruby><span class="tooltiptext">たしかに - indeed<br><a href="https://jisho.org/search/確かに" target="_blank">Jisho で見る</a></span></span>かに彼は<span class="tooltip n2-kanji"><ruby>懺悔<rt>ざんげ</rt></ruby><span class="tooltiptext">ざんげ - repentance<br><a href="https://jisho.org/search/懺悔" target="_blank">Jisho で見る</a></span></span>しています。</p>
+            </div>
+            
+            <div style="text-align: center; margin: 40px 0; font-style: italic;">
+                <p>[その他の<span class="tooltip n3-kanji"><ruby>戯曲<rt>ぎきょく</rt></ruby><span class="tooltiptext">ぎきょく - play<br><a href="https://jisho.org/search/戯曲" target="_blank">Jisho で見る</a></span></span>も<span class="tooltip n3-kanji"><ruby>同様<rt>どうよう</rt></ruby><span class="tooltiptext">どうよう - similarly<br><a href="https://jisho.org/search/同様" target="_blank">Jisho で見る</a></span></span>に<span class="n4-kanji">続</span>く]</p>
+            </div>
+        </section>
+        
+        <!-- Navigation buttons -->
+        <div class="nav-buttons">
+            <a href="#top" class="nav-button">トップへ</a>
+            <button onclick="window.scrollTo(0, 0)" class="nav-button">↑</button>
+        </div>
+        
+        <!-- Part Navigation -->
+        <div style="text-align: center; margin: 40px 0; padding: 20px; background-color: #f0f0f0; border-radius: 5px;">
+            <h3>他の部分へ移動</h3>
+            <p>
+                <a href="shakespeare-japanese-N4-complete-part1-v2.html">第一部 (行 1-1500)</a> | 
+                <strong>現在: 第二部 (行 1501-3000)</strong> | 
+                <a href="shakespeare-japanese-N4-complete-part3-v2.html">第三部 (行 3001-4500)</a> | 
+                <a href="shakespeare-japanese-N4-complete-part4-v2.html">第四部 (行 4501-5682)</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

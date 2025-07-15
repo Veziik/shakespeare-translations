@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア全集 日本語版 第一部 - JLPT N1学術注釈版</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+        
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #8b4513;
+            --gold-accent: #d4af37;
+            --annotation-bg: #f8f6f0;
+            --critical-bg: #f0f5fa;
+            --philosophical-bg: #faf5f0;
+            --linguistic-bg: #f5faf0;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --hover-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Serif JP', 'Shippori Mincho', serif;
+            line-height: 1.8;
+            color: var(--primary-color);
+            background: #fefefe;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            border-bottom: 3px solid var(--gold-accent);
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            letter-spacing: 0.1em;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .scholarly-info {
+            background: white;
+            padding: 30px;
+            margin: 20px 0 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--gold-accent);
+        }
+        
+        .scholarly-info h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+        
+        /* Digital Humanities Tools Panel */
+        .dh-tools-panel {
+            position: fixed;
+            right: 20px;
+            top: 200px;
+            width: 60px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            padding: 10px 0;
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        .dh-tools-panel:hover {
+            width: 280px;
+        }
+        
+        .dh-tool {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 25px;
+            margin: 5px 10px;
+        }
+        
+        .dh-tool:hover {
+            background: var(--annotation-bg);
+        }
+        
+        .dh-tool-icon {
+            font-size: 1.5em;
+            margin-right: 15px;
+            min-width: 30px;
+            text-align: center;
+        }
+        
+        .dh-tool-label {
+            opacity: 0;
+            white-space: nowrap;
+            font-size: 0.9em;
+            transition: opacity 0.3s ease;
+        }
+        
+        .dh-tools-panel:hover .dh-tool-label {
+            opacity: 1;
+        }
+        
+        /* Citation Management Modal */
+        .citation-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+        }
+        
+        .citation-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .citation-header {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .citation-format {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .citation-format:hover {
+            background: #e8e8e8;
+            transform: translateX(5px);
+        }
+        
+        .citation-format h4 {
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        .citation-format code {
+            font-size: 0.9em;
+            color: #666;
+            font-family: monospace;
+        }
+        
+        /* Text Analysis Tools */
+        .text-analysis-panel {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            box-shadow: var(--hover-shadow);
+            display: none;
+            z-index: 1000;
+        }
+        
+        .analysis-stat {
+            display: inline-block;
+            margin: 0 15px;
+            text-align: center;
+        }
+        
+        .analysis-stat-value {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: block;
+        }
+        
+        .analysis-stat-label {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        /* Interactive Annotations */
+        .interactive-annotation {
+            position: relative;
+            display: inline-block;
+            border-bottom: 2px dotted var(--gold-accent);
+            cursor: help;
+        }
+        
+        .annotation-popup {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: var(--hover-shadow);
+            width: 300px;
+            display: none;
+            z-index: 1000;
+            margin-bottom: 10px;
+        }
+        
+        .interactive-annotation:hover .annotation-popup {
+            display: block;
+        }
+        
+        .annotation-popup::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 8px solid transparent;
+            border-top-color: white;
+        }
+        
+        /* Reading Progress Indicator */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            z-index: 2000;
+        }
+        
+        .reading-progress-bar {
+            height: 100%;
+            background: var(--gold-accent);
+            width: 0;
+            transition: width 0.3s ease;
+        }
+        
+        /* Note-taking Sidebar */
+        .notes-sidebar {
+            position: fixed;
+            right: -400px;
+            top: 0;
+            width: 400px;
+            height: 100%;
+            background: white;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+            z-index: 1500;
+            padding: 30px;
+            overflow-y: auto;
+        }
+        
+        .notes-sidebar.active {
+            right: 0;
+        }
+        
+        .notes-header {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .note-item {
+            background: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .note-timestamp {
+            font-size: 0.8em;
+            color: #999;
+            margin-bottom: 5px;
+        }
+        
+        .note-content {
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        .note-reference {
+            font-size: 0.85em;
+            color: var(--accent-color);
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--primary-color);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .nav-item:hover {
+            background: var(--gold-accent);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Main Content */
+        .content-section {
+            margin-bottom: 60px;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .work-title {
+            font-size: 2em;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--gold-accent);
+            font-weight: 700;
+        }
+        
+        .sonnet, .scene {
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .sonnet-number, .scene-title {
+            font-size: 1.3em;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .original-text {
+            font-size: 1.1em;
+            line-height: 2;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 3px solid var(--gold-accent);
+            position: relative;
+        }
+        
+        /* Furigana Styling */
+        ruby {
+            ruby-align: center;
+        }
+        
+        rt {
+            font-size: 0.5em;
+            color: #888;
+            font-weight: 400;
+        }
+        
+        /* Annotation System */
+        .annotation-section {
+            margin-top: 30px;
+            padding: 25px;
+            background: var(--annotation-bg);
+            border-radius: 8px;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .annotation-header {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .annotation-icon {
+            font-size: 1.3em;
+        }
+        
+        /* Different Annotation Types */
+        .literary-criticism {
+            background: var(--critical-bg);
+            border-left: 4px solid #4a90e2;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .philosophical-commentary {
+            background: var(--philosophical-bg);
+            border-left: 4px solid #e67e22;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .linguistic-analysis {
+            background: var(--linguistic-bg);
+            border-left: 4px solid #27ae60;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .cultural-context {
+            background: #fdf5ff;
+            border-left: 4px solid #9b59b6;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        /* Scholarly References */
+        .reference {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #ccc;
+        }
+        
+        /* Interactive Elements */
+        .expandable {
+            cursor: pointer;
+            position: relative;
+            padding-right: 25px;
+        }
+        
+        .expandable::after {
+            content: '▼';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease;
+        }
+        
+        .expandable.expanded::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+        
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .expandable-content.expanded {
+            max-height: 2000px;
+        }
+        
+        /* Footnotes */
+        .footnote {
+            vertical-align: super;
+            font-size: 0.8em;
+            color: var(--accent-color);
+            cursor: pointer;
+            margin: 0 2px;
+        }
+        
+        .footnote:hover {
+            color: var(--gold-accent);
+            text-decoration: underline;
+        }
+        
+        .footnote-content {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--hover-shadow);
+            max-width: 600px;
+            display: none;
+            z-index: 1001;
+            border: 2px solid var(--gold-accent);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+            
+            .nav-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .dh-tools-panel {
+                display: none;
+            }
+            
+            .notes-sidebar {
+                width: 100%;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                font-size: 12pt;
+                line-height: 1.6;
+            }
+            
+            nav, .dh-tools-panel, .reading-progress, .notes-sidebar {
+                display: none;
+            }
+            
+            .content-section {
+                box-shadow: none;
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress">
+        <div class="reading-progress-bar"></div>
+    </div>
+    
+    <!-- Digital Humanities Tools Panel -->
+    <div class="dh-tools-panel">
+        <div class="dh-tool" onclick="toggleCitationModal()">
+            <span class="dh-tool-icon">📑</span>
+            <span class="dh-tool-label">引用管理ツール</span>
+        </div>
+        <div class="dh-tool" onclick="toggleTextAnalysis()">
+            <span class="dh-tool-icon">📊</span>
+            <span class="dh-tool-label">テキスト分析</span>
+        </div>
+        <div class="dh-tool" onclick="toggleNotesSidebar()">
+            <span class="dh-tool-icon">📝</span>
+            <span class="dh-tool-label">ノート作成</span>
+        </div>
+        <div class="dh-tool" onclick="exportAnnotations()">
+            <span class="dh-tool-icon">💾</span>
+            <span class="dh-tool-label">注釈エクスポート</span>
+        </div>
+        <div class="dh-tool" onclick="toggleComparativeView()">
+            <span class="dh-tool-icon">🔍</span>
+            <span class="dh-tool-label">比較テキスト表示</span>
+        </div>
+    </div>
+    
+    <!-- Citation Management Modal -->
+    <div class="citation-modal" id="citationModal">
+        <div class="citation-content">
+            <h3 class="citation-header">引用管理システム</h3>
+            <p style="margin-bottom: 20px;">ご希望の引用形式を選択してください：</p>
+            
+            <div class="citation-format" onclick="copyCitation('mla')">
+                <h4>MLA形式</h4>
+                <code>シェイクスピア、ウィリアム。「ソネット集」『シェイクスピア全集 日本語版 第一部』。JLPT N1学術注釈版、2025年。</code>
+            </div>
+            
+            <div class="citation-format" onclick="copyCitation('apa')">
+                <h4>APA形式</h4>
+                <code>Shakespeare, W. (2025). ソネット集. In シェイクスピア全集 日本語版 第一部 (JLPT N1学術注釈版).</code>
+            </div>
+            
+            <div class="citation-format" onclick="copyCitation('chicago')">
+                <h4>シカゴ形式</h4>
+                <code>シェイクスピア、ウィリアム。『シェイクスピア全集 日本語版 第一部』。JLPT N1学術注釈版。2025年。</code>
+            </div>
+            
+            <div class="citation-format" onclick="copyCitation('harvard')">
+                <h4>ハーバード形式</h4>
+                <code>Shakespeare, W 2025, 'ソネット集', シェイクスピア全集 日本語版 第一部, JLPT N1学術注釈版.</code>
+            </div>
+            
+            <button onclick="closeCitationModal()" style="margin-top: 20px; padding: 10px 20px; background: var(--accent-color); color: white; border: none; border-radius: 5px; cursor: pointer;">閉じる</button>
+        </div>
+    </div>
+    
+    <!-- Text Analysis Panel -->
+    <div class="text-analysis-panel" id="textAnalysisPanel">
+        <div class="analysis-stat">
+            <span class="analysis-stat-value" id="charCount">0</span>
+            <span class="analysis-stat-label">総文字数</span>
+        </div>
+        <div class="analysis-stat">
+            <span class="analysis-stat-value" id="kanjiCount">0</span>
+            <span class="analysis-stat-label">漢字数</span>
+        </div>
+        <div class="analysis-stat">
+            <span class="analysis-stat-value" id="annotationCount">0</span>
+            <span class="analysis-stat-label">注釈数</span>
+        </div>
+        <div class="analysis-stat">
+            <span class="analysis-stat-value" id="readingTime">0分</span>
+            <span class="analysis-stat-label">推定読書時間</span>
+        </div>
+    </div>
+    
+    <!-- Notes Sidebar -->
+    <div class="notes-sidebar" id="notesSidebar">
+        <h3 class="notes-header">学習ノート</h3>
+        <textarea id="newNoteInput" placeholder="新しいノートを入力..." style="width: 100%; min-height: 100px; margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+        <button onclick="addNote()" style="padding: 10px 20px; background: var(--accent-color); color: white; border: none; border-radius: 5px; cursor: pointer; margin-bottom: 20px;">ノートを追加</button>
+        <div id="notesContainer">
+            <!-- Notes will be dynamically added here -->
+        </div>
+    </div>
+    
+    <header>
+        <h1>シェイクスピア全集 日本語版 第一部</h1>
+        <p class="subtitle">JLPT N1 学術注釈版 - 文学研究者・上級学習者のための完全版</p>
+    </header>
+    
+    <div class="scholarly-info container">
+        <h2>学術版について</h2>
+        <p>本版は、日本語能力試験N1レベルの読者を対象とした、シェイクスピア作品の学術的注釈版です。原文の詩的美しさを保持しつつ、文学批評、哲学的考察、言語学的分析、文化的文脈の解説を通じて、作品の深層的理解を促進することを目的としています。</p>
+        <p>注釈は最小限の振り仮名に留め、むしろ作品の文学的価値、翻訳における言語選択の妙、日英文化の架橋としての役割に焦点を当てています。</p>
+        <p><strong>デジタル人文学機能：</strong>本版は最新のデジタル人文学ツールを搭載し、引用管理、テキスト分析、インタラクティブな注釈、学習ノート機能を提供します。</p>
+    </div>
+    
+    <nav>
+        <div class="nav-content">
+            <a href="#sonnets" class="nav-item">ソネット集</a>
+            <a href="#all-is-well" class="nav-item">終わりよければ全てよし</a>
+            <a href="#antony-cleopatra" class="nav-item">アントニウスとクレオパトラ</a>
+            <a href="#as-you-like-it" class="nav-item">お気に召すまま</a>
+            <a href="#comedy-errors" class="nav-item">間違いの喜劇</a>
+            <a href="#coriolanus" class="nav-item">コリオレイナス</a>
+            <a href="#hamlet" class="nav-item">ハムレット</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <!-- ソネット集 -->
+        <section id="sonnets" class="content-section">
+            <h2 class="work-title">ソネット集（1609年）</h2>
+            
+            <div class="sonnet">
+                <h3 class="sonnet-number">第一番</h3>
+                <div class="original-text">
+                    最も美しき者より我らは子孫を望む、<br>
+                    それにより<span class="interactive-annotation">美の薔薇<span class="annotation-popup">西洋文学における薔薇は美、愛、はかなさの象徴。日本文化の桜花に相当する美的価値を持つ。</span></span>は決して枯れぬよう、<br>
+                    されど熟したる者が時により逝くとも、<br>
+                    その優しき後継ぎがその記憶を担わん。<br>
+                    しかし汝は<span class="interactive-annotation">己が輝く瞳とのみ契り<span class="annotation-popup">ナルシシズムの隠喩。オウィディウス『変身物語』のナルキッソス神話への明確な言及。</span></span>、<br>
+                    自らの本質より成る燃料で光の炎を養い、<br>
+                    豊かなる処に飢饉を作り出し、<br>
+                    己が敵となり、甘き己に余りに残酷なり。<br>
+                    汝は今や世界の新鮮なる装飾品、<br>
+                    そして華やかなる春への唯一の使者なり、<br>
+                    己の蕾の内に満足を葬り、<br>
+                    優しき吝嗇家よ、出し惜しみて浪費す。<br>
+                    　　世を憐れめ、さもなくば貪欲者となれ、<br>
+                    　　墓と汝により世の分を食い尽くすべし。
+                </div>
+                
+                <div class="annotation-section">
+                    <h4 class="annotation-header">
+                        <span class="annotation-icon">📚</span>
+                        文学批評
+                    </h4>
+                    <div class="literary-criticism">
+                        <p>シェイクスピアのソネット集の巻頭を飾る本作は、いわゆる「procreation sonnets（生殖ソネット群）」の嚆矢として、全154編の主題的基調を確立する。「美の薔薇」という隠喩は、単なる美的価値の永続性を超えて、プラトン的イデアとアリストテレス的現実の弁証法的統合を示唆する。</p>
+                        <p>特筆すべきは、第5行「己が輝く瞳とのみ契り」における自己愛（ナルシシズム）の主題であり、これはオウィディウス『変身物語』のナルキッソス神話を明確に踏まえつつ、ルネサンス期の個人主義的傾向への警鐘として機能している。</p>
+                        <div class="reference">
+                            参照：Vendler, H. (1997). The Art of Shakespeare's Sonnets. Harvard University Press.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="annotation-section">
+                    <h4 class="annotation-header">
+                        <span class="annotation-icon">🎭</span>
+                        哲学的考察
+                    </h4>
+                    <div class="philosophical-commentary">
+                        <p>本ソネットは、存在論的な問いを美学的次元で展開する。「美の薔薇」の永続性への希求は、ヘラクレイトス的な万物流転の思想と、パルメニデス的な不変の存在への憧憬との間の緊張関係を内包している。</p>
+                        <p>「豊かなる処に飢饉を作り出し」という逆説的表現は、過剰な自己充足が却って精神的貧困を招くという、後のヘーゲル弁証法における「否定の否定」の萌芽を見出すことができる。これは東洋思想、特に老子の「無為自然」や仏教の「空」の概念とも共鳴する普遍的洞察である。</p>
+                    </div>
+                </div>
+                
+                <div class="annotation-section">
+                    <h4 class="annotation-header">
+                        <span class="annotation-icon">🔤</span>
+                        言語学的分析
+                    </h4>
+                    <div class="linguistic-analysis">
+                        <p>翻訳における「最も美しき者より我らは子孫を望む」は、原文"From fairest creatures we desire increase"の巧みな移植である。「fairest creatures」を「最も美しき者」と訳すことで、英語の複数形が内包する普遍性を、日本語の「者」という抽象的な単数形で表現している。</p>
+                        <p>また、「されど」「しかし」「なれど」といった逆接の接続詞の変奏は、原文のbut, yet等の単調さを回避し、文語体の豊かな語彙を活用した翻訳戦略の好例である。特に「甘き己に余りに残酷なり」における形容詞の畳韻法的使用は、日本語の音韻的特性を最大限に活用している。</p>
+                    </div>
+                </div>
+                
+                <div class="annotation-section">
+                    <h4 class="annotation-header">
+                        <span class="annotation-icon">🌸</span>
+                        文化的文脈
+                    </h4>
+                    <div class="cultural-context">
+                        <p>「美の薔薇」という表現は、西洋文学における薔薇の象徴性（美、愛、はかなさ）を踏襲しているが、日本文化においては桜花がより適切な対応物となろう。しかし、あえて薔薇を保持することで、翻訳は文化的他者性を維持し、読者に異文化体験を提供している。</p>
+                        <p>「優しき吝嗇家」という撞着語法は、日本の「物の哀れ」の美学とも通底する。過剰な保持が却って喪失を招くという逆説は、『源氏物語』における「もののあはれ」や、西行の「花の下にて春死なん」といった日本文学の伝統的主題とも響き合う。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sonnet">
+                <h3 class="sonnet-number">第二番</h3>
+                <div class="original-text">
+                    四十の冬が汝の額を包囲せし時、<br>
+                    汝の美の野に深き塹壕を掘らん時、<br>
+                    今かくも見つめられし汝の若さの誇らしき衣は、<br>
+                    価値なき<ruby>襤褸<rt>らんる</rt></ruby>として扱われん。<br>
+                    その時問われて、汝の美は何処にありやと、<br>
+                    汝の力強き日々の宝は何処にと、<br>
+                    己の深く落ち窪みし瞳の内にと言うは、<br>
+                    全てを食い尽くす恥と無益なる賛美なり。<br>
+                    汝の美の使用がいかに多くの賛美に値せしか、<br>
+                    もし汝が答え得るならば「この美しき我が子が<br>
+                    我が勘定を総計し、老いたる我が弁明となる」と<br>
+                    彼の美により汝のものなることを証せん。<br>
+                    　　これぞ汝老いし時に新たに作られること、<br>
+                    　　そして汝の血の温かきを感ずる時を見ん。
+                </div>
+                
+                <div class="annotation-section">
+                    <h4 class="annotation-header">
+                        <span class="annotation-icon">📚</span>
+                        文学批評
+                    </h4>
+                    <div class="literary-criticism">
+                        <p>第二番において、シェイクスピアは戦争の隠喩を巧みに展開する。「四十の冬が汝の額を包囲せし時」という軍事的イメージは、時間を侵略者として、若さを城塞として描写する。この擬人法は、ペトラルカ以来のソネット伝統における「愛の戦争」のトポスを、老化という普遍的主題へと転換させている。</p>
+                        <p>「深き塹壕」（deep trenches）としての皺の描写は、エリザベス朝の観客にとって、当時の包囲戦の生々しい記憶を喚起したであろう。美の戦場における時間の勝利という主題は、『ヴィーナスとアドニス』における美と死の対立とも呼応する。</p>
+                    </div>
+                </div>
+                
+                <div class="annotation-section">
+                    <h4 class="annotation-header expandable">
+                        <span class="annotation-icon">🎭</span>
+                        哲学的考察（クリックで展開）
+                    </h4>
+                    <div class="expandable-content">
+                        <div class="philosophical-commentary">
+                            <p>「汝の美の使用」という概念は、アリストテレスの潜在性（デュナミス）と現実性（エネルゲイア）の区別を想起させる。美は単に所有されるべきものではなく、「使用」されることで初めてその本質を実現する。これは後のカント美学における「無関心性」の概念への挑戦とも読める。</p>
+                            <p>「我が勘定を総計し」という経済的メタファーは、ルネサンス期の商業資本主義の勃興を反映しつつ、精神的価値の物質的表現という形而上学的問題を提起する。子供という「利子」によって美という「元本」を証明するという論理は、プロテスタント的労働倫理の美学的変奏とも解釈できる。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sonnet">
+                <h3 class="sonnet-number">第二十九番（完全版）</h3>
+                <div class="original-text">
+                    運命と人の目に見捨てられし時、<br>
+                    我は独り己が境涯を嘆き、<br>
+                    空しき叫びで聞こえぬ天を悩まし、<br>
+                    己を見つめて我が運命を呪う、<br>
+                    希望により富める者を羨み、<br>
+                    彼の如き風貌を、彼の如き友を有する者を、<br>
+                    この者の術を、かの者の範囲を欲し、<br>
+                    我が最も楽しむものに最も満足せず、<br>
+                    されど己をほとんど軽蔑するこれらの思いの中で、<br>
+                    偶然汝のことを思い、その時我が状態は、<br>
+                    （<span class="interactive-annotation">朝の光明に昇る雲雀<span class="annotation-popup">中世宗教詩における魂の上昇のイメージを世俗化し、人間的愛による救済という人文主義的主題へと変容。</span></span>の如く<br>
+                    陰鬱なる大地より）天の門にて讃美歌を歌う、<br>
+                    　　汝の甘き愛を思い出すがかかる富をもたらし、<br>
+                    　　その時我は王と我が状態を替えることを軽蔑す。
+                </div>
+                
+                <div class="annotation-section">
+                    <h4 class="annotation-header">
+                        <span class="annotation-icon">📚</span>
+                        文学批評と心理学的洞察
+                    </h4>
+                    <div class="literary-criticism">
+                        <p>第29番は、シェイクスピアのソネット集における最も個人的かつ普遍的な作品の一つである。冒頭の「運命と人の目に見捨てられし時」は、社会的疎外と実存的孤独の二重の苦悩を凝縮する。これは単なる個人的不運の嘆きではなく、ルネサンス期の社会的流動性がもたらした新たな不安の表現でもある。</p>
+                        <p>詩の構造は見事な対位法を示す。前半8行（オクテット）における下降的な心理運動は、第9行「されど」を転回点として、急激な上昇へと転じる。雲雀の比喩は、中世の宗教詩における魂の上昇のイメージを世俗化し、人間的愛による救済という人文主義的主題へと変容させている。</p>
+                        <div class="reference">
+                            参照：Booth, S. (1977). Shakespeare's Sonnets. Yale University Press.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="annotation-section">
+                    <h4 class="annotation-header">
+                        <span class="annotation-icon">🔤</span>
+                        翻訳技法の精緻な分析
+                    </h4>
+                    <div class="linguistic-analysis">
+                        <p>「空しき叫びで聞こえぬ天を悩まし」という訳は、原文"And trouble deaf heaven with my bootless cries"の音韻的効果を日本語で再現する試みである。「聞こえぬ天」は"deaf heaven"の直訳でありながら、日本語として自然な表現となっている。</p>
+                        <p>特に注目すべきは、「この者の術を、かの者の範囲を欲し」における指示代名詞の使い分けである。英語の"this man's art and that man's scope"を、古典日本語の「この」「かの」で訳し分けることで、羨望の対象の多様性と話者の心理的距離を巧みに表現している。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 戯曲：終わりよければ全てよし -->
+        <section id="all-is-well" class="content-section">
+            <h2 class="work-title">終わりよければ全てよし</h2>
+            
+            <div class="scene">
+                <h3 class="scene-title">第一幕 第一場 - ルシヨン伯爵の宮殿</h3>
+                <div class="original-text">
+                    <p><em>ベルトラム、ルシヨン伯爵夫人、ヘレナ、ラフュー登場、全員喪服にて</em></p>
+                    
+                    <p><strong>伯爵夫人</strong>　息子を私より送り出すことにより、我は二度目の夫を葬る。</p>
+                    
+                    <p><strong>ベルトラム</strong>　そして我が行くにあたり、母上、父の死を新たに悲しみ申す。しかれど我は陛下の御命令に従わねばならず、我は今や陛下の被後見人として、永遠に服従の身なれば。</p>
+                    
+                    <p><strong>ラフュー</strong>　奥方様は王に夫を見出されるでしょう。そして貴方様は、父を。常に全ての点にて善良なる方は、必然的に貴方様に対してもその徳を保たれるでしょう、貴方様の価値はそれが欠けたる所にてそれを呼び起こし、かくも豊かにある所にてそれを欠くことなし。</p>
+                </div>
+                
+                <div class="annotation-section">
+                    <h4 class="annotation-header">
+                        <span class="annotation-icon">📚</span>
+                        劇作技法の分析
+                    </h4>
+                    <div class="literary-criticism">
+                        <p>『終わりよければ全てよし』の開幕は、喪失と出発という二重の主題を提示する。「二度目の夫を葬る」という伯爵夫人の台詞は、息子の旅立ちを象徴的な死として捉える母性心理の鋭い洞察である。この比喩は、後の展開における「死と再生」のモチーフを予示している。</p>
+                        <p>ラフューの慰めの言葉における修辞的技巧は注目に値する。「貴方様の価値はそれが欠けたる所にてそれを呼び起こし」という対句法は、欠如と充足の弁証法的関係を示唆し、この戯曲全体を貫く「欠如による完成」というパラドックスを予告している。</p>
+                    </div>
+                </div>
+                
+                <div class="annotation-section">
+                    <h4 class="annotation-header expandable">
+                        <span class="annotation-icon">🌸</span>
+                        日本演劇との比較文学的考察（クリックで展開）
+                    </h4>
+                    <div class="expandable-content">
+                        <div class="cultural-context">
+                            <p>喪服での登場という演出指示は、能楽における「現在能」の構造を想起させる。特に『隅田川』における母子の別離の主題との類似は興味深い。しかし、能が静的な追憶と慟哭に焦点を当てるのに対し、シェイクスピアは動的な行動への転換を志向する。</p>
+                            <p>「被後見人」という身分は、日本の中世における「御恩と奉公」の関係に類似するが、西欧の封建制度における個人の自律性への志向が、ベルトラムの内的葛藤として表現されている点が特徴的である。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- アントニウスとクレオパトラ -->
+        <section id="antony-cleopatra" class="content-section">
+            <h2 class="work-title">アントニウスとクレオパトラの悲劇</h2>
+            
+            <div class="scene">
+                <h3 class="scene-title">第一幕 第一場 - アレクサンドリア、クレオパトラの宮殿</h3>
+                <div class="original-text">
+                    <p><em>フィロ、デメトリウス登場</em></p>
+                    
+                    <p><strong>フィロ</strong>　見よ、我らが将軍の高貴なる心がいかに売女の恋の炎となりしかを。見よ、その瞳を、かつては戦の煌めきに輝き、鋼鉄の如く彼の敵の眉を脅かし、今や折れてくすんだ扇の如く、褐色の美神の顔を扇ぐことしかせず。その将軍の心は、その広大なる胸にて世界の半分を覆い、海と大陸を腕に抱き、今は売女の宦官の如く成り果て、この色黒の乙女の奴隷と化せり。</p>
+                </div>
+                
+                <div class="annotation-section">
+                    <h4 class="annotation-header">
+                        <span class="annotation-icon">📚</span>
+                        東西文明の衝突という視座
+                    </h4>
+                    <div class="literary-criticism">
+                        <p>フィロの開幕の独白は、単なる道徳的批判を超えて、ローマ的価値観と東方的価値観の根本的対立を体現する。「売女」（strumpet）という侮蔑的呼称は、ローマの家父長制的道徳観からの断罪であるが、同時にクレオパトラが体現する女性的・東方的原理への恐怖と魅惑の両義性を露呈している。</p>
+                        <p>「褐色の美神」という表現に見られる人種的他者性の強調は、エドワード・サイードの『オリエンタリズム』が指摘する西洋の東洋表象の典型例である。しかし、シェイクスピアはこの偏見を単に再生産するのではなく、劇の進行と共に解体していく。</p>
+                        <div class="reference">
+                            参照：Said, E. (1978). Orientalism. Pantheon Books.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="annotation-section">
+                    <h4 class="annotation-header">
+                        <span class="annotation-icon">🔤</span>
+                        翻訳における文体選択の意義
+                    </h4>
+                    <div class="linguistic-analysis">
+                        <p>「売女の恋の炎となりしかを」という文語体の選択は、原文の荘重な文体を日本語で再現する試みである。特に「なりしかを」という已然形の使用は、完了と詠嘆を同時に表現し、フィロの複雑な心情（軽蔑と哀惜の混在）を巧みに伝えている。</p>
+                        <p>「海と大陸を腕に抱き」という表現は、原文の壮大なスケール感を保持しつつ、日本語の「抱く」という動詞が持つ親密性のニュアンスを加えることで、アントニウスの支配が単なる軍事的征服ではなく、より包括的な統治であったことを示唆している。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ハムレット -->
+        <section id="hamlet" class="content-section">
+            <h2 class="work-title">ハムレット　デンマーク王子の悲劇</h2>
+            
+            <div class="scene">
+                <h3 class="scene-title">第一幕 第二場 - エルシノア、国王の宮殿</h3>
+                <div class="original-text">
+                    <p><strong>ハムレット</strong>　ああ、余りに穢れた肉が溶け、融け、<span class="interactive-annotation">露と消え去ればよいのに<span class="annotation-popup">仏教的無常観と共鳴。『方丈記』や『歎異抄』の人間存在の儚さとの類似性。</span></span>！または永遠なる神が自殺に対し禁令を定めていなければ！神よ、神よ、この世界は何と疲れ、陳腐で、平板で、無益に見えることか！忌まわしいことよ、忌まわしい！草一本生えぬ庭、雑草のみが茂り、自然に従い粗野で汚らしいものだけが占領している。</p>
+                </div>
+                
+                <div class="annotation-section">
+                    <h4 class="annotation-header">
+                        <span class="annotation-icon">📚</span>
+                        実存主義的読解の可能性
+                    </h4>
+                    <div class="literary-criticism">
+                        <p>ハムレットの第一独白は、西洋文学史上最も影響力のある実存的苦悩の表現である。「余りに穢れた肉が溶け」という身体性への嫌悪は、プラトン的な霊肉二元論の極端な表出であると同時に、デカルト以前の心身問題への直観的洞察でもある。</p>
+                        <p>「草一本生えぬ庭」の比喩は、『創世記』のエデンの園の<ruby>対蹠<rt>たいせき</rt></ruby>的イメージであり、堕落した世界認識を表象する。この荒廃した庭のイメージは、T.S.エリオットの『荒地』における不毛性の主題の先駆となっている。</p>
+                        <div class="reference">
+                            参照：Greenblatt, S. (2004). Will in the World. W.W. Norton.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="annotation-section">
+                    <h4 class="annotation-header">
+                        <span class="annotation-icon">🎭</span>
+                        日本的無常観との共鳴
+                    </h4>
+                    <div class="philosophical-commentary">
+                        <p>「露と消え去ればよいのに」という表現は、仏教的無常観、特に『方丈記』の「ゆく川の流れは絶えずして」や、親鸞の「<ruby>歎異抄<rt>たんにしょう</rt></ruby>」における人間存在の儚さの認識と深く共鳴する。しかし、ハムレットの苦悩が能動的な自己消滅への欲求であるのに対し、日本的無常観は受動的な諦観を基調とする点で異なる。</p>
+                        <p>この差異は、キリスト教的な自殺禁忌と、仏教的な自然死への帰依という宗教的背景の相違に起因する。翻訳において「露」という語を選択したことは、この文化的架橋の巧みな試みと評価できる。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer with Additional Resources -->
+        <footer class="content-section" style="margin-top: 60px; background: #f5f5f5;">
+            <h3 style="color: var(--accent-color); margin-bottom: 20px;">参考文献と更なる研究のために</h3>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 10px;">• 小田島雄志 (2000) 『シェイクスピア全集』 白水社</li>
+                <li style="margin-bottom: 10px;">• 河合祥一郎 (2016) 『シェイクスピアの正体』 新潮社</li>
+                <li style="margin-bottom: 10px;">• Bloom, H. (1998). Shakespeare: The Invention of the Human. Riverhead Books.</li>
+                <li style="margin-bottom: 10px;">• Kermode, F. (2000). Shakespeare's Language. Farrar, Straus and Giroux.</li>
+                <li style="margin-bottom: 10px;">• 高橋康也 (1985) 『エリザベス朝演劇の世界』 朝日新聞社</li>
+            </ul>
+            <p style="margin-top: 20px; font-style: italic; color: #666;">
+                本注釈版は、日本語能力試験N1レベルの学習者および文学研究者を対象に、シェイクスピア作品の深層的理解を促進することを目的として編纂されました。各注釈は最新の文学理論と歴史的研究に基づいています。
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        // Reading Progress Bar
+        function updateReadingProgress() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            document.querySelector('.reading-progress-bar').style.width = progress + '%';
+        }
+        
+        window.addEventListener('scroll', updateReadingProgress);
+        
+        // Citation Management
+        function toggleCitationModal() {
+            const modal = document.getElementById('citationModal');
+            modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+        }
+        
+        function closeCitationModal() {
+            document.getElementById('citationModal').style.display = 'none';
+        }
+        
+        function copyCitation(format) {
+            const citations = {
+                mla: 'シェイクスピア、ウィリアム。「ソネット集」『シェイクスピア全集 日本語版 第一部』。JLPT N1学術注釈版、2025年。',
+                apa: 'Shakespeare, W. (2025). ソネット集. In シェイクスピア全集 日本語版 第一部 (JLPT N1学術注釈版).',
+                chicago: 'シェイクスピア、ウィリアム。『シェイクスピア全集 日本語版 第一部』。JLPT N1学術注釈版。2025年。',
+                harvard: 'Shakespeare, W 2025, \'ソネット集\', シェイクスピア全集 日本語版 第一部, JLPT N1学術注釈版.'
+            };
+            
+            const citation = citations[format];
+            navigator.clipboard.writeText(citation).then(() => {
+                alert('引用形式がクリップボードにコピーされました');
+            });
+        }
+        
+        // Text Analysis
+        function toggleTextAnalysis() {
+            const panel = document.getElementById('textAnalysisPanel');
+            if (panel.style.display === 'block') {
+                panel.style.display = 'none';
+            } else {
+                panel.style.display = 'block';
+                analyzeText();
+            }
+        }
+        
+        function analyzeText() {
+            const content = document.querySelector('.container').innerText;
+            const charCount = content.length;
+            const kanjiCount = (content.match(/[\u4e00-\u9faf]/g) || []).length;
+            const annotationCount = document.querySelectorAll('.annotation-section').length;
+            const readingTime = Math.ceil(charCount / 400); // 400 chars per minute
+            
+            document.getElementById('charCount').textContent = charCount.toLocaleString();
+            document.getElementById('kanjiCount').textContent = kanjiCount.toLocaleString();
+            document.getElementById('annotationCount').textContent = annotationCount;
+            document.getElementById('readingTime').textContent = readingTime + '分';
+        }
+        
+        // Notes Management
+        let notes = JSON.parse(localStorage.getItem('shakespeareNotes') || '[]');
+        
+        function toggleNotesSidebar() {
+            const sidebar = document.getElementById('notesSidebar');
+            sidebar.classList.toggle('active');
+            displayNotes();
+        }
+        
+        function addNote() {
+            const noteInput = document.getElementById('newNoteInput');
+            const noteText = noteInput.value.trim();
+            
+            if (noteText) {
+                const selectedText = window.getSelection().toString();
+                const note = {
+                    id: Date.now(),
+                    content: noteText,
+                    timestamp: new Date().toLocaleString('ja-JP'),
+                    reference: selectedText ? `参照: "${selectedText.substring(0, 50)}..."` : ''
+                };
+                
+                notes.unshift(note);
+                localStorage.setItem('shakespeareNotes', JSON.stringify(notes));
+                noteInput.value = '';
+                displayNotes();
+            }
+        }
+        
+        function displayNotes() {
+            const container = document.getElementById('notesContainer');
+            container.innerHTML = notes.map(note => `
+                <div class="note-item">
+                    <div class="note-timestamp">${note.timestamp}</div>
+                    <div class="note-content">${note.content}</div>
+                    ${note.reference ? `<div class="note-reference">${note.reference}</div>` : ''}
+                </div>
+            `).join('');
+        }
+        
+        // Export Annotations
+        function exportAnnotations() {
+            const annotations = [];
+            document.querySelectorAll('.annotation-section').forEach(section => {
+                annotations.push({
+                    type: section.querySelector('.annotation-header').textContent.trim(),
+                    content: section.querySelector('.literary-criticism, .philosophical-commentary, .linguistic-analysis, .cultural-context').textContent.trim()
+                });
+            });
+            
+            const dataStr = JSON.stringify(annotations, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            
+            const exportFileDefaultName = 'shakespeare-annotations.json';
+            
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+        }
+        
+        // Comparative View (Placeholder)
+        function toggleComparativeView() {
+            alert('比較テキスト表示機能は現在開発中です。この機能により、原文と翻訳を並列表示し、詳細な比較分析が可能になります。');
+        }
+        
+        // Expandable content functionality
+        document.querySelectorAll('.expandable').forEach(element => {
+            element.addEventListener('click', function() {
+                this.classList.toggle('expanded');
+                const content = this.nextElementSibling;
+                content.classList.toggle('expanded');
+            });
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-item').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+        
+        // Footnote functionality (if needed in future)
+        document.querySelectorAll('.footnote').forEach(footnote => {
+            footnote.addEventListener('click', function() {
+                const footnoteContent = document.querySelector('.footnote-content');
+                footnoteContent.style.display = footnoteContent.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+        
+        // Close citation modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('citationModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

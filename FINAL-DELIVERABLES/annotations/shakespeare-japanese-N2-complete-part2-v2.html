@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア全集 日本語版 JLPT N2学習者向け注釈付き - 第二部</title>
+    <style>
+        body {
+            font-family: 'Noto Serif JP', 'Yu Mincho', serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(to bottom, #2c3e50, #34495e);
+            color: white;
+            margin: -20px -20px 40px -20px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: normal;
+        }
+        .header h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            font-weight: normal;
+            color: #ecf0f1;
+        }
+        .header .subtitle {
+            font-size: 1.2em;
+            color: #bdc3c7;
+            margin-top: 20px;
+        }
+        .study-tools {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-width: 250px;
+        }
+        .study-tools h4 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        .study-tool-btn {
+            display: block;
+            width: 100%;
+            padding: 8px 12px;
+            margin: 5px 0;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .study-tool-btn:hover {
+            background-color: #2980b9;
+        }
+        .study-tool-btn.active {
+            background-color: #27ae60;
+        }
+        .progress-tracker {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #3498db;
+            width: 0%;
+            transition: width 0.3s;
+        }
+        .toc {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        .toc h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .toc li {
+            margin: 10px 0;
+        }
+        .toc a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 60px;
+        }
+        .section-title {
+            color: #c0392b;
+            font-size: 2em;
+            margin: 40px 0 30px 0;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #e74c3c;
+        }
+        .line {
+            margin: 15px 0;
+            padding: 10px 15px;
+            background-color: #fcfcfc;
+            border-left: 3px solid #3498db;
+            position: relative;
+        }
+        .line-number {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-right: 15px;
+            font-style: italic;
+        }
+        ruby {
+            position: relative;
+            display: inline-block;
+        }
+        ruby.n1-kanji {
+            background-color: #ffebee;
+            padding: 2px 4px;
+            border-radius: 3px;
+            cursor: help;
+        }
+        .tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            margin-bottom: 5px;
+            z-index: 10;
+        }
+        ruby:hover .tooltip {
+            opacity: 1;
+        }
+        .commentary {
+            background-color: #e8f5e9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #4caf50;
+            font-size: 0.95em;
+        }
+        .commentary h5 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .cultural-note {
+            background-color: #f3e5f5;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #9c27b0;
+            font-size: 0.95em;
+        }
+        .cultural-note h5 {
+            color: #6a1b9a;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .grammar-note {
+            background-color: #fff8e1;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #ffc107;
+            font-size: 0.95em;
+        }
+        .grammar-note h5 {
+            color: #f57c00;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .literary-device {
+            background-color: #e3f2fd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #2196f3;
+            font-size: 0.95em;
+        }
+        .literary-device h5 {
+            color: #1565c0;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .play-section {
+            margin-top: 60px;
+            padding: 40px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+        }
+        .play-title {
+            font-size: 2.2em;
+            color: #b71c1c;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .dialogue {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .speaker {
+            font-weight: bold;
+            color: #1565c0;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .stage-direction {
+            font-style: italic;
+            color: #666;
+            margin: 15px 0;
+            text-align: center;
+            font-size: 0.95em;
+        }
+        .monologue {
+            background-color: #fafafa;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+        }
+        .act-scene {
+            text-align: center;
+            font-size: 1.5em;
+            color: #c0392b;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+        .legend {
+            background-color: #f0f4f8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .legend h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        .legend-item {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>シェイクスピア全集 日本語版</h1>
+            <h2>JLPT N2学習者向け注釈付き</h2>
+            <div class="subtitle">第二部（行1501〜3000）</div>
+        </div>
+
+        <div class="study-tools">
+            <h4>学習ツール</h4>
+            <button class="study-tool-btn" onclick="toggleFurigana()">ふりがな表示切替</button>
+            <button class="study-tool-btn" onclick="toggleNotes()">注釈表示切替</button>
+            <button class="study-tool-btn" onclick="toggleHighlight()">N1漢字強調</button>
+            <div class="progress-tracker">
+                <h5>読了進捗: <span id="progress-percent">0%</span></h5>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <h4>凡例</h4>
+            <div class="legend-item" style="background-color: #ffebee;">
+                N1レベル漢字 - ふりがな付き
+            </div>
+            <div class="legend-item" style="background-color: #e8f5e9;">
+                文学的解説 - 詩的技法・修辞法の分析
+            </div>
+            <div class="legend-item" style="background-color: #f3e5f5;">
+                文化的背景 - 歴史的・文化的文脈の説明
+            </div>
+            <div class="legend-item" style="background-color: #fff8e1;">
+                文法解説 - 古典文法・文語体の説明
+            </div>
+        </div>
+
+        <div class="toc">
+            <h3>目次</h3>
+            <ul>
+                <li><a href="#hamlet-soliloquy">ハムレット - 「生きるべきか死ぬべきか」独白</a></li>
+                <li><a href="#macbeth">マクベス - 「明日、また明日」独白</a></li>
+                <li><a href="#merchant">ヴェニスの商人 - 慈悲の徳について</a></li>
+                <li><a href="#romeo-juliet">ロミオとジュリエット - バルコニーの場</a></li>
+                <li><a href="#lear">リア王 - 嵐の場面</a></li>
+                <li><a href="#midsummer">夏の夜の夢 - 妖精たちの歌</a></li>
+            </ul>
+        </div>
+
+        <section class="section" id="hamlet-soliloquy">
+            <h2 class="section-title">ハムレット - 第三幕第一場</h2>
+            
+            <div class="commentary">
+                <h5>「生きるべきか死ぬべきか」独白について</h5>
+                <p>この独白は、西洋文学史上最も有名な一節であり、人間の実存的苦悩を詩的に表現した傑作です。ハムレットは生と死、行動と無為、苦悩と解放の間で葛藤し、人間の条件について深い哲学的省察を展開します。</p>
+            </div>
+
+            <div class="act-scene">第三幕第一場</div>
+            
+            <div class="monologue">
+                <div class="speaker">ハムレット</div>
+                
+                <div class="line">
+                    <span class="line-number">1501</span>
+                    生きるべきか、死ぬべきか、それが問題だ。
+                </div>
+                <div class="line">
+                    <span class="line-number">1502</span>
+                    <ruby class="n1-kanji" data-meaning="激しく乱暴な、凶暴な" data-example="暴虐な支配者">暴虐<rt>ぼうぎゃく</rt></ruby>なる運命の<ruby class="n1-kanji" data-meaning="石を投げる道具、投石器" data-example="古代の戦争で投石器が使われた">投石<rt>とうせき</rt></ruby>と矢を
+                </div>
+                <div class="line">
+                    <span class="line-number">1503</span>
+                    心に耐え忍ぶことが、より<ruby class="n1-kanji" data-meaning="高貴な、気高い" data-example="崇高な理念を持つ">崇高<rt>すうこう</rt></ruby>なのか、
+                </div>
+                <div class="line">
+                    <span class="line-number">1504</span>
+                    それとも苦難の海に対して武器を取り、
+                </div>
+                <div class="line">
+                    <span class="line-number">1505</span>
+                    戦いによってそれらを終わらせることか。
+                </div>
+
+                <div class="literary-device">
+                    <h5>メタファーの複合性</h5>
+                    <p>「暴虐なる運命の投石と矢」は、運命を戦争に喩えた軍事的メタファーです。続く「苦難の海」は液体のメタファーへと転換し、人間の苦悩の圧倒的な性質を表現しています。この混合メタファーは、ハムレットの混乱した心理状態を反映しています。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">1506</span>
+                    死ぬこと―眠ること―
+                </div>
+                <div class="line">
+                    <span class="line-number">1507</span>
+                    それだけのこと。そして眠りによって我らは終わらせると言う、
+                </div>
+                <div class="line">
+                    <span class="line-number">1508</span>
+                    心の痛みと、肉体が<ruby class="n1-kanji" data-meaning="受け継ぐ、相続する" data-example="財産を継承する">継承<rt>けいしょう</rt></ruby>する
+                </div>
+                <div class="line">
+                    <span class="line-number">1509</span>
+                    千もの自然の衝撃を。それは<ruby class="n1-kanji" data-meaning="心から願うこと、熱望" data-example="平和を渇望する">渇望<rt>かつぼう</rt></ruby>すべき
+                </div>
+                <div class="line">
+                    <span class="line-number">1510</span>
+                    <ruby class="n1-kanji" data-meaning="完成、成就、最終的な実現" data-example="長年の努力の完遂">完遂<rt>かんすい</rt></ruby>である。死ぬこと、眠ること。
+                </div>
+
+                <div class="cultural-note">
+                    <h5>死と眠りの概念</h5>
+                    <p>死を眠りに喩える表現は、東西の文学に共通する普遍的なメタファーです。日本の仏教思想では「涅槃」が永遠の安らぎを意味し、また和歌においても「永き眠り」として死が表現されます。この類似性は、人類共通の死生観を示唆しています。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">1511</span>
+                    眠ること―ひょっとして夢を見ることか。ああ、そこに<ruby class="n1-kanji" data-meaning="困難、障害" data-example="計画に支障が生じた">支障<rt>ししょう</rt></ruby>がある。
+                </div>
+                <div class="line">
+                    <span class="line-number">1512</span>
+                    なぜなら、死の眠りの中でどんな夢が来るか、
+                </div>
+                <div class="line">
+                    <span class="line-number">1513</span>
+                    この死すべき<ruby class="n1-kanji" data-meaning="束縛、拘束" data-example="社会の桎梏から解放される">桎梏<rt>しっこく</rt></ruby>を脱ぎ捨てた時、
+                </div>
+                <div class="line">
+                    <span class="line-number">1514</span>
+                    それが我らを<ruby class="n1-kanji" data-meaning="ためらわせる、躊躇させる" data-example="決断を逡巡する">逡巡<rt>しゅんじゅん</rt></ruby>させるに違いない。
+                </div>
+
+                <div class="grammar-note">
+                    <h5>文語的表現の解説</h5>
+                    <p>「死すべき桎梏」の「べき」は当然・義務を表す助動詞「べし」の連体形。「桎梏」は足かせ手かせを意味し、ここでは肉体を魂の牢獄とする西洋哲学的観念を表現しています。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">1515</span>
+                    それこそが、かくも長き人生を<ruby class="n1-kanji" data-meaning="災い、不幸" data-example="天災は忘れた頃にやってくる">災厄<rt>さいやく</rt></ruby>たらしめる配慮なのだ。
+                </div>
+                <div class="line">
+                    <span class="line-number">1516</span>
+                    なぜなら、誰が耐え忍ぶだろうか、時の<ruby class="n1-kanji" data-meaning="むち、鞭打ち" data-example="奴隷は鞭で打たれた">鞭<rt>むち</rt></ruby>と<ruby class="n1-kanji" data-meaning="侮辱、軽蔑" data-example="彼の言動は侮蔑に値する">侮蔑<rt>ぶべつ</rt></ruby>を、
+                </div>
+                <div class="line">
+                    <span class="line-number">1517</span>
+                    <ruby class="n1-kanji" data-meaning="圧制者、暴君" data-example="圧制者に対する反乱">圧制者<rt>あっせいしゃ</rt></ruby>の不正を、傲慢な者の<ruby class="n1-kanji" data-meaning="横柄な態度、傲慢" data-example="権力者の倨傲な振る舞い">倨傲<rt>きょごう</rt></ruby>を、
+                </div>
+                <div class="line">
+                    <span class="line-number">1518</span>
+                    <ruby class="n1-kanji" data-meaning="軽蔑された、拒絶された" data-example="蔑ろにされた愛情">蔑<rt>さげす</rt></ruby>まれた愛の苦痛を、法の遅延を、
+                </div>
+                <div class="line">
+                    <span class="line-number">1519</span>
+                    役人の<ruby class="n1-kanji" data-meaning="横暴、傲慢な態度" data-example="官僚の横柄な対応">横柄<rt>おうへい</rt></ruby>を、そして価値ある者が
+                </div>
+                <div class="line">
+                    <span class="line-number">1520</span>
+                    価値なき者から受ける<ruby class="n1-kanji" data-meaning="軽蔑的な扱い、侮辱" data-example="無礼な侮辱を受ける">侮辱<rt>ぶじょく</rt></ruby>を。
+                </div>
+
+                <div class="commentary">
+                    <h5>社会的不正義のカタログ</h5>
+                    <p>1516-1520行は、人間社会の不正義を列挙した「カタログ」です。これらは16-17世紀のイギリス社会の具体的問題を反映していますが、同時に普遍的な人間の苦悩でもあります。日本の江戸時代の身分制度下での苦悩とも共通点が見られます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="macbeth">
+            <h2 class="section-title">マクベス - 第五幕第五場</h2>
+            
+            <div class="commentary">
+                <h5>「明日、また明日」独白について</h5>
+                <p>マクベス夫人の死を知らされた後のこの独白は、人生の無意味さと時間の空虚さを詩的に表現した、ニヒリズム文学の最高峰です。シェイクスピアは、権力を追求した末に全てを失った男の絶望を通して、人間存在の本質的な空虚さを描き出しています。</p>
+            </div>
+
+            <div class="monologue">
+                <div class="speaker">マクベス</div>
+                
+                <div class="line">
+                    <span class="line-number">1721</span>
+                    明日、また明日、また明日と、
+                </div>
+                <div class="line">
+                    <span class="line-number">1722</span>
+                    小刻みな歩みで日々は<ruby class="n1-kanji" data-meaning="忍び寄る、這うように進む" data-example="時間が匍匐前進する">匍匐<rt>ほふく</rt></ruby>し、
+                </div>
+                <div class="line">
+                    <span class="line-number">1723</span>
+                    記録された時の最後の<ruby class="n1-kanji" data-meaning="音節、言葉の単位" data-example="日本語の音節構造">音節<rt>おんせつ</rt></ruby>まで続く。
+                </div>
+                <div class="line">
+                    <span class="line-number">1724</span>
+                    そして我らの全ての昨日は、愚か者たちを
+                </div>
+                <div class="line">
+                    <span class="line-number">1725</span>
+                    塵なる死への道へと照らしてきた。
+                </div>
+
+                <div class="literary-device">
+                    <h5>時間の擬人化と反復法</h5>
+                    <p>「明日、また明日」の反復は、時間の単調な繰り返しを表現します。時間を「匍匐する」ものとして擬人化することで、その遅々とした、しかし確実な進行を描写しています。この表現は、仏教の輪廻転生の概念とも響き合います。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">1726</span>
+                    消えろ、消えろ、<ruby class="n1-kanji" data-meaning="短い、つかの間の" data-example="束の間の休息">束<rt>つか</rt></ruby>の間の<ruby class="n1-kanji" data-meaning="ろうそく、蝋燭" data-example="蝋燭の炎が揺れる">蝋燭<rt>ろうそく</rt></ruby>よ！
+                </div>
+                <div class="line">
+                    <span class="line-number">1727</span>
+                    人生は歩く影に過ぎぬ、哀れな役者だ、
+                </div>
+                <div class="line">
+                    <span class="line-number">1728</span>
+                    舞台で己の時を<ruby class="n1-kanji" data-meaning="気取って歩く、もったいぶる" data-example="傲慢に闊歩する">闊歩<rt>かっぽ</rt></ruby>し、<ruby class="n1-kanji" data-meaning="激怒する、憤る" data-example="不正に対して憤慨する">憤慨<rt>ふんがい</rt></ruby>し、
+                </div>
+                <div class="line">
+                    <span class="line-number">1729</span>
+                    そして二度と聞かれることはない。それは
+                </div>
+                <div class="line">
+                    <span class="line-number">1730</span>
+                    白痴の語る物語、音と<ruby class="n1-kanji" data-meaning="激怒、憤激" data-example="激昂して叫ぶ">激昂<rt>げきこう</rt></ruby>に満ちて、
+                </div>
+                <div class="line">
+                    <span class="line-number">1731</span>
+                    何も意味していない。
+                </div>
+
+                <div class="cultural-note">
+                    <h5>人生の演劇メタファー</h5>
+                    <p>人生を演劇に喩える「世界劇場」（theatrum mundi）の概念は、西洋文学の重要な主題です。日本の能楽における「夢幻能」の構造―現世を夢や幻として描く―とも共通性があります。世阿弥の「花伝書」における人生観との比較も興味深いでしょう。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="merchant">
+            <h2 class="section-title">ヴェニスの商人 - 第四幕第一場</h2>
+            
+            <div class="commentary">
+                <h5>ポーシャの「慈悲の徳」演説</h5>
+                <p>法廷でのポーシャの演説は、正義と慈悲の関係についての深遠な哲学的考察です。キリスト教的慈愛の理念を説きながら、普遍的な人間性への訴えかけとなっています。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">ポーシャ（男装して法学博士に扮している）</div>
+                
+                <div class="line">
+                    <span class="line-number">1832</span>
+                    慈悲の性質は<ruby class="n1-kanji" data-meaning="強制されない、拘束されない" data-example="束縛されない自由">束縛<rt>そくばく</rt></ruby>されぬもの。
+                </div>
+                <div class="line">
+                    <span class="line-number">1833</span>
+                    それは天より降る優しき雨のように
+                </div>
+                <div class="line">
+                    <span class="line-number">1834</span>
+                    下なる大地に落ちる。二重に祝福されて―
+                </div>
+                <div class="line">
+                    <span class="line-number">1835</span>
+                    与える者を祝福し、受ける者を祝福する。
+                </div>
+
+                <div class="literary-device">
+                    <h5>慈悲の自然メタファー</h5>
+                    <p>慈悲を「天より降る優しき雨」に喩えることで、その自然性と普遍性を表現しています。雨が差別なく万物を潤すように、真の慈悲は無条件で普遍的なものです。この比喩は、仏教の慈雨の概念とも通じます。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">1836</span>
+                    それは最も力ある者の中で最も力強く、
+                </div>
+                <div class="line">
+                    <span class="line-number">1837</span>
+                    <ruby class="n1-kanji" data-meaning="王位についた、即位した" data-example="即位した君主">即位<rt>そくい</rt></ruby>せし君主には王冠よりもよく似合う。
+                </div>
+                <div class="line">
+                    <span class="line-number">1838</span>
+                    <ruby class="n1-kanji" data-meaning="王の杖、権力の象徴" data-example="王笏を持つ国王">王笏<rt>おうしゃく</rt></ruby>は世俗的権力を示し、
+                </div>
+                <div class="line">
+                    <span class="line-number">1839</span>
+                    <ruby class="n1-kanji" data-meaning="威厳、尊厳" data-example="王の威厳に満ちた姿">威厳<rt>いげん</rt></ruby>と王の<ruby class="n1-kanji" data-meaning="畏怖、恐れ" data-example="神への畏怖の念">畏怖<rt>いふ</rt></ruby>の属性を示す。
+                </div>
+
+                <div class="grammar-note">
+                    <h5>文語調の格調</h5>
+                    <p>「即位せし」の「し」は過去の助動詞「き」の連体形。法廷という厳粛な場での演説として、格調高い文語調が用いられています。これは日本の能楽や歌舞伎の台詞回しとも共通する様式美です。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="romeo-juliet">
+            <h2 class="section-title">ロミオとジュリエット - 第二幕第二場</h2>
+            
+            <div class="commentary">
+                <h5>バルコニーの場面</h5>
+                <p>西洋文学史上最も有名な恋愛場面の一つ。若い恋人たちの情熱的な対話は、愛の理想主義と現実の障害との間の緊張を詩的に表現しています。</p>
+            </div>
+
+            <div class="stage-direction">（カピュレット家の庭園。ジュリエットがバルコニーに現れる）</div>
+
+            <div class="dialogue">
+                <div class="speaker">ロミオ</div>
+                
+                <div class="line">
+                    <span class="line-number">1945</span>
+                    だが、待て！あの窓に<ruby class="n1-kanji" data-meaning="光が差す、輝く" data-example="朝日が燦然と輝く">燦<rt>さん</rt></ruby>めく光は何か？
+                </div>
+                <div class="line">
+                    <span class="line-number">1946</span>
+                    それは東、そしてジュリエットは太陽だ！
+                </div>
+                <div class="line">
+                    <span class="line-number">1947</span>
+                    昇れ、美しき太陽よ、そして<ruby class="n1-kanji" data-meaning="嫉妬深い、ねたましい" data-example="嫉妬深い眼差し">嫉妬<rt>しっと</rt></ruby>深き月を殺せ。
+                </div>
+
+                <div class="literary-device">
+                    <h5>天体のメタファー</h5>
+                    <p>ジュリエットを太陽に、ロザラインを月に喩える壮大な天体メタファー。太陽が月を圧倒するように、ジュリエットへの新しい愛が以前の恋を消し去ることを表現しています。</p>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">ジュリエット</div>
+                
+                <div class="line">
+                    <span class="line-number">1962</span>
+                    ああ、ロミオ、ロミオ！なぜあなたはロミオなの？
+                </div>
+                <div class="line">
+                    <span class="line-number">1963</span>
+                    あなたの父を否定し、あなたの名を拒みなさい。
+                </div>
+                <div class="line">
+                    <span class="line-number">1964</span>
+                    もしそれが嫌なら、私の愛を誓って。
+                </div>
+                <div class="line">
+                    <span class="line-number">1965</span>
+                    そうすれば私はもうカピュレットではなくなる。
+                </div>
+
+                <div class="cultural-note">
+                    <h5>名前と実体の哲学</h5>
+                    <p>「名前とは何か」という問いは、言語と実在の関係についての哲学的問題です。日本の「言霊」思想では、名前には霊的な力が宿るとされ、西洋の nominalism とは異なる名前観があります。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">1970</span>
+                    名前とは何？薔薇と呼ばれるものは、
+                </div>
+                <div class="line">
+                    <span class="line-number">1971</span>
+                    他のどんな名前で呼ばれても、同じく甘く香るでしょう。
+                </div>
+                <div class="line">
+                    <span class="line-number">1972</span>
+                    だからロミオも、たとえロミオと呼ばれなくても、
+                </div>
+                <div class="line">
+                    <span class="line-number">1973</span>
+                    名前なしに持つその完璧な美徳を保つでしょう。
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="lear">
+            <h2 class="section-title">リア王 - 第三幕第二場</h2>
+            
+            <div class="commentary">
+                <h5>嵐の荒野での狂気</h5>
+                <p>娘たちに裏切られ、王国を失ったリアが、嵐の中で狂気に陥る場面。自然の猛威と人間の内的嵐が呼応し、宇宙的な混沌を表現しています。</p>
+            </div>
+
+            <div class="stage-direction">（荒野。嵐、雷鳴と稲妻）</div>
+
+            <div class="dialogue">
+                <div class="speaker">リア王</div>
+                
+                <div class="line">
+                    <span class="line-number">2234</span>
+                    吹け、風よ、そして汝の頬を<ruby class="n1-kanji" data-meaning="破裂させる、張り裂ける" data-example="怒りで血管が破裂しそうだ">破裂<rt>はれつ</rt></ruby>させよ！激しく吹け！
+                </div>
+                <div class="line">
+                    <span class="line-number">2235</span>
+                    汝ら、<ruby class="n1-kanji" data-meaning="激流、奔流" data-example="激流が岩を削る">激流<rt>げきりゅう</rt></ruby>と<ruby class="n1-kanji" data-meaning="大波、激浪" data-example="嵐で激浪が押し寄せる">激浪<rt>げきろう</rt></ruby>よ、<ruby class="n1-kanji" data-meaning="噴出する、ほとばしる" data-example="噴水が噴出する">噴出<rt>ふんしゅつ</rt></ruby>せよ、
+                </div>
+                <div class="line">
+                    <span class="line-number">2236</span>
+                    我らの<ruby class="n1-kanji" data-meaning="尖塔、教会の塔" data-example="教会の尖塔が空を指す">尖塔<rt>せんとう</rt></ruby>を溺れさせ、雄鶏を沈めるまで！
+                </div>
+
+                <div class="literary-device">
+                    <h5>pathetic fallacy（感情移入的誤謬）</h5>
+                    <p>自然現象に人間の感情を投影する修辞技法。リアの内的混乱が外的な嵐として表現され、マクロコスモス（宇宙）とミクロコスモス（人間）の照応関係を示しています。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">2237</span>
+                    汝ら、<ruby class="n1-kanji" data-meaning="硫黄、地獄の火を連想させる" data-example="硫黄の匂いが漂う">硫黄<rt>いおう</rt></ruby>の如き思考を<ruby class="n1-kanji" data-meaning="実行する、遂行する" data-example="計画を遂行する">遂行<rt>すいこう</rt></ruby>する火よ、
+                </div>
+                <div class="line">
+                    <span class="line-number">2238</span>
+                    <ruby class="n1-kanji" data-meaning="樫の木、雷に打たれやすい木" data-example="樫の大木が立つ">樫<rt>かし</rt></ruby>を裂く雷電の先駆けよ、
+                </div>
+                <div class="line">
+                    <span class="line-number">2239</span>
+                    我が白髪の頭を<ruby class="n1-kanji" data-meaning="焦がす、焼く" data-example="太陽が肌を焦がす">焦<rt>こ</rt></ruby>がせ！
+                </div>
+
+                <div class="cultural-note">
+                    <h5>老王の悲劇と東洋の孝</h5>
+                    <p>親に対する不孝を最大の罪とするリアの怒りは、儒教的な「孝」の概念と共鳴します。しかし、シェイクスピアは単純な道徳劇を超えて、権力、老い、家族の複雑な力学を描いています。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="midsummer">
+            <h2 class="section-title">夏の夜の夢 - 第二幕第一場</h2>
+            
+            <div class="commentary">
+                <h5>妖精たちの詩的世界</h5>
+                <p>シェイクスピアは、イギリスの民間伝承を素材に、独自の妖精世界を創造しました。この場面では、妖精の女王ティターニアに仕える妖精たちが、彼女のために子守歌を歌います。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">妖精たちの合唱</div>
+                
+                <div class="line">
+                    <span class="line-number">2456</span>
+                    <ruby class="n1-kanji" data-meaning="斑点のある、まだらな" data-example="斑な蛇の模様">斑<rt>まだら</rt></ruby>な蛇よ、二重の舌を持つものよ、
+                </div>
+                <div class="line">
+                    <span class="line-number">2457</span>
+                    <ruby class="n1-kanji" data-meaning="とげのある、針を持つ" data-example="棘のあるハリネズミ">棘<rt>とげ</rt></ruby>あるハリネズミよ、近づくな。
+                </div>
+                <div class="line">
+                    <span class="line-number">2458</span>
+                    <ruby class="n1-kanji" data-meaning="イモリ、両生類" data-example="井守が水辺に住む">井守<rt>いもり</rt></ruby>も蜘蛛も来るな、
+                </div>
+                <div class="line">
+                    <span class="line-number">2459</span>
+                    我らが妖精の女王に害をなすな。
+                </div>
+
+                <div class="grammar-note">
+                    <h5>呪文的リズム</h5>
+                    <p>妖精の歌は、七音節の短い詩行（trochaic tetrameter）で書かれ、呪文のようなリズムを生み出しています。日本語訳では五七調を意識し、リズミカルな効果を再現しています。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">2460</span>
+                    <ruby class="n1-kanji" data-meaning="ナイチンゲール、美しい声で鳴く鳥" data-example="鶯が春を告げる">鶯<rt>うぐいす</rt></ruby>よ、我らの歌と共に、
+                </div>
+                <div class="line">
+                    <span class="line-number">2461</span>
+                    ルラ、ルラ、子守歌を歌え。
+                </div>
+                <div class="line">
+                    <span class="line-number">2462</span>
+                    害も<ruby class="n1-kanji" data-meaning="魔法、呪文" data-example="魔法の呪文を唱える">呪文<rt>じゅもん</rt></ruby>も我らが姫君に
+                </div>
+                <div class="line">
+                    <span class="line-number">2463</span>
+                    近づくなかれ、おやすみなさい。
+                </div>
+
+                <div class="cultural-note">
+                    <h5>妖精と日本の精霊信仰</h5>
+                    <p>シェイクスピアの妖精は、日本の「妖怪」や「精霊」とは異なり、自然と調和して生きる存在として描かれます。しかし、人間世界に介入し、いたずらをする点では、日本の民間伝承の小妖怪たちと共通性があります。</p>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // 学習ツール機能の実装
+            let furiganaVisible = true;
+            let notesVisible = true;
+            let highlightEnabled = true;
+
+            function toggleFurigana() {
+                furiganaVisible = !furiganaVisible;
+                const furiganaElements = document.querySelectorAll('rt');
+                furiganaElements.forEach(rt => {
+                    rt.style.visibility = furiganaVisible ? 'visible' : 'hidden';
+                });
+                updateButtonState('toggleFurigana', furiganaVisible);
+            }
+
+            function toggleNotes() {
+                notesVisible = !notesVisible;
+                const notes = document.querySelectorAll('.commentary, .cultural-note, .grammar-note, .literary-device');
+                notes.forEach(note => {
+                    note.style.display = notesVisible ? 'block' : 'none';
+                });
+                updateButtonState('toggleNotes', notesVisible);
+            }
+
+            function toggleHighlight() {
+                highlightEnabled = !highlightEnabled;
+                const n1Kanji = document.querySelectorAll('.n1-kanji');
+                n1Kanji.forEach(kanji => {
+                    kanji.style.backgroundColor = highlightEnabled ? '#ffebee' : 'transparent';
+                });
+                updateButtonState('toggleHighlight', highlightEnabled);
+            }
+
+            function updateButtonState(functionName, isActive) {
+                const buttons = document.querySelectorAll('.study-tool-btn');
+                buttons.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes(functionName)) {
+                        if (isActive) {
+                            btn.classList.add('active');
+                        } else {
+                            btn.classList.remove('active');
+                        }
+                    }
+                });
+            }
+
+            // ツールチップ機能
+            document.querySelectorAll('.n1-kanji').forEach(ruby => {
+                const meaning = ruby.getAttribute('data-meaning');
+                const example = ruby.getAttribute('data-example');
+                if (meaning || example) {
+                    const tooltip = document.createElement('div');
+                    tooltip.className = 'tooltip';
+                    tooltip.innerHTML = meaning + (example ? '<br>例: ' + example : '');
+                    ruby.appendChild(tooltip);
+                }
+            });
+
+            // 読了進捗トラッキング
+            window.addEventListener('scroll', () => {
+                const scrolled = window.scrollY;
+                const height = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = (scrolled / height) * 100;
+                
+                document.getElementById('progress-fill').style.width = progress + '%';
+                document.getElementById('progress-percent').textContent = Math.round(progress) + '%';
+            });
+
+            // 初期状態の設定
+            document.addEventListener('DOMContentLoaded', () => {
+                updateButtonState('toggleFurigana', true);
+                updateButtonState('toggleNotes', true);
+                updateButtonState('toggleHighlight', true);
+            });
+        </script>
+    </div>
+</body>
+</html>

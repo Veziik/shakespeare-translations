@@ -1,0 +1,54 @@
+Analysis of Missing Content in French Translation
+================================================
+
+Complete Shakespeare file: 124,456 lines
+French translation file: 92,047 lines
+Difference: 32,409 lines (approximately 26% missing)
+
+Plays found in French translation:
+1. The Sonnets (Les Sonnets) - appears twice in file
+2. The Comedy of Errors (Le Comedy de Errors)
+3. The Tragedy of Antony and Cleopatra (Le Tragedy de Antony et Cleopatra)
+4. The Tragedy of Coriolanus (Le Tragedy de Coriolanus)
+5. The Tragedy of Hamlet, Prince of Denmark (Le Tragedy de Hamlet, Prince de Denmark)
+6. The Life of King Henry the Fifth (Le Vie de roi Henry le Fifth)
+7. The Tragedy of Julius Caesar (Le Tragedy de Julius Caesar)
+8. The Tragedy of King Lear (Le Tragedy de roi Lear)
+9. The Tragedy of Macbeth (Le Tragedy de Macbeth)
+10. The Tragedy of Othello, Moor of Venice (Le Tragedy de Othello, Moor de Venice)
+11. The Tragedy of Romeo and Juliet (Le Tragedy de Romeo et Juliet)
+12. The Tempest (Le Tempest)
+13. The Life of Timon of Athens (Le Vie de Timon de Athens)
+14. The Tragedy of Titus Andronicus (Le Tragedy de Titus Andronicus)
+15. The History of Troilus and Cressida (Le History de Troilus et Cressida)
+16. The Winter's Tale (appears to be partially translated)
+17. A Lover's Complaint (at the end)
+
+Missing plays (confirmed):
+1. All's Well That Ends Well
+2. As You Like It
+3. Love's Labour's Lost
+
+Potentially missing plays to verify:
+4. Measure for Measure
+5. The Merchant of Venice
+6. A Midsummer Night's Dream
+7. Much Ado About Nothing
+8. The Taming of the Shrew
+9. Twelfth Night
+10. The Two Gentlemen of Verona
+11. The Merry Wives of Windsor
+12. King John
+13. Richard II
+14. Henry IV Part 1
+15. Henry IV Part 2
+16. Henry VI Part 1
+17. Henry VI Part 2
+18. Henry VI Part 3
+19. Richard III
+20. Henry VIII
+21. Pericles
+22. Venus and Adonis
+23. The Rape of Lucrece
+24. The Passionate Pilgrim
+25. The Phoenix and the Turtle

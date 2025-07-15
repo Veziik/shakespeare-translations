@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア全集 日本語版 JLPT N2学習者向け注釈付き - 第四部（最終巻）</title>
+    <style>
+        body {
+            font-family: 'Noto Serif JP', 'Yu Mincho', serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(to bottom, #2c3e50, #34495e);
+            color: white;
+            margin: -20px -20px 40px -20px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: normal;
+        }
+        .header h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            font-weight: normal;
+            color: #ecf0f1;
+        }
+        .header .subtitle {
+            font-size: 1.2em;
+            color: #bdc3c7;
+            margin-top: 20px;
+        }
+        .study-tools {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-width: 250px;
+        }
+        .study-tools h4 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        .study-tool-btn {
+            display: block;
+            width: 100%;
+            padding: 8px 12px;
+            margin: 5px 0;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .study-tool-btn:hover {
+            background-color: #2980b9;
+        }
+        .study-tool-btn.active {
+            background-color: #27ae60;
+        }
+        .progress-tracker {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #3498db;
+            width: 0%;
+            transition: width 0.3s;
+        }
+        .toc {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        .toc h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+        .toc li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .toc li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+        }
+        .toc a {
+            color: #34495e;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .toc a:hover {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        .introduction {
+            background-color: #fff9e6;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border-left: 5px solid #f39c12;
+        }
+        .introduction h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .play-section {
+            margin-bottom: 60px;
+            padding: 30px;
+            background-color: #fafafa;
+            border-radius: 10px;
+        }
+        .play-title {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+        .play-intro {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .scene {
+            margin-bottom: 40px;
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .scene-header {
+            font-size: 1.3em;
+            color: #34495e;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .dialogue {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+        }
+        .character {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .japanese {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        .english {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .line-number {
+            color: #95a5a6;
+            font-size: 0.85em;
+            margin-right: 10px;
+        }
+        .vocabulary {
+            background-color: #fff5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 3px solid #e74c3c;
+        }
+        .vocabulary h4 {
+            color: #c0392b;
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+        }
+        .vocab-item {
+            margin: 8px 0;
+            padding: 5px 0;
+            border-bottom: 1px dotted #ecf0f1;
+        }
+        .vocab-item:last-child {
+            border-bottom: none;
+        }
+        .vocab-word {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .vocab-reading {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin: 0 10px;
+        }
+        .vocab-meaning {
+            color: #34495e;
+        }
+        .vocab-level {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        .vocab-level.n2 {
+            background-color: #3498db;
+            color: white;
+        }
+        .vocab-level.n1 {
+            background-color: #9b59b6;
+            color: white;
+        }
+        .grammar-note {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 3px solid #3498db;
+        }
+        .grammar-note h4 {
+            color: #2980b9;
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+        }
+        .grammar-pattern {
+            font-family: monospace;
+            background-color: #ecf0f1;
+            padding: 5px 10px;
+            border-radius: 3px;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        .cultural-note {
+            background-color: #f5f5dc;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 3px solid #f39c12;
+        }
+        .cultural-note h4 {
+            color: #d68910;
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+        }
+        .stage-direction {
+            font-style: italic;
+            color: #7f8c8d;
+            margin: 10px 0;
+            text-align: center;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .completion-message {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .completion-message h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .completion-message p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+        .next-steps {
+            background-color: rgba(255,255,255,0.2);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .next-steps h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 60px;
+        }
+        @media (max-width: 768px) {
+            .study-tools {
+                position: static;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            .container {
+                padding: 10px;
+            }
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .play-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>シェイクスピア全集 日本語版</h1>
+            <h2>JLPT N2学習者向け注釈付き - 第四部（最終巻）</h2>
+            <div class="subtitle">『テンペスト』『ジュリアス・シーザー』主要場面集<br>行4501-5682</div>
+        </div>
+
+        <div class="study-tools">
+            <h4>学習ツール</h4>
+            <button class="study-tool-btn" onclick="toggleVocabulary()">語彙注釈 表示/非表示</button>
+            <button class="study-tool-btn" onclick="toggleGrammar()">文法解説 表示/非表示</button>
+            <button class="study-tool-btn" onclick="toggleEnglish()">英語原文 表示/非表示</button>
+            <button class="study-tool-btn" onclick="highlightN2()">N2語彙 ハイライト</button>
+            
+            <div class="progress-tracker">
+                <h4>学習進度</h4>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress"></div>
+                </div>
+                <p id="progress-text">0% 完了</p>
+            </div>
+        </div>
+
+        <div class="toc">
+            <h3>目次</h3>
+            <ul>
+                <li><a href="#introduction">はじめに - N2シリーズ完結にあたって</a></li>
+                <li><a href="#tempest">『テンペスト』- プロスペローの魔法と赦し</a></li>
+                <ul style="margin-left: 20px;">
+                    <li><a href="#tempest-1">第1幕第2場 - ミランダとの対話</a></li>
+                    <li><a href="#tempest-2">第4幕第1場 - 精霊たちの祝福</a></li>
+                    <li><a href="#tempest-3">第5幕第1場 - 魔法の放棄と和解</a></li>
+                </ul>
+                <li><a href="#julius-caesar">『ジュリアス・シーザー』- 権力と裏切り</a></li>
+                <ul style="margin-left: 20px;">
+                    <li><a href="#caesar-1">第3幕第1場 - カエサルの暗殺</a></li>
+                    <li><a href="#caesar-2">第3幕第2場 - アントニウスの追悼演説</a></li>
+                    <li><a href="#caesar-3">第5幕第5場 - ブルータスの最期</a></li>
+                </ul>
+                <li><a href="#completion">N2シリーズ完結メッセージ</a></li>
+            </ul>
+        </div>
+
+        <div class="introduction" id="introduction">
+            <h3>はじめに - N2シリーズ完結にあたって</h3>
+            <p>JLPT N2学習者向けシェイクスピア全集の最終巻へようこそ。本巻では、シェイクスピアの円熟期の傑作『テンペスト』と、政治劇の傑作『ジュリアス・シーザー』から、特に重要な場面を厳選してお届けします。</p>
+            
+            <p>『テンペスト』では、魔法使いプロスペローの復讐と赦しの物語を通じて、人間の成長と和解のテーマを探ります。一方、『ジュリアス・シーザー』では、権力、野心、友情、裏切りという永遠のテーマが、古代ローマを舞台に展開されます。</p>
+            
+            <p>N2レベルの学習者の皆様は、これらの作品を通じて、より高度な日本語表現と、シェイクスピアの深遠な人間洞察に触れることができるでしょう。全4巻にわたるN2シリーズを通じて、皆様の日本語力と文学的素養が大きく向上したことを願っています。</p>
+        </div>
+
+        <div class="play-section" id="tempest">
+            <h2 class="play-title">『テンペスト』(The Tempest)</h2>
+            
+            <div class="play-intro">
+                <p>シェイクスピア最後の完全な作品とされる『テンペスト』は、魔法の島を舞台にした赦しと和解の物語です。ミラノ大公プロスペローは、弟アントーニオに地位を奪われ、娘ミランダとともに孤島に流されます。魔法を身につけたプロスペローは、嵐を起こして仇敵たちを島に呼び寄せますが、最終的に復讐ではなく赦しを選びます。</p>
+            </div>
+
+            <div class="scene" id="tempest-1">
+                <h3 class="scene-header">第1幕第2場 - ミランダとの対話</h3>
+                <p class="stage-direction">【嵐の後、島の洞窟の前。プロスペローが娘ミランダに過去を語る】</p>
+                
+                <div class="dialogue">
+                    <div class="character">プロスペロー</div>
+                    <div class="japanese">
+                        <span class="line-number">[4510]</span>
+                        ミランダ、愛する娘よ、今こそ知るべき時が来た。
+                        なぜ我々がこの人里離れた島に住んでいるのか、
+                        そして、今しがた起こした嵐の意味を。
+                    </div>
+                    <div class="english">
+                        Miranda, my dear daughter, the time has come for you to know
+                        why we live on this remote island,
+                        and the meaning of the tempest I just raised.
+                    </div>
+                </div>
+
+                <div class="vocabulary">
+                    <h4>重要語彙</h4>
+                    <div class="vocab-item">
+                        <span class="vocab-word">人里離れた</span>
+                        <span class="vocab-reading">ひとざとはなれた</span>
+                        <span class="vocab-meaning">remote, isolated from human habitation</span>
+                        <span class="vocab-level n2">N2</span>
+                    </div>
+                    <div class="vocab-item">
+                        <span class="vocab-word">今しがた</span>
+                        <span class="vocab-reading">いましがた</span>
+                        <span class="vocab-meaning">just now, a moment ago</span>
+                        <span class="vocab-level n2">N2</span>
+                    </div>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">ミランダ</div>
+                    <div class="japanese">
+                        <span class="line-number">[4520]</span>
+                        父上、あの恐ろしい光景を見て、私の心は張り裂けそうでした。
+                        船に乗っていた人々の苦しみを思うと、
+                        涙が止まりません。
+                    </div>
+                    <div class="english">
+                        Father, seeing that terrible sight nearly broke my heart.
+                        Thinking of the suffering of those on the ship,
+                        I cannot stop my tears.
+                    </div>
+                </div>
+
+                <div class="grammar-note">
+                    <h4>文法ポイント：〜そうだ（様態）</h4>
+                    <p>「張り裂けそうでした」の「〜そうだ」は、今にも何かが起こりそうな様子を表します。</p>
+                    <div class="grammar-pattern">動詞（連用形）＋そうだ</div>
+                    <p>例：泣きそうだ（今にも泣きそう）、壊れそうだ（今にも壊れそう）</p>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">プロスペロー</div>
+                    <div class="japanese">
+                        <span class="line-number">[4530]</span>
+                        心配するな、優しい子よ。誰一人として傷ついてはいない。
+                        私の術は完璧だ。すべては計画通りに進んでいる。
+                        お前には知らせていなかったが、私はかつてミラノ大公だった。
+                        そして、お前は正真正銘の公女なのだ。
+                    </div>
+                    <div class="english">
+                        Do not worry, gentle child. Not a single person has been harmed.
+                        My art is perfect. Everything proceeds according to plan.
+                        I have not told you before, but I was once Duke of Milan.
+                        And you are a true princess.
+                    </div>
+                </div>
+
+                <div class="vocabulary">
+                    <h4>重要語彙</h4>
+                    <div class="vocab-item">
+                        <span class="vocab-word">正真正銘</span>
+                        <span class="vocab-reading">しょうしんしょうめい</span>
+                        <span class="vocab-meaning">genuine, authentic, real</span>
+                        <span class="vocab-level n1">N1</span>
+                    </div>
+                    <div class="vocab-item">
+                        <span class="vocab-word">術</span>
+                        <span class="vocab-reading">じゅつ</span>
+                        <span class="vocab-meaning">art, technique, magic</span>
+                        <span class="vocab-level n2">N2</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene" id="tempest-2">
+                <h3 class="scene-header">第4幕第1場 - 精霊たちの祝福</h3>
+                <p class="stage-direction">【プロスペローが精霊たちを呼び出し、ミランダとフェルディナンドの婚約を祝福する幻影を見せる】</p>
+                
+                <div class="dialogue">
+                    <div class="character">プロスペロー</div>
+                    <div class="japanese">
+                        <span class="line-number">[4650]</span>
+                        さあ、我が忠実なる精霊アリエルよ、
+                        若い恋人たちのために、美しい幻を見せてやろう。
+                        彼らの純粋な愛に、天の祝福があらんことを。
+                    </div>
+                    <div class="english">
+                        Now, my faithful spirit Ariel,
+                        let us show the young lovers a beautiful vision.
+                        May heaven's blessing be upon their pure love.
+                    </div>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">アイリス（虹の女神）</div>
+                    <div class="japanese">
+                        <span class="line-number">[4660]</span>
+                        豊穣の女神ケレスよ、この祝福の場にお越しください。
+                        金色の麦穂を実らせ、緑なす牧場を豊かにする方よ、
+                        ユノー様があなたをお呼びです。
+                    </div>
+                    <div class="english">
+                        Ceres, goddess of abundance, come to this place of blessing.
+                        You who make golden wheat ripen and green pastures flourish,
+                        Lady Juno summons you.
+                    </div>
+                </div>
+
+                <div class="cultural-note">
+                    <h4>文化的背景：ギリシャ・ローマ神話</h4>
+                    <p>この場面では、ギリシャ・ローマ神話の神々が登場します。アイリス（虹の女神）、ケレス（豊穣の女神）、ユノー（結婚の女神）は、それぞれ自然と人間生活の重要な側面を司る神々です。シェイクスピアは、これらの神話的要素を用いて、祝福の場面に神聖さと荘厳さを与えています。</p>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">プロスペロー</div>
+                    <div class="japanese">
+                        <span class="line-number">[4680]</span>
+                        これらの精霊たちは皆、私の術によって呼び出されたものだ。
+                        だが覚えておきなさい、我々の人生もまた夢のようなもの。
+                        この壮麗な幻影のように、いつかは消え去る運命にある。
+                        我々は夢と同じ糸で織られているのだから。
+                    </div>
+                    <div class="english">
+                        All these spirits have been summoned by my art.
+                        But remember, our life too is like a dream.
+                        Like this magnificent vision, it is destined to vanish.
+                        We are such stuff as dreams are made on.
+                    </div>
+                </div>
+
+                <div class="grammar-note">
+                    <h4>文法ポイント：〜によって（受身・手段）</h4>
+                    <p>「私の術によって呼び出された」の「〜によって」は、動作の手段や原因を表します。</p>
+                    <div class="grammar-pattern">名詞＋によって＋受身形</div>
+                    <p>N2レベルでは、この表現を使って原因・理由・手段を正確に表現できることが求められます。</p>
+                </div>
+            </div>
+
+            <div class="scene" id="tempest-3">
+                <h3 class="scene-header">第5幕第1場 - 魔法の放棄と和解</h3>
+                <p class="stage-direction">【プロスペローが魔法を捨て、敵を赦す決意をする】</p>
+                
+                <div class="dialogue">
+                    <div class="character">プロスペロー</div>
+                    <div class="japanese">
+                        <span class="line-number">[4750]</span>
+                        私の魔法も今や頂点に達した。
+                        太陽を曇らせ、風を呼び、海を荒らし、
+                        雷鳴を轟かせることもできた。
+                        だが、この荒々しい魔法を、私は今ここに捨てよう。
+                    </div>
+                    <div class="english">
+                        My magic has now reached its peak.
+                        I could dim the sun, summon winds, trouble the seas,
+                        and make thunder roar.
+                        But this rough magic I here abjure.
+                    </div>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">プロスペロー（続き）</div>
+                    <div class="japanese">
+                        <span class="line-number">[4760]</span>
+                        魔法の杖を折り、書物を海の底深く沈めよう。
+                        もはや復讐ではなく、赦しこそが私の選ぶ道だ。
+                        美徳は復讐よりも尊い。彼らが悔い改めるなら、
+                        私の怒りも終わりを告げよう。
+                    </div>
+                    <div class="english">
+                        I'll break my staff and drown my book deep in the sea.
+                        No longer revenge, but forgiveness is the path I choose.
+                        Virtue is nobler than vengeance. If they repent,
+                        my anger too shall come to an end.
+                    </div>
+                </div>
+
+                <div class="vocabulary">
+                    <h4>重要語彙</h4>
+                    <div class="vocab-item">
+                        <span class="vocab-word">頂点</span>
+                        <span class="vocab-reading">ちょうてん</span>
+                        <span class="vocab-meaning">peak, summit, zenith</span>
+                        <span class="vocab-level n2">N2</span>
+                    </div>
+                    <div class="vocab-item">
+                        <span class="vocab-word">轟かせる</span>
+                        <span class="vocab-reading">とどろかせる</span>
+                        <span class="vocab-meaning">to make roar, to make thunder</span>
+                        <span class="vocab-level n1">N1</span>
+                    </div>
+                    <div class="vocab-item">
+                        <span class="vocab-word">悔い改める</span>
+                        <span class="vocab-reading">くいあらためる</span>
+                        <span class="vocab-meaning">to repent, to reform</span>
+                        <span class="vocab-level n2">N2</span>
+                    </div>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">プロスペロー（エピローグ）</div>
+                    <div class="japanese">
+                        <span class="line-number">[4780]</span>
+                        今や私の魔法は失われ、残された力はわずかだ。
+                        この島に閉じ込められるか、ナポリに帰れるかは、
+                        皆様の手に委ねられている。
+                        どうか、優しき拍手で私を自由にしてください。
+                    </div>
+                    <div class="english">
+                        Now my charms are all o'erthrown, and what strength I have's mine own.
+                        Whether I remain confined to this island or return to Naples
+                        lies in your hands.
+                        Please, with your gentle applause, set me free.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="play-section" id="julius-caesar">
+            <h2 class="play-title">『ジュリアス・シーザー』(Julius Caesar)</h2>
+            
+            <div class="play-intro">
+                <p>古代ローマを舞台にした政治劇『ジュリアス・シーザー』は、権力、野心、友情、裏切りという普遍的テーマを扱った傑作です。共和政ローマの理想を守ろうとするブルータスは、親友でもあるカエサルを暗殺しますが、その行為は予期せぬ結果を招きます。「ブルータス、お前もか」という有名な台詞で知られるこの作品は、政治的理想と個人的感情の葛藤を鮮やかに描き出しています。</p>
+            </div>
+
+            <div class="scene" id="caesar-1">
+                <h3 class="scene-header">第3幕第1場 - カエサルの暗殺</h3>
+                <p class="stage-direction">【元老院。陰謀者たちがカエサルを取り囲む】</p>
+                
+                <div class="dialogue">
+                    <div class="character">カエサル</div>
+                    <div class="japanese">
+                        <span class="line-number">[4850]</span>
+                        臆病者は死ぬまでに何度も死ぬが、
+                        勇者が死を味わうのはただ一度だけだ。
+                        私が今まで聞いた不思議なことの中で、
+                        最も不思議なのは人が死を恐れることだ。
+                    </div>
+                    <div class="english">
+                        Cowards die many times before their deaths;
+                        The valiant never taste of death but once.
+                        Of all the wonders that I yet have heard,
+                        It seems to me most strange that men should fear death.
+                    </div>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">メテラス・シンバー</div>
+                    <div class="japanese">
+                        <span class="line-number">[4860]</span>
+                        偉大なるカエサル様、どうか私の兄の追放を
+                        お取り消しください。彼の罪を許していただけませんか。
+                    </div>
+                    <div class="english">
+                        Most high, most mighty Caesar,
+                        please revoke my brother's banishment.
+                        Will you not pardon his offense?
+                    </div>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">カエサル</div>
+                    <div class="japanese">
+                        <span class="line-number">[4870]</span>
+                        私を普通の人間と思うな。気まぐれで決定を変える者たちとは違う。
+                        私は北極星のように不動だ。
+                        空に星は無数にあるが、動かぬ星は一つだけ。
+                        人間界でも、その不動の星は私だ。
+                    </div>
+                    <div class="english">
+                        Do not think me an ordinary man who changes decisions on a whim.
+                        I am constant as the northern star.
+                        There are countless stars in the sky, but only one remains fixed.
+                        In the world of men, that fixed star is I.
+                    </div>
+                </div>
+
+                <div class="grammar-note">
+                    <h4>文法ポイント：〜と思うな（禁止）</h4>
+                    <p>「私を普通の人間と思うな」の「〜と思うな」は、強い禁止を表す命令形です。</p>
+                    <div class="grammar-pattern">動詞（辞書形）＋な</div>
+                    <p>この形は書き言葉や演劇的な表現でよく使われ、通常の「〜ないでください」より強い調子を持ちます。</p>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">カスカ</div>
+                    <div class="japanese">
+                        <span class="line-number">[4880]</span>
+                        語るな、祈るな！
+                        <span class="stage-direction">【カエサルを刺す】</span>
+                    </div>
+                    <div class="english">
+                        Speak not, pray not!
+                        [Stabs Caesar]
+                    </div>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">カエサル</div>
+                    <div class="japanese">
+                        <span class="line-number">[4890]</span>
+                        ブルータス、お前もか！ならば、カエサルは死のう！
+                        <span class="stage-direction">【息絶える】</span>
+                    </div>
+                    <div class="english">
+                        Et tu, Brute? Then fall, Caesar!
+                        [Dies]
+                    </div>
+                </div>
+
+                <div class="cultural-note">
+                    <h4>文化的背景：「ブルータス、お前もか」</h4>
+                    <p>「Et tu, Brute?」（エト・トゥー・ブルーテ）は、世界で最も有名な台詞の一つです。信頼していた友人からの裏切りを表す言葉として、多くの言語で引用されています。日本語では「ブルータス、お前もか」として定着し、親しい人からの裏切りを表す慣用句となっています。</p>
+                </div>
+            </div>
+
+            <div class="scene" id="caesar-2">
+                <h3 class="scene-header">第3幕第2場 - アントニウスの追悼演説</h3>
+                <p class="stage-direction">【フォーラム。市民たちの前でブルータスとアントニウスが演説を行う】</p>
+                
+                <div class="dialogue">
+                    <div class="character">アントニウス</div>
+                    <div class="japanese">
+                        <span class="line-number">[4950]</span>
+                        友よ、ローマ市民よ、同胞よ、耳を貸してくれ。
+                        私はカエサルを葬りに来た、賛美するためではない。
+                        人の悪事は死後も生き続けるが、
+                        善行はしばしば骨とともに葬られる。
+                        カエサルもそうあるべきだ。
+                    </div>
+                    <div class="english">
+                        Friends, Romans, countrymen, lend me your ears.
+                        I come to bury Caesar, not to praise him.
+                        The evil that men do lives after them;
+                        The good is oft interred with their bones.
+                        So let it be with Caesar.
+                    </div>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">アントニウス（続き）</div>
+                    <div class="japanese">
+                        <span class="line-number">[4960]</span>
+                        高潔なブルータスは、カエサルが野心家だったと言った。
+                        もしそうなら、それは重大な欠点だ。
+                        そして、カエサルは重い代償を払った。
+                        だが、ブルータスは高潔な人だ。
+                        彼らは皆、高潔な人々だ。
+                    </div>
+                    <div class="english">
+                        The noble Brutus hath told you Caesar was ambitious.
+                        If it were so, it was a grievous fault,
+                        And grievously hath Caesar answered it.
+                        But Brutus is an honorable man.
+                        So are they all, all honorable men.
+                    </div>
+                </div>
+
+                <div class="vocabulary">
+                    <h4>重要語彙</h4>
+                    <div class="vocab-item">
+                        <span class="vocab-word">高潔</span>
+                        <span class="vocab-reading">こうけつ</span>
+                        <span class="vocab-meaning">noble, virtuous, of high moral character</span>
+                        <span class="vocab-level n2">N2</span>
+                    </div>
+                    <div class="vocab-item">
+                        <span class="vocab-word">野心家</span>
+                        <span class="vocab-reading">やしんか</span>
+                        <span class="vocab-meaning">ambitious person</span>
+                        <span class="vocab-level n2">N2</span>
+                    </div>
+                    <div class="vocab-item">
+                        <span class="vocab-word">代償</span>
+                        <span class="vocab-reading">だいしょう</span>
+                        <span class="vocab-meaning">price, compensation, consequence</span>
+                        <span class="vocab-level n2">N2</span>
+                    </div>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">アントニウス</div>
+                    <div class="japanese">
+                        <span class="line-number">[4980]</span>
+                        カエサルが野心家だったと？
+                        彼は多くの捕虜をローマに連れ帰り、
+                        その身代金は国庫を満たした。
+                        これが野心に見えるか？
+                        貧しい者が泣けば、カエサルも涙を流した。
+                        野心というものは、もっと硬い材料でできているはずだ。
+                    </div>
+                    <div class="english">
+                        Was Caesar ambitious?
+                        He brought many captives home to Rome,
+                        whose ransoms filled the public coffers.
+                        Did this seem ambitious?
+                        When the poor cried, Caesar wept.
+                        Ambition should be made of sterner stuff.
+                    </div>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">アントニウス</div>
+                    <div class="japanese">
+                        <span class="line-number">[5000]</span>
+                        だが、ここに羊皮紙がある。カエサルの遺言書だ。
+                        もし私がこれを読めば—いや、読むつもりはない—
+                        諸君はカエサルの傷口に口づけし、
+                        彼の神聖な血に手巾を浸すだろう。
+                        いや、彼の髪の毛一本でも、遺産として懇願するだろう。
+                    </div>
+                    <div class="english">
+                        But here's a parchment with Caesar's will.
+                        If I were to read it—which I don't intend to—
+                        you would kiss Caesar's wounds
+                        and dip your handkerchiefs in his sacred blood.
+                        Nay, you would beg for a single hair of his as inheritance.
+                    </div>
+                </div>
+
+                <div class="grammar-note">
+                    <h4>文法ポイント：もし〜ば（仮定条件）</h4>
+                    <p>「もし私がこれを読めば」の「〜ば」は、仮定条件を表す重要な文法です。</p>
+                    <div class="grammar-pattern">動詞（仮定形）＋ば</div>
+                    <p>N2レベルでは、様々な仮定表現（〜たら、〜と、〜ば、〜なら）の使い分けが求められます。</p>
+                </div>
+            </div>
+
+            <div class="scene" id="caesar-3">
+                <h3 class="scene-header">第5幕第5場 - ブルータスの最期</h3>
+                <p class="stage-direction">【フィリピの戦場近く。敗北したブルータスが最期の時を迎える】</p>
+                
+                <div class="dialogue">
+                    <div class="character">ブルータス</div>
+                    <div class="japanese">
+                        <span class="line-number">[5100]</span>
+                        私の人生の夜は来た。私の骨は一日の労働で疲れ果て、
+                        今は休息を求めている。カエサルの霊が、
+                        二度も私の前に現れた。一度はサルディスで、
+                        そして昨夜、再びこのフィリピの野で。
+                        私の時が来たことを知っている。
+                    </div>
+                    <div class="english">
+                        The night of my life has come. My bones, weary from the day's toil,
+                        now seek their rest. Caesar's ghost
+                        has appeared before me twice. Once at Sardis,
+                        and last night again, here on the fields of Philippi.
+                        I know my hour has come.
+                    </div>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">ブルータス</div>
+                    <div class="japanese">
+                        <span class="line-number">[5120]</span>
+                        さらば、友よ。我が祖国よ、安心せよ。
+                        ブルータスは臆病ゆえに死を選ぶのではない。
+                        ローマのために生き、ローマのために死ぬ。
+                        私はカエサルを殺した時よりも、
+                        今、自分自身に刃を向ける方が喜ばしい。
+                    </div>
+                    <div class="english">
+                        Farewell, friends. My country, be at peace.
+                        Brutus does not choose death from cowardice.
+                        I lived for Rome and die for Rome.
+                        I find more joy in turning the blade upon myself now
+                        than when I killed Caesar.
+                    </div>
+                </div>
+
+                <div class="vocabulary">
+                    <h4>重要語彙</h4>
+                    <div class="vocab-item">
+                        <span class="vocab-word">労働</span>
+                        <span class="vocab-reading">ろうどう</span>
+                        <span class="vocab-meaning">labor, toil, work</span>
+                        <span class="vocab-level n2">N2</span>
+                    </div>
+                    <div class="vocab-item">
+                        <span class="vocab-word">臆病</span>
+                        <span class="vocab-reading">おくびょう</span>
+                        <span class="vocab-meaning">cowardice, timidity</span>
+                        <span class="vocab-level n2">N2</span>
+                    </div>
+                    <div class="vocab-item">
+                        <span class="vocab-word">刃</span>
+                        <span class="vocab-reading">やいば</span>
+                        <span class="vocab-meaning">blade, sword</span>
+                        <span class="vocab-level n1">N1</span>
+                    </div>
+                </div>
+
+                <div class="dialogue">
+                    <div class="character">アントニウス（ブルータスの死後）</div>
+                    <div class="japanese">
+                        <span class="line-number">[5150]</span>
+                        これこそが、彼ら全員の中で最も高潔なローマ人だった。
+                        他の陰謀者たちは皆、カエサルへの妬みから行動した。
+                        ただブルータスだけが、公共の利益と正義への思いから、
+                        彼らに加わったのだ。
+                        彼の人生は、全ての要素が見事に調和していた。
+                    </div>
+                    <div class="english">
+                        This was the noblest Roman of them all.
+                        All the conspirators save only he
+                        did what they did in envy of great Caesar.
+                        He only, in a general honest thought
+                        and common good to all, made one of them.
+                        His life was gentle, and the elements so mixed in him.
+                    </div>
+                </div>
+
+                <div class="cultural-note">
+                    <h4>文化的背景：ストア哲学と名誉の死</h4>
+                    <p>ブルータスの自決は、古代ローマのストア哲学の影響を受けています。名誉を重んじ、理性的に生き、必要とあらば潔く死を選ぶことが、理想的な生き方とされていました。シェイクスピアは、この古代の価値観を通じて、個人の信念と公共の利益の間の永遠の葛藤を描いています。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="completion-message" id="completion">
+            <h2>N2シリーズ完結おめでとうございます！</h2>
+            
+            <p>JLPT N2学習者向けシェイクスピア全集、全4巻を完走されました。これは素晴らしい達成です！</p>
+            
+            <p>この旅を通じて、あなたは：</p>
+            <ul style="text-align: left; display: inline-block;">
+                <li>シェイクスピアの主要作品12作品に触れました</li>
+                <li>1000以上の重要語彙を学習しました</li>
+                <li>複雑な文法構造を実際の文学作品で体験しました</li>
+                <li>西洋文学の普遍的テーマを日本語で理解しました</li>
+            </ul>
+            
+            <div class="next-steps">
+                <h3>次のステップへ</h3>
+                <p>N2レベルの学習を完了したあなたには、以下の選択肢があります：</p>
+                <ul style="text-align: left; display: inline-block;">
+                    <li><strong>N1シリーズへの挑戦</strong> - より高度な語彙と表現でシェイクスピアを読む</li>
+                    <li><strong>原文との対照読み</strong> - 英語原文と日本語訳を比較しながら読む</li>
+                    <li><strong>作品の深い分析</strong> - 気に入った作品を選んで、詳細に研究する</li>
+                    <li><strong>実際の舞台鑑賞</strong> - 学んだ作品の舞台や映画を観る</li>
+                </ul>
+                
+                <p style="margin-top: 30px; font-size: 1.3em;">
+                    「全世界は舞台、人間は皆役者に過ぎない」<br>
+                    - 『お気に召すまま』より
+                </p>
+                
+                <p>あなたの日本語学習の旅が、これからも実り多きものでありますように！</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>シェイクスピア全集 日本語版 - JLPT N2学習者向け注釈付き 第四部（最終巻）</p>
+            <p>収録範囲：行4501-5682 | 『テンペスト』『ジュリアス・シーザー』</p>
+            <p>このテキストは教育目的で作成されました。</p>
+        </div>
+    </div>
+
+    <script>
+        // Toggle vocabulary notes
+        function toggleVocabulary() {
+            const vocabSections = document.querySelectorAll('.vocabulary');
+            vocabSections.forEach(section => {
+                section.style.display = section.style.display === 'none' ? 'block' : 'none';
+            });
+            updateButtonState('vocabulary');
+        }
+
+        // Toggle grammar notes
+        function toggleGrammar() {
+            const grammarSections = document.querySelectorAll('.grammar-note');
+            grammarSections.forEach(section => {
+                section.style.display = section.style.display === 'none' ? 'block' : 'none';
+            });
+            updateButtonState('grammar');
+        }
+
+        // Toggle English translations
+        function toggleEnglish() {
+            const englishLines = document.querySelectorAll('.english');
+            englishLines.forEach(line => {
+                line.style.display = line.style.display === 'none' ? 'block' : 'none';
+            });
+            updateButtonState('english');
+        }
+
+        // Highlight N2 vocabulary
+        function highlightN2() {
+            const n2Items = document.querySelectorAll('.vocab-level.n2');
+            n2Items.forEach(item => {
+                const parent = item.closest('.vocab-item');
+                parent.style.backgroundColor = parent.style.backgroundColor === 'rgb(255, 243, 205)' ? '' : '#fff3cd';
+            });
+            updateButtonState('n2');
+        }
+
+        // Update button state
+        function updateButtonState(type) {
+            const buttons = document.querySelectorAll('.study-tool-btn');
+            buttons.forEach(btn => {
+                if (btn.textContent.includes(getButtonKeyword(type))) {
+                    btn.classList.toggle('active');
+                }
+            });
+        }
+
+        // Get button keyword
+        function getButtonKeyword(type) {
+            switch(type) {
+                case 'vocabulary': return '語彙';
+                case 'grammar': return '文法';
+                case 'english': return '英語';
+                case 'n2': return 'N2';
+                default: return '';
+            }
+        }
+
+        // Track reading progress
+        let totalHeight = 0;
+        let readHeight = 0;
+
+        window.addEventListener('DOMContentLoaded', () => {
+            totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            updateProgress();
+        });
+
+        window.addEventListener('scroll', () => {
+            readHeight = window.scrollY;
+            updateProgress();
+        });
+
+        function updateProgress() {
+            const progress = totalHeight > 0 ? Math.min((readHeight / totalHeight) * 100, 100) : 0;
+            document.getElementById('progress').style.width = progress + '%';
+            document.getElementById('progress-text').textContent = Math.round(progress) + '% 完了';
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Save reading position
+        window.addEventListener('beforeunload', () => {
+            localStorage.setItem('n2-part4-scroll-position', window.scrollY);
+        });
+
+        // Restore reading position
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedPosition = localStorage.getItem('n2-part4-scroll-position');
+            if (savedPosition) {
+                window.scrollTo(0, parseInt(savedPosition));
+            }
+        });
+    </script>
+</body>
+</html>

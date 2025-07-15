@@ -1,0 +1,2822 @@
+Este es el archivo número 100 presentado por el Proyecto Gutenberg, y
+es presentado en cooperación con World Library, Inc., desde su
+Library of the Future y los CDROMS de Shakespeare. ¡El Proyecto Gutenberg
+a menudo publica textos que NO están en el Dominio Público!
+
+Shakespeare
+
+*Este texto tiene ciertas implicaciones de derechos de autor que deberías leer!*
+
+<<ESTA VERSIÓN ELECTRÓNICA DE LAS OBRAS COMPLETAS DE WILLIAM
+SHAKESPEARE TIENE DERECHOS DE AUTOR 1990-1993 DE WORLD LIBRARY, INC., Y ES
+PROPORCIONADA POR PROJECT GUTENBERG ETEXT DE ILLINOIS BENEDICTINE COLLEGE
+CON PERMISO. LAS COPIAS ELECTRÓNICAS Y LEGIBLES POR MÁQUINA PUEDEN SER
+DISTRIBUIDAS SIEMPRE QUE DICHAS COPIAS (1) SEAN SOLO PARA TU USO PERSONAL
+O DE OTROS, Y (2) NO SEAN DISTRIBUIDAS O USADAS
+COMERCIALMENTE. LA DISTRIBUCIÓN COMERCIAL PROHIBIDA INCLUYE POR CUALQUIER
+SERVICIO QUE COBRE POR TIEMPO DE DESCARGA O POR MEMBRESÍA.>>
+
+*El Proyecto Gutenberg se enorgullece de cooperar con The World Library*
+en la presentación de Las Obras Completas de William Shakespeare
+para tu lectura, educación y entretenimiento. SIN EMBARGO, ESTO
+NO ES NI SHAREWARE NI DOMINIO PÚBLICO...Y BAJO LAS CONDICIONES
+DE LA BIBLIOTECA DEL FUTURO DE ESTA PRESENTACIÓN...NO SE PUEDEN
+HACER CARGOS POR *NINGÚN* ACCESO A ESTE MATERIAL. ¡SE TE ANIMA
+A REGALARLO A QUIEN QUIERAS, PERO NO SE PERMITEN CARGOS!
+
+
+**Bienvenido al Mundo de los Textos Electrónicos Gratuitos**
+
+**Textos Legibles tanto por Humanos como por Computadoras, Desde 1971**
+
+*Estos Textos Preparados por Cientos de Voluntarios y Donaciones*
+
+La información sobre cómo contactar al Proyecto Gutenberg para obtener textos
+y más información se incluye a continuación. Necesitamos tus donaciones.
+
+
+Las Obras Completas de William Shakespeare
+
+Enero, 1994 [Texto #100]
+
+
+Las Obras Completas de William Shakespeare de la Biblioteca del Futuro
+Library of the Future es una Marca Registrada (TM) de World Library Inc.
+******Este archivo debería llamarse shaks12.txt o shaks12.zip*****
+
+Las EDICIONES corregidas de nuestros textos obtienen un NÚMERO nuevo, shaks13.txt
+Las VERSIONES basadas en fuentes separadas obtienen una LETRA nueva, shaks10a.txt
+
+Si deseas más información sobre World Library, Inc.
+Por favor llámalos al 1-800-443-0238 o envía un correo a julianc@netcom.com
+¡Por favor dales nuestro agradecimiento por su cooperación con Shakespeare!
+
+
+La fecha oficial de lanzamiento de todos los textos del Proyecto Gutenberg es a
+medianoche, hora central, del último día del mes indicado. Una
+versión preliminar puede publicarse a menudo para sugerencias, comentarios
+y edición por parte de aquellos que lo deseen. Para asegurarte de tener una
+primera edición actualizada [xxxxx10x.xxx] por favor verifica los tamaños
+de archivo en la primera semana del mes siguiente. Dado que nuestro programa ftp tiene
+un error que confunde la fecha [intentamos arreglarlo y fallamos], una
+mirada al tamaño del archivo tendrá que bastar, pero intentaremos ver que una
+nueva copia tenga al menos un byte más o menos.
+
+
+Información sobre el Proyecto Gutenberg (una página)
+
+Producimos alrededor de dos millones de dólares por cada hora que trabajamos. Las
+cincuenta horas es una estimación conservadora de cuánto tiempo nos toma
+obtener cualquier texto seleccionado, ingresado, revisado, editado, investigado
+los derechos de autor y analizados, las cartas de derechos de autor escritas, etc. Esta
+audiencia proyectada es de cien millones de lectores. Si nuestro valor
+por texto se estima nominalmente en un dólar, entonces producimos 2
+millones de dólares por hora este año, tendremos que hacer cuatro archivos
+de texto por mes: aumentando así nuestra productividad desde un millón.
+El objetivo del Proyecto Gutenberg es regalar un billón de archivos de texto
+para el 31 de diciembre de 2001. [10,000 x 100,000,000=Billón]
+Esto es diez mil títulos cada uno para cien millones de lectores,
+que es el 10% del número esperado de usuarios de computadoras para finales
+del año 2001.
+
+¡Necesitamos tus donaciones más que nunca!
+
+Todas las donaciones deben hacerse a "Project Gutenberg/IBC", y son
+deducibles de impuestos en la medida permitida por la ley ("IBC" es Illinois
+Benedictine College). (Las suscripciones a nuestro boletín en papel van
+también a IBC)
+
+Para estos y otros asuntos, por favor envía correo a:
+
+Project Gutenberg
+P. O. Box 2782
+Champaign, IL 61825
+
+Cuando todos los demás correos electrónicos fallen, intenta con nuestro Director Ejecutivo:
+Michael S. Hart hart@vmd.cso.uiuc.edu (internet) hart@uiucvmd (bitnet)
+
+Preferiríamos enviarte esta información por correo electrónico
+(Internet, Bitnet, Compuserve, ATTMAIL o MCImail).
+
+******
+
+Si tienes un FTP de Internet y deseas obtener una copia de nuestro texto,
+por favor intenta:
+
+ftp uiarchive.cso.uiuc.edu
+login: anonymous
+contraseña: tu@correo
+cd etext
+dir (para ver archivos)
+get o mget (para obtener archivos...usualmente indicados en mayúsculas)
+GET INDEX100.GUT
+para obtener el archivo INDEX.
+cd etext91 o cd etext92 o cd etext93 [para archivos antiguos]
+dir [para ver los directorios]
+cd etext93 [ver tu propio directorio]
+dir [para ver archivos]
+get o mget [para obtener archivos...usualmente indicados en mayúsculas]
+GET NEW.GUT para información general
+GET GUTINDEX.93 para una lista de libros y
+GET GUTINDEX.ALL para una lista de TODO
+
+***FIN DEL PROYECTO GUTENBERG'S ETEXT DE LAS OBRAS COMPLETAS DE SHAKESPEARE***
+*******Este archivo debería llamarse shaks12.txt o shaks12.zip********
+
+Las EDICIONES corregidas de nuestros textos obtienen un NÚMERO nuevo, shaks13.txt
+Las VERSIONES basadas en fuentes separadas obtienen una LETRA nueva, shaks10a.txt
+
+
+Las Obras Completas de William Shakespeare
+
+Este es el índice del Proyecto Gutenberg de las Obras Completas de
+Shakespeare de World Library, Inc.
+
+LOS SONETOS
+
+                     1
+  De seres bellos deseamos descendencia,
+  Para que así la rosa nunca muera,
+  Y cuando el tiempo maduro al fin perezca,
+  Su tierno heredero guarde su memoria:
+  Mas tú, comprometido a tus brillantes ojos,
+  Nutres tu propia luz con fuego interno,
+  Creando hambre donde abundancia existe,
+  Enemigo de ti mismo, cruel eterno:
+  Tú que ahora eres del mundo el ornamento,
+  Y único mensajero de primavera,
+  Entierras en tu ser tu alegre aliento,
+  Y avaro tierno, gastas al guardarlo:
+    Ten piedad del mundo, o glotón serás,
+    Devorando del mundo y tumba a la vez.
+
+
+                     2
+  Cuando asedien tu frente cuarenta inviernos,
+  Y caven hondas zanjas en tu campo hermoso,
+  Tu altiva juventud y traje soberbio,
+  Será trapo sin precio ni valioso:
+  Si entonces te preguntan dónde queda
+  Todo el tesoro de tus días lozanos;
+  Decir que en tus ojos hundidos se hospeda,
+  Sería gran vergüenza y elogio vano.
+  ¡Cuánto mejor respuesta tu belleza
+  Si pudieras decir: 'Este hijo hermoso
+  Salda mis cuentas y excusa mi vejez',
+  Probando que heredó tu ser precioso!
+    Esto sería al envejecer renacer,
+    Y ver tu sangre tibia al enfriar.
+
+
+                     3
+  Mírate en el espejo y di al reflejo:
+  Ya es tiempo de formar un rostro nuevo;
+  Si no renuevas hoy tu imagen bella,
+  Engañas al mundo y a madre dejas.
+  ¿Dónde está la mujer cuyo virgen vientre
+  Desdeñe la labranza de tu arado?
+  ¿O quién tan necio que tumba se vuelva
+  De su propio amor, sin dejar legado?
+  Eres de tu madre el claro espejo,
+  Y ella en ti recuerda abril florido;
+  Así tú por ventanas de tu edad,
+  Verás pese a arrugas tu oro vivido.
+    Mas si vives sin ser recordado,
+    Muere solo y tu imagen muere a tu lado.
+
+
+                     4
+  Belleza pródiga, ¿por qué gastas
+  En ti mismo tu rica herencia entera?
+  Natura nada da, sólo hace préstamos,
+  Y siendo generosa, presta a quien genera:
+  Entonces, bello avaro, ¿por qué abusas
+  Del gran regalo dado para dar?
+  Usurero sin fruto, ¿por qué usas
+  Tan gran suma sin poder prosperar?
+  Pues comerciando sólo contigo mismo,
+  A tu dulce ser estás engañando;
+  Cuando natura exija que te marches,
+  ¿Qué cuentas aceptables dejarás?
+    Tu belleza sin uso irá a la tumba,
+    Mas usada en tu heredero perdura.
+
+
+                     5
+  Las horas que con mano delicada
+  Formaron ese rostro que ojos aman,
+  Harán de ese mismo ser tiranía,
+  Y lo hermoso volverán sin gracia:
+  Pues tiempo sin descanso lleva el verano
+  Al horrible invierno destructor,
+  Con savia helada y hojas despojadas,
+  Belleza bajo nieve sin color:
+  Si no quedara un líquido guardado,
+  Destilado en muros de cristal,
+  Con la belleza su efecto iría,
+  Sin dejar memoria de su ser.
+    Mas flores destiladas, si el invierno encuentran,
+    Pierden forma pero su esencia queda.
+
+
+                     6
+  No dejes que la mano del invierno
+  Desfigure tu verano sin destilarlo:
+  Llena algún frasco, atesora algún lugar
+  Con tu bello tesoro antes que muera:
+  Tal uso no es usura prohibida,
+  Que alegra a quien el interés recibe;
+  Es para ti engendrar otro tú mismo,
+  O diez más felices, diez por uno:
+  Diez veces tú más dichoso serías,
+  Si diez hijos tuyos te recrearan;
+  ¿Qué haría la muerte si te marcharas,
+  Dejándote vivir en tu simiente?
+    No seas terco, pues muy bello eres
+    Para ser conquista de los gusanos.
+
+
+                     7
+  Mira al oriente cuando la luz graciosa
+  Alza su frente ardiente; cada ojo
+  Le rinde homenaje con nueva alabanza,
+  Sirviendo con miradas su esplendor:
+  Y cuando escala la celeste cumbre,
+  Como fuerte joven en su mediodía,
+  Las miradas mortales siguen su belleza,
+  En su peregrinaje de oro puro:
+  Mas cuando baja con su carro exhausto,
+  Como débil anciano al fin del día,
+  Los ojos antes fieles se desvían
+  De su sendero bajo sin mirar:
+    Así tú, si no tienes descendencia,
+    Sin miradas mueres en tu ocaso.
+
+
+                     8
+  Al oír música, ¿por qué estás triste?
+  Dulzuras no combaten, gozo a gozo agrada:
+  ¿Por qué amas aquello que no gozas,
+  O gozas con placer lo que te enfada?
+  Si el acorde perfecto de sonidos,
+  En unión casada ofende tu oído,
+  Es que dulcemente te reprenden
+  Por confundir las partes que debieras:
+  Mira cómo una cuerda abraza a otra,
+  Golpeándose en mutuo y dulce orden;
+  Como padre e hijo y madre alegre,
+  Que juntos una sola nota cantan:
+    Su cantar sin palabras, siendo muchos uno,
+    Te dice así: 'Solo nada tendrás'.
+
+
+                     9
+  ¿Es por temor de hacer llorar a viuda,
+  Que te consumes solo en esta vida?
+  ¡Ah! si murieras sin dejar un hijo,
+  El mundo viuda sin par te lloraría;
+  El mundo tu viuda aún lamentaría
+  Que no dejaste forma tuya atrás,
+  Cuando toda viuda puede mantener
+  Por ojos de sus hijos la memoria:
+  Mira: quien en el mundo mal derrocha
+  Solo cambia lugar, mas da alegría;
+  Pero belleza que se guarda muere,
+  Y guardada sin uso se destruye:
+    No hay amor por otros en tu pecho
+    Si en ti mismo tal muerte cometes.
+
+
+                     10
+  Por vergüenza niega que no amas a nadie,
+  Tú que contigo mismo eres tan duro.
+  Admite si quieres que muchos te aman,
+  Mas que tú no amas es evidente:
+  Pues tanto odio asesino te posee,
+  Que contra ti conspiras sin dudar,
+  Buscando arruinar ese bello techo
+  Que debieras con celo reparar:
+  Cambia tu pensar, que yo cambio el mío:
+  ¿Debe el odio morar donde amor debe?
+  Sé como tu presencia, bello y tierno,
+  O al menos sé contigo bondadoso:
+    Hazte otro por amor hacia mi ser,
+    Que belleza viva en ti o en tu prole.
+
+
+                     11
+  Tan rápido como menguas así creces,
+  En uno de los tuyos al partir;
+  Y esa sangre fresca que joven donas,
+  Puedes llamar tuya al envejecer:
+  En esto vive saber, belleza, aumento,
+  Sin esto hay locura, vejez y declive;
+  Si todos pensaran como tú piensas,
+  En sesenta años pereciera el mundo:
+  Deja que los que natura no hizo bellos,
+  Los duros, sin rasgos, mueran estériles;
+  Ella te dio más porque mejor eres,
+  Y ese don generoso debes dar:
+    Te talló como sello, y quiso así
+    Que imprimas más, no dejes morir copia.
+
+
+                     12
+  Cuando cuento el reloj marcando horas,
+  Y veo el día hundiéndose en la noche,
+  Cuando miro la violeta marchita,
+  Y rizos negros que plateó la nieve:
+  Cuando veo los árboles sin hojas,
+  Que dieron sombra al rebaño en verano,
+  Y el verde estival en gavillas puesto,
+  Con blanca barba erizada en andas:
+  Entonces pregunto por tu belleza,
+  Que entre ruinas del tiempo ha de ir,
+  Pues toda gracia y beldad se abandona,
+  Y muere tan veloz como otra nace:
+    Y nada puede al Tiempo y su guadaña
+    Salvo la prole cuando él te arrastra.
+
+
+                     13
+  ¡Ojalá fueras siempre tuyo! Mas no eres
+  Tuyo más tiempo que el que aquí estés:
+  Contra este fin que viene prepararte
+  Debieras, y tu imagen dulce dar.
+  Así tu belleza que tienes prestada
+  No hallará final, será renovada;
+  Tu dulce hijo tu forma llevaría,
+  Y serías tuyo cuando ya no fueres.
+  ¿Quién dejaría tal casa que se hunda,
+  Sin que el honor con celo la repare
+  Contra la rabia de infinitos años
+  Y el rigor del estéril crudo invierno?
+    Ninguno sino pródigos sin mente:
+    Tuviste padre, deja a tu hijo igual.
+
+
+                     14
+  No de las estrellas saco mi juicio,
+  Y aun así creo saber astronomía,
+  Mas no para decir buena fortuna,
+  De plagas, de hambrunas o estaciones:
+  Ni puedo adivinar breves minutos,
+  Señalando a cada uno lluvia o viento,
+  O decir si a príncipes irá bien
+  Por señales que encuentro en el cielo:
+  Mas de tus ojos mi saber derivo,
+  Y en esas dos estrellas leo tal arte:
+  Que verdad y belleza prosperarán,
+  Si te conviertes tú en tu guardián:
+    O si no, esto de ti yo profetizo:
+    Tu fin será de belleza y verdad ruina.
+
+
+                     15
+  Cuando pienso que todo lo que crece
+  Se mantiene perfecto un breve instante,
+  Y este gran escenario solo muestra
+  Shows que secretas fuerzas van guiando;
+  Cuando veo que el hombre como planta crece,
+  Por el mismo cielo alzado y detenido,
+  Florece en juventud, declina en alto,
+  Y olvida su valiente estado muere:
+  Entonces esta idea de mudanza
+  Te presenta ante mí, rico en juventud,
+  Donde Tiempo gastador y ruina luchan
+  Por cambiar tu día joven en noche:
+    Y en guerra con el Tiempo por tu amor,
+    Mientras te quita, yo te injerto nuevo.
+
+
+                     16
+  ¿Mas por qué no con arma más potente
+  Haces guerra al sangriento Tiempo tirano?
+  ¿Y no te fortificas con medios
+  Más dichosos que mi estéril rima?
+  Ahora estás en cima de horas bellas,
+  Y vírgenes jardines sin plantar
+  Con viva virtud tu flor desean,
+  Más parecida que tu imagen muerta:
+  Las líneas de vida esa vida guardan,
+  Que ni lápiz del tiempo ni mi pluma
+  En valor interior o exterior
+  Pueden darte a ojos vivos del futuro.
+    Dar de ti mismo guarda tu poder:
+    Debes vivir pintado por tu mano.
+
+
+                     17
+  ¿Quién creerá mi verso en el futuro,
+  Si estuviera lleno de tu elogio?
+  Aunque el cielo sabe es solo una tumba
+  Que esconde tu vida, muestra la mitad:
+  Si yo escribiera de tus bellos ojos,
+  Y en números contara tus mil gracias,
+  La edad futura diría: 'Miente el poeta,
+  Rostros mortales no tienen tal toque'.
+  Así mis papeles, por edad dorados,
+  Serían despreciados como cuentos viejos,
+  Menos verdaderos que canción de bardo,
+  Y tus derechos tomados por locura:
+    Mas si vivieras tú algún hijo tuyo,
+    Dos veces vivirías: en él, mi rima.
+
+
+                     18
+  ¿He de compararte a día estival?
+  Más templado eres tú y más amable:
+  Vientos rudos sacuden brotes de mayo,
+  Y el verano muy corta fecha tiene:
+  A veces muy caliente el sol destella,
+  Y a menudo su rostro de oro opaca;
+  Y toda belleza de belleza cae,
+  Por azar o por curso natural:
+  Mas tu eterno verano no declina,
+  Ni pierde posesión de tu hermosura;
+  Ni la Muerte dirá que en sombra vagas,
+  Cuando en versos eternos al tiempo crezcas:
+    Mientras hombre respire u ojo vea,
+    Vive esto, y esto vida a ti te da.
+
+
+                     19
+  Tiempo voraz, embota al león sus garras,
+  Y haz que tierra devore a sus criaturas;
+  Arranca fieros dientes de las fauces,
+  Y quema al fénix viejo en su sangre;
+  Haz alegres y tristes estaciones,
+  Y haz lo que quieras, Tiempo veloz,
+  Al mundo entero y sus delicias breves:
+  Mas te prohíbo un crimen muy odioso:
+  No talles con tus horas frente amada,
+  Ni traces líneas con tu vieja pluma;
+  Sin tocar déjalo en tu curso sea
+  Modelo de belleza venidero.
+    Mas haz tu mal, Tiempo: pese a tu daño,
+    Mi amor será joven siempre en verso.
+
+
+                     20
+  Rostro de mujer pintó naturaleza
+  Con su mano al maestro de mi alma;
+  Corazón de mujer tierno, mas no dado
+  A cambio voluble cual mujer falsa;
+  Ojo más brillante que el de ellas, menos falso,
+  Dorando aquello sobre lo que mira;
+  Un hombre en forma, que todo controla,
+  Robando ojos de hombres, almas de ellas.
+  Y por mujer al principio fuiste hecho,
+  Hasta que Natura al formarte amó,
+  Y por añadidura me privó,
+  Al darte cosa sin uso para mí.
+    Mas ya que te hizo para ellas gozo,
+    Mío sea tu amor, tuyo su tesoro.
+
+
+                     21
+  No como aquella Musa que en su verso
+  Por pintada belleza se desvela,
+  Y el cielo mismo por adorno emplea,
+  Comparando toda bella con su bella:
+  Déjame, fiel en amor, verdad escribir,
+  Y entonces créeme: mi amor es tan hermoso
+  Como hijo alguno que parió una madre,
+  Aunque no brille cual doradas velas:
+  Deja que digan más quien gusta hablar;
+  Mi propósito no es vender ni halagar,
+  Y no venderé lo que en el cielo está,
+  Esa enorme rueda que todos pueden ver:
+    Quien más alardea es menos a mis ojos
+    Que esas monedas de oro en los cielos.
+
+
+                     22
+  Mi espejo no me hará creer que envejezco,
+  Mientras juventud y tú tengáis igual fecha;
+  Mas cuando en ti vea surcos del tiempo,
+  Espero que la muerte mis días cese.
+  Pues toda esa belleza que te viste
+  Es solo el digno atuendo de mi pecho,
+  Que vive en ti, como el tuyo vive en mí:
+  ¿Cómo puedo entonces ser mayor que tú?
+  Por tanto, amor, cuídate tanto por ti
+  Como yo lo haré, no por mí, por ti;
+  Portando tu corazón con tal cuidado
+  Cual tierna nodriza a su bebé guarda.
+    No presumas tu corazón cuando muera el mío:
+    Me diste el tuyo para no devolverlo.
+
+
+                     23
+  Como actor novato en el escenario,
+  Que con su miedo olvida su papel,
+  O fiera feroz que de rabia carga,
+  Y su exceso de fuerza la debilita;
+  Así yo por falta de confianza olvido
+  Decir el rito perfecto del amor,
+  Y mi amor parece que su fuerza pierde,
+  Por el peso excesivo de mi afecto:
+  Que mis libros sean mi elocuencia entonces,
+  Heraldos mudos de mi pecho ardiente,
+  Que suplican amor y buscan recompensa,
+  Más que lengua alguna que haya hablado.
+    Aprende a leer lo que amor callado escribe:
+    Oír con los ojos es del amor el arte.
+
+
+                     24
+  Mi ojo jugó al pintor y ha trazado
+  Tu hermosa forma en tabla de mi pecho;
+  Mi cuerpo es el marco donde se encierra,
+  Y perspectiva es del pintor su arte.
+  Por el pintor verás su habilidad,
+  Para hallar donde tu imagen verdadera,
+  Que en el taller de mi pecho cuelga,
+  Y tus ojos son ventanas cristalinas.
+  Mira qué buen cambio ojos por ojos dan:
+  Los míos tu forma dibujaron, los tuyos
+  Son ventanas a mi pecho, donde el sol
+  Se deleita mirando al contemplarte:
+    Mas los ojos les falta astucia al arte,
+    Dibujan lo que ven, no el corazón.
+
+
+                     25
+  Que aquellos que sus estrellas favorecen
+  De honor público y títulos se jacten,
+  Mientras yo, a quien fortuna tal niega,
+  Sin ser notado gozo lo que honro.
+  Los favoritos de príncipes despliegan
+  Como caléndulas sus hojas al sol,
+  Y en sí mismos su orgullo está enterrado,
+  Pues ante un ceño su gloria perece.
+  El guerrero por mil luchas famoso,
+  Si una vez es vencido en la batalla,
+  Del libro del honor borrado queda,
+  Y todo su trabajo es olvidado:
+    Feliz yo entonces, que amo y soy amado
+    Donde no puedo ser quitado ni quitar.
+
+
+                     26
+  Señor de mi amor, a quien vasallaje
+  Tu mérito ha atado mi deber fuerte,
+  Te envío esta embajada por escrito,
+  Para mostrar deber, no mi ingenio:
+  Deber tan grande, que ingenio tan pobre
+  Puede parecer desnudo al mostrarte;
+  Mas que espero tenga aceptación,
+  Y vista mi andrajoso amor de estima;
+  Hasta que estrella que guíe mi camino,
+  Me señale con gracioso aspecto lleno,
+  Y vista de bello atuendo mi amor:
+  Entonces osaré decir cuánto te amo;
+    Hasta entonces no muestro mi cabeza
+    Para probar cuán digno soy de ti.
+
+
+                     27
+  Cansado del trabajo, corro a mi cama,
+  Deseado reposo de miembros fatigados;
+  Mas entonces comienza viaje en mi mente
+  Para trabajarla cuando el cuerpo acaba:
+  Pues mis pensamientos desde lejos donde moro
+  Intentan peregrinar devotos hacia ti,
+  Y mantienen mis párpados bien abiertos,
+  Mirando oscuridad que ciegos ven:
+  Salvo que mi alma en sombra imaginaria
+  Presenta tu sombra a mi vista ciega,
+  Cual joya colgada en noche espantosa,
+  Hace hermosa la noche y nuevo su rostro.
+    Así de día mis miembros, de noche mente,
+    Por ti y por mí no hallan reposo alguno.
+
+
+                     28
+  ¿Cómo entonces volver con alegría,
+  Cuando no se me otorga beneficio del descanso?
+  Cuando el día no alivia su opresión de noche,
+  Sino día y noche juntos me oprimen:
+  Y cada cual, aunque mutuos enemigos,
+  Se dan la mano para torturarme,
+  Uno con trabajo, otro quejándose
+  Cuán lejos viajo, más lejos de ti.
+  Al día digo que brillas para halagarlo,
+  Y le haces favor cuando nubes cubren cielo:
+  Así adulo al día de ceño jurado,
+  Cuando noche brillante mi pena alivia:
+    Mas día tras día mi pena alarga,
+    Y noche tras noche mi dolor agranda.
+
+
+                     29
+  Cuando en desgracia con fortuna y hombres,
+  Solo lloro mi estado desdichado,
+  Y molesto al cielo sordo con mis llantos,
+  Y me miro a mí mismo y maldigo mi hado,
+  Deseando ser más rico en esperanza,
+  Con rasgos como él, como él con amigos,
+  Deseando arte de este, alcance de aquel,
+  Con lo que más disfruto menos contento:
+  Mas cuando casi me desprecio a mí mismo,
+  Pienso en ti por azar, y mi estado
+  Como alondra al alba desde tierra oscura,
+  Canta himnos ante puerta celestial:
+    Tu dulce amor traído a memoria
+    Me hace despreciar cambiar con reyes.
+
+
+                     30
+  Cuando ante el tribunal del pensamiento
+  Convoco el recuerdo de lo pasado,
+  Suspiro por muchas cosas que busqué,
+  Y lloro de nuevo el tiempo malgastado:
+  Entonces ahogo mis ojos (sin llorar)
+  Por amigos queridos en muerte ocultos,
+  Y lloro de nuevo amor ya pagado,
+  Y gimo por muchas vistas perdidas:
+  Entonces me aflijo por pasados males,
+  Y cuento pesadamente dolor tras dolor,
+  La triste cuenta de lamentos viejos,
+  Que pago como si no hubiera pagado:
+    Mas si pienso en ti mientras, amigo,
+    Se restauran pérdidas, cesan penas.
+
+
+                     31
+  Tu pecho posee todos los corazones
+  Que yo por falta de amor creí muertos,
+  Y allí reina amor con todas sus partes,
+  Y todos los amigos que pensé enterrados.
+  ¡Cuántas lágrimas santas y devotas
+  Ha robado de mis ojos el amor!
+  Como interés de muertos, que aparecen
+  Solo cosas mudadas, en ti ocultas.
+  Eres la tumba donde amor yace enterrado,
+  Con trofeos colgados de amantes idos,
+  Que su amor me dieron, que ahora doy
+  Entero con sus derechos solo a ti:
+    Su amor debido a muchos, tuyo es solo,
+    Y ellos en ti viven tras su muerte.
+
+
+                     32
+  Si sobrevives mi día bien contado,
+  Cuando la muerte cubra mis huesos con polvo,
+  Y por fortuna vuelvas a mirar
+  Estas líneas toscas de tu amante muerto,
+  Compáralas con lo mejor del tiempo,
+  Y aunque toda pluma las supere,
+  Guárdalas por mi amor, no por su rima,
+  Que excede la altura de hombres felices.
+  Concédeme entonces pensamiento amoroso:
+  'Si hubiera crecido el amor de mi amigo,
+  Hijo más querido el tiempo habría dado,
+  Para marchar con mejor compañía:
+    Mas ya que murió y poetas mejores crecen,
+    Leo su estilo mas su amor en ellos.'
+
+
+                     33
+  Muchas mañanas gloriosas he visto
+  Halagar las cimas con ojo soberano,
+  Besando con rostro de oro prados verdes,
+  Dorando arroyos con su alquimia santa;
+  Pero nubes bajas a veces permiten
+  Cruzar con fea carrera su faz celeste,
+  Y del mundo triste esconden su vista,
+  Huyendo sin ser visto hacia occidente:
+  Así mi sol brilló una mañana
+  Con todo su triunfal esplendor en mí;
+  Mas fue solo una hora que fue mía,
+  La nube regional me lo escondió.
+    Esto no desdeña mi amor sin embargo:
+    Soles del mundo manchan como los del cielo.
+
+
+                     34
+  ¿Por qué prometiste día tan hermoso,
+  Y sin capa me hiciste caminar,
+  Para que nubes viles me alcanzaran
+  Y tu brillo ocultaran con su hedor?
+  No basta que rompas por la nube
+  Para secar lluvia en mi faz golpeada,
+  Pues nadie alaba ungüento que sana
+  Pero no quita herida ni desgracia:
+  Ni tu vergüenza cura mi dolor,
+  Aunque te arrepientas, tengo la pérdida,
+  Del ofensor la cruz pesa fuerte,
+  Mas débil consuelo a quien la sufre.
+    Pero esas lágrimas son perlas de amor,
+    Y ricas son, rescatan todo mal.
+
+
+                     35
+  No más te aflijas por lo que has hecho:
+  Rosas tienen espinas, fuentes tienen lodo,
+  Nubes y eclipses manchan sol y luna,
+  Y gusano vil vive en dulce capullo.
+  Todos yerran, y yo también en esto,
+  Que autorizo tu falta comparando,
+  Me corrompo excusando tus pecados,
+  Tu adversario siendo y tu abogado:
+  Contra mí mismo inicio una demanda,
+  Tal guerra civil hay en mi amor y odio,
+  Que accesorio debo volverme yo
+  De ese dulce ladrón que agrio me roba.
+
+
+                     36
+  Déjame confesar que dos debemos ser,
+  Aunque en nuestras vidas separación haya;
+  Así las manchas que sobre mí están,
+  Sin tu ayuda yo solo las soporto.
+  En nuestros dos amores hay un solo afecto,
+  Aunque en nuestras vidas separación hay,
+  Que aunque altera no quita el efecto,
+  Mas roba dulces horas al deleite.
+  Puede que no te reconozca más,
+  Para que mi culpa no te traiga vergüenza,
+  Ni tú con pública bondad me honres,
+  Si no quitas honor de tu buen nombre:
+    Mas no lo hagas, pues te amo tanto,
+    Que siendo tuyo, mío es tu renombre.
+
+
+                     37
+  Como padre decrépito se alegra
+  Viendo a su hijo activo en juventud,
+  Así yo, hecho cojo por fortuna,
+  Tomo consuelo de tu verdad y valor:
+  Sea belleza, cuna, ingenio o riqueza,
+  O todo, o más aún, en ti entronado,
+  Yo injerto mi amor a tu abundancia,
+  Y no soy cojo, pobre o despreciado.
+  Mientras tal sombra dé tal sustancia,
+  Que en tu abundancia sea yo saciado,
+  Y por parte de tu gloria viva:
+  Mira lo mejor que deseo está en ti,
+    Y teniéndolo soy diez veces feliz,
+    Diez veces más feliz en tu felicidad.
+
+
+                     38
+  ¿Cómo puede mi musa tema faltar,
+  Mientras respiras y viertes en mi verso
+  Tu dulce argumento propio, excelente
+  Para que papel vulgar lo ensaye?
+  Date gracias si algo digno en mí
+  De leer encuentras o mirar atento,
+  Pues ¿quién tan mudo que escribir no pueda,
+  Cuando tú mismo das luz al invento?
+  Sé la décima Musa, diez veces vales
+  Más que las nueve viejas de rimadores,
+  Y quien te invoque, deja que produzca
+  Versos eternos para durar por siempre.
+    Si mi leve Musa place a días curiosos,
+    Mío el dolor mas tuya la alabanza.
+
+
+                     39
+  ¿Cómo con modestia puedo cantar,
+  Cuando eres el mejor tema de mi canto?
+  ¿Qué puede mi alabanza a mí traer?
+  ¿Y qué sino mía cuando te alabo?
+  Por esto vivamos separados,
+  Y nuestro amor pierda nombre de soltero,
+  Que por separación yo pueda dar
+  Lo que es debido solo a ti.
+  Ausencia, qué tormento probarías,
+  Si no dieras dulce ocio al tiempo
+  Para entretenerlo con pensar de amor,
+  Que tiempo y pensamientos dulce engañan,
+    Y que enseñas cómo hacer uno dos,
+    Alabando aquí quien lejos está.
+
+
+                     40
+  Toma mis amores todos, amor, tómalos,
+  ¿Qué tienes más entonces de lo que había?
+  No hay amor, mi amor, que llames cierto,
+  Todo mío era tuyo antes que lo tuvieras.
+  Si por mi amor recibes tú mi amor,
+  No puedo culparte, mi amor usas;
+  Mas sé culpado si a ti te engañas
+  Por gusto voluntario de lo que niegas.
+  Perdono tu robo, ladrón gentil,
+  Aunque robes toda mi pobreza:
+  Y sin embargo amor sabe es mayor pena
+  Sufrir mal de amor que odio conocido:
+    Lasciva gracia en quien todo mal luce bien,
+    Mátame con desprecios, mas no seamos enemigos.
+
+
+                     41
+  Esas hermosas libertades que tomas
+  No son cuando de tu corazón me ausento,
+  Pues aún entonces mío eres y leal:
+  Tu belleza y años plenos te convienen,
+  Pues tentación te sigue donde vas,
+  Gentil eres, por tanto conquistable,
+  Hermoso eres, por tanto asaltable;
+  Y cuando mujer corteja, ¿qué hijo
+  De mujer dejará tu corte agriar?
+  Mas aún podrías mi sitio evitar,
+  Y reprimir tu errante juventud bella,
+  Que te guía en motín rompiendo votos:
+    El de ella tentándote con tu hermosura,
+    El tuyo siendo falso por tu hermosura.
+
+
+                     42
+  Que la tengas no es toda mi pena,
+  Aunque puedo decir que la amé tierno;
+  Que ella te tenga es mi mayor pérdida,
+  Pérdida en amor que más cerca toca.
+  Amantes culpables, así os excuso:
+  La amas porque sabes que yo la amo,
+  Y ella por mi causa me hace daño,
+  Sufriendo por mí lo que yo niego.
+  Si te pierdo, mi pérdida es su ganancia,
+  Y perdiéndola, mi amigo halla pérdida;
+  Ambos se hallan, yo a ambos los pierdo,
+  Y ambos por mí ponen cruz sobre mí:
+    Mas la alegría es: mi amigo y yo somos uno,
+    Dulce aduladora, solo me amas tú.
+
+
+                     43
+  Cuando más parpadeo mejor ven mis ojos,
+  Pues todo el día ven sin contemplar;
+  Mas cuando duermo, en sueños te miran,
+  Y oscuros brillan, brillan en lo oscuro:
+  Tú cuya sombra hace brillar las sombras,
+  ¡Cuán feliz haría tu forma ver
+  Al claro día con tu luz más clara,
+  Cuando a ojos ciegos tu sombra así brilla!
+  ¡Cuán benditos mis ojos serían mirando
+  En día vivo, cuando en noche muerta
+  Tu hermosa sombra imperfecta cruza
+  Por pesado sueño en mi vista rota!
+    Todos los días son noches sin verte,
+    Y noches días brillantes cuando sueño.
+
+
+                     44
+  Si fuera pensamiento mi carne torpe,
+  Distancia injuriosa no me impidiera,
+  Pues entonces pese al espacio iría
+  Desde límites lejanos donde estás;
+  No importaría aunque mi pie parara
+  En el punto más remoto lejos de ti,
+  Pues ágil pensamiento salta mar y tierra,
+  Tan pronto como piensa donde estar.
+  Mas ay, me mata no ser pensamiento,
+  Para saltar distancias cuando partes,
+  Sino que de tierra y agua estoy hecho,
+  Y debo con gemidos seguir al tiempo,
+    Sin recibir de elementos lentos
+    Más que lágrimas, señal de todo dolor.
+
+
+                     45
+  Los otros dos, aire leve y fuego puro,
+  Están contigo ambos donde yo esté,
+  Mi pensamiento el primero, mi deseo el otro,
+  Presentes-ausentes con movimiento rápido.
+  Cuando estos elementos veloces van
+  En tierna embajada de amor a ti,
+  Mi vida hecha de cuatro, con dos solos,
+  Hacia muerte se hunde en melancolía.
+  Hasta que se repare mi vida entera,
+  Por esos mensajeros que regresan,
+  Que ahora vuelven asegurándome
+  De tu salud hermosa, contándola.
+    Esto oído me alegro, mas no mucho,
+    Los mando y al punto me entristezco.
+
+
+                     46
+  Mi ojo y corazón están en guerra
+  Por dividir conquista de tu vista;
+  Mi ojo niega al corazón tu imagen,
+  Mi corazón al ojo niega el derecho;
+  Mi corazón dice que en él reposas,
+  (Cofre nunca por ojos penetrado)
+  Mas el acusado niega tal ruego,
+  Y dice que tu hermosa forma en él yace.
+  Para decidir este pleito empanelan
+  Jurado de pensamientos, del corazón inquilinos,
+  Y por veredicto determinan
+  La parte del ojo y del corazón querida:
+    Así: mi ojo tu exterior posee,
+    Y mi corazón tu amor interno tiene.
+
+
+                     47
+  Entre ojo y corazón liga se ha hecho,
+  Y cada uno al otro ahora ayuda:
+  Cuando mi ojo hambriento está de verte,
+  O el corazón de amor con suspiros se ahoga;
+  Con tu retrato entonces mi ojo festeja,
+  Y al banquete pintado invita al corazón:
+  Otra vez mi ojo es huésped del corazón,
+  Y en sus pensamientos de amor comparte.
+  Así, por tu imagen o mi amor,
+  Ausente tú, presente estás conmigo,
+  Pues más lejos que mi pensar no puedes,
+  Y con ellos estoy, y ellos contigo.
+    O si duermen, tu imagen en mi vista
+    Despierta mi corazón para deleitarlo.
+
+
+                     48
+  ¡Cuán cuidadoso al tomar mi camino,
+  Cada bagatela bajo llave poner,
+  Para que a mi uso quedara sin tocar
+  Por manos falsas, en segura guarda!
+  Mas tú, para quien joyas son juguetes,
+  Mi mejor consuelo, mi mayor pena,
+  Lo mejor querido y mi único cuidado,
+  Quedas presa de cualquier vil ladrón.
+  No te encerré en cofre alguno,
+  Salvo donde no estás aunque te siento,
+  Dentro del dulce cierre de mi pecho,
+  De donde a tu placer vas y vienes:
+    Y aun de allí temo serás robado,
+    Pues verdad es ladrona por tal premio.
+
+
+                     49
+  Contra ese tiempo, si algún día viene,
+  Cuando veas con ceño mis defectos,
+  Cuando tu amor su cuenta haya rendido,
+  Llamado a auditoría por consejos;
+  Contra ese tiempo cuando pases raro,
+  Y apenas me saludes con tu ojo,
+  Cuando amor de lo que era convertido
+  Halle razones serias de apartarse;
+  Contra ese tiempo aquí me fortifico
+  Con conocer mi propio poco mérito,
+  Y esta mi mano contra mí levanto,
+  Para guardar razones de tu parte:
+    Para dejarme tienes ley tan fuerte,
+    Que por qué amar no puedo dar razón.
+
+
+                     50
+  ¡Cuán pesado viajo por camino,
+  Cuando lo que busco, fin del viaje,
+  Enseña que reposo ha de decir:
+  'Así de lejos mides de tu amigo'!
+  La bestia que me lleva, con mi pena,
+  Camina torpe al llevar tal peso,
+  Como si por instinto el triste supiera
+  Su jinete no ama prisa lejos de ti:
+  La espuela sangrienta no puede urgirlo,
+  Que a veces ira clava en su costado,
+  A lo cual responde con un gemido,
+  Más agudo a mí que espuela al flanco:
+    Pues ese gemido pone en mi mente:
+    Mi pena adelante, mi gozo atrás.
+
+
+                     51
+  Así puede mi amor excusar lento agravio
+  De mi torpe caballo cuando de ti parto:
+  ¿Por qué apurarme desde donde parto triste?
+  Hasta volver no necesito de prisa.
+  ¿Para qué espolear entonces mi tardanza?
+  ¿Qué excusa hallará mi pobre bestia,
+  Cuando velocidad del viento parezca lenta?
+  Entonces debo espolear aunque vuele en viento;
+  En alada prisa no conoceré movimiento,
+  Pues ningún caballo mi deseo alcanza:
+  Por tanto deseo, de amor perfecto hecho,
+  Relinchará, sin importar rocín por fuego:
+    Mas amor por amor excusa así mi jade,
+    Ya que partiendo fue despacio, volviendo correré veloz.
+
+
+                     52
+  Soy como el rico cuya llave bendita
+  Puede llevarlo a su dulce tesoro oculto,
+  El cual no abrirá a toda hora,
+  Para no embotar del raro placer lo fino.
+  Por eso son las fiestas solemnes, raras,
+  Pues vienen separadas en largo año,
+  Como joyas preciosas muy distantes,
+  O piedras capitanas del collar.
+  Así el tiempo que te guarda es mi cofre,
+  O como armario que esconde el manto,
+  Para hacer bendita ocasión especial
+  Al revelar su preso orgullo guardado.
+    Bendito tú cuyo mérito da alcance:
+    Tenerlo triunfa, faltarle da esperanza.
+
+
+                     53
+  ¿Cuál es tu esencia, de qué estás formado,
+  Que millones de extrañas sombras te siguen?
+  Pues cada cual tiene sombra, una sola,
+  Y tú siendo uno cada sombra prestas:
+  Pinta a Adonis, y el retrato es
+  Pobre imitación que viene tras de ti;
+  En mejilla de Helena toda belleza puesta,
+  Y tú en traje griego eres pintado nuevo:
+  Habla de primavera y del otoño rico,
+  Una muestra sombra de tu hermosura,
+  La otra cual tu generosidad parece,
+  Y en toda gracia bendita te hallamos.
+    En todo bello externo tienes parte,
+    Mas tú como ninguno, por constante corazón.
+
+
+                     54
+  ¡Cuánto más bella parece la belleza
+  Por el dulce adorno que verdad le da!
+  La rosa luce hermosa, mas la juzgamos
+  Más bella por la dulce esencia en ella.
+  Los capullos silvestres tienen tal color
+  Como el perfumado tinte de las rosas,
+  Cuelgan en espinas, juegan desenfadados
+  Cuando aliento estival sus máscaras abre:
+  Mas solo por su vista es su virtud,
+  Viven sin buscar, mueren sin elogio,
+  Mueren para sí. No así dulces rosas:
+  De sus muertes dulces, dulces olores nacen.
+    Y así de ti, hermosa y joven flor:
+    Cuando mueras, tu verdad destila el verso.
+
+
+                     55
+  Ni mármol ni dorados monumentos
+  De príncipes vivirán más que esta rima;
+  Mas tú brillarás más claro en su texto
+  Que piedra sin barrer que el tiempo mancha.
+  Cuando guerra derroche y tumbe estatuas,
+  Y luchas desarraiguen la obra en piedra,
+  Ni espada de Marte ni fuego de guerra
+  Quemarán de tu memoria el vivo archivo.
+  Contra muerte y contra olvido hostil
+  Avanzarás; tu loa hallará sitio
+  Aun en los ojos de posteridad
+  Que gaste este mundo hasta el juicio final.
+    Así hasta que te alces en el juicio,
+    Vives aquí y en ojos de amantes moras.
+
+
+                     56
+  Dulce amor renueva fuerza, no se diga
+  Que tu filo es más romo que apetito,
+  Que hoy por comer lleno se enferma,
+  Mañana agudo en su primer deleite.
+  Así amor sé tú: aunque hoy contemples
+  Hasta que tus ojos guiñen hartos ya,
+  Mañana mira nuevo, y no mates
+  Con perpetua torpeza el espíritu de amor:
+  Sea este triste intervalo cual mar
+  Que separa orillas donde dos amantes
+  Vienen cada día para que al ver
+  Volver del amor, más bendito sea:
+    O llámalo invierno que con cuidados
+    Hace al verano el triple deseado.
+
+
+                     57
+  Siendo tu esclavo, ¿qué debo sino estar
+  A horas y momentos de tu gusto?
+  No tengo tiempo valioso que gastar,
+  Ni servicios hasta que tú requieras.
+  No oso reprochar las horas sin fin
+  Mientras yo, tu señor, el reloj por ti miro,
+  Ni pienso amarga la ausencia agria
+  Cuando una vez dijiste adiós de ti.
+  Ni oso preguntar con celos donde estás,
+  Donde puedas estar o tus asuntos;
+  Sino cual triste esclavo quedo y pienso
+  Solo donde estás, cuán feliz los haces.
+    Tan tonto fiel es amor que en tu hacer,
+    Hagas lo que hagas, no piensa mal.
+
+
+                     58
+  Dios no permita que quien te hizo esclavo
+  Deba en pensamiento tu placer regir,
+  O de tus horas a tu mano pedir cuenta,
+  Siendo vasallo para esperar tu ocio.
+  Déjame sufrir, estando a tu capricho,
+  La prisión de tu libertad sufrir,
+  Y paciencia domar ante tu reproche,
+  Sin acusarte de hacerme algún daño.
+  Sé donde gustes, tan firme tu decreto
+  Que tú mismo tu tiempo privilegias
+  Para lo que quieras; a ti pertenece
+  Perdonarte a ti mismo de propios males.
+    Yo esperaré, aunque esperar sea infierno,
+    Sin culpar tu placer, malo o bueno.
+
+
+                     59
+  Si no hay nada nuevo, sino que lo que es
+  Ha sido antes, ¡cuán engañados nuestros cerebros,
+  Que trabajando por crear mal llevan
+  Segunda carga de un hijo anterior!
+  Si el archivo de memoria volviera
+  Quinientos cursos del sol para atrás,
+  Para ver tu imagen en libro antiguo,
+  Desde que la mente en letras se formó,
+  Que yo pudiera ver qué el viejo mundo
+  Decía de tu maravilloso marco,
+  Si hemos mejorado o ellos mejor,
+  O si la vuelta siempre es la misma.
+    Seguro estoy que ingenios de antes
+    A temas dieron admirada alabanza.
+
+
+                     60
+  Como las olas hacia orilla van,
+  Así minutos corren a su fin,
+  Cada cual toma el lugar del que antes fue,
+  En dura secuencia todos van adelante.
+  Nacimiento una vez en principal luz,
+  Gatea a madurez siendo coronado,
+  Eclipses torcidos luchan contra su gloria,
+  Y tiempo que dio, ahora su don confunde.
+  Tiempo atraviesa flor de juventud,
+  Y cava surcos en frente de belleza,
+  Se nutre de rarezas naturales,
+  Y nada existe sino su hoz derriba:
+    Mas pese a su cruel mano esperan
+    Mis versos, alabando tu valor.
+
+
+                     61
+  ¿Es tu deseo tu imagen me desvele?
+  ¿Es tu querer mis párpados abrir?
+  ¿Es tu espíritu que desde ti mandas
+  A espiar mis hechos, reírte de mi pereza?
+  No, tu amor aunque mucho no es tan grande:
+  Es mi amor quien mi ojo mantiene abierto,
+  Mi propio amor verdadero que vence al sueño,
+  Para ser guardián siempre por tu causa.
+  Por ti vigilo, no desde ti atendido,
+  Cerca estoy aunque tú lejos estés;
+  Mis pensamientos cual todo amante celos sienten,
+  Mi defectuosa edad a celos mueve:
+    Pues mi amor yace lejos despierto,
+    Por ti mientras por otros viajo lejos.
+
+
+                     62
+  Pecado de amor propio tiene todo mi ojo,
+  Y toda mi alma, y cada parte mía;
+  Y para este pecado no hay cura,
+  Tan arraigado está en mi corazón.
+  Pienso ningún rostro es tan gracioso
+  Como el mío, ni forma tan perfecta,
+  Y para mí defino mi valor,
+  Como si a todos otros superara.
+  Mas cuando el espejo muestra mi verdad,
+  Golpeado y cortado por vejez bronceada,
+  Mi amor propio leo todo al contrario:
+  Sería pecado amarse tanto a sí.
+    Es a ti (yo mismo) a quien alabo,
+    Pintando mi edad con tu hermoso día.
+
+
+                     63
+  Para cuando mi amor sea como soy yo
+  Por mano injuriosa del tiempo gastado,
+  Cuando horas drenen su sangre y llenen
+  Con líneas y arrugas su joven frente,
+  Cuando haya viajado su día juvenil
+  Hacia la empinada noche de la edad,
+  Y todas las bellezas de que ahora es rey
+  Se desvanezcan o ya no se vean:
+  Para tal tiempo ahora me preparo,
+  Y fortifico contra arrugas del confisco
+  Que la memoria borrarán de mi amor:
+  Su dulce vida en negra tinta vivirá,
+    Y aún verdes en belleza serán vistos,
+    Y vivirán, y él en ellos verde aún.
+
+
+                     64
+  Cuando he visto del tiempo la cruel mano
+  Borrar costoso orgullo de edades muertas,
+  Cuando veo altas torres derribadas,
+  Y bronce eterno esclavo de ira mortal;
+  Cuando veo al mar hambriento ganar
+  Ventaja sobre el reino de la orilla,
+  Y tierra firme ganar del mar profundo,
+  Creciendo almacén con pérdida y pérdida con almacén;
+  Cuando veo tal cambio de estado,
+  O estado mismo llevado a decaer,
+  Ruina me enseña así a meditar
+  Que tiempo vendrá y llevará mi amor.
+    Pensar esto es cual muerte que no elige
+    Sino llorar tener lo que teme perder.
+
+
+                     65
+  Si bronce, piedra, tierra ni mar sin límite,
+  Sino mortalidad los vence a todos,
+  ¿Cómo belleza mantendrá su ruego
+  Contra tal ira, no más fuerte que flor?
+  ¿Cómo aliento dulce de verano aguantará
+  Contra asedio arrugador de días duros,
+  Cuando rocas impenetrables no son firmes,
+  Ni puertas de acero fuertes que tiempo no gaste?
+  Meditación terrible, ¿dónde guardaré
+  Del cofre del tiempo la joya del tiempo?
+  ¿Qué mano fuerte retendrá su pie veloz?
+  ¿Quién prohibirá su saqueo de belleza?
+    Nadie, salvo que este milagro obre:
+    Que en tinta negra mi amor brille aún.
+
+
+                     66
+  Cansado de todo, por muerte clamo,
+  Como ver mérito nacer mendigo,
+  Y nada necesitado bien vestido,
+  Y fe más pura mal abandonada,
+  Y honor dorado mal colocado,
+  Y virgen virtud prostituida ruda,
+  Y recta perfección deshonrada injusta,
+  Y fuerza por cojo brazo inhabilitada,
+  Y arte por autoridad callado,
+  Y necia locura rigiendo habilidad,
+  Y simple verdad llamada simpleza,
+  Y bien cautivo sirviendo a mal capitán:
+    Cansado de esto, me iría de aquí,
+    Salvo que muriendo dejo solo a mi amor.
+
+
+                     67
+  ¿Por qué debe él vivir con infección,
+  Y con presencia adornar gracia impía,
+  Para que pecado por él ventaja halle,
+  Y se disimule con su compañía?
+  ¿Por qué falsa pintura imita su mejilla,
+  Y roba vista muerta de rosa viva?
+  ¿Por qué pobre belleza indirecta busca
+  Con rosas de sombra enriquecerse?
+  ¿Por qué vive, si natura en bancarrota,
+  Mendiga sangre para teñir venas vivas?
+  Ella lo guarda, de tiempos sin vida el orgullo,
+  Para mostrar qué riqueza antes tenía,
+    En días lejanos antes de estos tan malos.
+
+
+                     68
+  Así es su mejilla mapa de días idos,
+  Cuando belleza vivía y moría cual flores,
+  Antes que estos bastardos signos bellos,
+  Osaran morar en frente viva o muerta;
+  Antes que dorados cabellos de muertos,
+  Derecho de tumbas, fueran cortados
+  Para vivir segunda vida en otra testa,
+  Antes que pelo bello de otro ya muerto
+  Se usara para adornar otro cráneo:
+  En él las santas flores antiguas viven,
+  Sin ornamento alguno, él mismo y cierto,
+  Sin hacer verano de otro su verdor:
+    Natura lo guarda para mostrar
+    Al arte falso qué fue belleza ayer.
+
+
+                     69
+  Las partes tuyas que el mundo puede ver
+  No faltan nada que pensar repare:
+  Todas las lenguas, voces de las almas,
+  Te dan lo debido, verdad desnuda hasta enemigos.
+  Tu exterior loa merece loa externa,
+  Pues tu ornato exterior igual muestras;
+  Mas esas lenguas que te dan lo tuyo
+  En otro acento lugar distinto dan:
+  Mirando más allá que alcanza el ojo,
+  Tu mente ven en tus hechos mostrada;
+  A tu interior medido por tus actos,
+  Por rango olor de maleza entre flores.
+    Por qué tu olor no iguala tu presencia:
+    El suelo es que común creces, vulgar.
+
+
+                     70
+  Que seas culpado no será tu falta,
+  Pues marca de calumnia es la belleza;
+  Sospecha es ornamento de lo bello,
+  Cuervo volando en aire más dulce del cielo.
+  Así eres bueno, calumnia te marca
+  El mejor buen tiempo, única prueba de valor;
+  Siendo cortejado del tiempo nunca estás:
+  Eres primer blanco del gusano vil.
+  Mas pasaste emboscada de años mozos,
+  Sin atacar o siendo atacado venciste,
+  Mas esta alabanza no puede ser tuya
+  Para atar envidia siempre más crecida:
+    Si sospecha de mal no mostraras,
+    Solo reinarías corazones que te deben.
+
+
+                     71
+  No llores más cuando yo esté muerto
+  De lo que oigas la campana triste
+  Dar aviso al mundo que he huido
+  De este vil mundo con viles más a morar:
+  No, si lees esta línea no recuerdes
+  La mano que escribió, pues tanto te amo
+  Que en tu dulce pensar prefiero olvido,
+  Si pensar en mí te causara pena.
+  Si miras (digo) sobre este verso,
+  Cuando yo quizá con barro esté mezclado,
+  No ensayes siquiera mi pobre nombre,
+  Mas deja tu amor con mi vida decaer.
+    No sea que el mundo sabio en tu gemir vea,
+    Y se burle contigo de mí tras irme.
+
+
+                     72
+  Para que el mundo no te haga contar
+  Qué mérito en mí vivía que amaras
+  Tras mi muerte, amor, olvídame entero,
+  Pues no tienes en mí nada que probar:
+  Salvo que inventes virtuosa mentira,
+  Para dar a mi nombre más que merece,
+  Y cuelgues más loas sobre tumba podrida
+  Que verdad tacaña daría gustosa:
+  Que tu amor verdadero no parezca falso
+  Por hablar bien sin verdad de mí por amor;
+  Mi nombre sea enterrado con mi cuerpo,
+  Y no viva más para vergüenza tuya o mía.
+    Pues lo que produce aquí mi pluma
+    Nada vale o si algo, es vergüenza.
+
+
+                     73
+  Ese tiempo del año puedes ver en mí,
+  Cuando hojas amarillas, pocas, ninguna,
+  Cuelgan de ramas que tiemblan al frío,
+  Coros sin techo donde aves cantaron.
+  En mí ves el crepúsculo del día
+  Que tras la puesta en oeste se desvanece,
+  Y poco a poco negra noche quita
+  Segunda muerte que sella todo en paz.
+  En mí ves brillar de fuego tal
+  Que en las cenizas de su juventud yace,
+  Como lecho mortal donde expirará,
+  Consumido por lo que lo nutrió.
+    Esto percibes, que hace tu amor fuerte,
+    Amar bien lo que pronto has de perder.
+
+
+                     74
+  Conténtate cuando ese arresto vil
+  Sin rescate alguno al fin me lleve:
+  Mi vida en esta línea tiene parte
+  Que para memorial contigo queda.
+  Cuando esto revises, tú revisas
+  La parte misma que te fue sagrada;
+  Tierra puede tener tierra, es su derecho,
+  Mi espíritu es tuyo, lo mejor de mí.
+  Así no pierdes escoria de la vida,
+  Presa de gusanos, mi cuerpo muerto,
+  Conquista cobarde de cuchillo ruin,
+  Muy bajo de ti para recordarlo.
+    Su valor es aquello que contiene,
+    Y eso es esto, y esto en ti permanece.
+
+
+                     75
+  Eres a mi pensar como alimento
+  A vida, o cual lluvia dulce a tierra;
+  Y por tu paz tengo tal conflicto
+  Como entre avaro y su riqueza hay.
+  Ya orgulloso cual quien goza, ya dudando
+  Que tiempo ladrón te robe su tesoro;
+  Ya pensando mejor estar solo contigo,
+  Ya mejor que el mundo vea mi gozo;
+  A veces harto de festín mirándote,
+  Y luego limpio hambre de una vista;
+  Sin tener ni buscar ningún placer
+  Salvo el que tengo o de ti tomar debo.
+    Así me haces hambrear y hartar,
+    Ayunando todo o todo el día comiendo.
+
+
+                     76
+  ¿Por qué mi verso es tan pobre de invento?
+  Tan lejos de cambio o variación?
+  ¿Por qué con el tiempo no miro a un lado
+  A nuevos modos y compuestos raros?
+  ¿Por qué escribo siempre uno, lo mismo,
+  Y mantengo invención en traje viejo,
+  Que cada palabra casi dice mi nombre,
+  Mostrando su cuna y de dónde vino?
+  Sabes, dulce amor, siempre escribo de ti,
+  Y tú y amor sois siempre mi argumento:
+  Así lo mejor visto en gastadas ropas,
+  Gastando nuevo lo viejo ya gastado:
+    Pues como el sol es cada día nuevo y viejo,
+    Mi amor cuenta siempre lo ya contado.
+
+
+                     77
+  Tu espejo mostrará cómo gastas bellezas,
+  Tu reloj cómo minutos valiosos gastas;
+  Las blancas hojas vacías tu mente impriman,
+  Y de este libro esta lección aprende:
+  Arrugas que tu espejo bien mostrará,
+  De tumbas abiertas te darán memoria;
+  Por sombra de tu reloj, sigilosa marcha
+  Del tiempo avanzas a eternidad.
+  Mira: lo que memoria no contiene
+  Confía a estos blancos desperdicios,
+  Esos hijos nutridos, de tu mente dados,
+  Nuevo conocer de tu mente toman.
+    Estos oficios cuanto más los mires,
+    Tu libro ayudan, tu mirar enriquecen.
+
+
+                     78
+  Tan a menudo te invoqué por musa,
+  Y hallé tan bella ayuda en mi verso,
+  Que toda pluma ajena usa mi uso,
+  Y bajo ti sus poesías dispersan.
+  Tus ojos enseñaron al mudo a cantar,
+  Y pesada ignorancia alzaron a volar,
+  Añadieron plumas al ala del docto,
+  Y dieron doble gracia a majestad.
+  Sé más orgulloso de lo que compilo,
+  Cuya influencia es tuya y de ti nace;
+  En otros obras mas mi estilo enmiendas,
+  Y artes con tu gracia son agraciadas.
+    Mas tú eres todo mi arte y adelantas
+    Alto como saber mi ruda ignorancia.
+
+
+                     79
+  Mientras solo llamé por tu ayuda,
+  Solo mi verso tuvo tu gentil gracia;
+  Mas ahora mis números graciosos caen,
+  Y mi musa enferma cede a otro el puesto.
+  Admito, dulce amor, tu bello tema
+  Merece trabajo de mejor pluma;
+  Mas lo que de ti él inventa,
+  Te roba y te paga otra vez.
+  Te presta virtud, y robó esa voz
+  De tu conducta; belleza te atribuye
+  Y hallada en ti, por tanto de alabar.
+  No le agradezcas entonces lo que dice,
+    Ya que lo que te debe hasta de ti paga:
+    Deuda de amor solo a ti se debe.
+
+
+                     80
+  ¡Cómo desfallezco cuando de ti escribo,
+  Sabiendo que mejor genio usa tu nombre,
+  Y en alabarte gasta todo su poder,
+  Que mudo quedo hablando de tu fama!
+  Mas ya que tu valor es ancho cual mar,
+  La más humilde y más soberbia vela lleva,
+  Mi barco atrevido en tu voluntad,
+  Tu hondo sin sonido que todo abraza me sostiene.
+  O si naufrago mi barca destroza,
+  Siendo menor nave de alto bordo;
+  O siendo náufrago, soy barco sin valor,
+  Él de alta fábrica y de buena fama:
+    Si él prospera y yo soy desechado,
+    Lo peor fue esto: mi amor fue mi ruina.
+
+
+                     81
+  O viviré para escribir tu epitafio,
+  O tú sobrevives cuando esté podrido;
+  De aquí tu memoria muerte no puede
+  Tomar, aunque de mí todo sea olvidado.
+  Tu nombre de aquí vida inmortal tendrá,
+  Aunque yo, una vez ido, al mundo muera;
+  La tierra solo puede darme tumba común,
+  Cuando tú en ojos de hombres yazgas siempre.
+  Tu monumento será mi verso tierno,
+  Que ojos no creados aún leerán,
+  Y lenguas por nacer tu ser dirán,
+  Cuando todos los que respiran mueran.
+    Vivirás aún, tal virtud mi pluma tiene,
+    Donde más aliento mora, en bocas de hombres.
+
+
+                     82
+  Admito no estás casado a mi musa,
+  Y puedes sin mancha por alto pasar
+  Mirando donde el mundo sus canciones usa,
+  Y todos los estilos reputados mirar;
+  Y sus grandes pensamientos tan bellos como tu faz,
+  Hallando tu valor en todas las alas;
+  No me culpes por tal uso, no es mal,
+  Cuando ellos en ti bellas materias hallan.
+  Mas lo que de ti hallé en plano cierto,
+  De puro corazón lo hallé tan bien,
+  Vale más que pinturas groseras de hoy,
+  Y debe tu bello rostro sobrevivir.
+    Su grosera pintura mejor usada fuera
+    Donde falta sangre; en ti es abusada.
+
+
+                     83
+  Nunca vi que necesitaras pintura,
+  Y por tanto a tu belleza no pinté;
+  Hallé, o pensé hallar, que excedías
+  El tierno estéril del tema del poeta:
+  Y por tanto he dormido en tu alabanza,
+  Que tú mismo existiendo bien muestras
+  Cuán corto llega el lápiz moderno
+  Al hablar del valor que en ti crece.
+  Por mi silencio más pecado imputas,
+  Pues no se debe tu gloria a que otros
+  Te entierren vivo entre sus versos,
+  Cuando más vida hay en tu hermosa vista.
+    Hago más daño tratando de alabarte
+    Que ellos cuyo lápiz mudo busca fama.
+
+
+                     84
+  ¿Quién es el que dice más, o puede más
+  Decir que esta rica loa: que eres solo tú?
+  En ti tal tesoro de ser guardas,
+  Que siendo uno puedes toda sombra dar.
+  Pobre pluma sin tema en su tintero,
+  Que copia solo lo que está escrito,
+  Mas tu tema siendo tan bendito
+  Le da tal ingenio que te da fama.
+  Sé tú quien da tu importación al verso,
+  Haciendo tu estilo admirado en todas partes.
+  Tú a tu adorable ser demasiado amas,
+  Para ti y alabanza estás determinado.
+    Y por tanto no necesitas loa tomar,
+    Cuando en ti siendo, tu alabanza vive.
+
+
+                     85
+  Mi musa atada en modales guarda silencio,
+  Mientras que comentarios de tu alabanza
+  Guardan su letra con pluma dorada,
+  Y frases preciosas todas las musas guardan.
+  Pienso buenos pensamientos, otros escriben bien,
+  Y como escribano sin letras digo amén
+  A cada himno que espíritu hábil paga
+  En letra pulida de refinada pluma.
+  Oyendo alabarte digo: es así, verdad,
+  Y a lo sumo de loa añado algo más;
+  Mas eso está en mi pensar, cuyo amor
+  Aunque palabras vengan tarde, guarda primer lugar.
+    Entonces otros por aliento de palabras brillan,
+    Yo por mudos pensamientos, hablando en efecto.
+
+
+                     86
+  ¿Fue la vela orgullosa de su gran verso,
+  Atada para premio de tus pensamientos ricos,
+  Lo que hizo mis pensamientos maduros en tumba,
+  Haciéndolos sepulcro donde nacieron?
+  ¿Fue su espíritu, por espíritus enseñado
+  Sobre tono mortal, lo que me hirió?
+  No, ni él ni sus fantasmas nocturnos
+  Dándole ayuda, mi verso asombraron.
+  Ni él, ni ese espíritu afable y familiar
+  Que cada noche lo engaña con su ingenio,
+  Como vencedores de mi silencio pueden
+  Jactarse; yo no estaba enfermo de miedo.
+    Mas cuando tu rostro llenó su línea,
+    Entonces me falté materia, debilité la mía.
+
+
+                     87
+  Adiós, eres muy caro para mi tener,
+  Y bien sabes cuánto es tu estimación;
+  El acta de tu valor te libera:
+  Mi lazo en ti está ya terminado.
+  ¿Cómo te tengo sino por tu permiso?
+  ¿Y para tal riqueza dónde mi mérito?
+  La causa de este bello don me falta,
+  Y así mi patente vuelve a ti de nuevo.
+  Te diste sin tu valor conocer,
+  O yo a quien diste mal entendiendo;
+  Así tu gran don sobre error fundado
+  Vuelve a casa, en mejor juicio hecho.
+    Te tuve como un sueño que halaga:
+    Rey en sueño, mas despierto, sin nada.
+
+
+                     88
+  Cuando te dispongas a despreciarme,
+  Y pongas mi mérito en ojo de desdén,
+  De tu lado contra mí mismo lucharé,
+  Y probaré virtud tuya aunque perjures:
+  Conociendo mis faltas puedo armar
+  Historia de defectos escondidos,
+  Que seré perdedor e inclinarme
+  Atendiendo toda ventaja tuya.
+  Tal lucha haré de mi parte,
+  Que todo mi amor argumentaré contra mí,
+  Que por tu bien no puedo luchar
+  Contra razones de tan honda astucia.
+    Pues caer en odio tuyo evitaré,
+    Ya que debo, no amarte, contra mí alegar.
+
+
+                     89
+  Di que me dejaste por alguna falta,
+  Y yo sobre esa ofensa comentaré;
+  Háblame de mi cojera, y al punto
+  Cojo iré sin hacer defensa alguna.
+  No puedes, amor, deshonrarme a medias
+  Con fingido desprecio hacia mí;
+  No mirarte más será tu voluntad;
+  Yo mismo ausente de tu senda estaré.
+  Mi lengua no nombrará tu dulce nombre,
+  No sea, profano, que yo lo profane,
+  Y porte nuestro viejo conocer con él;
+  Por ti contra mí mismo juraré:
+    Por esto debo no amarte, que no quiero
+    Estar con quien odio, aunque te amo entero.
+
+
+                     90
+  Ódiame entonces cuando quieras; si es, ya,
+  Ahora mientras el mundo cruza mis actos;
+  Únete con rencor de fortuna, inclínate,
+  Y no dejes caer golpe más atrás.
+  Ah no cuando mi corazón escape este dolor,
+  Vengas detrás de conquista miserable;
+  No des a día ventoso noche lluviosa
+  Para alargar el dolor que propongo.
+  Si me dejas, no me dejes al final,
+  Cuando otras penas pequeñas hayan hecho
+  Su despecho; mas al inicio ven,
+  Así pruebo del peor sabor primero.
+    Y otros dolores de pena imaginada
+    Con pérdida tuya no parecerán nada.
+
+
+                     91
+  Algunos se glorían en cuna, otros en destreza,
+  Algunos en riqueza, otros en fuerza corporal,
+  Algunos en trajes de nueva fantasía,
+  Algunos en halcones, perros y caballo.
+  Y cada humor tiene su placer junto,
+  En que halla un gozo sobre el resto;
+  Mas estos particulares no son mi medida,
+  Un general mejor todos los vence.
+  Tu amor es más que alta cuna para mí,
+  Más rico que riqueza, más que trajes finos,
+  De más deleite que halcones o caballos;
+  Y teniéndote, del orgullo humano alardeo.
+    Miserable solo en esto: puedes quitar
+    Todo esto y hacerme más miserable estar.
+
+
+                     92
+  Mas haz tu peor para robarte lejos:
+  Por vida eres asegurado mío,
+  Y vida no más que tu amor durará,
+  Pues de tu amor mi vida depende.
+  No necesito temer el peor de males,
+  Cuando en el menor mi vida termina;
+  Veo que mejor estado a mí pertenece
+  Que aquel que de tu humor depende.
+  No puedes vejarme con mente voluble,
+  Ya que mi vida de tu revuelta pende.
+  ¡Oh qué feliz título encuentro!
+  Feliz de tener tu amor, feliz de morir.
+    ¿Mas qué es tan bello que no tema mancha?
+    Puedes ser falso y yo no saberlo.
+
+
+                     93
+  Así viviré suponiendo que eres fiel,
+  Como esposo engañado; así la cara
+  Del amor puede aún parecer amor,
+  Aunque alterada: tu vista en mí, tu corazón fuera.
+  Pues no puede odio vivir en tu ojo;
+  Por tanto en eso no puedo ver tu cambio.
+  En miradas de muchos la historia falsa
+  Del corazón se escribe en gestos raros.
+  Mas cielo en tu creación decretó
+  Que en tu rostro dulce amor siempre more;
+  Sean cuales tus pensamientos o tus obras,
+  Tus miradas nada sino dulzura deben decir.
+    Cuán como manzana de Eva crece tu belleza,
+    Si tu dulce virtud no responde a tu muestra.
+
+
+                     94
+  Los que tienen poder de herir y no hieren,
+  Que no hacen lo que más aparentan,
+  Que mueven a otros siendo como piedra,
+  Inmóviles, fríos, lentos a tentación:
+  Ellos con justicia heredan gracias del cielo,
+  Y administran riquezas de natura;
+  Ellos son señores y dueños de sus rostros,
+  Otros solo mayordomos de su excelencia.
+  La flor de verano es al verano dulce,
+  Aunque para sí sola viva y muera;
+  Mas si esa flor con infección se encuentra,
+  La más vil maleza supera su dignidad:
+    Pues lo más dulce se vuelve más agrio
+    Por sus actos; lirios podridos huelen peor que hierbas.
+
+
+                     95
+  ¡Cuán dulce y amable haces la vergüenza,
+  Que como gusano en capullo fragante
+  Mora en belleza de tu nombre en flor!
+  ¡En qué dulzuras no encierras tu error!
+  La lengua que cuenta historia de tus días,
+  Haciendo lascivos comentarios de tu juego,
+  No puede con desdén desalabarte,
+  Sino que alabándote hace algún elogio.
+  ¡Oh qué mansión tienen esos vicios
+  Que escogieron morar donde belleza vela!
+  Belleza es velo que cubre toda mancha,
+  Y todo lo vuelve dulce ante los ojos.
+    Ten cuidado, amor, de tal privilegio:
+    El filo más duro mal usado te pierde.
+
+
+                     96
+  Dicen que tu falta es juventud, otros libertad;
+  Dicen tu gracia es juventud y gentil juego;
+  Ambas, gracias y faltas, son amadas
+  Más y menos: tú haces gracias las faltas.
+  Como en dedo de reina triunfante
+  La joya más baja será estimada,
+  Así son los errores que en ti se ven
+  A verdades traducidos y por ciertos tomados.
+  ¡Cuántos corderos podría el lobo llevar
+  Si como cordero pudiera traducir su vista!
+  ¡Cuántos miradores podrías desviar
+  Si usaras la fuerza de todo tu poder!
+    Mas no lo hagas, te amo de tal suerte,
+    Que siendo tuyo, mío es tu buen reporte.
+
+
+                     97
+  ¡Cuán como invierno ha sido mi ausencia
+  De ti, el placer del año fugaz!
+  ¡Qué heladas sentí, qué días oscuros vi!
+  ¡Qué desnudez de diciembre en todas partes!
+  Y sin embargo este tiempo removido fue verano,
+  El otoño cargado con rico aumento,
+  Llevando el vientre de primavera juguetona,
+  Como viudas preñadas tras muerte de señores:
+  Mas esta abundante prole me pareció
+  Solo esperanza de huérfanos y fruto sin padre;
+  Pues verano y sus placeres te esperan,
+  Y tú ausente, hasta pájaros están mudos.
+    O si cantan, es con tal tristeza,
+    Que hojas pálidas temen venga el invierno.
+
+
+                     98
+  De ti he estado ausente en primavera,
+  Cuando abril orgulloso, vestido en gala,
+  Ha puesto espíritu joven en todo,
+  Que hasta Saturno pesado reía y saltaba.
+  Ni cantos de aves ni el dulce olor
+  De flores diferentes en olor y tono
+  Podían hacerme contar cuento estival,
+  O recogerlas de sus lechos altivos:
+  Ni me maravillé del lirio blanco,
+  Ni alabé el bermellón hondo en la rosa;
+  Eran dulces, mas figuras de deleite,
+  Dibujadas según tú, su patrón cierto.
+    Contigo aún invierno es primavera,
+    Y sin ti con su sombra juego en pena.
+
+
+                     99
+  A la violeta adelantada reprendo:
+  Dulce ladrona, ¿de dónde robaste tu olor
+  Si no del aliento de mi amor? El orgullo
+  Púrpura que en tus suaves mejillas mora,
+  En venas de mi amor groseramente teñiste.
+  Condeno lirios por robar tu mano,
+  Y capullos de mejorana tu cabello;
+  Las rosas temerosas en espinas se paran,
+  Una roja de vergüenza, otra blanca espera;
+  Una tercera ni roja ni blanca robó
+  De ambas, y a su robo anexó tu aliento;
+  Mas por su robo en orgullo de crecimiento
+  Un gusano vengador la comió hasta muerte.
+    Más flores noté, mas ninguna vi
+    Que dulce o color no robara de ti.
+
+
+                     100
+  ¿Dónde estás, Musa, que olvidas tanto
+  Hablar de lo que te da toda tu fuerza?
+  ¿Gastas tu furor en canción sin valor,
+  Dando tu poder a temas bajos luz?
+  Vuelve, Musa olvidadiza, y redime
+  En números gentiles tiempo mal gastado;
+  Canta al oído que oye tu canción,
+  Y da a mi pluma argumentos y destreza.
+  Levántate, Musa perezosa, mira su cara;
+  Si tiempo ha grabado allí alguna arruga,
+  Si alguna hay, sé sátira del declive,
+  Y haz del desprecio dondequiera fama.
+    Da a mi amor fama más veloz que tiempo
+    Gasta vida, así previenes su guadaña.
+
+
+                     101
+  Oh Musa truante, ¿cuál será tu enmienda
+  Por negligencia de verdad en belleza?
+  Verdad y belleza de mi amor dependen;
+  Así también tú, y en esto dignificada.
+  Responde, Musa: ¿no dirás acaso
+  Que verdad no necesita color fijo,
+  Belleza no precisa lápiz para mostrarse,
+  Lo mejor es mejor si no se mezcla?
+  ¿Porque no necesita loa serás muda?
+  No te excuses así, pues en ti yace
+  Hacer que viva más allá de tumba dorada,
+  Y sea alabado por edades venideras.
+    Haz tu oficio, Musa; yo te enseño
+    A hacer que parezca largo desde aquí como ahora.
+
+
+                     102
+  Mi amor se fortalece aunque más débil parece;
+  No amo menos, aunque menos lo muestre.
+  Ese amor es mercancía cuya estimación
+  Rica la lengua del dueño publica siempre.
+  Nuestro amor era nuevo, entonces en primavera,
+  Cuando solía saludarlo con mis cantos,
+  Como Filomela al inicio del verano
+  Que para su canto cuando días maduran.
+  No que verano sea menos grato ahora
+  Que cuando su himno triste calmó la noche,
+  Sino que música salvaje carga ramas,
+  Y dulces comunes pierden su deleite.
+    Por tanto como ella a veces callo,
+    Para no aburrirte con mi canción.
+
+
+                     103
+  ¡Ay, qué pobreza da mi Musa muestra,
+  Teniendo tal alcance para mostrar orgullo!
+  El argumento desnudo es más excelente
+  Que cuando va vestido de mi alabanza.
+  ¡Oh no me culpes si más no escribo!
+  Mira en tu espejo, allí aparece cara
+  Que supera mi invención roma del todo,
+  Embotando líneas, haciéndome desgracia.
+  ¿No fuera pecado entonces esforzándome
+  Estropear tema que antes estaba bien?
+  Pues no hay más deber sino que tu gracia,
+  Siendo gracia mía, sea gloria de mi verso.
+    Déjame en mis reportes sincero ser,
+    Y más amor mostrar que verso puede.
+
+
+                     104
+  Para mí, bello amigo, nunca serás viejo,
+  Pues como eras cuando tu ojo vi primero,
+  Tal pareces; tu belleza aún tres inviernos
+  Han de bosques sacudido tres veranos.
+  Tres hermosas primaveras vueltas otoño
+  En proceso de estaciones he visto;
+  Tres perfumes de abril en junio ardidos,
+  Desde que te vi fresco, que aún eres verde.
+  Ah, mas belleza cual reloj se mueve,
+  Mi ojo puede engañarse: por tu bien
+  Temo que no nacidos dirán que miento.
+  Para esto, oye, anciano tiempo cruel:
+    Antes que nacieras era la figura
+    De belleza muerta hasta tu venida.
+
+
+                     105
+  No dejes mi amor llamarse idolatría,
+  Ni mi amado como ídolo mostrar,
+  Ya que mis canciones y loas todas son
+  A uno, de uno, siempre, y siempre así.
+  Gentil es mi amor hoy, mañana gentil,
+  Siempre constante en excelencia rara;
+  Por tanto mi verso a constancia confinado,
+  Una cosa expresando, no deja diferencia.
+  'Bello, gentil y fiel' es mi argumento;
+  'Bello, gentil y fiel' variando en otros modos;
+  Y en este cambio mi invención se gasta,
+  Tres temas en uno, de alcance amplio.
+    'Bello, gentil y fiel' han vivido solos,
+    Que nunca hasta ahora en uno se sentaron.
+
+
+                     106
+  Cuando en la crónica del tiempo gastado
+  Veo descripciones de los más bellos seres,
+  Y belleza haciendo bellas viejas rimas,
+  En loa de damas muertas y caballeros,
+  Entonces en blasón de belleza dulce,
+  De mano, de pie, de labio, de ojo, de frente,
+  Veo que su antigua pluma habría expresado
+  Tal belleza como tú dominas ahora.
+  Así toda su loa son profecías
+  De este tiempo nuestro, todo prefigurando;
+  Y por mirarte con ojos que adivinan,
+  No tenían arte tu valor para cantar:
+    Pues nosotros que estos días presentes vemos,
+    Tenemos ojos para asombro, mas lengua falta.
+
+
+                     107
+  Ni mis propios miedos ni el alma profeta
+  Del ancho mundo soñando en lo por venir
+  Pueden ya controlar el arriendo cierto
+  De mi amor verdadero a término confinado.
+  La luna mortal soportó su eclipse,
+  Y tristes augures burlan sus presagios;
+  Incertidumbres ahora se coronan seguras,
+  Y paz proclama olivos sin fin de edad.
+  Ahora con gotas de este tiempo balsámico
+  Mi amor se ve fresco, y muerte a mí suscribe,
+  Ya que pese a él viviré en esta pobre rima,
+  Mientras él insulta sobre huesos y tumbas mudas.
+    Y tú en esto hallarás tu monumento,
+    Cuando tiránicos blasones y bronce estén gastados.
+
+
+                     108
+  ¿Qué hay en el cerebro que tinta pueda
+  Decir que no haya expresado mi espíritu?
+  ¿Qué hay nuevo para hablar, qué registrar,
+  Que pueda expresar mi amor o tu mérito?
+  Nada, dulce niño; mas como oraciones
+  Divinas debo cada día decir lo mismo,
+  Y no cuento viejo mi amor divino,
+  Como cuando primero santifiqué tu nombre.
+  Así amor eterno en caso fresco de amor
+  No pesa polvo ni daño de la edad,
+  Ni da a arrugas necesario espacio,
+  Mas hace antigüedad por siempre su paje,
+    Hallando amor primero aún alimentado,
+    Donde tiempo y forma externa dirían muerto.
+
+
+                     109
+  Nunca digas que falso de corazón fui,
+  Aunque ausencia pareció mi llama calmar.
+  Tan fácil podría de mí mismo partir
+  Como de mi alma que en tu pecho yace:
+  Ese es mi hogar de amor; si me alejé,
+  Como viajero vuelvo otra vez,
+  Justo a tiempo, no con tiempo cambiado,
+  Para que yo mismo traiga agua a mi mancha.
+  Nunca creas, aunque en mi natura reine
+  Toda fragilidad de carne y sangre,
+  Que pudiera tan mal estar manchado
+  Para dejar por nada tu suma de bien:
+    Pues nada este ancho universo llamo,
+    Salvo tú, mi rosa; en él eres mi todo.
+
+
+                     110
+  Es verdad, he ido aquí y allá,
+  Y me hice bufón ante la vista,
+  Herí mi pensar, vendí barato lo más caro,
+  Hice viejas ofensas de afectos nuevos:
+  Muy cierto es que miré verdad de reojo,
+  Y a extrañezas me di por completo;
+  Mas por estos desvíos todos de ti
+  Dan a mi corazón otra juventud.
+  Y peores pruebas me probaron tu amor,
+  Ahora todo acabó, tuve un dios de amor
+  A quien haré bienvenida para siempre,
+  Cual el que lo trae a mi pecho puro:
+    Al cielo iré con agua apagafuegos,
+    Para lavar culpables manchas mías.
+
+
+                     111
+  Por favor castiga a mi fortuna culpable,
+  La diosa culpable de mis actos dañinos,
+  Que no proveyó mejor para mi vida
+  Que medios públicos, que modales públicos crían.
+  De ahí viene que mi nombre recibe marca,
+  Y casi de ahí mi naturaleza
+  Se sujeta a lo que trabaja en ella,
+  Como mano del tintorero. Piedad entonces,
+  Y desea sea renovado. Mientras,
+  Como paciente voluntario beberé
+  Pociones de eisel contra mi infección,
+  No hay amargo que amargo piense ser,
+  Ni doble penitencia para corregir.
+    Piedad entonces, amigo, y te aseguro,
+    Piedad es todo; soy suficiente tras tu amor.
+
+
+                     112
+  Tu amor y piedad borran la impresión
+  Que vulgar escándalo marcó en mi frente;
+  ¿Qué me importa quién me llame bien o mal,
+  Si tú mi mal cubres, mi bien permites?
+  Eres mi todo el mundo, y debo esforzarme
+  Por saber cambios solo de tu humor;
+  Ninguno otro para mí vivo o muerto,
+  Para mis sentidos duros cambios o penas.
+  Tan hondo abismo echo de las voces
+  Tanto de críticos como aduladores,
+  Que marco cómo son mi negligencia
+  Dispensando halagos como reprimendas:
+    Tú eres mi intención tan fuerte marcada,
+    Que todos los demás pienso y olvido.
+
+
+                     113
+  Desde que te dejé, mi ojo está en mi mente,
+  Y lo que me gobierna para ver
+  Parece en parte ciego, ve en parte,
+  Pues no entrega al corazón su vista.
+  Pues no retiene forma propia de aves
+  O flores que capta con el ojo,
+  Ni su propia visión guarda objeto,
+  De las criaturas más rudas a las dulces;
+  Mas su mente al punto las convierte
+  A tu dulce forma que le place hacer:
+  Montaña o mar, el día o la noche,
+  El cuervo o paloma, hace tu figura.
+    Incapaz de más, repleto de ti,
+    Mi ojo más fiel falso se ha vuelto.
+
+
+                     114
+  ¿O será que mi mente coronada
+  Con tu amor bebe adulación?
+  ¿O dirán mis ojos que esto es verdad,
+  Y que tu amor enseñó esta alquimia,
+  De hacer de monstruos y cosas indigestas
+  Querubines que a tu dulce ser parecen,
+  Creando cada cosa mala perfecta
+  Tan rápido como llega a mi vista?
+  Oh es lo primero, es halagadora mi vista,
+  Y mi gran mente regiamente bebe:
+  Si es veneno que así me agrada,
+  Mi ojo lo sabe, y es el primer pecado;
+    Prepara la copa a su propio gusto:
+    Lo prueba primero, menor pecado es mío.
+
+
+                     115
+  Esas líneas que antes escribí mienten,
+  Las que dijeron no podía amarte más;
+  Mas entonces no sabía de llama plena
+  Que arde más clara viniendo a razón.
+  Mas considerando tiempo, cuyos millones
+  De azares se cuelan entre votos,
+  Broncean belleza, embotan filo agudo,
+  Desvían mentes fuertes a curso alterno:
+  ¡Ay! ¿por qué temiendo accidentes del tiempo,
+  No dije 'Ahora te amo al máximo',
+  Cuando era cierto ante incertidumbre,
+  Coronando presente, dudando del resto?
+    Amor es bebé; no pude entonces decir
+    'Te amo al máximo', para dar pleno crecer.
+
+
+                     116
+  Al matrimonio de almas verdaderas
+  No admito impedimentos. Amor no es amor
+  Si altera cuando alteración encuentra,
+  O se doblega con quien se remueve.
+  Oh no, es marca siempre fija que mira
+  Tempestades y nunca se conmueve;
+  Es la estrella de toda barca errante,
+  De altura ignota aunque su valor se tome.
+  Amor no es bufón del tiempo, aunque labios
+  Y mejillas caigan bajo hoz que corte;
+  Amor no altera con sus breves horas,
+  Mas soporta hasta el borde del fin del mundo.
+  Si esto es error y en mí se prueba,
+  Nunca escribí, ni hombre alguno amó.
+
+
+                     117
+  Acúsame así: que todo he olvidado
+  Por tu gran bondad y tu mérito alto;
+  Que he vagado de todos los lazos
+  Que día a día tu caro amor me ata;
+  Que he visitado a velas desconocidas,
+  Y dado a los vientos mi afecto cierto,
+  Que he izado vela a toda veleidad,
+  Muy lejos llevándome de tu puerto.
+  Anota lo que gasté de tu amor;
+  Mas no me temas ni por cambios pruebas,
+  Aunque ausencia pareció mi llama apagar,
+  Dio prueba de mi constancia más fuerte.
+    No podría dar por nada nueva llama
+    Salvo para tu amor traer más leña.
+
+
+                     118
+  Como con brebajes agrios el apetito
+  Aguzamos, o con purgantes prevenimos
+  Enfermedad no vista, curamos lo sano
+  Para evadir males inciertos que tememos;
+  Así yo, lleno de tu dulzura nunca
+  Saciante, pensé en amarguras gustar;
+  Y enfermo de bienestar, encontré
+  Que ser enfermo era sano antes de curar.
+  Así política en amor, te anticipa,
+  Los males que no eran, crecieron a daños ciertos,
+  Y llevó a medicina alma sana
+  Que con medicina enferma se hizo.
+    Mas de esto aprendo y hallo lección cierta:
+    Drogas envenenan al que amor enferma.
+
+
+                     119
+  ¡Qué pociones bebí de lágrimas de Sirena,
+  Destiladas de alambiques sucios del infierno!
+  Aplicando miedos a esperanza, esperanza a miedos,
+  Aún perdiendo cuando más ganar creía.
+  ¡Qué errores hizo mi corazón cometer
+  Cuando pensé que nunca podría errar!
+  ¡Cuán desviados de órbita mis ojos rodaron
+  En la distracción de su loco frenesí!
+  Oh beneficio del mal: ahora encuentro cierto
+  Que mejor se hace bien por mal, y arruinado
+  Amor cuando se construye de nuevo crece
+  Más bello, más grande, mucho más bendito.
+    Así vuelvo ganador por mis daños,
+    Y gano tres veces más de lo perdido.
+
+
+                     120
+  Que fuiste alguna vez cruel, ahora me alegra,
+  Y por ese dolor que entonces sentí,
+  Necesito doblarme bajo mi transgresión,
+  A menos que nervios fueran bronce o acero batido.
+  Pues si fuiste por mi culpa sacudido
+  Como yo por la tuya, has pasado
+  Noche de dolor infernal, y yo tirano
+  No tengo ocio de pensar en tu crimen.
+  Que nuestro dolor de pena mutua sea
+  El rescate mutuo: yo el tuyo, tú el mío;
+  Y tú mío hallarás fiel simpatía,
+  Como yo por el tuyo aún siento ahora;
+    Tal ofensa profunda es excusa; dame la tuya,
+    Y tú la mía llevas contigo siempre.
+
+
+                     121
+  Es mejor ser vil que vil ser estimado,
+  Cuando no ser recibe reproche de ser;
+  Y el placer justo perdido, que es juzgado
+  No por nuestro sentir sino por otros ver.
+  ¿Por qué con ojos falsos fragilidad ajena
+  Deben mis ojos falsos dar saludo?
+  No: soy lo que soy, y los que miden
+  Mis abusos cuentan sus propios males;
+  Yo puedo ser recto aunque ellos estén torcidos,
+  Y por sus viles pensamientos mi actuar no se mide,
+  A menos que este general mal mantenga:
+  Todos los hombres son malos y en maldad reinan.
+
+
+                     122
+  Tu regalo, tus tablas, están en mi cerebro
+  Llenas escritas con carácter duradero,
+  Que permanecerán más allá de toda fecha
+  Hasta eternidad, o al menos mientras
+  Cerebro y corazón con sus poderes vivan;
+  O al menos mientras cada uno a natura dé tributo,
+  La cuenta tuya olvidada no puede ser.
+  Por tanto para guardar su memoria entera,
+  Esa pobre retención no podía tanto,
+  Ni necesito cuentas para marcar amor caro,
+  Por tanto osé regalar tus tablas,
+  Para confiar más en lo que permanece:
+    Guardar adjunto fuera implicar olvido
+    En memoria que no puede perderse.
+
+
+                     123
+  No, Tiempo, no alardes de que yo cambio:
+  Tus pirámides construidas con nueva fuerza
+  Para mí no son nada nuevas o extrañas;
+  Son solo vestidos de lo que hemos visto.
+  Nuestras fechas son breves, y por tanto admiramos
+  Lo que nos ofreces como viejo disfrazado,
+  Y antes nacido queremos que sea nuestro,
+  Que pensar que oímos de ellos descritos.
+  Tus registros y lo que vemos del pasado,
+  Tanto ellos como tú mismo desafío,
+  Sin asombrarme ni del presente ni pasado,
+  Pues tus archivos y lo que vemos mentira.
+    Esto prometo y siempre será cierto:
+    Seré fiel pese a tu guadaña y a ti.
+
+
+                     124
+  Si mi amor fuera hijo del estado,
+  Podría por bastardo de fortuna ser tomado,
+  Sujeto al favor del tiempo o a caer
+  Entre hierbas o flores reunidas.
+  No; fue construido lejos de accidente;
+  No sufre en sonriente pompa, ni cae
+  Bajo golpe de descontento tronado;
+  No teme política, ese hereje
+  Que trabaja en arriendos de cortas horas,
+  Mas todo solo permanece vastamente pulido,
+  A lo que no calor crece ni ahogo llueve.
+  Para esto llamo como testigos tontos del tiempo,
+    Que mueren por bondad, habiendo vivido por crimen.
+
+
+                     125
+  ¿Fuera algo para mí llevar el dosel,
+  Con mi externa honrando apariencia externa,
+  O poner base para eternidad
+  Que prueba más corta que ruina o desecho?
+  ¿No he visto moradores en favor
+  Perder todo y más por pagar renta excesiva,
+  Por interés compuesto de corazones olvidados,
+  Olvidando simple sencillez en victoria?
+  No, déjame ser obsequioso en tu corazón,
+  Y toma mi oblación, pobre mas libre,
+  Que no es mixta con segundos, no conoce arte,
+  Sino mutua dádiva, solo tú por mí.
+    Vete, alma informante, subornaré
+    Te trae, mas no mi inocente amor mixto.
+
+
+                     126
+  Oh tú, mi adorable niño, que en tu poder
+  Tienes el cristal del tiempo, su hoz, su hora;
+  Que has crecido por menguar, y en ello muestras
+  A tus amantes marchitos cuán dulce creces.
+  Si natura, soberana señora sobre ruina,
+  Mientras avanzas te retiene aún,
+  Su propósito es deshonrar la ruina,
+  Y matarte para mostrar su destreza.
+  Teme a ella, oh tú favorito de su placer:
+  Puede retener mas no guardar su tesoro;
+  Su auditoría, aunque retrasada, respondida debe ser,
+  Y su quietanza es entregarte al fin.
+    ( )
+    ( )
+
+
+                     127
+  En la edad antigua negro no era contado bello,
+  O si lo era, no llevaba nombre de belleza;
+  Mas ahora negro es heredero de belleza,
+  Y belleza calumniada con nombre bastardo.
+  Pues desde que cada mano tiene poder
+  Para poner cara bella en naturaleza,
+  Dulce belleza no tiene nombre ni sagrada morada,
+  Sino que es profanada, si no vive deshonrada.
+  Por tanto los ojos de mi amada son negro cuervo,
+  Sus cejas también, y les sienta bien de luto
+  Por aquellos que no naciendo bellos sin creación
+  Calumnian creación con falsa apariencia:
+    Mas así lamentando les queda tal gracia
+    Que todos dicen belleza así debe ser.
+
+
+                     128
+  ¡Cuán a menudo cuando tú, mi música, tocas
+  Sobre esa bendita madera cuyo movimiento
+  Hace sonar con tu dulce dedo el alambre
+  Que mi oído confunde con dulce acorde,
+  Envidio esas teclas que ágiles saltan
+  Para besar la tierna palma interior de tu mano,
+  Mientras mis labios que deberían esa cosecha,
+  Ante la osadía de madera sonrojan, quietos!
+  Estar así tocadas por esas teclas,
+  Darían mi estado para cambiar contigo.
+  Sobre ellas tus dedos caminan gentiles,
+  Haciendo madera muerta más bendita que labios vivos.
+    Ya que así las teclas descaradas son felices,
+    Dales tus dedos, dame tus labios para besar.
+
+
+                     129
+  Gasto de espíritu en desecho de vergüenza
+  Es lujuria en acción, y hasta acción, lujuria
+  Es perjura, asesina, sangrienta, culpable,
+  Salvaje, extrema, ruda, cruel, sin confianza;
+  Disfrutada al punto, al punto despreciada;
+  Pasada razón cazada, y al punto tenida,
+  Pasada razón odiada como trago de cebo,
+  Con propósito puesto para volver loco al tomador;
+  Loca en busca y en posesión así,
+  Teniendo, tenida, y en extremo perseguida;
+  Bendita antes, una alegría propuesta, detrás un sueño.
+  Todo esto el mundo bien sabe, mas nadie sabe bien
+    Cómo evitar el cielo que lleva a este infierno.
+
+
+                     130
+  Los ojos de mi amada no son como el sol;
+  Coral es más rojo que el rojo de sus labios;
+  Si nieve es blanca, morenos son sus pechos;
+  Si pelos son alambres, negros alambres crecen en su cabeza.
+  He visto rosas rojas y blancas,
+  Mas no veo tales rosas en sus mejillas;
+  Y en perfumes hay más deleite
+  Que en el aliento que de mi amada sale.
+  Amo oír hablarla, mas bien sé
+  Que música tiene mucho más grato sonido;
+  Admito nunca vi caminar a diosa:
+  Mi amada cuando anda pisa el suelo.
+    Y sin embargo por cielo creo mi amor tan rara
+    Como cualquiera por falsa comparación deshonrada.
+
+
+                     131
+  Eres tan tirana como esas crueles
+  Que por bellas se vuelven orgullosas;
+  Pues bien sabes que para mi dote eres
+  La joya más bella y más preciosa.
+  Mas en buena fe algunos dicen al verte
+  Que tu cara no tiene poder de hacer gemir amantes;
+  No me atrevo decir que yerran, aunque juro
+  Para mí sola mil gemidos causas:
+  Y para probar que juro verdadero,
+  Pienso en ti y mi alma gime enseguida
+  Una sobre otra de modo sucesivo,
+  Como francamente no tuya mas tuya siendo.
+    Tu negro es el más bello en mi juicio:
+    Negro calumnian los que no son como tú.
+
+
+                     132
+  Amo tus ojos, y ellos como apiadándose,
+  Sabiendo que tu corazón me atormenta con desdén,
+  Han puesto negro luto amoroso,
+  Y miradores de luto en verdad me quedan bien.
+  Y en verdad no el sol de la mañana
+  Mejor sienta al gris rostro del oriente,
+  Ni esa estrella llena del atardecer
+  Tanto gracia da a la sobria tarde del oeste,
+  Como esos dos ojos de luto a tu rostro:
+  Oh que tal belleza vista tu corazón también,
+  Y que vistan tu compasión como tu vista,
+  Entonces juraré belleza misma es negra,
+    Y todos feos que tu complexión faltan.
+
+
+                     133
+  ¡Maldigo ese corazón que me hace gemir
+  Por aquel profundo herido suspiro de amigo!
+  ¿No es suficiente atormentarme sola,
+  Sino que esclava a mi dulce amigo debes ser?
+  De mí misma me has tomado cruel ojo,
+  Y mi otro yo más que yo has tomado;
+  De él, de mí y de ti soy olvidado,
+  Triple tormento tres veces para ser cruzado:
+  Cárcela a mi corazón en tu pecho de acero,
+  Mas entonces deja libre el corazón de mi amigo;
+  Quien me guarda, deja que sea mi guardia,
+  Así no podrás entonces usar rigor:
+    Y sin embargo lo harás, pues siendo mía,
+    Tuyo es mi yo, y todo mío es tuyo.
+
+
+                     134
+  Así que ahora he confesado que él es tuyo,
+  Y yo mismo estoy hipotecado a tu voluntad,
+  Yo perderé si tú lo restituyes,
+  Para que mi otro yo aún pueda quedarse.
+  Mas no lo soltarás, ni él será libre,
+  Pues eres codiciosa, y él es bondadoso;
+  Él aprendió mas firmó como fiador por mí,
+  Bajo ese vínculo que lo ata a ti.
+  El estatuto de tu belleza tomarás,
+  Tú usurera que pones todo a uso,
+  Y demandas a un amigo vino deudor por mí,
+  Así a él pierdo por mi torpe abuso.
+    A él lo he perdido, tú tienes a ambos,
+    Él paga el todo mas libre aún no está.
+
+
+                     135
+  Quien tenga voluntad, tú tienes tu 'Voluntad',
+  Y 'Voluntad' de sobra y 'Voluntad' en exceso;
+  Más que suficiente soy yo que te vejo aún,
+  A tu dulce voluntad añadiendo mi voluntad.
+  ¿No permitirás, cuya voluntad es grande,
+  Ocultar mi voluntad en la tuya?
+  ¿Será en otros voluntad aceptada gracia,
+  Y en mi voluntad ninguna aceptación brilla?
+  El mar todo agua, sin embargo lluvia recibe,
+  Y en abundancia añade a su almacén;
+  Así tú siendo rica en 'Voluntad' añade
+  A tu 'Voluntad' una voluntad mía
+    Para hacer tu gran 'Voluntad' más.
+    No dejes que ninguno, ninguno mate lo amable en ti.
+
+
+                     136
+  Si tu alma pregunta, dile que 'Voluntad' soy,
+  Y que 'Voluntad' es tu alma, admitida allí;
+  Así dulce aceptación por amor le darás,
+  Y 'Voluntad' cumplirá tesoro de tu amor;
+  Llena con voluntades, y mi voluntad una sola,
+  En multitud de cosas me cuentas
+  En número, aunque en cuenta nada sea:
+  Por nada me tengas, pero hazme algo querido.
+  Haz que tu amor me llame así amor, 'Voluntad';
+  Y entonces tú amas el nombre de 'Voluntad',
+  Pues 'Voluntad' para ti siempre es buena,
+  Y 'Voluntad' es cumplir en ti tu voluntad.
+    Así para ti lleno de 'voluntades' completo,
+    Yo soy en ellos 'Voluntad', admíteme dulce.
+
+
+                     137
+  Amor ciego tonto, ¿qué haces a mis ojos,
+  Que contemplan mas no ven lo que ven?
+  Saben qué es belleza, ven dónde yace,
+  Mas toman lo peor por el mejor bien.
+  Si ojos corruptos por mirar parcial
+  Están anclados en bahía donde todos navegan,
+  ¿Por qué has forjado ganchos de falsedad
+  A los que mi juicio del corazón amarras?
+  ¿Por qué mi corazón piensa terreno privado,
+  Que sabe es lugar común del mundo?
+  ¿O mis ojos viendo esto dicen que no es,
+  Para poner cara bella en cosa tan vil?
+    En verdad qué plagas son mis ojos y corazón,
+    Que de vista verdadera así se apartan.
+
+
+                     138
+  Cuando mi amor jura que es fiel,
+  La creo aunque sé que miente,
+  Para que piense que me cree joven
+  Inexperto en falsedades del mundo.
+  Así vanamente pensando que me cree joven,
+  Aunque ella sabe mis días pasados,
+  Simplemente crédito doy a su lengua falsa:
+  Por ambos lados así la simple verdad suprimida.
+  ¿Mas por qué no dice ella que es injusta?
+  ¿Y por qué no digo yo que soy viejo?
+  Oh, el mejor hábito del amor es aparente confianza,
+  Y edad en amor no ama contar años.
+    Por tanto miento con ella y ella conmigo,
+    Y en nuestras faltas por mentiras halagados somos.
+
+
+                     139
+  No me llames a justificar el mal
+  Que tu crueldad a mi corazón hace;
+  Hiere con tu ojo mas no con tu lengua;
+  Usa poder con poder, y no mates con arte.
+  Dime que amas a otro, mas ante mi vista
+  Querida, no apartes tu mirada enamorada.
+  ¿Qué necesidad tienes de herir con astucia,
+  Cuando tu poder más que mi defensa es fuerte?
+  Deja que te excuse: ay, mi amor bien sabe
+  Sus bellas miradas han sido mis enemigos,
+  Y por tanto de mi cara voltea mis enemigos,
+  Para que en otra parte dirijan sus flechas:
+    Mas no lo hagas, pues ya estoy casi muerto,
+    Mátame directa con miradas, y acaba mi dolor.
+
+
+                     140
+  Sé sabia como eres cruel, no oprimas
+  Mi paciencia muda con demasiado desdén,
+  No sea que el dolor me haga sabio y loco
+  Para que al mundo diga cuán falsa eres.
+  Pues si voy loco, mi lengua dirá
+  Cosas de ti que no serán creídas;
+  Y como loco por el mundo seré,
+  Oído como locos, sin fe soy creído:
+  Que no muestre que sabes que me odias;
+  Pues ojos fijos los locos tienen,
+  Y en locura crecida podría contar mal,
+  Cuando ahora cuento mal tu ojo errante.
+    Así sigue recto y yo seguiré siendo cuerdo,
+    O terminaré con ti y conmigo mismo.
+
+
+                     141
+  En fe no te amo con mis ojos,
+  Pues mil errores en ti notan;
+  Mas es mi corazón que ama lo que desprecian,
+  Quien a pesar de vista se place en gustar.
+  Ni mis oídos ansiosos a tu tono,
+  Ni mi tacto sensible, ni gusto, ni olfato,
+  Desean ser invitados a festín alguno
+  Contigo solo; mas mis cinco ingenios
+  Ni mis cinco sentidos pueden disuadir
+  A un corazón tonto de servirte,
+  Quien deja al hombre sin gobierno a tu orgullo,
+  Como vasallo siervo de tu vista.
+    Solo mi plaga así gano cuenta:
+    Ella que me hace pecar me da dolor.
+
+
+                     142
+  Amor es mi pecado, y tu virtud odio,
+  Odio de mi pecado basado en amor pecador;
+  Oh mas con el mío mi estado compara,
+  Y hallarás no merece ser reprochado;
+  O si lo es, no de labios tuyos,
+  Que han profanado sus lechos escarlata
+  Con sello de besos de otros dados,
+  Tan a menudo como los míos robaron renta ajena.
+  Que sea legal que ame como tú amas;
+  Con ojos apiadados mírame de vuelta,
+  Busca tu propia en la de otro y deja
+  Crecer tu piedad para ser digna de piedad;
+    Si buscas tenerla y que te la nieguen,
+    Por tu ejemplo propio puedes ser negada.
+
+
+                     143
+  ¡Ved como ama de casa cuidadosa corre
+  A atrapar una de sus aves plumadas,
+  Mientras su bebé descuidado corre detrás,
+  Clamando por alcanzarla cuyo afán
+  Es perseguir lo que vuela ante su cara,
+  Sin importar su bebé que llora!
+  Así corres tras lo que vuela de ti,
+  Mientras yo tu bebé te persigo de lejos;
+  Mas si alcanzas esperanza, vuélvete
+  Y juega el papel de madre, besa me,
+  Sé amable, como es madre al hijo,
+  Así rezaré tu voluntad se cumpla,
+    Si te vuelves y mi llanto fuerte calmas.
+
+
+                     144
+  Dos amores tengo de consuelo y desespero,
+  Que como dos espíritus aún me sugieren:
+  El mejor ángel es un hombre justo,
+  El peor espíritu mujer de mal color.
+  Para ganarme pronto al infierno mi mal femenino
+  Tentó mi mejor ángel de mi lado,
+  Y corrompería mi santo para ser diablo,
+  Cortejando su pureza con soberbia impura.
+  Y si mi ángel se volvió demonio o no,
+  Sospecho mas directamente no lo sé;
+  Mas siendo ambos de mí, ambos entre ellos,
+  Mi ángel en el infierno de otro está.
+    Mas esto nunca sabré mas vivo en duda,
+    Hasta que mi mal ángel eche fuera mi bien.
+
+
+                     145
+  Los labios de mi amor que dijo 'Te odio'
+  A mí que languidecía por ella en dolor,
+  Han de los cielos movido piedad
+  Que castigan mi cara con amargo disdén.
+  Mas cuando vio mi estado doloroso,
+  Enseguida su corazón compasivo,
+  Reprendiendo esa lengua que siempre dulce
+  Solía dar veredictos gentiles,
+  Le enseñó así otro tono a usar:
+  'Te odio' mudó y acabó con 'no así',
+  Que siguió como gentil día sigue
+  Noche como demonio del cielo al infierno huido.
+    'Te odio' de su odio ella lanzó,
+    Y salvó mi vida diciendo 'no así'.
+
+
+                     146
+  Pobre alma, centro de mi tierra pecadora,
+  ( ) estos poderes rebeldes que adornas,
+  ¿Por qué dentro penas y sufres escasez,
+  Pintando tu exterior con costo tan grande?
+  ¿Por qué en arriendo tan corto gastas
+  En tu desvaneciente mansión tan gran gasto?
+  ¿Heredarán gusanos este exceso?
+  ¿Come tu carga este cuerpo? ¿Es ese tu fin?
+  Entonces, alma, vive de pérdida de tu siervo,
+  Y deja que pene para engrosar tu almacén;
+  Compra términos divinos vendiendo horas de escoria;
+  Sé dentro nutrida, fuera no más rica:
+    Así te alimentarás de muerte que se alimenta de hombres,
+    Y muerte muerta, no hay más morir entonces.
+
+
+                     147
+  Mi amor es cual fiebre anhelando aún
+  Por lo que más la enfermedad alimenta;
+  Mi razón, el médico de mi amor,
+  Enojada porque su prescripción no se guarda,
+  Me ha dejado, y yo desesperado veo
+  Que deseo es muerte, que medicina odiaba.
+  Pasada cura estoy, ahora razón pasada,
+  Y frenético loco con inquietud eterna;
+  Mis pensamientos y mi discurso como de locos,
+  Al azar de la verdad vanamente expresados;
+  Pues he jurado bella y pensado brillante,
+  Quien es negra como infierno, oscura como noche.
+
+
+                     148
+  ¡Oh yo! ¿qué ojos ha puesto amor en mi cabeza,
+  Que no tienen correspondencia con vista verdadera?
+  ¿O si la tienen, dónde está mi juicio huido,
+  Que censura falsamente lo que ven bien?
+  Si lo que mis ojos miran es bello,
+  ¿Por qué dice el mundo que no es así?
+  Si no es, entonces amor bien demuestra
+  Que el ojo del amor no es tan fiel como todos.
+  ¿Cómo puede ser? Oh cómo puede el ojo de amor ser fiel,
+  Que está tan vejado con velar y llorar?
+  No es maravilla entonces aunque yo vea mal:
+  El sol mismo no ve hasta que el cielo aclara.
+    Oh astuto amor, con lágrimas me ciegas los ojos,
+    No sea que ojos bien vean y vean tus sucias faltas.
+
+
+                     149
+  ¿Puedes decir cuando soy cruel contigo,
+  Que por tu amor cruel soy conmigo mismo?
+  ¿No pienso en ti cuando me olvido
+  Por tu causa de mí mismo, ah tirano?
+  ¿A quién odio sino a quien tú odias?
+  ¿Con quién frunzo sino con quien tú mal estás?
+  ¿Qué mérito alabo sino lo que desprecias?
+  Si frunzo a mí mismo, al punto te venero.
+  Mi movimiento todo está a tu servicio,
+  Mi vida y ser a tu mandato espera;
+  No hay tiempo ni servicio tan precioso
+  Que para tu amor gastado sea daño.
+    Amor es tan tonto que, hagas lo que quieras,
+    Piensa no mal aunque sientas tu desprecio.
+
+
+                     150
+  ¿De qué poder estás hecha para dar
+  Fuerza a tu insuficiencia tal potente?
+  ¿Con qué magia influyes mi corazón
+  Para hacerme desmentir vista clara?
+  ¿Quién enseñó al día a decir día no es,
+  Que tan mal me gobiernas en el sol?
+  ¿De dónde tienes este poder de mal
+  Con fuerza tal que en mi mente crece?
+  ¿Quién a ti, oh más digna de desprecio,
+  Dio garantía de mérito en mí,
+  Para tanto controlar mi corazón y vista,
+  Que juro no hay más sol que lo que veo?
+    Oh amor, de ti procede que amo
+    Aquellas cosas que ven otros despreciables.
+
+
+                     151
+  Amor es muy joven para saber conciencia;
+  Mas ¿quién no sabe que conciencia es nacida de amor?
+  Entonces, gentil tramposa, no me trates mal,
+  No sea mi culpa tome tu dulce ser.
+  Pues traicionándote, yo traiciono
+  Mi parte más noble a traición grosera;
+  Mi alma dice a mi cuerpo que puede
+  Triunfar en amor; carne no espera más,
+  Mas al alzarse a tu nombre se señala
+  Como su triunfante premio. Orgullosa de este orgullo,
+  Él contento es tu pobre vasallo ser,
+  Para estar a tu lado, caer junto a ti.
+    No falta conciencia cuando llamo 'amor'
+    Por cuyo amor me alzo y caigo así.
+
+
+                     152
+  En amarte sabes soy perjuro,
+  Mas tú dos veces perjura eres para conmigo:
+  Jurando amor donde tu lecho-voto rompiste,
+  Y voto nuevo roto odiando tras jurar.
+  Mas ¿por qué digo dos veces perjura eres,
+  Cuando veinte veces rompo veinte juramentos?
+  Perjuro soy más; pues todos mis votos son juramentos
+  Solo para mal usar tu belleza.
+  Pues he jurado pensamientos profundos de ti,
+  Juramentos de tu amor, constancia y verdad;
+  Y para iluminarte di ojos a ceguera,
+  O los hice contra la cosa que veían:
+    Pues he jurado eres bella: más perjuro soy
+    Jurando mal contra verdad tan vil.
+
+
+                     153
+  Cupido dejó su marca de fuego dormido,
+  Y muchas ninfas que votaron vida casta
+  Vinieron trotando; mas en su doncella mano
+  La más bella votaria tomó ese fuego,
+  Que muchos corazones de legiones de amantes calentó;
+  Y así el general de deseo caliente
+  Fue durmiendo por virgen mano desarmado.
+  Este fuego de amor ella en fuente fría apagó
+  Que de este santo fuego de amor tomó calor perpetuo,
+  Convirtiéndose en baño de salud para hombres enfermos:
+  Mas yo, esclavo enfermo de mi señora,
+  Vine allí por cura, y esto probé:
+    Fuego de amor calienta agua, agua no enfría amor.
+
+
+                     154
+  El pequeño dios de amor yaciendo dormido
+  Su marca de fuego a un lado había puesto,
+  Mientras muchas ninfas que castidad guardaron
+  Vinieron esa vía; mas la más bella
+  En su mano la marca del ardiente dios tomó,
+  Y el fuego del corazón del enfermo
+  En fuente virgen fría su marca templó,
+  Que del fuego santo sin fin tomó calor,
+  Un baño de salud para hombres en dolor:
+  Mas a ese baño mi señora fue,
+  Y allí amor nuevo probando vino a conocer
+  Que el fuego del amor calienta las aguas aún;
+    Y enfermo de amor, al baño fui veloz,
+    Mas hallé no cura, así me voy para siempre:
+    El baño por mi ayuda yace donde Cupido
+    Obtuvo nuevo fuego: los ojos de mi señora.
+
+
+FIN DE LOS SONETOS
+
+
+<<ESTA VERSIÓN ELECTRÓNICA DE LAS OBRAS COMPLETAS DE WILLIAM
+SHAKESPEARE TIENE DERECHOS DE AUTOR 1990-1993 DE WORLD LIBRARY, INC., Y ES
+PROPORCIONADA POR PROJECT GUTENBERG ETEXT DE ILLINOIS BENEDICTINE COLLEGE
+CON PERMISO. LAS COPIAS ELECTRÓNICAS Y LEGIBLES POR MÁQUINA PUEDEN SER
+DISTRIBUIDAS SIEMPRE QUE DICHAS COPIAS (1) SEAN SOLO PARA TU USO PERSONAL
+O DE OTROS, Y (2) NO SEAN DISTRIBUIDAS O USADAS
+COMERCIALMENTE. LA DISTRIBUCIÓN COMERCIAL PROHIBIDA INCLUYE POR CUALQUIER
+SERVICIO QUE COBRE POR TIEMPO DE DESCARGA O POR MEMBRESÍA.>>
+
+
+
+1603
+
+TODO ESTÁ BIEN CUANDO TERMINA BIEN
+
+por William Shakespeare
+
+
+Dramatis Personae
+
+  REY DE FRANCIA
+  EL DUQUE DE FLORENCIA
+  BERTRAM, Conde de Rosellón
+  LAFEU, un señor anciano
+  PAROLLES, seguidor de Bertram
+  DOS SEÑORES FRANCESES, sirviendo con Bertram
+
+  MAYORDOMO, Sirviente de la Condesa de Rosellón
+  LAVACHE, un bufón y Sirviente de la Condesa de Rosellón
+  UN PAJE, Sirviente de la Condesa de Rosellón
+
+  CONDESA DE ROSELLÓN, madre de Bertram
+  HELENA, una dama protegida por la Condesa
+  UNA VIUDA DE FLORENCIA
+  DIANA, hija de la Viuda
+
+
+  VIOLENTA, vecina y amiga de la Viuda
+  MARIANA, vecina y amiga de la Viuda
+
+  Señores, Oficiales, Soldados, etc., Franceses y Florentinos
+
+
+
+<<ESTA VERSIÓN ELECTRÓNICA DE LAS OBRAS COMPLETAS DE WILLIAM
+SHAKESPEARE TIENE DERECHOS DE AUTOR 1990-1993 DE WORLD LIBRARY, INC., Y ES
+PROPORCIONADA POR PROJECT GUTENBERG ETEXT DE ILLINOIS BENEDICTINE COLLEGE
+CON PERMISO. LAS COPIAS ELECTRÓNICAS Y LEGIBLES POR MÁQUINA PUEDEN SER
+DISTRIBUIDAS SIEMPRE QUE DICHAS COPIAS (1) SEAN SOLO PARA TU USO PERSONAL
+O DE OTROS, Y (2) NO SEAN DISTRIBUIDAS O USADAS
+COMERCIALMENTE. LA DISTRIBUCIÓN COMERCIAL PROHIBIDA INCLUYE POR CUALQUIER
+SERVICIO QUE COBRE POR TIEMPO DE DESCARGA O POR MEMBRESÍA.>>
+
+
+
+ESCENARIO:
+Rosellón; París; Florencia; Marsella
+
+
+ACTO I. ESCENA 1.
+Rosellón. El palacio del CONDE
+
+Entran BERTRAM, la CONDESA DE ROSELLÓN, HELENA, y LAFEU, todos de negro
+
+  CONDESA. Al entregar mi hijo de mí, entierro un segundo esposo.
+  BERTRAM. Y yo al ir, señora, lloro la muerte de mi padre de nuevo;
+    mas debo atender el mandato de Su Majestad, a quien ahora estoy
+    bajo tutela, siempre en sujeción.
+  LAFEU. Encontrarás del Rey un esposo, señora; tú, señor, un
+    padre. Él que es tan generalmente bueno en todo momento debe por
+    necesidad sostener su virtud hacia ti, cuya valía lo movería
+    donde quisiera, antes que faltarle donde hay tal
+    abundancia.

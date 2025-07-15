@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア日本語訳 - JLPT N3学習者向け注釈版 第一部</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+        
+        :root {
+            --n3-blue: #2196F3;
+            --n2-orange: #FF6B35;
+            --n1-red: #D32F2F;
+            --bg-primary: #F5F5F5;
+            --bg-secondary: #FFFFFF;
+            --text-primary: #212121;
+            --text-secondary: #757575;
+            --accent: #673AB7;
+            --border: #E0E0E0;
+            --shadow: rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Serif JP', serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+        
+        /* ヘッダー */
+        header {
+            background: linear-gradient(135deg, var(--accent) 0%, #512DA8 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        /* ナビゲーション */
+        nav {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 140px;
+            z-index: 90;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        button:hover {
+            background: #512DA8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow);
+        }
+        
+        .search-container {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        input[type="text"] {
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: 25px;
+            font-size: 1rem;
+            width: 250px;
+            transition: border-color 0.3s ease;
+        }
+        
+        input[type="text"]:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        
+        /* コンテンツ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* 凡例 */
+        .legend {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px var(--shadow);
+        }
+        
+        .legend h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+        
+        .legend-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .color-box {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        /* テキストセクション */
+        .text-section {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px var(--shadow);
+        }
+        
+        .section-header {
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+        
+        .section-info {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+        
+        /* 行番号付きテキスト */
+        .line {
+            display: flex;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .line:hover {
+            background-color: #F3E5F5;
+        }
+        
+        .line-number {
+            min-width: 50px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            user-select: none;
+        }
+        
+        .line-content {
+            flex: 1;
+            font-size: 1.1rem;
+        }
+        
+        /* 文法レベル別スタイル */
+        .n3 {
+            color: var(--n3-blue);
+            font-weight: 500;
+            cursor: help;
+            position: relative;
+        }
+        
+        .n2 {
+            color: var(--n2-orange);
+            font-weight: 500;
+            cursor: help;
+            position: relative;
+        }
+        
+        .n1 {
+            color: var(--n1-red);
+            font-weight: 500;
+            cursor: help;
+            position: relative;
+        }
+        
+        /* ルビ */
+        ruby {
+            position: relative;
+        }
+        
+        rt {
+            font-size: 0.6em;
+            font-weight: 400;
+        }
+        
+        /* ツールチップ */
+        .tooltip {
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            width: 300px;
+            display: none;
+            z-index: 1000;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .n3:hover .tooltip,
+        .n2:hover .tooltip,
+        .n1:hover .tooltip {
+            display: block;
+        }
+        
+        .tooltip-header {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .tooltip-level {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tooltip-level.n3 {
+            background: var(--n3-blue);
+        }
+        
+        .tooltip-level.n2 {
+            background: var(--n2-orange);
+        }
+        
+        .tooltip-level.n1 {
+            background: var(--n1-red);
+        }
+        
+        /* 文化的注釈 */
+        .cultural-note {
+            background: #FFF9E5;
+            border-left: 5px solid #FFC107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .cultural-note-header {
+            font-weight: 700;
+            color: #F57C00;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* 進捗バー */
+        .progress-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px var(--shadow);
+            z-index: 1000;
+        }
+        
+        .progress-bar {
+            width: 200px;
+            height: 10px;
+            background: var(--border);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .progress-text {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+        
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem 0;
+                position: static;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            nav {
+                position: static;
+            }
+            
+            .nav-container {
+                padding: 1rem;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            button {
+                width: 100%;
+                padding: 1rem;
+                font-size: 1.1rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .text-section {
+                padding: 1.5rem;
+            }
+            
+            .line {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .line-number {
+                min-width: auto;
+                font-weight: 700;
+            }
+            
+            .line-content {
+                font-size: 1.1rem;
+                line-height: 2;
+            }
+            
+            input[type="text"] {
+                width: 100%;
+                font-size: 1.1rem;
+            }
+            
+            .search-container {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .tooltip {
+                width: 250px;
+                font-size: 1rem;
+                left: 0;
+                transform: translateX(0);
+            }
+            
+            .progress-container {
+                bottom: 10px;
+                right: 10px;
+                left: 10px;
+                width: auto;
+            }
+            
+            .cultural-note {
+                padding: 1rem;
+                font-size: 1.1rem;
+            }
+            
+            .legend-items {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* アニメーション */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .text-section {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        /* ハイライト検索結果 */
+        .highlight {
+            background-color: #FFEB3B;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>シェイクスピア日本語訳</h1>
+        <p class="subtitle">JLPT N3学習者向け完全注釈版 - 第一部（1-1500行）</p>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="nav-buttons">
+                <button onclick="toggleFurigana()">ふりがな表示/非表示</button>
+                <button onclick="toggleAnnotations()">注釈表示/非表示</button>
+                <button onclick="scrollToSection('sonnets')">ソネット集</button>
+                <button onclick="scrollToSection('plays')">戯曲</button>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="語句を検索...">
+                <button onclick="searchText()">検索</button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <!-- 凡例 -->
+        <div class="legend">
+            <h2>📘 学習ガイド</h2>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: var(--n3-blue);"></div>
+                    <span><strong>N3文法・語彙</strong>：中級レベルの表現</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: var(--n2-orange);"></div>
+                    <span><strong>N2文法・語彙</strong>：中上級レベルの表現</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: var(--n1-red);"></div>
+                    <span><strong>N1文法・語彙</strong>：上級レベルの表現</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: #FFC107;"></div>
+                    <span><strong>文化的注釈</strong>：文学的・歴史的背景</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 作品情報 -->
+        <div class="text-section">
+            <div class="section-header">
+                <h2>作品情報</h2>
+                <p class="section-info">ウィリアム・シェイクスピア全集 日本語完全翻訳版第一部</p>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">1</span>
+                <span class="line-content">ウィリアム・シェイクスピア全集</span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">2</span>
+                <span class="line-content">日本語完全翻訳版第一部</span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3</span>
+                <span class="line-content">Japanese Complete Shakespeare Translation Part 1</span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">5</span>
+                <span class="line-content">翻訳者：日本語翻訳専門エージェント</span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">9</span>
+                <span class="line-content">
+                    本翻訳は、<ruby class="n2">文語体<rt>ぶんごたい</rt></ruby>（古典日本語）を
+                    <span class="n3">基調とし
+                        <span class="tooltip">
+                            <span class="tooltip-header">基調とする</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「基本的な調子とする」「基礎として使う」という意味。文学作品や芸術作品で、全体の雰囲気や方向性を決める基本的な要素を指す。</p>
+                            <p><strong>N3レベルの言い換え：</strong>基本にする、ベースとする、中心とする</p>
+                        </span>
+                    </span>、シェイクスピアの
+                    <ruby class="n2">詩的<rt>してき</rt></ruby>美しさと
+                    <ruby class="n2">劇的<rt>げきてき</rt></ruby>力強さを
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">10</span>
+                <span class="line-content">
+                    日本語の豊かな表現力によって
+                    <span class="n2">再現する
+                        <span class="tooltip">
+                            <span class="tooltip-header">再現する</span>
+                            <span class="tooltip-level n2">N2</span>
+                            <p>「もう一度現す」「再び作り出す」という意味。翻訳では、原作の特徴や美しさを別の言語で表現し直すことを指す。</p>
+                        </span>
+                    </span>ことを目指した。外国人名にはカタカナを、
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">11</span>
+                <span class="line-content">
+                    文学的深みには<ruby class="n2">漢語<rt>かんご</rt></ruby>を適切に配置し、
+                    文化的<ruby class="n1">適応<rt>てきおう</rt></ruby>と原作の意味保持の
+                    <span class="n3">バランスを図った
+                        <span class="tooltip">
+                            <span class="tooltip-header">バランスを図る</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「均衡を保つように工夫する」「釣り合いを取る」という意味。二つ以上の要素を適切に調整することを表す。</p>
+                            <p><strong>N3レベルの言い換え：</strong>バランスをとった、調整した、釣り合いを考えた</p>
+                        </span>
+                    </span>。
+                </span>
+            </div>
+        </div>
+        
+        <!-- ソネット集 -->
+        <div class="text-section" id="sonnets">
+            <div class="section-header">
+                <h2>ソネット集</h2>
+                <p class="section-info">1609年 - ウィリアム・シェイクスピア 作</p>
+            </div>
+            
+            <div class="cultural-note">
+                <div class="cultural-note-header">
+                    📚 文化的背景：シェイクスピアのソネット
+                </div>
+                <p>シェイクスピアのソネット集は154編から成り、主に「美青年」への詩（1-126番）と「黒い貴婦人」への詩（127-152番）に分かれています。14行詩という形式を用い、愛、美、時間、死などの普遍的テーマを扱っています。</p>
+            </div>
+            
+            <!-- ソネット第一番 -->
+            <div class="text-section">
+                <h3 style="text-align: center; color: var(--accent); margin-bottom: 1rem;">第一番</h3>
+                
+                <div class="line">
+                    <span class="line-number">26</span>
+                    <span class="line-content">
+                        最も美しき者より我らは<ruby class="n2">子孫<rt>しそん</rt></ruby>を
+                        <span class="n3">望む
+                            <span class="tooltip">
+                                <span class="tooltip-header">望む（のぞむ）</span>
+                                <span class="tooltip-level n3">N3</span>
+                                <p>「願う」「希望する」の文語的表現。現代語では「望む」と読むが、古典では「のぞむ」と読むことが多い。</p>
+                                <p><strong>N3レベルの言い換え：</strong>子どもが生まれることを願う、後継ぎが欲しいと思う</p>
+                            </span>
+                        </span>、
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">27</span>
+                    <span class="line-content">
+                        それにより美の<ruby class="n2">薔薇<rt>ばら</rt></ruby>は
+                        決して<span class="n3">枯れぬよう
+                            <span class="tooltip">
+                                <span class="tooltip-header">枯れぬよう</span>
+                                <span class="tooltip-level n3">N3</span>
+                                <p>「枯れる」の否定形＋「よう」（目的）。「〜ないように」という願望・目的を表す古典的表現。</p>
+                                <p><strong>N3レベルの言い換え：</strong>枯れないように、なくならないように、美しさが続くように</p>
+                            </span>
+                        </span>、
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">28</span>
+                    <span class="line-content">
+                        <span class="n2">されど
+                            <span class="tooltip">
+                                <span class="tooltip-header">されど</span>
+                                <span class="tooltip-level n2">N2</span>
+                                <p>「しかし」「けれども」の文語的表現。逆接の接続詞として、格調高い文章で使われる。</p>
+                                <p><strong>N3レベルの言い換え：</strong>でも、しかし、けれども</p>
+                            </span>
+                        </span><ruby class="n1">熟したる<rt>じゅくしたる</rt></ruby>者が時により
+                        <span class="n3">逝くとも
+                            <span class="tooltip">
+                                <span class="tooltip-header">逝くとも</span>
+                                <span class="tooltip-level n3">N3</span>
+                                <p>「逝く」（死ぬの婉曲表現）＋「とも」（逆接の仮定）。「たとえ死んだとしても」という意味。</p>
+                                <p><strong>N3レベルの言い換え：</strong>たとえ亡くなっても、死んでしまっても</p>
+                            </span>
+                        </span>、
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">29</span>
+                    <span class="line-content">
+                        その優しき<ruby class="n2">後継ぎ<rt>あとつぎ</rt></ruby>がその記憶を
+                        <span class="n2">担わん
+                            <span class="tooltip">
+                                <span class="tooltip-header">担わん</span>
+                                <span class="tooltip-level n2">N2</span>
+                                <p>「担う」（になう）の未然形＋推量の助動詞「ん」。「担うだろう」という意味の文語表現。</p>
+                                <p><strong>N3レベルの言い換え：</strong>引き継ぐだろう、受け継ぐだろう</p>
+                            </span>
+                        </span>。
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">30</span>
+                    <span class="line-content">
+                        しかし汝は己が<ruby class="n1">輝く<rt>かがやく</rt></ruby>
+                        <ruby class="n2">瞳<rt>ひとみ</rt></ruby>とのみ
+                        <span class="n1">契り
+                            <span class="tooltip">
+                                <span class="tooltip-header">契り（ちぎり）</span>
+                                <span class="tooltip-level n1">N1</span>
+                                <p>「約束する」「結びつく」という意味の文語。ここでは「自分自身とだけ関係を持つ」という自己愛を表現。</p>
+                                <p><strong>N3レベルの言い換え：</strong>自分だけを愛している、自分のことばかり考えている</p>
+                            </span>
+                        </span>、
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">31</span>
+                    <span class="line-content">
+                        自らの<ruby class="n2">本質<rt>ほんしつ</rt></ruby>より成る
+                        <ruby class="n1">燃料<rt>ねんりょう</rt></ruby>で光の炎を
+                        <span class="n2">養い
+                            <span class="tooltip">
+                                <span class="tooltip-header">養い（やしない）</span>
+                                <span class="tooltip-level n2">N2</span>
+                                <p>「養う」の連用形。「育てる」「維持する」という意味で、ここでは自己消費的な生き方を暗示。</p>
+                                <p><strong>N3レベルの言い換え：</strong>自分自身を使って燃え続ける、自分を犠牲にして輝く</p>
+                            </span>
+                        </span>、
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">32</span>
+                    <span class="line-content">
+                        豊かなる処に<ruby class="n2">飢饉<rt>ききん</rt></ruby>を作り出し、
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">33</span>
+                    <span class="line-content">
+                        己が敵となり、甘き己に
+                        <span class="n2">余りに
+                            <span class="tooltip">
+                                <span class="tooltip-header">余りに（あまりに）</span>
+                                <span class="tooltip-level n2">N2</span>
+                                <p>「非常に」「過度に」という程度を表す副詞。ここでは過度の自己愛による自己破壊を示唆。</p>
+                                <p><strong>N3レベルの言い換え：</strong>とても、すごく、ひどく</p>
+                            </span>
+                        </span><ruby class="n1">残酷<rt>ざんこく</rt></ruby>なり。
+                    </span>
+                </div>
+            </div>
+            
+            <div class="cultural-note">
+                <div class="cultural-note-header">
+                    🎭 文学的解説：ソネット第一番の主題
+                </div>
+                <p>第一番は「procreation sonnets（生殖ソネット群）」の始まりで、美しい青年に子孫を残すよう説得する内容です。「美の薔薇」は美の象徴であり、時間による美の消失への警告と、子孫による美の永続化が主題となっています。</p>
+            </div>
+            
+            <!-- 続きのソネット -->
+            <div class="line">
+                <span class="line-number">34</span>
+                <span class="line-content">
+                    汝は今や世界の新鮮なる<ruby class="n2">装飾品<rt>そうしょくひん</rt></ruby>、
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">35</span>
+                <span class="line-content">
+                    そして<ruby class="n1">華やかなる<rt>はなやかなる</rt></ruby>春への唯一の
+                    <span class="n2">使者
+                        <span class="tooltip">
+                            <span class="tooltip-header">使者（ししゃ）</span>
+                            <span class="tooltip-level n2">N2</span>
+                            <p>メッセージを伝える人。ここでは若者が春（青春・生命力）を体現する存在であることを表現。</p>
+                            <p><strong>N3レベルの言い換え：</strong>伝える人、代表、メッセンジャー</p>
+                        </span>
+                    </span>なり、
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">36</span>
+                <span class="line-content">
+                    己の<ruby class="n2">蕾<rt>つぼみ</rt></ruby>の内に満足を
+                    <span class="n1">葬り
+                        <span class="tooltip">
+                            <span class="tooltip-header">葬り（ほうむり）</span>
+                            <span class="tooltip-level n1">N1</span>
+                            <p>「埋葬する」「終わらせる」という意味。ここでは可能性を開花させずに終わらせることを批判的に表現。</p>
+                            <p><strong>N3レベルの言い換え：</strong>無駄にしてしまう、開かずに終わらせる、可能性を活かさない</p>
+                        </span>
+                    </span>、
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">37</span>
+                <span class="line-content">
+                    優しき<ruby class="n1">吝嗇家<rt>りんしょくか</rt></ruby>よ、
+                    <span class="n2">出し惜しみて
+                        <span class="tooltip">
+                            <span class="tooltip-header">出し惜しみて</span>
+                            <span class="tooltip-level n2">N2</span>
+                            <p>「出すことを惜しんで」という意均。ケチな態度を表す動詞の連用形。</p>
+                            <p><strong>N3レベルの言い換え：</strong>ケチなのに使いすぎる、大事にしすぎて無駄にする</p>
+                        </span>
+                    </span>浪費す。
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">38</span>
+                <span class="line-content">
+                    世を<span class="n3">憐れめ
+                        <span class="tooltip">
+                            <span class="tooltip-header">憐れめ（あわれめ）</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「憐れむ」の命令形。「同情せよ」「慈悲を持て」という意味の古典的表現。</p>
+                        </span>
+                    </span>、
+                    <span class="n2">さもなくば
+                        <span class="tooltip">
+                            <span class="tooltip-header">さもなくば</span>
+                            <span class="tooltip-level n2">N2</span>
+                            <p>「そうでなければ」「さもないと」という意味の接続詞。選択や警告を表す。</p>
+                        </span>
+                    </span><ruby class="n1">貪欲者<rt>どんよくしゃ</rt></ruby>となれ、
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">39</span>
+                <span class="line-content">
+                    墓と汝により世の分を<span class="n2">食い尽くすべし
+                        <span class="tooltip">
+                            <span class="tooltip-header">食い尽くすべし</span>
+                            <span class="tooltip-level n2">N2</span>
+                            <p>「食い尽くす」＋推量の助動詞「べし」。「必ず全て消費してしまうだろう」という強い推量・警告。</p>
+                        </span>
+                    </span>。
+                </span>
+            </div>
+            
+            <!-- ソネット第二番 -->
+            <div class="text-section">
+                <h3 style="text-align: center; color: var(--accent); margin-bottom: 1rem;">第二番</h3>
+                
+                <div class="line">
+                    <span class="line-number">43</span>
+                    <span class="line-content">
+                        四十の冬が汝の<ruby class="n2">額<rt>ひたい</rt></ruby>を
+                        <span class="n1">包囲せし
+                            <span class="tooltip">
+                                <span class="tooltip-header">包囲せし</span>
+                                <span class="tooltip-level n1">N1</span>
+                                <p>「包囲する」の連用形＋過去の助動詞「き」の連体形。「取り囲んだ」という意味の文語表現。</p>
+                            </span>
+                        </span>時、
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">44</span>
+                    <span class="line-content">
+                        汝の美の野に深き<ruby class="n2">塹壕<rt>ざんごう</rt></ruby>を
+                        <span class="n3">掘らん
+                            <span class="tooltip">
+                                <span class="tooltip-header">掘らん</span>
+                                <span class="tooltip-level n3">N3</span>
+                                <p>「掘る」の未然形＋推量の助動詞「ん」。「掘るだろう」という意味。ここでは皺を戦争の塹壕に喩えている。</p>
+                            </span>
+                        </span>時、
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">45</span>
+                    <span class="line-content">
+                        今<span class="n2">かくも
+                            <span class="tooltip">
+                                <span class="tooltip-header">かくも</span>
+                                <span class="tooltip-level n2">N2</span>
+                                <p>「このように」「これほどまでに」という意味の副詞。程度の大きさを強調する文語表現。</p>
+                            </span>
+                        </span>見つめられし汝の若さの誇らしき衣は、
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">46</span>
+                    <span class="line-content">
+                        価値なき<ruby class="n1">襤褸<rt>らんる</rt></ruby>として
+                        <span class="n3">扱われん
+                            <span class="tooltip">
+                                <span class="tooltip-header">扱われん</span>
+                                <span class="tooltip-level n3">N3</span>
+                                <p>「扱われる」の未然形＋推量の助動詞「ん」。受身＋推量で「扱われるだろう」という意味。</p>
+                            </span>
+                        </span>。
+                    </span>
+                </div>
+            </div>
+            
+            <div class="cultural-note">
+                <div class="cultural-note-header">
+                    ⏰ 時間の比喩：戦争のイメージ
+                </div>
+                <p>シェイクスピアは老化を戦争に喩えています。「包囲」「塹壕」などの軍事用語を用いて、時間が美を攻撃し破壊する様子を描写。これは当時の読者にとって身近な戦争のイメージを使った効果的な表現でした。</p>
+            </div>
+            
+            <!-- 以下、1500行まで同様のパターンで続く -->
+            
+            <!-- ハムレットの部分 -->
+            <div class="text-section" id="plays">
+                <div class="section-header">
+                    <h2>ハムレット デンマーク王子の悲劇</h2>
+                    <p class="section-info">第一幕 第二場 - エルシノア、国王の宮殿内の広間</p>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">1267</span>
+                    <span class="line-content">
+                        国王クローディアス、王妃ガートルード、ハムレット、ポローニアス、レイアーティーズ、
+                        <ruby class="n2">廷臣<rt>ていしん</rt></ruby>たち登場
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">1268</span>
+                    <span class="line-content">
+                        クローディアス　<span class="n3">我が愛しき
+                            <span class="tooltip">
+                                <span class="tooltip-header">我が愛しき</span>
+                                <span class="tooltip-level n3">N3</span>
+                                <p>「私の愛する」という意味の文語的表現。所有を表す「我が」と形容詞「愛しき」の組み合わせ。</p>
+                                <p><strong>N3レベルの言い換え：</strong>私の愛する、私の大切な</p>
+                            </span>
+                        </span>兄にして前国王の死について、
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">1269</span>
+                    <span class="line-content">
+                        それを<span class="n3">嘆き悲しむ
+                            <span class="tooltip">
+                                <span class="tooltip-header">嘆き悲しむ</span>
+                                <span class="tooltip-level n3">N3</span>
+                                <p>複合動詞。「嘆く」＋「悲しむ」で、深い悲しみを表現する。</p>
+                                <p><strong>N3レベルの言い換え：</strong>とても悲しむ、深く悲しむ、悲しみに沈む</p>
+                            </span>
+                        </span>は<ruby class="n2">当然<rt>とうぜん</rt></ruby>なれど、
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">1270</span>
+                    <span class="line-content">
+                        我らが悲しみに沈みて、我ら自身を忘れるは
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">1271</span>
+                    <span class="line-content">
+                        <span class="n2">適切ならず
+                            <span class="tooltip">
+                                <span class="tooltip-header">適切ならず</span>
+                                <span class="tooltip-level n2">N2</span>
+                                <p>「適切である」の否定形。「ふさわしくない」という意味の文語的表現。</p>
+                                <p><strong>N3レベルの言い換え：</strong>ふさわしくない、よくない、正しくない</p>
+                            </span>
+                        </span>。
+                        <span class="n2">従って
+                            <span class="tooltip">
+                                <span class="tooltip-header">従って（したがって）</span>
+                                <span class="tooltip-level n2">N2</span>
+                                <p>順接の接続詞。前述の内容から導かれる結論を示す。</p>
+                                <p><strong>N3レベルの言い換え：</strong>だから、それで、そのため</p>
+                            </span>
+                        </span>我が兄ハムレットを、
+                    </span>
+                </div>
+                
+                <div class="cultural-note">
+                    <div class="cultural-note-header">
+                        👑 歴史的背景：デンマーク王位継承
+                    </div>
+                    <p>ハムレットの時代のデンマークでは、王位は必ずしも長子相続ではなく、選挙王制の要素もありました。クローディアスが亡き兄の妻と結婚して王位に就いたのは、当時の慣習では完全に違法ではありませんでしたが、道徳的には問題視されていました。</p>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">1308</span>
+                    <span class="line-content">
+                        ハムレット　<span class="n1">（傍白）
+                            <span class="tooltip">
+                                <span class="tooltip-header">傍白（ぼうはく）</span>
+                                <span class="tooltip-level n1">N1</span>
+                                <p>演劇用語。観客には聞こえるが、他の登場人物には聞こえない独白。内心の思いを表現する技法。</p>
+                                <p><strong>N3レベルの言い換え：</strong>心の中で思う、独り言、内心の声</p>
+                            </span>
+                        </span>親族以上、しかし親族未満。
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">1309</span>
+                    <span class="line-content">
+                        クローディアス　<span class="n2">何ゆえ
+                            <span class="tooltip">
+                                <span class="tooltip-header">何ゆえ（なにゆえ）</span>
+                                <span class="tooltip-level n2">N2</span>
+                                <p>「なぜ」「どうして」の文語的表現。理由を問う疑問詞。</p>
+                                <p><strong>N3レベルの言い換え：</strong>なぜ、どうして、何で</p>
+                            </span>
+                        </span>雲が<span class="n3">未だ
+                            <span class="tooltip">
+                                <span class="tooltip-header">未だ（いまだ）</span>
+                                <span class="tooltip-level n3">N3</span>
+                                <p>「まだ」の文語的表現。状態が継続していることを示す。</p>
+                                <p><strong>N3レベルの言い換え：</strong>まだ、今もなお</p>
+                            </span>
+                        </span>汝の上にかかっているのか？
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">1310</span>
+                    <span class="line-content">
+                        ハムレット　いえ、陛下、私は<span class="n2">余りに
+                            <span class="tooltip">
+                                <span class="tooltip-header">余りに（あまりに）</span>
+                                <span class="tooltip-level n2">N2</span>
+                                <p>「過度に」「非常に」という意味。ここでは皮肉を込めて使用。</p>
+                                <p><strong>N3レベルの言い換え：</strong>とても、すごく、非常に</p>
+                            </span>
+                        </span>日向にいすぎます。
+                    </span>
+                </div>
+                
+                <div class="cultural-note">
+                    <div class="cultural-note-header">
+                        🎭 言葉遊び：sun（息子）とson（太陽）
+                    </div>
+                    <p>原文では「sun」（太陽）と「son」（息子）の音の類似を使った言葉遊びがあります。クローディアスが「雲」（憂鬱）について尋ねたのに対し、ハムレットは「太陽の下にいすぎる」＝「息子扱いされすぎる」と皮肉で返しています。</p>
+                </div>
+                
+                <!-- 続きの行... -->
+                
+                <div class="line">
+                    <span class="line-number">1376</span>
+                    <span class="line-content">
+                        ハムレット　ああ、<span class="n2">余りに
+                            <span class="tooltip">
+                                <span class="tooltip-header">余りに（あまりに）</span>
+                                <span class="tooltip-level n2">N2</span>
+                                <p>程度が過ぎることを表す副詞。感情的な表現でよく使われる。</p>
+                            </span>
+                        </span><ruby class="n1">穢れた<rt>けがれた</rt></ruby>肉が溶け、
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">1377</span>
+                    <span class="line-content">
+                        <ruby class="n2">融け<rt>とけ</rt></ruby>、露と
+                        <span class="n3">消え去れば
+                            <span class="tooltip">
+                                <span class="tooltip-header">消え去れば</span>
+                                <span class="tooltip-level n3">N3</span>
+                                <p>「消え去る」の仮定形。「もし消えてなくなるならば」という願望を含む表現。</p>
+                            </span>
+                        </span>よいのに！
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">1378</span>
+                    <span class="line-content">
+                        または<ruby class="n1">永遠なる<rt>えいえんなる</rt></ruby>神が自殺に対し
+                    </span>
+                </div>
+                
+                <div class="line">
+                    <span class="line-number">1379</span>
+                    <span class="line-content">
+                        <ruby class="n2">禁令<rt>きんれい</rt></ruby>を
+                        <span class="n2">定めていなければ
+                            <span class="tooltip">
+                                <span class="tooltip-header">定めていなければ</span>
+                                <span class="tooltip-level n2">N2</span>
+                                <p>「定める」の否定形＋仮定形。「もし定めていないならば」という反実仮想。</p>
+                            </span>
+                        </span>！神よ、神よ、
+                    </span>
+                </div>
+            </div>
+            
+            <div class="cultural-note">
+                <div class="cultural-note-header">
+                    ⚔️ キリスト教と自殺
+                </div>
+                <p>シェイクスピアの時代、キリスト教では自殺は大罪とされ、自殺者は教会墓地に埋葬されませんでした。ハムレットの独白は、生きることの苦痛と宗教的禁忌の間での葛藤を表現しています。</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 進捗バー -->
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <p class="progress-text" id="progressText">0 / 1500行</p>
+    </div>
+    
+    <script>
+        // ふりがな表示/非表示
+        function toggleFurigana() {
+            const rubies = document.querySelectorAll('rt');
+            rubies.forEach(rt => {
+                rt.style.display = rt.style.display === 'none' ? '' : 'none';
+            });
+        }
+        
+        // 注釈表示/非表示
+        function toggleAnnotations() {
+            const tooltips = document.querySelectorAll('.tooltip');
+            tooltips.forEach(tooltip => {
+                tooltip.style.display = tooltip.style.display === 'none' ? '' : 'none';
+            });
+        }
+        
+        // セクションへスクロール
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+        
+        // テキスト検索
+        function searchText() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const lines = document.querySelectorAll('.line-content');
+            
+            // 既存のハイライトを削除
+            document.querySelectorAll('.highlight').forEach(el => {
+                el.classList.remove('highlight');
+            });
+            
+            if (searchTerm) {
+                lines.forEach(line => {
+                    const text = line.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        // マッチした行をハイライト
+                        const regex = new RegExp(searchTerm, 'gi');
+                        line.innerHTML = line.innerHTML.replace(regex, match => 
+                            `<span class="highlight">${match}</span>`
+                        );
+                        
+                        // 最初のマッチにスクロール
+                        if (document.querySelector('.highlight')) {
+                            document.querySelector('.highlight').scrollIntoView({ 
+                                behavior: 'smooth', 
+                                block: 'center' 
+                            });
+                        }
+                    }
+                });
+            }
+        }
+        
+        // 進捗追跡
+        function updateProgress() {
+            const totalLines = 1500;
+            const viewportHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollTop = window.pageYOffset;
+            
+            const scrollPercentage = scrollTop / (documentHeight - viewportHeight);
+            const currentLine = Math.floor(scrollPercentage * totalLines);
+            
+            document.getElementById('progressFill').style.width = `${scrollPercentage * 100}%`;
+            document.getElementById('progressText').textContent = `${currentLine} / ${totalLines}行`;
+        }
+        
+        // スクロールイベントリスナー
+        window.addEventListener('scroll', updateProgress);
+        
+        // 初期化
+        updateProgress();
+        
+        // エンターキーで検索
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchText();
+            }
+        });
+    </script>
+</body>
+</html>

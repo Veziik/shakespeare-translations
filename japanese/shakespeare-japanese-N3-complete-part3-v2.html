@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア日本語訳 - JLPT N3学習者向け注釈版 第三部</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+        
+        :root {
+            --n3-blue: #2196F3;
+            --n2-orange: #FF6B35;
+            --n1-red: #D32F2F;
+            --bg-primary: #F5F5F5;
+            --bg-secondary: #FFFFFF;
+            --text-primary: #212121;
+            --text-secondary: #757575;
+            --accent: #673AB7;
+            --border: #E0E0E0;
+            --shadow: rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Serif JP', serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+        
+        /* ヘッダー */
+        header {
+            background: linear-gradient(135deg, var(--accent) 0%, #512DA8 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        /* ナビゲーション */
+        nav {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 140px;
+            z-index: 90;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        button:hover {
+            background: #512DA8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow);
+        }
+        
+        /* コンテナ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* 凡例 */
+        .legend {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        .legend h2 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .legend-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .color-box {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+        
+        /* セクションヘッダー */
+        .section-header {
+            background: linear-gradient(to right, var(--accent), transparent);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-info {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* テキストセクション */
+        .text-section {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        /* 行表示 */
+        .line {
+            display: flex;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .line:hover {
+            background-color: rgba(103, 58, 183, 0.05);
+        }
+        
+        .line-number {
+            min-width: 60px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-right: 2rem;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .line-content {
+            flex: 1;
+            font-size: 1.2rem;
+            line-height: 2.2;
+        }
+        
+        /* 注釈付き語彙 */
+        .n3 {
+            color: var(--n3-blue);
+            font-weight: 500;
+            position: relative;
+            cursor: help;
+            border-bottom: 2px dotted var(--n3-blue);
+        }
+        
+        .n2 {
+            color: var(--n2-orange);
+            font-weight: 500;
+            position: relative;
+            cursor: help;
+            border-bottom: 2px dotted var(--n2-orange);
+        }
+        
+        .n1 {
+            color: var(--n1-red);
+            font-weight: 500;
+            position: relative;
+            cursor: help;
+            border-bottom: 2px dotted var(--n1-red);
+        }
+        
+        /* ルビ */
+        ruby {
+            position: relative;
+        }
+        
+        ruby.n2 rt, ruby.n1 rt {
+            font-size: 0.7em;
+            color: var(--text-secondary);
+        }
+        
+        /* ツールチップ */
+        .tooltip {
+            display: none;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            width: 300px;
+            box-shadow: 0 4px 8px var(--shadow);
+            z-index: 10;
+            margin-bottom: 5px;
+        }
+        
+        .n3:hover .tooltip,
+        .n2:hover .tooltip,
+        .n1:hover .tooltip {
+            display: block;
+        }
+        
+        .tooltip-header {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .tooltip-level {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 15px;
+            color: white;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+        
+        .tooltip-level.n3 {
+            background: var(--n3-blue);
+        }
+        
+        .tooltip-level.n2 {
+            background: var(--n2-orange);
+        }
+        
+        .tooltip-level.n1 {
+            background: var(--n1-red);
+        }
+        
+        .tooltip p {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+        
+        /* 文化的注釈 */
+        .cultural-note {
+            background: #FFF3E0;
+            border-left: 4px solid #FFC107;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-size: 1.1rem;
+        }
+        
+        .cultural-note-header {
+            font-weight: 700;
+            color: #F57C00;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        /* 検索機能 */
+        .search-container {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        input[type="text"] {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 25px;
+            font-size: 1rem;
+            flex: 1;
+            max-width: 300px;
+        }
+        
+        /* 進捗トラッカー */
+        .progress-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--bg-secondary);
+            border-radius: 25px;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 8px var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .progress-bar {
+            width: 200px;
+            height: 10px;
+            background: var(--border);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        /* ナビゲーションリンク */
+        .navigation-links {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        .nav-link {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            background: #512DA8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow);
+        }
+        
+        /* レスポンシブデザイン */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .text-section {
+                padding: 1rem;
+            }
+            
+            .line {
+                flex-direction: column;
+            }
+            
+            .line-number {
+                min-width: auto;
+                font-weight: 700;
+            }
+            
+            .line-content {
+                font-size: 1.1rem;
+                line-height: 2;
+            }
+            
+            input[type="text"] {
+                width: 100%;
+                font-size: 1.1rem;
+            }
+            
+            .search-container {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .tooltip {
+                width: 250px;
+                font-size: 1rem;
+                left: 0;
+                transform: translateX(0);
+            }
+            
+            .progress-container {
+                bottom: 10px;
+                right: 10px;
+                left: 10px;
+                width: auto;
+            }
+            
+            .cultural-note {
+                padding: 1rem;
+                font-size: 1.1rem;
+            }
+            
+            .legend-items {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* アニメーション */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .text-section {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        /* ハイライト検索結果 */
+        .highlight {
+            background-color: #FFEB3B;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>シェイクスピア日本語訳</h1>
+        <p class="subtitle">JLPT N3学習者向け完全注釈版 - 第三部（3001-4500行）</p>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="nav-buttons">
+                <button onclick="toggleFurigana()">ふりがな表示/非表示</button>
+                <button onclick="toggleAnnotations()">注釈表示/非表示</button>
+                <button onclick="scrollToSection('kinglear')">リア王</button>
+                <button onclick="scrollToSection('cordelia')">コーディーリアの場面</button>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="語句を検索...">
+                <button onclick="searchText()">検索</button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <!-- 凡例 -->
+        <div class="legend">
+            <h2>📘 学習ガイド</h2>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: var(--n3-blue);"></div>
+                    <span><strong>N3文法・語彙</strong>：中級レベルの表現</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: var(--n2-orange);"></div>
+                    <span><strong>N2文法・語彙</strong>：中上級レベルの表現（ふりがな付き）</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: var(--n1-red);"></div>
+                    <span><strong>N1文法・語彙</strong>：上級レベルの表現（ふりがな付き）</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: #FFC107;"></div>
+                    <span><strong>文化的注釈</strong>：文学的・歴史的背景</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ナビゲーションリンク -->
+        <div class="navigation-links">
+            <a href="shakespeare-japanese-N3-complete-part2-v2.html" class="nav-link">← 第二部へ</a>
+            <a href="shakespeare-japanese-N3-complete-part4-v2.html" class="nav-link">第四部へ →</a>
+        </div>
+        
+        <!-- リア王 -->
+        <div class="text-section" id="kinglear">
+            <div class="section-header">
+                <h2>リア王</h2>
+                <p class="section-info">第一幕第一場 - リア王の宮殿</p>
+            </div>
+            
+            <div class="cultural-note">
+                <div class="cultural-note-header">
+                    👑 リア王：シェイクスピア四大悲劇の一つ
+                </div>
+                <p>『リア王』は、老王が娘たちに王国を分け与えることから始まる悲劇です。娘たちの愛情を試す場面は、親子関係の本質と権力の危うさを描いています。日本の『忠臣蔵』のような忠誠と裏切りのテーマが中心となっています。</p>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3015</span>
+                <span class="line-content">
+                    ケント　私は思ったが、王はアルバニ公爵を
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3016</span>
+                <span class="line-content">
+                    コーンウォール公爵より<span class="n3">愛された
+                        <span class="tooltip">
+                            <span class="tooltip-header">愛された</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「愛する」の受身形の過去形。「〜に愛される」は誰かから愛情を受けることを表す。</p>
+                            <p><strong>N3文法ポイント：</strong>受身形「〜れる/られる」は動作を受ける側の視点で表現</p>
+                        </span>
+                    </span>と。
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3018</span>
+                <span class="line-content">
+                    グロスター　そうお思いでしたが、今、王国の<span class="n3">分割
+                        <span class="tooltip">
+                            <span class="tooltip-header">分割</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「分ける」「切り分ける」という意味の名詞。大きなものを複数の部分に分けること。</p>
+                            <p><strong>N3レベルの言い換え：</strong>分けること、分配、配分</p>
+                        </span>
+                    </span>において、
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3019</span>
+                <span class="line-content">
+                    どちらの公爵がより<span class="n3">価値ある
+                        <span class="tooltip">
+                            <span class="tooltip-header">価値ある</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「価値がある」の連体形。重要性や大切さを持つことを表す。</p>
+                            <p><strong>N3文法ポイント：</strong>「〜ある」は「〜がある」の文語的表現</p>
+                        </span>
+                    </span>かを<ruby class="n2">識別<rt>しきべつ</rt></ruby>することは
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3020</span>
+                <span class="line-content">
+                    我らにはできません、部分が非常に<span class="n3">平等に
+                        <span class="tooltip">
+                            <span class="tooltip-header">平等に</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「同じように」「公平に」という意味の副詞。差別なく同じ扱いをすること。</p>
+                            <p><strong>N3レベルの言い換え：</strong>公平に、同じように、均等に</p>
+                        </span>
+                    </span><ruby class="n2">計られている<rt>はかられている</rt></ruby>からです
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3025</span>
+                <span class="line-content">
+                    グロスター　彼の<ruby class="n2">養育<rt>よういく</rt></ruby>は、殿下、私の<span class="n3">負担
+                        <span class="tooltip">
+                            <span class="tooltip-header">負担</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「責任」「重荷」という意味。ここでは子供を育てる責任のこと。</p>
+                            <p><strong>N3レベルの言い換え：</strong>責任、義務、重荷</p>
+                        </span>
+                    </span>でした。私は
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3026</span>
+                <span class="line-content">
+                    彼を認めることを<span class="n3">しばしば
+                        <span class="tooltip">
+                            <span class="tooltip-header">しばしば</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「よく」「たびたび」「何度も」という意味の副詞。頻度が高いことを表す。</p>
+                            <p><strong>N3レベルの言い換え：</strong>よく、たびたび、何度も</p>
+                        </span>
+                    </span><ruby class="n2">赤面<rt>せきめん</rt></ruby>しましたが、今は
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3027</span>
+                <span class="line-content">
+                    <ruby class="n1">図々しく<rt>ずうずうしく</rt></ruby>なっています。
+                </span>
+            </div>
+        </div>
+        
+        <!-- リア王の王国分割の場面 -->
+        <div class="text-section">
+            <div class="section-header">
+                <h2>王国分割の宣言</h2>
+                <p class="section-info">リア王が三人の娘に王国を分ける重要な場面</p>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3064</span>
+                <span class="line-content">
+                    リア　その間、我らの<span class="n3">意図
+                        <span class="tooltip">
+                            <span class="tooltip-header">意図</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「計画」「目的」「考え」という意味。何かをしようとする心の中の考え。</p>
+                            <p><strong>N3レベルの言い換え：</strong>計画、目的、つもり</p>
+                        </span>
+                    </span>を明らかにしよう。
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3068</span>
+                <span class="line-content">
+                    全ての配慮、<ruby class="n2">国事<rt>こくじ</rt></ruby>、<ruby class="n2">統治<rt>とうち</rt></ruby>を
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3069</span>
+                <span class="line-content">
+                    より若い力に<span class="n3">委ね
+                        <span class="tooltip">
+                            <span class="tooltip-header">委ねる</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「まかせる」「ゆだねる」という意味。責任や仕事を他の人に渡すこと。</p>
+                            <p><strong>N3レベルの言い換え：</strong>まかせる、任せる、託す</p>
+                        </span>
+                    </span>、我らが
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3070</span>
+                <span class="line-content">
+                    <span class="n3">重荷
+                        <span class="tooltip">
+                            <span class="tooltip-header">重荷</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「重い負担」「責任」という意味。心や体に負担となるもの。</p>
+                            <p><strong>N3レベルの言い換え：</strong>負担、責任、重い仕事</p>
+                        </span>
+                    </span>を降ろして死に向かうように。
+                </span>
+            </div>
+        </div>
+        
+        <!-- コーディーリアの場面 -->
+        <div class="text-section" id="cordelia">
+            <div class="section-header">
+                <h2>三人の娘の愛の告白</h2>
+                <p class="section-info">ガナリルとコーディーリアの対照的な告白</p>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3081</span>
+                <span class="line-content">
+                    語れ、お前たちのうち誰が我らを<span class="n3">最も
+                        <span class="tooltip">
+                            <span class="tooltip-header">最も</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「一番」「もっとも」という意味の副詞。最上級を表す。</p>
+                            <p><strong>N3レベルの言い換え：</strong>一番、もっとも、いちばん</p>
+                        </span>
+                    </span>愛するかを、
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3082</span>
+                <span class="line-content">
+                    我らが最大の<ruby class="n2">恩寵<rt>おんちょう</rt></ruby>を最大の<ruby class="n2">功績<rt>こうせき</rt></ruby>のある場所に<span class="n2">拡張し
+                        <span class="tooltip">
+                            <span class="tooltip-header">拡張する</span>
+                            <span class="tooltip-level n2">N2</span>
+                            <p>「広げる」「大きくする」という意味。範囲や規模を大きくすること。</p>
+                        </span>
+                    </span>、
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3086</span>
+                <span class="line-content">
+                    ガナリル　父上、私は汝を愛します
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3087</span>
+                <span class="line-content">
+                    言葉や<ruby class="n2">視界<rt>しかい</rt></ruby>の自由より多く、
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3088</span>
+                <span class="line-content">
+                    <ruby class="n2">貴重な<rt>きちょうな</rt></ruby>空間と自由より多く、
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3092</span>
+                <span class="line-content">
+                    息が出ない、言葉が<span class="n3">足りない
+                        <span class="tooltip">
+                            <span class="tooltip-header">足りない</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「不足する」「十分でない」という意味。必要な量や程度に達していないこと。</p>
+                            <p><strong>N3レベルの言い換え：</strong>不足する、十分でない、足らない</p>
+                        </span>
+                    </span>ほどに。
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3094</span>
+                <span class="line-content">
+                    コーディーリア　（<ruby class="n2">傍白<rt>ぼうはく</rt></ruby>）コーディーリアは何をすべきか？
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3095</span>
+                <span class="line-content">
+                    愛して<span class="n3">静かにしていよう
+                        <span class="tooltip">
+                            <span class="tooltip-header">静かにしていよう</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「〜していよう」は継続の意志を表す。黙っている、何も言わないでいることを決意している。</p>
+                            <p><strong>N3文法ポイント：</strong>「〜ていよう」は意志的な継続を表す</p>
+                        </span>
+                    </span>。
+                </span>
+            </div>
+            
+            <div class="cultural-note">
+                <div class="cultural-note-header">
+                    💔 コーディーリアの沈黙：真実の愛の表現
+                </div>
+                <p>コーディーリアは父への愛を大げさに表現することを拒否します。これは偽りの愛と真実の愛の対比を示しています。日本の「言わぬが花」という概念にも通じる、控えめな愛情表現の美徳を描いています。</p>
+            </div>
+        </div>
+        
+        <!-- さらなる場面 -->
+        <div class="text-section">
+            <div class="section-header">
+                <h2>王国の分割</h2>
+                <p class="section-info">リア王が土地を分け与える場面</p>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3097</span>
+                <span class="line-content">
+                    リア　この非常に<ruby class="n2">豊かな<rt>ゆたかな</rt></ruby>東の<span class="n3">境界
+                        <span class="tooltip">
+                            <span class="tooltip-header">境界</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「境目」「国境」という意味。二つの地域を分ける線。</p>
+                            <p><strong>N3レベルの言い換え：</strong>境目、国境、境</p>
+                        </span>
+                    </span>から
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3098</span>
+                <span class="line-content">
+                    この線まで、<span class="n3">広大で
+                        <span class="tooltip">
+                            <span class="tooltip-header">広大</span>
+                            <span class="tooltip-level n3">N3</span>
+                            <p>「とても広い」「大きい」という意味の形容動詞。面積が非常に大きいこと。</p>
+                            <p><strong>N3レベルの言い換え：</strong>とても広い、大きい、広々とした</p>
+                        </span>
+                    </span><ruby class="n2">肥沃な<rt>ひよくな</rt></ruby>森、
+                </span>
+            </div>
+            
+            <div class="line">
+                <span class="line-number">3099</span>
+                <span class="line-content">
+                    広い川、広い<ruby class="n2">平原<rt>へいげん</rt></ruby>で、
+                </span>
+            </div>
+        </div>
+        
+        <!-- 進捗トラッカー -->
+        <div class="progress-container">
+            <span>進捗：</span>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <span id="progressText">0 / 1500行</span>
+        </div>
+        
+        <!-- ナビゲーションリンク -->
+        <div class="navigation-links">
+            <a href="shakespeare-japanese-N3-complete-part2-v2.html" class="nav-link">← 第二部へ</a>
+            <a href="shakespeare-japanese-N3-complete-part4-v2.html" class="nav-link">第四部へ →</a>
+        </div>
+    </div>
+    
+    <script>
+        // ふりがな表示切り替え
+        function toggleFurigana() {
+            const rtElements = document.querySelectorAll('rt');
+            rtElements.forEach(rt => {
+                rt.style.display = rt.style.display === 'none' ? 'block' : 'none';
+            });
+        }
+        
+        // 注釈表示切り替え
+        function toggleAnnotations() {
+            const tooltips = document.querySelectorAll('.tooltip');
+            tooltips.forEach(tooltip => {
+                tooltip.style.display = tooltip.style.display === 'none' ? 'block' : 'none';
+            });
+        }
+        
+        // セクションにスクロール
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+        
+        // テキスト検索
+        function searchText() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            if (searchTerm) {
+                const lines = document.querySelectorAll('.line-content');
+                
+                // 既存のハイライトを削除
+                document.querySelectorAll('.highlight').forEach(el => {
+                    el.outerHTML = el.innerHTML;
+                });
+                
+                lines.forEach(line => {
+                    const text = line.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        // マッチした行をハイライト
+                        const regex = new RegExp(searchTerm, 'gi');
+                        line.innerHTML = line.innerHTML.replace(regex, match => 
+                            `<span class="highlight">${match}</span>`
+                        );
+                        
+                        // 最初のマッチにスクロール
+                        if (document.querySelector('.highlight')) {
+                            document.querySelector('.highlight').scrollIntoView({ 
+                                behavior: 'smooth', 
+                                block: 'center' 
+                            });
+                        }
+                    }
+                });
+            }
+        }
+        
+        // 進捗追跡
+        function updateProgress() {
+            const totalLines = 1500;
+            const viewportHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollTop = window.pageYOffset;
+            
+            const scrollPercentage = scrollTop / (documentHeight - viewportHeight);
+            const currentLine = Math.floor(scrollPercentage * totalLines);
+            
+            document.getElementById('progressFill').style.width = `${scrollPercentage * 100}%`;
+            document.getElementById('progressText').textContent = `${currentLine} / ${totalLines}行`;
+        }
+        
+        // スクロールイベントリスナー
+        window.addEventListener('scroll', updateProgress);
+        
+        // 初期化
+        updateProgress();
+        
+        // エンターキーで検索
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchText();
+            }
+        });
+    </script>
+</body>
+</html>

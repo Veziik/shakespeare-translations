@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア日本語翻訳 - N4学習者向け注釈版 第一部</title>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', 'Yu Gothic', 'Hiragino Sans', sans-serif;
+            line-height: 1.8;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .navigation {
+            background-color: #34495e;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background-color: #2c3e50;
+        }
+        
+        .content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .line-container {
+            margin: 15px 0;
+            padding: 10px;
+            border-left: 3px solid #ecf0f1;
+            transition: all 0.3s;
+        }
+        
+        .line-container:hover {
+            background-color: #f8f9fa;
+            border-left-color: #3498db;
+        }
+        
+        .line-number {
+            display: inline-block;
+            width: 60px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            text-align: right;
+            margin-right: 15px;
+        }
+        
+        /* JLPT Level Colors */
+        .n4 {
+            color: #27ae60;
+            font-weight: 500;
+        }
+        
+        .n3 {
+            color: #f39c12;
+            font-weight: 500;
+        }
+        
+        .n2 {
+            color: #e67e22;
+            font-weight: 500;
+        }
+        
+        .n1 {
+            color: #e74c3c;
+            font-weight: 500;
+        }
+        
+        /* Furigana styling */
+        ruby {
+            font-size: 1.2em;
+        }
+        
+        ruby rt {
+            font-size: 0.6em;
+            color: #666;
+        }
+        
+        /* Tooltip styling */
+        .tooltip {
+            position: relative;
+            cursor: help;
+            border-bottom: 2px dotted currentColor;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltiptext {
+            visibility: hidden;
+            width: 300px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: left;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -150px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        
+        .tooltiptext a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .tooltiptext a:hover {
+            text-decoration: underline;
+        }
+        
+        .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2c3e50 transparent transparent transparent;
+        }
+        
+        /* Grammar explanation boxes */
+        .grammar-box {
+            background-color: #ecf0f1;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .grammar-box h4 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        .section-header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            margin: 30px -30px 20px -30px;
+            text-align: center;
+            font-size: 1.3em;
+        }
+        
+        .work-title {
+            font-size: 1.5em;
+            color: #2c3e50;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+        
+        /* Level indicator */
+        .level-indicator {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        /* Reading progress */
+        #reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background-color: #3498db;
+            transition: width 0.3s;
+            z-index: 200;
+        }
+    </style>
+</head>
+<body>
+    <div id="reading-progress" style="width: 0%;"></div>
+    
+    <div class="header">
+        <h1>シェイクスピア日本語翻訳</h1>
+        <h2>N4学習者向け注釈版 第一部</h2>
+        <p>JLPT N4レベルの学習者のための詳細な注釈付き版</p>
+    </div>
+    
+    <div class="navigation">
+        <div class="nav-links">
+            <a href="#introduction">序文</a>
+            <a href="#sonnets">ソネット集</a>
+            <a href="#coriolanus">コリオレイナス</a>
+            <a href="#hamlet">ハムレット</a>
+            <a href="#grammar-notes">文法解説</a>
+        </div>
+    </div>
+    
+    <div class="content">
+        <section id="introduction">
+            <div class="section-header">序文</div>
+            
+            <div class="line-container">
+                <span class="line-number">1</span>
+                <span class="n4">ウィリアム・シェイクスピア</span><span class="n4 tooltip">全集<span class="tooltiptext">ぜんしゅう - complete works<br><a href="https://jisho.org/search/全集" target="_blank">辞書で見る</a></span></span>
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">2</span>
+                <span class="n4">日本語</span><span class="n4 tooltip">完全<span class="tooltiptext">かんぜん - complete, perfect<br><a href="https://jisho.org/search/完全" target="_blank">辞書で見る</a></span></span><span class="n4 tooltip">翻訳<span class="tooltiptext">ほんやく - translation<br><a href="https://jisho.org/search/翻訳" target="_blank">辞書で見る</a></span></span><span class="n4">版</span><span class="n4">第一部</span>
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">3</span>
+                Japanese Complete Shakespeare Translation Part 1
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">5</span>
+                <span class="n4 tooltip">翻訳者<span class="tooltiptext">ほんやくしゃ - translator<br><a href="https://jisho.org/search/翻訳者" target="_blank">辞書で見る</a></span></span>：<span class="n4">日本語</span><span class="n4">翻訳</span><span class="n4 tooltip">専門<span class="tooltiptext">せんもん - specialty, expert<br><a href="https://jisho.org/search/専門" target="_blank">辞書で見る</a></span></span>エージェント
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">6</span>
+                <span class="n4 tooltip">協力<span class="tooltiptext">きょうりょく - cooperation<br><a href="https://jisho.org/search/協力" target="_blank">辞書で見る</a></span></span>：Claude Code (https://claude.ai/code)
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">7</span>
+                <span class="n4 tooltip">完成<span class="tooltiptext">かんせい - completion<br><a href="https://jisho.org/search/完成" target="_blank">辞書で見る</a></span></span><span class="n4">日</span>：2025<span class="n4">年</span>7<span class="n4">月</span>13<span class="n4">日</span>
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">9</span>
+                <span class="n4">本</span><span class="n4">翻訳</span>は、<ruby class="n3 tooltip">文語体<rt>ぶんごたい</rt><span class="tooltiptext">ぶんごたい - literary style, classical Japanese<br><a href="https://jisho.org/search/文語体" target="_blank">辞書で見る</a></span></ruby>（<span class="n4 tooltip">古典<span class="tooltiptext">こてん - classic, classical<br><a href="https://jisho.org/search/古典" target="_blank">辞書で見る</a></span></span><span class="n4">日本語</span>）を<ruby class="n3 tooltip">基調<rt>きちょう</rt><span class="tooltiptext">きちょう - basis, keynote<br><a href="https://jisho.org/search/基調" target="_blank">辞書で見る</a></span></ruby>とし、シェイクスピアの<ruby class="n3 tooltip">詩的<rt>してき</rt><span class="tooltiptext">してき - poetic<br><a href="https://jisho.org/search/詩的" target="_blank">辞書で見る</a></span></ruby><span class="n4">美しさ</span>と<ruby class="n3 tooltip">劇的<rt>げきてき</rt><span class="tooltiptext">げきてき - dramatic<br><a href="https://jisho.org/search/劇的" target="_blank">辞書で見る</a></span></ruby><span class="n4">力強さ</span>を
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">10</span>
+                <span class="n4">日本語</span>の<ruby class="n3 tooltip">豊<rt>ゆた</rt><span class="tooltiptext">ゆたか - abundant, rich<br><a href="https://jisho.org/search/豊か" target="_blank">辞書で見る</a></span></ruby>かな<span class="n4 tooltip">表現力<span class="tooltiptext">ひょうげんりょく - power of expression<br><a href="https://jisho.org/search/表現力" target="_blank">辞書で見る</a></span></span>によって<ruby class="n3 tooltip">再現<rt>さいげん</rt><span class="tooltiptext">さいげん - reproduction, recreation<br><a href="https://jisho.org/search/再現" target="_blank">辞書で見る</a></span></ruby>することを<ruby class="n3 tooltip">目指<rt>めざ</rt><span class="tooltiptext">めざす - to aim at<br><a href="https://jisho.org/search/目指す" target="_blank">辞書で見る</a></span></ruby>した。<span class="n4">外国人</span><span class="n4">名</span>にはカタカナを、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">11</span>
+                <ruby class="n3 tooltip">文学的<rt>ぶんがくてき</rt><span class="tooltiptext">ぶんがくてき - literary<br><a href="https://jisho.org/search/文学的" target="_blank">辞書で見る</a></span></ruby><span class="n4">深み</span>には<ruby class="n3 tooltip">漢語<rt>かんご</rt><span class="tooltiptext">かんご - Chinese-origin words<br><a href="https://jisho.org/search/漢語" target="_blank">辞書で見る</a></span></ruby>を<span class="n4 tooltip">適切<span class="tooltiptext">てきせつ - appropriate<br><a href="https://jisho.org/search/適切" target="_blank">辞書で見る</a></span></span>に<ruby class="n3 tooltip">配置<rt>はいち</rt><span class="tooltiptext">はいち - arrangement, placement<br><a href="https://jisho.org/search/配置" target="_blank">辞書で見る</a></span></ruby>し、<ruby class="n3 tooltip">文化的<rt>ぶんかてき</rt><span class="tooltiptext">ぶんかてき - cultural<br><a href="https://jisho.org/search/文化的" target="_blank">辞書で見る</a></span></ruby><ruby class="n3 tooltip">適応<rt>てきおう</rt><span class="tooltiptext">てきおう - adaptation<br><a href="https://jisho.org/search/適応" target="_blank">辞書で見る</a></span></ruby>と<ruby class="n3 tooltip">原作<rt>げんさく</rt><span class="tooltiptext">げんさく - original work<br><a href="https://jisho.org/search/原作" target="_blank">辞書で見る</a></span></ruby>の<span class="n4">意味</span><ruby class="n3 tooltip">保持<rt>ほじ</rt><span class="tooltiptext">ほじ - retention, maintenance<br><a href="https://jisho.org/search/保持" target="_blank">辞書で見る</a></span></ruby>のバランスを<span class="n4">図</span>った。
+            </div>
+            
+            <div class="grammar-box">
+                <h4>文法ポイント：〜を目指す（めざす）</h4>
+                <p>「目指す」は「aim for」「strive for」という意味です。「〜を目指す」の形で使います。</p>
+                <p>例：プロの歌手を目指している。（I'm aiming to become a professional singer.）</p>
+            </div>
+        </section>
+        
+        <section id="sonnets">
+            <div class="work-title">ソネット集</div>
+            
+            <div class="section-header">第一番</div>
+            
+            <div class="line-container">
+                <span class="line-number">26</span>
+                <span class="n4">最も</span><span class="n4">美しき</span><span class="n4">者</span>より<span class="n4">我ら</span>は<ruby class="n3 tooltip">子孫<rt>しそん</rt><span class="tooltiptext">しそん - descendants, offspring<br><a href="https://jisho.org/search/子孫" target="_blank">辞書で見る</a></span></ruby>を<span class="n4">望む</span>、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">27</span>
+                それにより<span class="n4">美</span>の<ruby class="n3 tooltip">薔薇<rt>ばら</rt><span class="tooltiptext">ばら - rose<br><a href="https://jisho.org/search/薔薇" target="_blank">辞書で見る</a></span></ruby>は<span class="n4">決して</span><ruby class="n3 tooltip">枯<rt>か</rt><span class="tooltiptext">かれる - to wither<br><a href="https://jisho.org/search/枯れる" target="_blank">辞書で見る</a></span></ruby>れぬよう、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">28</span>
+                されど<ruby class="n3 tooltip">熟<rt>じゅく</rt><span class="tooltiptext">じゅくする - to ripen, mature<br><a href="https://jisho.org/search/熟する" target="_blank">辞書で見る</a></span></ruby>したる<span class="n4">者</span>が<span class="n4">時</span>により<ruby class="n2 tooltip">逝<rt>ゆ</rt><span class="tooltiptext">ゆく - to pass away (literary)<br><a href="https://jisho.org/search/逝く" target="_blank">辞書で見る</a></span></ruby>くとも、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">29</span>
+                その<span class="n4">優しき</span><ruby class="n3 tooltip">後継<rt>こうけい</rt><span class="tooltiptext">こうけいぎ - successor, heir<br><a href="https://jisho.org/search/後継ぎ" target="_blank">辞書で見る</a></span></ruby>ぎがその<span class="n4">記憶</span>を<ruby class="n3 tooltip">担<rt>にな</rt><span class="tooltiptext">になう - to bear, carry<br><a href="https://jisho.org/search/担う" target="_blank">辞書で見る</a></span></ruby>わん。
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">30</span>
+                しかし<ruby class="n2 tooltip">汝<rt>なんじ</rt><span class="tooltiptext">なんじ - thou, you (archaic)<br><a href="https://jisho.org/search/汝" target="_blank">辞書で見る</a></span></ruby>は<span class="n4">己</span>が<span class="n4">輝く</span><ruby class="n3 tooltip">瞳<rt>ひとみ</rt><span class="tooltiptext">ひとみ - pupil of the eye<br><a href="https://jisho.org/search/瞳" target="_blank">辞書で見る</a></span></ruby>とのみ<ruby class="n3 tooltip">契<rt>ちぎ</rt><span class="tooltiptext">ちぎる - to pledge, vow<br><a href="https://jisho.org/search/契る" target="_blank">辞書で見る</a></span></ruby>り、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">31</span>
+                <span class="n4">自ら</span>の<ruby class="n3 tooltip">本質<rt>ほんしつ</rt><span class="tooltiptext">ほんしつ - essence, true nature<br><a href="https://jisho.org/search/本質" target="_blank">辞書で見る</a></span></ruby>より<span class="n4">成る</span><ruby class="n3 tooltip">燃料<rt>ねんりょう</rt><span class="tooltiptext">ねんりょう - fuel<br><a href="https://jisho.org/search/燃料" target="_blank">辞書で見る</a></span></ruby>で<span class="n4">光</span>の<ruby class="n3 tooltip">炎<rt>ほのお</rt><span class="tooltiptext">ほのお - flame<br><a href="https://jisho.org/search/炎" target="_blank">辞書で見る</a></span></ruby>を<span class="n4">養い</span>、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">32</span>
+                <ruby class="n3 tooltip">豊<rt>ゆた</rt><span class="tooltiptext">ゆたか - abundant, rich<br><a href="https://jisho.org/search/豊か" target="_blank">辞書で見る</a></span></ruby>かなる<span class="n4">処</span>に<ruby class="n2 tooltip">飢饉<rt>ききん</rt><span class="tooltiptext">ききん - famine<br><a href="https://jisho.org/search/飢饉" target="_blank">辞書で見る</a></span></ruby>を<span class="n4">作り出し</span>、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">33</span>
+                <span class="n4">己</span>が<span class="n4">敵</span>となり、<span class="n4">甘き</span><span class="n4">己</span>に<span class="n4">余り</span>に<ruby class="n3 tooltip">残酷<rt>ざんこく</rt><span class="tooltiptext">ざんこく - cruel<br><a href="https://jisho.org/search/残酷" target="_blank">辞書で見る</a></span></ruby>なり。
+            </div>
+            
+            <div class="grammar-box">
+                <h4>文法ポイント：文語体の「なり」</h4>
+                <p>古典日本語で「なり」は現代語の「である」「だ」に相当します。断定を表します。</p>
+                <p>例：美しきものなり ＝ 美しいものである</p>
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">34</span>
+                <ruby class="n2 tooltip">汝<rt>なんじ</rt><span class="tooltiptext">なんじ - thou, you (archaic)<br><a href="https://jisho.org/search/汝" target="_blank">辞書で見る</a></span></ruby>は<span class="n4">今や</span><span class="n4">世界</span>の<span class="n4">新鮮</span>なる<ruby class="n3 tooltip">装飾品<rt>そうしょくひん</rt><span class="tooltiptext">そうしょくひん - ornament, decoration<br><a href="https://jisho.org/search/装飾品" target="_blank">辞書で見る</a></span></ruby>、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">35</span>
+                そして<ruby class="n3 tooltip">華<rt>はな</rt><span class="tooltiptext">はなやか - gorgeous, brilliant<br><a href="https://jisho.org/search/華やか" target="_blank">辞書で見る</a></span></ruby>やかなる<span class="n4">春</span>への<span class="n4">唯一</span>の<ruby class="n3 tooltip">使者<rt>ししゃ</rt><span class="tooltiptext">ししゃ - messenger, envoy<br><a href="https://jisho.org/search/使者" target="_blank">辞書で見る</a></span></ruby>なり、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">36</span>
+                <span class="n4">己</span>の<ruby class="n3 tooltip">蕾<rt>つぼみ</rt><span class="tooltiptext">つぼみ - bud<br><a href="https://jisho.org/search/蕾" target="_blank">辞書で見る</a></span></ruby>の<span class="n4">内</span>に<span class="n4">満足</span>を<ruby class="n3 tooltip">葬<rt>ほうむ</rt><span class="tooltiptext">ほうむる - to bury<br><a href="https://jisho.org/search/葬る" target="_blank">辞書で見る</a></span></ruby>り、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">37</span>
+                <span class="n4">優しき</span><ruby class="n2 tooltip">吝嗇家<rt>りんしょくか</rt><span class="tooltiptext">りんしょくか - miser, stingy person<br><a href="https://jisho.org/search/吝嗇家" target="_blank">辞書で見る</a></span></ruby>よ、<span class="n4">出し惜しみ</span>て<ruby class="n3 tooltip">浪費<rt>ろうひ</rt><span class="tooltiptext">ろうひ - waste, squander<br><a href="https://jisho.org/search/浪費" target="_blank">辞書で見る</a></span></ruby>す。
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">38</span>
+                <span class="n4">世</span>を<ruby class="n3 tooltip">憐<rt>あわ</rt><span class="tooltiptext">あわれむ - to pity, have mercy<br><a href="https://jisho.org/search/憐れむ" target="_blank">辞書で見る</a></span></ruby>れめ、さもなくば<ruby class="n3 tooltip">貪欲<rt>どんよく</rt><span class="tooltiptext">どんよく - greed, avarice<br><a href="https://jisho.org/search/貪欲" target="_blank">辞書で見る</a></span></ruby><span class="n4">者</span>となれ、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">39</span>
+                <span class="n4">墓</span>と<ruby class="n2 tooltip">汝<rt>なんじ</rt><span class="tooltiptext">なんじ - thou, you (archaic)<br><a href="https://jisho.org/search/汝" target="_blank">辞書で見る</a></span></ruby>により<span class="n4">世</span>の<span class="n4">分</span>を<span class="n4">食い尽くす</span>べし。
+            </div>
+            
+            <div class="grammar-box">
+                <h4>文法ポイント：命令形「〜め」</h4>
+                <p>古典日本語の命令形。「憐れめ」は現代語の「憐れみなさい」に相当します。</p>
+                <p>「べし」は推量・当然・命令などを表す助動詞です。</p>
+            </div>
+        </section>
+        
+        <section id="sonnet2">
+            <div class="section-header">第二番</div>
+            
+            <div class="line-container">
+                <span class="line-number">43</span>
+                <span class="n4">四十</span>の<span class="n4">冬</span>が<ruby class="n2 tooltip">汝<rt>なんじ</rt><span class="tooltiptext">なんじ - thou, you (archaic)<br><a href="https://jisho.org/search/汝" target="_blank">辞書で見る</a></span></ruby>の<ruby class="n3 tooltip">額<rt>ひたい</rt><span class="tooltiptext">ひたい - forehead<br><a href="https://jisho.org/search/額" target="_blank">辞書で見る</a></span></ruby>を<ruby class="n2 tooltip">包囲<rt>ほうい</rt><span class="tooltiptext">ほうい - siege, encirclement<br><a href="https://jisho.org/search/包囲" target="_blank">辞書で見る</a></span></ruby>せし<span class="n4">時</span>、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">44</span>
+                <ruby class="n2 tooltip">汝<rt>なんじ</rt><span class="tooltiptext">なんじ - thou, you (archaic)<br><a href="https://jisho.org/search/汝" target="_blank">辞書で見る</a></span></ruby>の<span class="n4">美</span>の<span class="n4">野</span>に<span class="n4">深き</span><ruby class="n2 tooltip">塹壕<rt>ざんごう</rt><span class="tooltiptext">ざんごう - trench<br><a href="https://jisho.org/search/塹壕" target="_blank">辞書で見る</a></span></ruby>を<span class="n4">掘ら</span>ん<span class="n4">時</span>、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">45</span>
+                <span class="n4">今</span>かくも<span class="n4">見つめ</span>られし<ruby class="n2 tooltip">汝<rt>なんじ</rt><span class="tooltiptext">なんじ - thou, you (archaic)<br><a href="https://jisho.org/search/汝" target="_blank">辞書で見る</a></span></ruby>の<span class="n4">若さ</span>の<ruby class="n3 tooltip">誇<rt>ほこ</rt><span class="tooltiptext">ほこらしい - proud<br><a href="https://jisho.org/search/誇らしい" target="_blank">辞書で見る</a></span></ruby>らしき<ruby class="n3 tooltip">衣<rt>ころも</rt><span class="tooltiptext">ころも - garment, clothing<br><a href="https://jisho.org/search/衣" target="_blank">辞書で見る</a></span></ruby>は、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">46</span>
+                <span class="n4">価値</span>なき<ruby class="n2 tooltip">襤褸<rt>ぼろ</rt><span class="tooltiptext">ぼろ - rags, tattered clothes<br><a href="https://jisho.org/search/襤褸" target="_blank">辞書で見る</a></span></ruby>として<span class="n4">扱わ</span>れん。
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">47</span>
+                その<span class="n4">時</span><span class="n4">問わ</span>れて、<ruby class="n2 tooltip">汝<rt>なんじ</rt><span class="tooltiptext">なんじ - thou, you (archaic)<br><a href="https://jisho.org/search/汝" target="_blank">辞書で見る</a></span></ruby>の<span class="n4">美</span>は<span class="n4">何処</span>にありやと、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">48</span>
+                <ruby class="n2 tooltip">汝<rt>なんじ</rt><span class="tooltiptext">なんじ - thou, you (archaic)<br><a href="https://jisho.org/search/汝" target="_blank">辞書で見る</a></span></ruby>の<span class="n4">力強き</span><span class="n4">日々</span>の<span class="n4">宝</span>は<span class="n4">何処</span>にと、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">49</span>
+                <span class="n4">己</span>の<span class="n4">深く</span><ruby class="n3 tooltip">落ち窪<rt>おちくぼ</rt><span class="tooltiptext">おちくぼむ - to be sunken, hollow<br><a href="https://jisho.org/search/落ち窪む" target="_blank">辞書で見る</a></span></ruby>みし<ruby class="n3 tooltip">瞳<rt>ひとみ</rt><span class="tooltiptext">ひとみ - pupil of the eye<br><a href="https://jisho.org/search/瞳" target="_blank">辞書で見る</a></span></ruby>の<span class="n4">内</span>にと<span class="n4">言う</span>は、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">50</span>
+                <span class="n4">全て</span>を<span class="n4">食い尽くす</span><span class="n4">恥</span>と<ruby class="n3 tooltip">無益<rt>むえき</rt><span class="tooltiptext">むえき - useless, futile<br><a href="https://jisho.org/search/無益" target="_blank">辞書で見る</a></span></ruby>なる<ruby class="n3 tooltip">賛美<rt>さんび</rt><span class="tooltiptext">さんび - praise, admiration<br><a href="https://jisho.org/search/賛美" target="_blank">辞書で見る</a></span></ruby>なり。
+            </div>
+            
+            <div class="grammar-box">
+                <h4>文法ポイント：「〜ん」（推量の助動詞）</h4>
+                <p>「掘らん」の「ん」は推量・意志を表す助動詞「む」の変化形です。</p>
+                <p>「〜だろう」「〜しよう」という意味になります。</p>
+            </div>
+        </section>
+        
+        <section id="coriolanus">
+            <div class="work-title">コリオレイナス</div>
+            
+            <div class="section-header">第一幕 第一場</div>
+            
+            <div class="line-container">
+                <span class="line-number">988</span>
+                ローマ。<span class="n4">通り</span>
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">990</span>
+                <ruby class="n3 tooltip">多数<rt>たすう</rt><span class="tooltiptext">たすう - many, a large number<br><a href="https://jisho.org/search/多数" target="_blank">辞書で見る</a></span></ruby>の<span class="n4">市民</span>たち、<ruby class="n3 tooltip">棍棒<rt>こんぼう</rt><span class="tooltiptext">こんぼう - club, cudgel<br><a href="https://jisho.org/search/棍棒" target="_blank">辞書で見る</a></span></ruby>、<ruby class="n3 tooltip">杖<rt>つえ</rt><span class="tooltiptext">つえ - staff, cane<br><a href="https://jisho.org/search/杖" target="_blank">辞書で見る</a></span></ruby>、その<span class="n4">他</span>の<span class="n4">武器</span>を<span class="n4">持って</span><span class="n4">登場</span>
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">992</span>
+                <span class="n4">第一</span><span class="n4">市民</span>　<span class="n4">皆</span>の<span class="n4">者</span>、<span class="n4">話</span>を<span class="n4">聞け</span>！<span class="n4">最初</span>に<span class="n4">話</span>そう、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">993</span>
+                <span class="n4">我ら</span>は<span class="n4">死ぬ</span>ことを<ruby class="n3 tooltip">決意<rt>けつい</rt><span class="tooltiptext">けつい - determination, resolution<br><a href="https://jisho.org/search/決意" target="_blank">辞書で見る</a></span></ruby>した！
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">995</span>
+                <span class="n4">第二</span><span class="n4">市民</span>　<span class="n4">死ぬ</span>ことを<ruby class="n3 tooltip">決意<rt>けつい</rt><span class="tooltiptext">けつい - determination, resolution<br><a href="https://jisho.org/search/決意" target="_blank">辞書で見る</a></span></ruby>した！
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">997</span>
+                <span class="n4">第一</span><span class="n4">市民</span>　<span class="n4">我ら</span>は<ruby class="n3 tooltip">貧民<rt>ひんみん</rt><span class="tooltiptext">ひんみん - poor people, the poor<br><a href="https://jisho.org/search/貧民" target="_blank">辞書で見る</a></span></ruby>で、<ruby class="n2 tooltip">貴族<rt>きぞく</rt><span class="tooltiptext">きぞく - nobility, aristocrat<br><a href="https://jisho.org/search/貴族" target="_blank">辞書で見る</a></span></ruby>どもは<span class="n4">金持ち</span>じゃ！
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">998</span>
+                <ruby class="n2 tooltip">元老院<rt>げんろういん</rt><span class="tooltiptext">げんろういん - senate<br><a href="https://jisho.org/search/元老院" target="_blank">辞書で見る</a></span></ruby>の<ruby class="n2 tooltip">奴<rt>やつ</rt><span class="tooltiptext">やつら - those guys (rough)<br><a href="https://jisho.org/search/奴ら" target="_blank">辞書で見る</a></span></ruby>らは<span class="n4">我ら</span>を<span class="n4">殺す</span>つもりじゃ！<span class="n4">死ぬ</span>より<span class="n4">戦う</span><span class="n4">方</span>が<span class="n4">まし</span>じゃ！
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1000</span>
+                <span class="n4">我ら</span>の<ruby class="n3 tooltip">労働<rt>ろうどう</rt><span class="tooltiptext">ろうどう - labor, work<br><a href="https://jisho.org/search/労働" target="_blank">辞書で見る</a></span></ruby>にて<ruby class="n3 tooltip">肥<rt>こ</rt><span class="tooltiptext">こやす - to fatten, enrich<br><a href="https://jisho.org/search/肥やす" target="_blank">辞書で見る</a></span></ruby>やされた<ruby class="n2 tooltip">奴<rt>やつ</rt><span class="tooltiptext">やつら - those guys (rough)<br><a href="https://jisho.org/search/奴ら" target="_blank">辞書で見る</a></span></ruby>らよ！<ruby class="n2 tooltip">奴<rt>やつ</rt><span class="tooltiptext">やつら - those guys (rough)<br><a href="https://jisho.org/search/奴ら" target="_blank">辞書で見る</a></span></ruby>らが<span class="n4">人間</span>の<span class="n4">食べ物</span>を
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1001</span>
+                <ruby class="n3 tooltip">倉庫<rt>そうこ</rt><span class="tooltiptext">そうこ - warehouse, storehouse<br><a href="https://jisho.org/search/倉庫" target="_blank">辞書で見る</a></span></ruby>にため<span class="n4">込んで</span>おる<span class="n4">間</span>に、<span class="n4">我ら</span>が<span class="n4">食う</span>は<ruby class="n2 tooltip">籾殻<rt>もみがら</rt><span class="tooltiptext">もみがら - rice husks<br><a href="https://jisho.org/search/籾殻" target="_blank">辞書で見る</a></span></ruby>よ！
+            </div>
+            
+            <div class="grammar-box">
+                <h4>文法ポイント：関西弁的な「じゃ」</h4>
+                <p>この戯曲では「じゃ」が多く使われています。これは断定の「だ」の方言的な形です。</p>
+                <p>「〜じゃ」＝「〜だ」「〜である」</p>
+                <p>例：金持ちじゃ ＝ 金持ちだ</p>
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1003</span>
+                <span class="n4">第三</span><span class="n4">市民</span>　<ruby class="n3 tooltip">穀物<rt>こくもつ</rt><span class="tooltiptext">こくもつ - grain, cereal<br><a href="https://jisho.org/search/穀物" target="_blank">辞書で見る</a></span></ruby><span class="n4">法</span>を<span class="n4">設けた</span>のは<ruby class="n2 tooltip">奴<rt>やつ</rt><span class="tooltiptext">やつら - those guys (rough)<br><a href="https://jisho.org/search/奴ら" target="_blank">辞書で見る</a></span></ruby>らじゃ、そうして<ruby class="n3 tooltip">貧乏<rt>びんぼう</rt><span class="tooltiptext">びんぼう - poor, poverty<br><a href="https://jisho.org/search/貧乏" target="_blank">辞書で見る</a></span></ruby><span class="n4">人</span>どもの
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1004</span>
+                <span class="n4">血</span>を<span class="n4">吸う</span>のじゃ！<ruby class="n2 tooltip">奴<rt>やつ</rt><span class="tooltiptext">やつら - those guys (rough)<br><a href="https://jisho.org/search/奴ら" target="_blank">辞書で見る</a></span></ruby>らを<span class="n4">殺せ</span>！
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1006</span>
+                <span class="n4">第一</span><span class="n4">市民</span>　やつらの<span class="n4">中</span>でも<span class="n4">一番</span><ruby class="n3 tooltip">邪悪<rt>じゃあく</rt><span class="tooltiptext">じゃあく - evil, wicked<br><a href="https://jisho.org/search/邪悪" target="_blank">辞書で見る</a></span></ruby>なのはガイウス・マーシアスよ！
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1008</span>
+                <span class="n4">第二</span><span class="n4">市民</span>　<ruby class="n2 tooltip">奴<rt>やつ</rt><span class="tooltiptext">やつ - that guy (rough)<br><a href="https://jisho.org/search/奴" target="_blank">辞書で見る</a></span></ruby>は<ruby class="n3 tooltip">狗<rt>いぬ</rt><span class="tooltiptext">いぬ - dog (derogatory)<br><a href="https://jisho.org/search/狗" target="_blank">辞書で見る</a></span></ruby>のように<ruby class="n3 tooltip">誇<rt>ほこ</rt><span class="tooltiptext">ほこり - pride<br><a href="https://jisho.org/search/誇り" target="_blank">辞書で見る</a></span></ruby>り<span class="n4">高い</span><span class="n4">男</span>じゃ、それに<ruby class="n3 tooltip">平民<rt>へいみん</rt><span class="tooltiptext">へいみん - commoner, plebeian<br><a href="https://jisho.org/search/平民" target="_blank">辞書で見る</a></span></ruby>の<span class="n4">敵</span>じゃ！
+            </div>
+        </section>
+        
+        <section id="hamlet">
+            <div class="work-title">ハムレット　デンマーク王子の悲劇</div>
+            
+            <div class="section-header">第一幕 第二場</div>
+            
+            <div class="line-container">
+                <span class="line-number">1263</span>
+                <span class="n4">第一</span><span class="n4">幕</span>　<span class="n4">第二</span><span class="n4">場</span>
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1264</span>
+                エルシノア。<span class="n4">国王</span>の<ruby class="n3 tooltip">宮殿<rt>きゅうでん</rt><span class="tooltiptext">きゅうでん - palace<br><a href="https://jisho.org/search/宮殿" target="_blank">辞書で見る</a></span></ruby><span class="n4">内</span>の<ruby class="n3 tooltip">広間<rt>ひろま</rt><span class="tooltiptext">ひろま - hall, large room<br><a href="https://jisho.org/search/広間" target="_blank">辞書で見る</a></span></ruby>
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1266</span>
+                <span class="n4">国王</span>クローディアス、<ruby class="n3 tooltip">王妃<rt>おうひ</rt><span class="tooltiptext">おうひ - queen<br><a href="https://jisho.org/search/王妃" target="_blank">辞書で見る</a></span></ruby>ガートルード、ハムレット、ポローニアス、レイアーティーズ、ヴォルティマンド、コーネリアス、<ruby class="n3 tooltip">廷臣<rt>ていしん</rt><span class="tooltiptext">ていしん - courtier<br><a href="https://jisho.org/search/廷臣" target="_blank">辞書で見る</a></span></ruby>たち<span class="n4">登場</span>
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1268</span>
+                クローディアス　<span class="n4">我が</span><span class="n4">愛しき</span><span class="n4">兄</span>にして<span class="n4">前</span><span class="n4">国王</span>の<span class="n4">死</span>について、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1269</span>
+                それを<ruby class="n3 tooltip">嘆<rt>なげ</rt><span class="tooltiptext">なげく - to lament, grieve<br><a href="https://jisho.org/search/嘆く" target="_blank">辞書で見る</a></span></ruby>き<span class="n4">悲しむ</span>は<span class="n4">当然</span>なれど、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1270</span>
+                <span class="n4">我ら</span>が<span class="n4">悲しみ</span>に<span class="n4">沈み</span>て、<span class="n4">我ら</span><span class="n4">自身</span>を<span class="n4">忘れる</span>は
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1271</span>
+                <span class="n4">適切</span>ならず。<ruby class="n3 tooltip">従<rt>したが</rt><span class="tooltiptext">したがって - therefore<br><a href="https://jisho.org/search/従って" target="_blank">辞書で見る</a></span></ruby>って<span class="n4">我が</span><span class="n4">兄</span>ハムレットを、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1272</span>
+                <span class="n4">永遠</span>の<span class="n4">記憶</span>にとどめつつ、かつ
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1273</span>
+                <span class="n4">死す</span>べき<ruby class="n3 tooltip">定<rt>さだ</rt><span class="tooltiptext">さだめ - fate, destiny<br><a href="https://jisho.org/search/定め" target="_blank">辞書で見る</a></span></ruby>めの<span class="n4">我ら</span>は<span class="n4">自然</span>の<ruby class="n3 tooltip">掟<rt>おきて</rt><span class="tooltiptext">おきて - law, rule<br><a href="https://jisho.org/search/掟" target="_blank">辞書で見る</a></span></ruby>に<ruby class="n3 tooltip">従<rt>したが</rt><span class="tooltiptext">したがう - to follow, obey<br><a href="https://jisho.org/search/従う" target="_blank">辞書で見る</a></span></ruby>い、
+            </div>
+            
+            <div class="grammar-box">
+                <h4>文法ポイント：「〜べき」</h4>
+                <p>「べき」は当然・義務・推量を表す助動詞「べし」の連体形です。</p>
+                <p>「死すべき定め」＝「死ぬ運命」「必ず死ぬ定め」</p>
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1274</span>
+                <ruby class="n3 tooltip">智慧<rt>ちえ</rt><span class="tooltiptext">ちえ - wisdom<br><a href="https://jisho.org/search/智慧" target="_blank">辞書で見る</a></span></ruby>と<span class="n4">共に</span><span class="n4">悲しみ</span>、<span class="n4">記憶</span>と<span class="n4">共に</span><ruby class="n3 tooltip">忘却<rt>ぼうきゃく</rt><span class="tooltiptext">ぼうきゃく - oblivion, forgetfulness<br><a href="https://jisho.org/search/忘却" target="_blank">辞書で見る</a></span></ruby>し、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1275</span>
+                その<span class="n4">死</span>を<ruby class="n3 tooltip">悼<rt>いた</rt><span class="tooltiptext">いたむ - to mourn<br><a href="https://jisho.org/search/悼む" target="_blank">辞書で見る</a></span></ruby>みつつ、<span class="n4">我ら</span>の<span class="n4">生</span>を<ruby class="n3 tooltip">考慮<rt>こうりょ</rt><span class="tooltiptext">こうりょ - consideration<br><a href="https://jisho.org/search/考慮" target="_blank">辞書で見る</a></span></ruby>し、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1276</span>
+                これまで<ruby class="n3 tooltip">皇后<rt>こうごう</rt><span class="tooltiptext">こうごう - empress<br><a href="https://jisho.org/search/皇后" target="_blank">辞書で見る</a></span></ruby>なりし、<span class="n4">今</span>は<ruby class="n3 tooltip">皇妃<rt>こうひ</rt><span class="tooltiptext">こうひ - imperial princess<br><a href="https://jisho.org/search/皇妃" target="_blank">辞書で見る</a></span></ruby>となり、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1277</span>
+                この<ruby class="n3 tooltip">好戦<rt>こうせん</rt><span class="tooltiptext">こうせん - belligerent<br><a href="https://jisho.org/search/好戦" target="_blank">辞書で見る</a></span></ruby>の<span class="n4">国</span>の<ruby class="n3 tooltip">共同<rt>きょうどう</rt><span class="tooltiptext">きょうどう - cooperation, joint<br><a href="https://jisho.org/search/共同" target="_blank">辞書で見る</a></span></ruby><ruby class="n3 tooltip">統治者<rt>とうちしゃ</rt><span class="tooltiptext">とうちしゃ - ruler<br><a href="https://jisho.org/search/統治者" target="_blank">辞書で見る</a></span></ruby>なる<span class="n4">者</span>を<span class="n4">妻</span>とせり。
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1308</span>
+                ハムレット　（<ruby class="n3 tooltip">傍白<rt>ぼうはく</rt><span class="tooltiptext">ぼうはく - aside (theatrical)<br><a href="https://jisho.org/search/傍白" target="_blank">辞書で見る</a></span></ruby>）<ruby class="n3 tooltip">親族<rt>しんぞく</rt><span class="tooltiptext">しんぞく - relative, kin<br><a href="https://jisho.org/search/親族" target="_blank">辞書で見る</a></span></ruby><span class="n4">以上</span>、しかし<ruby class="n3 tooltip">親族<rt>しんぞく</rt><span class="tooltiptext">しんぞく - relative, kin<br><a href="https://jisho.org/search/親族" target="_blank">辞書で見る</a></span></ruby><ruby class="n3 tooltip">未満<rt>みまん</rt><span class="tooltiptext">みまん - less than<br><a href="https://jisho.org/search/未満" target="_blank">辞書で見る</a></span></ruby>。
+            </div>
+            
+            <div class="grammar-box">
+                <h4>文法ポイント：傍白（ぼうはく）</h4>
+                <p>演劇で、登場人物が観客にだけ聞こえるように話す独白。他の登場人物には聞こえない設定です。</p>
+                <p>英語の "aside" に相当します。</p>
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1310</span>
+                クローディアス　<span class="n4">何ゆえ</span><span class="n4">雲</span>が<span class="n4">未だ</span><ruby class="n2 tooltip">汝<rt>なんじ</rt><span class="tooltiptext">なんじ - thou, you (archaic)<br><a href="https://jisho.org/search/汝" target="_blank">辞書で見る</a></span></ruby>の<span class="n4">上</span>にかかっているのか？
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1312</span>
+                ハムレット　いえ、<ruby class="n3 tooltip">陛下<rt>へいか</rt><span class="tooltiptext">へいか - Your Majesty<br><a href="https://jisho.org/search/陛下" target="_blank">辞書で見る</a></span></ruby>、<span class="n4">私</span>は<span class="n4">余り</span>に<ruby class="n3 tooltip">日向<rt>ひなた</rt><span class="tooltiptext">ひなた - sunny place<br><a href="https://jisho.org/search/日向" target="_blank">辞書で見る</a></span></ruby>にいすぎます。
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1314</span>
+                <ruby class="n3 tooltip">王妃<rt>おうひ</rt><span class="tooltiptext">おうひ - queen<br><a href="https://jisho.org/search/王妃" target="_blank">辞書で見る</a></span></ruby>　<span class="n4">愛しき</span>ハムレット、その<span class="n4">暗い</span><ruby class="n3 tooltip">衣<rt>ころも</rt><span class="tooltiptext">ころも - garment, clothing<br><a href="https://jisho.org/search/衣" target="_blank">辞書で見る</a></span></ruby>を<span class="n4">脱ぎ捨て</span>、
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1315</span>
+                デンマーク<span class="n4">王</span>を<span class="n4">友</span>として<span class="n4">見なせ</span>。
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1316</span>
+                <ruby class="n2 tooltip">汝<rt>なんじ</rt><span class="tooltiptext">なんじ - thou, you (archaic)<br><a href="https://jisho.org/search/汝" target="_blank">辞書で見る</a></span></ruby>の<span class="n4">垂れた</span><ruby class="n3 tooltip">瞼<rt>まぶた</rt><span class="tooltiptext">まぶた - eyelid<br><a href="https://jisho.org/search/瞼" target="_blank">辞書で見る</a></span></ruby>をもて
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1317</span>
+                <span class="n4">永遠</span>に<ruby class="n3 tooltip">塵<rt>ちり</rt><span class="tooltiptext">ちり - dust<br><a href="https://jisho.org/search/塵" target="_blank">辞書で見る</a></span></ruby>の<span class="n4">中</span>に<span class="n4">父</span>を<span class="n4">探す</span>な。
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1318</span>
+                <ruby class="n2 tooltip">汝<rt>なんじ</rt><span class="tooltiptext">なんじ - thou, you (archaic)<br><a href="https://jisho.org/search/汝" target="_blank">辞書で見る</a></span></ruby>が<span class="n4">知る</span><ruby class="n3 tooltip">如<rt>ごと</rt><span class="tooltiptext">ごとく - like, as<br><a href="https://jisho.org/search/如く" target="_blank">辞書で見る</a></span></ruby>く、<ruby class="n3 tooltip">万物<rt>ばんぶつ</rt><span class="tooltiptext">ばんぶつ - all things<br><a href="https://jisho.org/search/万物" target="_blank">辞書で見る</a></span></ruby>の<ruby class="n3 tooltip">運命<rt>うんめい</rt><span class="tooltiptext">うんめい - fate, destiny<br><a href="https://jisho.org/search/運命" target="_blank">辞書で見る</a></span></ruby>は
+            </div>
+            
+            <div class="line-container">
+                <span class="line-number">1319</span>
+                <span class="n4">生</span>より<span class="n4">死</span>に<span class="n4">向かう</span>ものなり。
+            </div>
+        </section>
+        
+        <section id="grammar-notes">
+            <div class="section-header">文法解説まとめ</div>
+            
+            <div class="grammar-box">
+                <h4>1. 古典的な語尾</h4>
+                <ul>
+                    <li><strong>なり</strong> - 断定の助動詞。現代語の「である」「だ」</li>
+                    <li><strong>べし</strong> - 推量・当然・命令などを表す</li>
+                    <li><strong>ん（む）</strong> - 推量・意志を表す</li>
+                    <li><strong>せり</strong> - 完了・過去を表す</li>
+                </ul>
+            </div>
+            
+            <div class="grammar-box">
+                <h4>2. 敬語と古語</h4>
+                <ul>
+                    <li><strong>汝（なんじ）</strong> - 二人称代名詞（古語）</li>
+                    <li><strong>我（われ）</strong> - 一人称代名詞</li>
+                    <li><strong>陛下（へいか）</strong> - 国王への敬称</li>
+                    <li><strong>〜たまう</strong> - 尊敬の助動詞</li>
+                </ul>
+            </div>
+            
+            <div class="grammar-box">
+                <h4>3. 文語的表現</h4>
+                <ul>
+                    <li><strong>〜にて</strong> - 現代語の「〜で」</li>
+                    <li><strong>〜より</strong> - 「〜から」（起点・比較）</li>
+                    <li><strong>〜ども</strong> - 複数・軽蔑を表す接尾語</li>
+                    <li><strong>如く（ごとく）</strong> - 「〜のように」</li>
+                </ul>
+            </div>
+            
+            <div class="grammar-box">
+                <h4>4. N4レベルで知っておくべき漢字・語彙</h4>
+                <ul>
+                    <li>文学作品では通常より難しい語彙が使われます</li>
+                    <li>文脈から意味を推測する練習をしましょう</li>
+                    <li>古典的な表現も現代日本語の理解に役立ちます</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    
+    <div class="level-indicator">
+        JLPT N4 レベル
+    </div>
+    
+    <script>
+        // Reading progress bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('reading-progress').style.width = scrolled + '%';
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Highlight current line on hover
+        document.querySelectorAll('.line-container').forEach(line => {
+            line.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#f8f9fa';
+            });
+            line.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '';
+            });
+        });
+    </script>
+</body>
+</html>

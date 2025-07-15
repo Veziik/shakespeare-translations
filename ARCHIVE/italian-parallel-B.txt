@@ -1,0 +1,6 @@
+SHAKESPEARE ITALIAN TRANSLATION - PARALLEL B
+Chunks 05-08 Translation
+Translator: Italian_Parallel_B
+Date: 2025-07-12
+
+================================================================================

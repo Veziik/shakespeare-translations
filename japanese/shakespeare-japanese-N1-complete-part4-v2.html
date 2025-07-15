@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア全集 日本語版 第四部 - 権力と植民地主義：テンペストとジュリアス・シーザー JLPT N1学術注釈版</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+        
+        :root {
+            --primary-color: #1a1a2e;
+            --accent-color: #16213e;
+            --gold-accent: #e94560;
+            --annotation-bg: #f8f6f0;
+            --critical-bg: #f0f5fa;
+            --postcolonial-bg: #faf5f0;
+            --political-bg: #f5faf0;
+            --power-bg: #f0f0fa;
+            --republican-bg: #faf0f5;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --hover-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Serif JP', 'Shippori Mincho', serif;
+            line-height: 1.8;
+            color: var(--primary-color);
+            background: #fefefe;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(233,69,96,0.1) 0%, transparent 70%);
+            animation: pulse 20s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.3; }
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 0.1em;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .subtitle {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            font-weight: 400;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .scholarly-info {
+            background: white;
+            padding: 40px;
+            margin: 20px 0 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--gold-accent);
+        }
+        
+        .scholarly-info h2 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .scholarly-info p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        /* Line Entry Styling */
+        .line-entry {
+            background: white;
+            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .line-entry:hover {
+            box-shadow: var(--hover-shadow);
+            transform: translateY(-2px);
+        }
+        
+        .line-number {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        .original-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 3px solid var(--gold-accent);
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        .japanese-translation {
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        /* Critical Analysis Sections */
+        .critical-analysis {
+            margin-top: 30px;
+        }
+        
+        .analysis-section {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .postcolonial-analysis {
+            background: var(--postcolonial-bg);
+            border-left: 3px solid #d4a574;
+        }
+        
+        .political-analysis {
+            background: var(--political-bg);
+            border-left: 3px solid #74d4a5;
+        }
+        
+        .power-analysis {
+            background: var(--power-bg);
+            border-left: 3px solid #7474d4;
+        }
+        
+        .republican-analysis {
+            background: var(--republican-bg);
+            border-left: 3px solid #d474a5;
+        }
+        
+        .analysis-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+        
+        .analysis-content {
+            line-height: 1.8;
+        }
+        
+        .analysis-content p {
+            margin-bottom: 12px;
+        }
+        
+        /* Linguistic Notes */
+        .linguistic-notes {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+        
+        .linguistic-notes h4 {
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            color: var(--accent-color);
+        }
+        
+        .linguistic-notes ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .linguistic-notes li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .linguistic-notes li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--gold-accent);
+        }
+        
+        /* Ruby text for furigana */
+        ruby {
+            font-size: 1.1em;
+        }
+        
+        rt {
+            font-size: 0.5em;
+            color: #666;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 80px;
+            border-top: 2px solid #eee;
+            color: #666;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .line-entry {
+                padding: 20px;
+            }
+            
+            .analysis-section {
+                padding: 15px;
+            }
+        }
+        
+        /* Special emphasis for key terms */
+        .key-term {
+            font-weight: 600;
+            color: var(--gold-accent);
+            border-bottom: 1px dotted var(--gold-accent);
+            cursor: help;
+        }
+        
+        /* Quotation styling */
+        .quote-reference {
+            font-style: italic;
+            margin: 15px 0;
+            padding: 15px 20px;
+            background: #f9f9f9;
+            border-left: 3px solid var(--accent-color);
+            font-size: 0.95em;
+        }
+        
+        /* Series completion notice */
+        .series-completion {
+            background: linear-gradient(135deg, #e94560 0%, #16213e 100%);
+            color: white;
+            padding: 60px 40px;
+            margin: 60px 0;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .series-completion::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+        
+        .series-completion h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .series-completion p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>シェイクスピア全集 日本語版 第四部</h1>
+            <p class="subtitle">権力と植民地主義：テンペストとジュリアス・シーザー</p>
+            <p class="subtitle">JLPT N1 学術注釈版 - ポストコロニアル批評と政治理論を通じて</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="scholarly-info">
+            <h2>本巻の学術的概要</h2>
+            <p>本巻は、シェイクスピアの政治的作品『テンペスト』と『ジュリアス・シーザー』の重要場面を収録し、ポストコロニアル理論と政治哲学を通じて分析を行う。エドワード・サイード、ホミ・バーバ、ガヤトリ・スピヴァクのポストコロニアル批評、ハンナ・アーレント、カール・シュミットの政治理論を援用し、権力、植民地主義、共和主義の問題を探究する。</p>
+            <p>収録範囲：第4501行～第5682行</p>
+            <p>批評的アプローチ：ポストコロニアル批評、政治理論、新歴史主義、文化唯物論</p>
+            <p>言語的特徴：N1レベルの学術語彙、最小限の振り仮名使用、政治哲学・ポストコロニアル理論の専門用語</p>
+        </div>
+
+        <!-- Line 4501-4510: The Tempest - Caliban's Curse -->
+        <div class="line-entry">
+            <span class="line-number">行 4501-4510</span>
+            <div class="original-text">
+                "You taught me language; and my profit on't<br>
+                Is, I know how to curse. The red plague rid you<br>
+                For learning me your language!"
+            </div>
+            <div class="japanese-translation">
+                お前は私に言語を教えた。そしてその利益は<br>
+                呪い方を知ったことだ。赤い疫病がお前を滅ぼしますように<br>
+                お前の言語を私に学ばせたことに対して！
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section postcolonial-analysis">
+                    <h3>言語的植民地化の逆説</h3>
+                    <div class="analysis-content">
+                        <p>カリバンの呪詛は、ファノンの『<span class="key-term">黒い皮膚・白い仮面</span>』で論じられた言語的疎外の劇的表現である。植民者の言語の習得は、被植民者に抵抗の道具を与えると同時に、本質的な文化的暴力を構成する。</p>
+                        <p>「呪い方を知った」という皮肉は、<span class="key-term">ミミクリー</span>の破壊的潜在力を示す。バーバの理論によれば、模倣は常に「ほとんど同じだが完全には同じでない」という不安定性を内包し、植民地権力を内部から脅かす。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section power-analysis">
+                    <h3>教育と支配の弁証法</h3>
+                    <div class="analysis-content">
+                        <p>グラムシの<span class="key-term">文化的ヘゲモニー</span>概念から見れば、言語教育は支配の最も効果的な手段である。しかし、カリバンの反応は、ヘゲモニーの不完全性と抵抗の可能性を示す。</p>
+                        <p>「赤い疫病」への言及は、植民地化の過程で実際に起きた疫病による先住民虐殺の歴史的記憶を喚起し、言語的暴力と物理的暴力の連続性を暴露する。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「profit on't」：利益の皮肉な使用。資本主義的語彙の転覆</li>
+                    <li>「red plague」：梅毒への言及。植民地交流の病理学的側面</li>
+                    <li>「rid」：古語的用法。呪詛の言語の時代錯誤性</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4511-4520: Julius Caesar - Brutus's Republican Idealism -->
+        <div class="line-entry">
+            <span class="line-number">行 4511-4520</span>
+            <div class="original-text">
+                "Not that I loved Caesar less, but that I loved<br>
+                Rome more. Had you rather Caesar were living and<br>
+                die all slaves, than that Caesar were dead, to live<br>
+                all free men?"
+            </div>
+            <div class="japanese-translation">
+                私がカエサルを愛さなかったのではなく、<br>
+                ローマをより愛したのだ。君たちはカエサルが生きて<br>
+                全員が奴隷として死ぬことを望むか、それともカエサルが死んで、<br>
+                全員が自由人として生きることを望むか？
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section political-analysis">
+                    <h3>共和主義的自由の概念</h3>
+                    <div class="analysis-content">
+                        <p>ブルータスの弁明は、フィリップ・ペティットの<span class="key-term">共和主義的自由</span>の概念を先取りする。自由は単なる不干渉ではなく、恣意的支配からの解放として理解される。</p>
+                        <p>「奴隷」と「自由人」の二項対立は、マキアヴェッリ的な<span class="key-term">市民的徳</span>の理想を反映する。共和国の市民は、専制君主の臣民とは存在論的に異なる政治的主体として構想される。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section republican-analysis">
+                    <h3>政治的暗殺の倫理</h3>
+                    <div class="analysis-content">
+                        <p>カール・シュミットの<span class="key-term">例外状態</span>理論に照らせば、ブルータスの行為は法の停止による法の救済という逆説を体現する。暗殺は、共和制を守るための超法規的措置として正当化される。</p>
+                        <p>しかし、アーレントが『革命について』で論じるように、暴力による政治的行為は、それが守ろうとする公共性そのものを破壊する危険を孕む。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「Not that...but that」：対比構造による論理的正当化</li>
+                    <li>「free men」：gender-specific言語。共和主義的市民概念の排他性</li>
+                    <li>修辞疑問文：聴衆の同意を前提とした説得技法</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4521-4530: The Tempest - Prospero's Books -->
+        <div class="line-entry">
+            <span class="line-number">行 4521-4530</span>
+            <div class="original-text">
+                "Me, poor man, my library<br>
+                Was dukedom large enough: of temporal royalties<br>
+                He thinks me now incapable."
+            </div>
+            <div class="japanese-translation">
+                哀れな私にとって、私の書庫は<br>
+                十分に大きな公国であった。世俗的な王権について<br>
+                彼は今や私を無能と考えている。
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section power-analysis">
+                    <h3>知識と権力の関係性</h3>
+                    <div class="analysis-content">
+                        <p>プロスペローの書物への執着は、フーコーの<span class="key-term">知＝権力</span>論の具現化である。魔術的知識は、物理的領土に代わる新たな支配形態を可能にする。</p>
+                        <p>「書庫」を「公国」とする比喩は、ベーコン的な「<span class="key-term">知は力なり</span>」の思想を反映し、近代的な知識支配の萌芽を示す。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section postcolonial-analysis">
+                    <h3>知識人と植民地支配</h3>
+                    <div class="analysis-content">
+                        <p>サイードの『<span class="key-term">知識人とは何か</span>』の観点から、プロスペローは植民地における西洋知識人の原型を示す。書物という文化資本は、先住民に対する支配の正当化装置として機能する。</p>
+                        <p>「世俗的な王権」への無関心という pose は、知的優越性の主張であると同時に、政治的無責任の表明でもある。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「dukedom large enough」：領土の metaphorical な拡張</li>
+                    <li>「temporal royalties」：世俗的／精神的の中世的二分法</li>
+                    <li>「incapable」：能力の政治的定義</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4531-4540: Julius Caesar - Mark Antony's Rhetoric -->
+        <div class="line-entry">
+            <span class="line-number">行 4531-4540</span>
+            <div class="original-text">
+                "Friends, Romans, countrymen, lend me your ears;<br>
+                I come to bury Caesar, not to praise him.<br>
+                The evil that men do lives after them;<br>
+                The good is oft interred with their bones."
+            </div>
+            <div class="japanese-translation">
+                友よ、ローマ人よ、同胞よ、耳を貸してくれ。<br>
+                私はカエサルを葬りに来たのであって、讃えに来たのではない。<br>
+                人の為す悪は死後も生き続ける。<br>
+                善はしばしば骨と共に葬られる。
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section political-analysis">
+                    <h3>修辞学と大衆操作</h3>
+                    <div class="analysis-content">
+                        <p>アントニーの演説は、アリストテレスの修辞学における<span class="key-term">エートス</span>、<span class="key-term">パトス</span>、<span class="key-term">ロゴス</span>の完璧な統合を示す。三重の呼びかけは、聴衆を段階的に包摂する戦略である。</p>
+                        <p>「葬りに来た」という表明は、意図的な<span class="key-term">イロニー</span>である。否定形による肯定という修辞技法は、検閲を回避しつつメッセージを伝達する。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section republican-analysis">
+                    <h3>民主主義とデマゴーグ</h3>
+                    <div class="analysis-content">
+                        <p>プラトンの『ゴルギアス』における修辞学批判を想起させる。アントニーは、<span class="key-term">デマゴーグ</span>の原型として、感情に訴えることで理性的判断を曇らせる。</p>
+                        <p>善悪の死後評価に関する一般論は、具体的な政治的判断を普遍的な道徳問題へとすり替える。これは、ハーバーマスの言う<span class="key-term">戦略的行為</span>の典型である。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「Friends, Romans, countrymen」：包摂の拡大する同心円</li>
+                    <li>「lend me your ears」：身体の比喩による注意の要求</li>
+                    <li>「oft」：詩的語彙による感情的効果</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4541-4550: The Tempest - Miranda's Wonder -->
+        <div class="line-entry">
+            <span class="line-number">行 4541-4550</span>
+            <div class="original-text">
+                "O brave new world,<br>
+                That has such people in't!"
+            </div>
+            <div class="japanese-translation">
+                ああ、勇敢な新世界よ、<br>
+                このような人々がいるとは！
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section postcolonial-analysis">
+                    <h3>無垢と植民地的まなざし</h3>
+                    <div class="analysis-content">
+                        <p>ミランダの驚嘆は、オリエンタリズム的<span class="key-term">他者化</span>の逆転を示す。ヨーロッパ人を「発見」する彼女のまなざしは、コロンブス的な「発見」の言説をパロディ化する。</p>
+                        <p>「勇敢な新世界」という表現は、後にハクスリーによってディストピア小説のタイトルとして使用され、進歩主義的楽観の危険性を暗示する。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section power-analysis">
+                    <h3>無知の政治性</h3>
+                    <div class="analysis-content">
+                        <p>ミランダの無垢は、<span class="key-term">認識論的暴力</span>の可能性を示す。スピヴァクが論じるように、善意の無知は植民地主義的実践を正当化する装置として機能しうる。</p>
+                        <p>彼女の驚きは、文明／野蛮の二項対立を前提とし、その転倒によってかえってこの対立を強化する。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「brave」：勇敢な、華麗な、の両義性</li>
+                    <li>「new world」：地理的・認識論的な新しさの重層性</li>
+                    <li>感嘆文：純粋性の修辞的構築</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4551-4560: Julius Caesar - The Mob's Fickleness -->
+        <div class="line-entry">
+            <span class="line-number">行 4551-4560</span>
+            <div class="original-text">
+                "This Caesar was a tyrant."<br>
+                "Nay, that's certain:<br>
+                We are blest that Rome is rid of him."
+            </div>
+            <div class="japanese-translation">
+                このカエサルは暴君だった。<br>
+                いや、それは確かだ。<br>
+                ローマが彼を排除したことは祝福である。
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section political-analysis">
+                    <h3>群衆心理と政治的判断</h3>
+                    <div class="analysis-content">
+                        <p>群衆の変節は、ル・ボンの『<span class="key-term">群衆心理</span>』で分析された集団的無責任性を例証する。個人の理性的判断は、集団の情動に呑み込まれる。</p>
+                        <p>「暴君」というレッテルの安易な受容は、シュミットの<span class="key-term">友敵理論</span>における政治的なるものの本質を示す。敵の指定は、政治的共同体の構成原理となる。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section republican-analysis">
+                    <h3>民主主義の脆弱性</h3>
+                    <div class="analysis-content">
+                        <p>トクヴィルが警告した「<span class="key-term">多数者の専制</span>」がここに現れる。民主的正当性は、容易に暴民支配へと転化する。</p>
+                        <p>「祝福」という宗教的語彙の使用は、政治的暴力を神聖化する危険なレトリックである。これは、ベンヤミンの「<span class="key-term">神話的暴力</span>」の概念と共鳴する。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「Nay」：否定から肯定への急速な転換</li>
+                    <li>「blest」：blessedの詩的短縮形。宗教的含意</li>
+                    <li>「rid of」：排除の暴力性を中性化する表現</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4561-4570: The Tempest - Ariel's Freedom -->
+        <div class="line-entry">
+            <span class="line-number">行 4561-4570</span>
+            <div class="original-text">
+                "Where the bee sucks, there suck I:<br>
+                In a cowslip's bell I lie;<br>
+                There I couch when owls do cry."
+            </div>
+            <div class="japanese-translation">
+                蜜蜂が吸うところで、私も吸う。<br>
+                <ruby>桜草<rt>さくらそう</rt></ruby>の鐘の中に私は横たわる。<br>
+                <ruby>梟<rt>ふくろう</rt></ruby>が鳴くとき、そこで私は休む。
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section postcolonial-analysis">
+                    <h3>自然への回帰と脱植民地化</h3>
+                    <div class="analysis-content">
+                        <p>アリエルの歌は、植民地的労働からの解放後の<span class="key-term">主体性の回復</span>を表現する。自然との調和的関係は、支配-被支配関係の外部を想像する。</p>
+                        <p>しかし、この牧歌的ビジョンは、「<span class="key-term">高貴な野蛮人</span>」の神話を再生産する危険も孕む。脱植民地化は、単純な自然回帰では達成されない。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section power-analysis">
+                    <h3>自由の詩学</h3>
+                    <div class="analysis-content">
+                        <p>アリエルの自由は、ドゥルーズ＝ガタリの<span class="key-term">逃走線</span>として理解できる。蜜蜂との同一化は、主体の固定的アイデンティティからの逃走を示す。</p>
+                        <p>しかし、この自由は個人的逃避に留まり、集団的解放の展望を欠く。これは、新自由主義的な「自由」概念の限界を予示する。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「sucks」の反復：音の戯れによる自由の表現</li>
+                    <li>「cowslip's bell」：花の擬人化。自然の生命性</li>
+                    <li>韻律：歌謡的リズムによる解放感の演出</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4571-4580: Julius Caesar - Brutus's Stoicism -->
+        <div class="line-entry">
+            <span class="line-number">行 4571-4580</span>
+            <div class="original-text">
+                "There is a tide in the affairs of men,<br>
+                Which, taken at the flood, leads on to fortune;<br>
+                Omitted, all the voyage of their life<br>
+                Is bound in shallows and in miseries."
+            </div>
+            <div class="japanese-translation">
+                人の営みには潮流がある、<br>
+                満潮時に乗れば、幸運へと導かれる。<br>
+                逃せば、彼らの人生の全航海は<br>
+                浅瀬と不幸に縛られる。
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section political-analysis">
+                    <h3>政治的機会主義の哲学</h3>
+                    <div class="analysis-content">
+                        <p>ブルータスの潮流の比喩は、マキアヴェッリの<span class="key-term">ヴィルトゥ</span>と<span class="key-term">フォルトゥーナ</span>の弁証法を反映する。政治的行為者は、運命の流れを読み、適切な瞬間に行動しなければならない。</p>
+                        <p>しかし、この決断主義は、カール・シュミットの<span class="key-term">決定主義</span>の危険性も示す。「潮流」への服従は、歴史的必然性への屈服となりうる。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section republican-analysis">
+                    <h3>ストア哲学と政治的行為</h3>
+                    <div class="analysis-content">
+                        <p>海の比喩は、ストア派の<span class="key-term">自然に従って生きる</span>という理想を政治領域に適用する。しかし、自然の必然性と政治的自由の間には根本的な緊張がある。</p>
+                        <p>「浅瀬と不幸」は、政治的勇気の欠如がもたらす道徳的退廃を示す。これは、アーレントの<span class="key-term">活動的生</span>の概念と共鳴する。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「tide」「flood」「voyage」「shallows」：航海メタファーの一貫性</li>
+                    <li>「bound」：束縛と境界の二重の意味</li>
+                    <li>条件構文：運命の分岐点の文法的表現</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4581-4590: The Tempest - Prospero's Renunciation -->
+        <div class="line-entry">
+            <span class="line-number">行 4581-4590</span>
+            <div class="original-text">
+                "But this rough magic<br>
+                I here abjure, and, when I have required<br>
+                Some heavenly music, which even now I do,<br>
+                To work mine end upon their senses that<br>
+                This airy charm is for, I'll break my staff,<br>
+                Bury it certain fathoms in the earth,<br>
+                And deeper than did ever plummet sound<br>
+                I'll drown my book."
+            </div>
+            <div class="japanese-translation">
+                しかしこの荒々しい魔術を<br>
+                私はここに放棄する。そして天の音楽を<br>
+                要求した後―今まさにそうしているが―<br>
+                この空気の魔法が向けられた者たちの感覚に<br>
+                私の目的を果たすために働きかけた後、私は杖を折り、<br>
+                地中の定められた<ruby>尋<rt>ひろ</rt></ruby>に埋め、<br>
+                測鉛がかつて達したことのない深さよりも深く<br>
+                私の書を沈めよう。
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section postcolonial-analysis">
+                    <h3>植民地支配者の「改悛」</h3>
+                    <div class="analysis-content">
+                        <p>プロスペローの魔術放棄は、植民地支配の<span class="key-term">自発的終焉</span>の幻想を表す。しかし、この「寛大な」行為は、すでに目的を達成した後の権力の放棄であり、真の脱植民地化ではない。</p>
+                        <p>書物を「溺れさせる」という表現は、知識の破壊を装いながら、実際には西洋的知の優越性を最後まで保持する。<span class="key-term">認識論的特権</span>は放棄されない。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section power-analysis">
+                    <h3>権力放棄の演劇性</h3>
+                    <div class="analysis-content">
+                        <p>魔術の放棄は、ウェーバーの<span class="key-term">カリスマ的支配</span>から<span class="key-term">合法的支配</span>への移行として読める。プロスペローは超自然的権力を放棄することで、世俗的権威を確立する。</p>
+                        <p>杖と書という権力の象徴の破壊は、実際には権力の<span class="key-term">昇華</span>である。物質的支配から象徴的支配への移行が起こる。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「abjure」：法的・宗教的な放棄の厳粛性</li>
+                    <li>「fathoms」：海洋的尺度。島の地理的文脈</li>
+                    <li>「plummet」：測深錘。知識の深度の比喩</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4591-4600: Julius Caesar - Cassius's Epicureanism -->
+        <div class="line-entry">
+            <span class="line-number">行 4591-4600</span>
+            <div class="original-text">
+                "The fault, dear Brutus, is not in our stars,<br>
+                But in ourselves, that we are underlings."
+            </div>
+            <div class="japanese-translation">
+                過ちは、親愛なるブルータスよ、我々の星にあるのではなく、<br>
+                我々自身にある、我々が下位の者であることに。
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section political-analysis">
+                    <h3>運命論の拒絶と政治的主体性</h3>
+                    <div class="analysis-content">
+                        <p>カシウスの主張は、<span class="key-term">占星術的決定論</span>から<span class="key-term">政治的主意主義</span>への転換を示す。これは、近代的な政治的主体の誕生を告げる。</p>
+                        <p>「下位の者」という自己認識は、ニーチェの<span class="key-term">奴隷道徳</span>の克服を要求する。自己の劣位性の認識が、革命的行動の出発点となる。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section republican-analysis">
+                    <h3>共和主義的能動性</h3>
+                    <div class="analysis-content">
+                        <p>星への責任転嫁の拒否は、<span class="key-term">市民的責任</span>の引き受けを意味する。共和国の市民は、自らの政治的運命の作者でなければならない。</p>
+                        <p>しかし、この主意主義は、構造的不平等を個人の責任に還元する危険も孕む。カシウスの論理は、新自由主義的な自己責任論の先駆となりうる。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「fault」：過失、断層の両義性。構造的問題の示唆</li>
+                    <li>「underlings」：下級者。階層的メタファー</li>
+                    <li>「in our stars」：占星術的世界観の残存</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4601-4610: The Tempest - Caliban's Island -->
+        <div class="line-entry">
+            <span class="line-number">行 4601-4610</span>
+            <div class="original-text">
+                "This island's mine, by Sycorax my mother,<br>
+                Which thou takest from me."
+            </div>
+            <div class="japanese-translation">
+                この島は私のものだ、我が母シコラックスによって、<br>
+                それをお前は私から奪った。
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section postcolonial-analysis">
+                    <h3>土地の所有権と先住権</h3>
+                    <div class="analysis-content">
+                        <p>カリバンの主張は、<span class="key-term">先住民の土地権</span>の問題を提起する。母系による相続の言及は、ヨーロッパの父権的所有概念への対抗を示す。</p>
+                        <p>「奪った」という直接的な告発は、植民地化の暴力性を露呈させる。ロックの<span class="key-term">労働による所有</span>理論は、ここで先住権の前に無効化される。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section power-analysis">
+                    <h3>母権と抵抗の系譜</h3>
+                    <div class="analysis-content">
+                        <p>シコラックスへの言及は、<span class="key-term">対抗的系譜学</span>の構築である。植民地権力に対して、別の正統性の源泉が対置される。</p>
+                        <p>母親の名による権利主張は、父権的法秩序の外部に立つ。これは、イリガライの<span class="key-term">母系的想像力</span>の政治的可能性を示唆する。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「mine」：所有代名詞の強調的使用</li>
+                    <li>「by Sycorax」：権利の源泉の明示</li>
+                    <li>現在形「takest」：継続する収奪の強調</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4611-4620: Julius Caesar - Caesar's Hubris -->
+        <div class="line-entry">
+            <span class="line-number">行 4611-4620</span>
+            <div class="original-text">
+                "I could be well moved, if I were as you:<br>
+                If I could pray to move, prayers would move me:<br>
+                But I am constant as the northern star,<br>
+                Of whose true-fix'd and resting quality<br>
+                There is no fellow in the firmament."
+            </div>
+            <div class="japanese-translation">
+                もし私があなた方のようであれば、心を動かされることもあろう。<br>
+                もし私が動かすために祈ることができれば、祈りが私を動かすだろう。<br>
+                しかし私は北極星のように不動である、<br>
+                その真に固定され静止した性質において<br>
+                天空に並ぶものはない。
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section political-analysis">
+                    <h3>絶対権力の自己神格化</h3>
+                    <div class="analysis-content">
+                        <p>カエサルの自己比較は、<span class="key-term">政治的神学</span>の極致を示す。北極星への同一化は、超越的な不動性を主張し、人間的な可謬性を否定する。</p>
+                        <p>「祈り」への言及は皮肉である。神的存在を自称することで、カエサルは<span class="key-term">主権者のパラドックス</span>を体現する―法の上に立つ者は法の外にある。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section republican-analysis">
+                    <h3>専制の認識論</h3>
+                    <div class="analysis-content">
+                        <p>不動性の主張は、<span class="key-term">熟議民主主義</span>の否定である。対話と説得の可能性を拒否することで、カエサルは共和政の基本原理を破壊する。</p>
+                        <p>天体への比喩は、人間的な政治領域から神的な自然領域への逃避を示す。これは、アーレントが批判した<span class="key-term">反政治的</span>態度の典型である。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「constant」：不変性、堅固性の含意</li>
+                    <li>「northern star」：航海の指針としての政治的メタファー</li>
+                    <li>条件法の反復：現実性の否定による超越性の主張</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4621-4630: The Tempest - Ferdinand's Labor -->
+        <div class="line-entry">
+            <span class="line-number">行 4621-4630</span>
+            <div class="original-text">
+                "There be some sports are painful, and their labour<br>
+                Delight in them sets off: some kinds of baseness<br>
+                Are nobly undergone and most poor matters<br>
+                Point to rich ends."
+            </div>
+            <div class="japanese-translation">
+                苦痛を伴う遊戯もあり、その労苦は<br>
+                それらの中の喜びによって相殺される。ある種の卑しさは<br>
+                高貴に耐えられ、最も貧しい事柄が<br>
+                豊かな目的を指し示す。
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section postcolonial-analysis">
+                    <h3>植民地労働の美化</h3>
+                    <div class="analysis-content">
+                        <p>フェルディナンドの労働の正当化は、植民地における<span class="key-term">強制労働の イデオロギー</span>を反映する。苦痛の「高貴化」は、搾取を道徳的試練として偽装する。</p>
+                        <p>「豊かな目的」への言及は、植民地主義の<span class="key-term">文明化の使命</span>言説を想起させる。現在の苦痛は、未来の報酬によって正当化される。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section power-analysis">
+                    <h3>労働と愛の弁証法</h3>
+                    <div class="analysis-content">
+                        <p>プロスペローによる労働の課は、フーコーの<span class="key-term">規律権力</span>の作動を示す。身体の訓練を通じて、主体の内面が形成される。</p>
+                        <p>しかし、フェルディナンドの受容は、<span class="key-term">自発的服従</span>の問題を提起する。愛という動機は、権力関係を不可視化する。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「sports are painful」：遊びと苦痛の逆説的結合</li>
+                    <li>「baseness」/「nobly」：道徳的価値の転倒</li>
+                    <li>「poor」/「rich」：経済的メタファーの展開</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4631-4640: Julius Caesar - Portia's Wound -->
+        <div class="line-entry">
+            <span class="line-number">行 4631-4640</span>
+            <div class="original-text">
+                "I have made strong proof of my constancy,<br>
+                Giving myself a voluntary wound<br>
+                Here, in the thigh: can I bear that with patience,<br>
+                And not my husband's secrets?"
+            </div>
+            <div class="japanese-translation">
+                私は自分の不屈の精神の強い証を立てました、<br>
+                自らに自発的な傷を与えることで<br>
+                ここに、腿に。これを忍耐をもって耐えられる私が、<br>
+                夫の秘密を耐えられないでしょうか？
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section political-analysis">
+                    <h3>女性の政治的主体性</h3>
+                    <div class="analysis-content">
+                        <p>ポーシャの自傷行為は、<span class="key-term">男性的勇気</span>の模倣を通じて政治的承認を求める。これは、ジュディス・バトラーの<span class="key-term">ジェンダー・パフォーマティヴィティ</span>理論の古典的例証である。</p>
+                        <p>身体的苦痛と政治的信頼の等価は、女性が公的領域に参入するために払わねばならない代価を示す。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section republican-analysis">
+                    <h3>私的領域と公的領域の交差</h3>
+                    <div class="analysis-content">
+                        <p>「夫の秘密」への要求は、<span class="key-term">公私の区分</span>への挑戦である。共和主義的な公的徳は、家庭内でも要求される。</p>
+                        <p>しかし、自傷による証明という論理は、女性の政治参加が常に身体的犠牲を要求される不平等を露呈する。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「constancy」：不変性、貞節の両義</li>
+                    <li>「voluntary wound」：主体的行為の強調</li>
+                    <li>「thigh」：性的含意のある身体部位の選択</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4641-4650: The Tempest - Gonzalo's Utopia -->
+        <div class="line-entry">
+            <span class="line-number">行 4641-4650</span>
+            <div class="original-text">
+                "I' the commonwealth I would by contraries<br>
+                Execute all things; for no kind of traffic<br>
+                Would I admit; no name of magistrate;<br>
+                Letters should not be known; riches, poverty,<br>
+                And use of service, none."
+            </div>
+            <div class="japanese-translation">
+                共和国において私は反対のやり方で<br>
+                すべてを執行するだろう。いかなる種類の商業も<br>
+                私は認めない。治安判事の名もなく、<br>
+                文字は知られることなく、富も貧困も、<br>
+                そして奉仕の慣習も、何もない。
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section postcolonial-analysis">
+                    <h3>ユートピアと植民地主義</h3>
+                    <div class="analysis-content">
+                        <p>ゴンザーロのユートピア構想は、モンテーニュの「<span class="key-term">食人種について</span>」を下敷きとし、新世界を白紙状態として想像する植民地主義的思考を示す。</p>
+                        <p>「文字」の拒否は、<span class="key-term">口承文化</span>への憧憬を示すが、これ自体が文字文化からの特権的な視点である。原始主義は、しばしば最も洗練された文明の産物である。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section political-analysis">
+                    <h3>否定による政治構想</h3>
+                    <div class="analysis-content">
+                        <p>「反対のやり方」という方法論は、<span class="key-term">否定弁証法</span>的思考を示す。既存秩序の単純な転倒は、その秩序の論理に囚われたままである。</p>
+                        <p>商業、法、文字、階級の否定は、ルソー的な<span class="key-term">自然状態</span>への回帰願望を表すが、これは近代の産物としての反近代である。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「by contraries」：対立による方法の明示</li>
+                    <li>「traffic」：商業、交通、交流の多義性</li>
+                    <li>否定の列挙：ユートピアの消極的定義</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4651-4660: Julius Caesar - Brutus's Last Words -->
+        <div class="line-entry">
+            <span class="line-number">行 4651-4660</span>
+            <div class="original-text">
+                "Caesar, now be still:<br>
+                I kill'd not thee with half so good a will."
+            </div>
+            <div class="japanese-translation">
+                カエサルよ、今は安らかに。<br>
+                私はお前を殺したときの半分の意志も持たずに死ぬ。
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section political-analysis">
+                    <h3>政治的行為の悲劇的帰結</h3>
+                    <div class="analysis-content">
+                        <p>ブルータスの最期の言葉は、<span class="key-term">政治的暴力の循環性</span>を認識する。暗殺者が自死によって犠牲者と和解を求める皮肉は、革命の自己破壊的論理を示す。</p>
+                        <p>「半分の意志」という表現は、政治的確信の漸進的崩壊を示す。<span class="key-term">大義</span>のための殺人は、最終的に無意味性に直面する。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section republican-analysis">
+                    <h3>共和主義的徳の限界</h3>
+                    <div class="analysis-content">
+                        <p>自死による名誉の回復という<span class="key-term">ストア的解決</span>は、政治的失敗を道徳的勝利に転換しようとする。しかし、これは公的領域からの逃避でもある。</p>
+                        <p>カエサルへの呼びかけは、敵対関係の死後の解消を求めるが、これは政治的対立を個人的悲劇に還元する危険を孕む。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「be still」：安息と沈黙の両義的要求</li>
+                    <li>「half so good a will」：意志の定量化の不可能性</li>
+                    <li>対句構造：生と死、加害と被害の対称性</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4661-4670: The Tempest - Epilogue -->
+        <div class="line-entry">
+            <span class="line-number">行 4661-4670</span>
+            <div class="original-text">
+                "Now my charms are all o'erthrown,<br>
+                And what strength I have's mine own,<br>
+                Which is most faint: now, 'tis true,<br>
+                I must be here confined by you,<br>
+                Or sent to Naples."
+            </div>
+            <div class="japanese-translation">
+                今や私の魔法はすべて打ち倒され、<br>
+                私が持つ力は私自身のもの、<br>
+                それは最も弱々しい。今、確かに、<br>
+                私はあなた方によってここに閉じ込められるか、<br>
+                あるいはナポリに送られねばならない。
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section postcolonial-analysis">
+                    <h3>脱植民地化の不完全性</h3>
+                    <div class="analysis-content">
+                        <p>プロスペローのエピローグは、植民地支配者の<span class="key-term">脆弱性の演技</span>を示す。権力放棄後の「弱々しさ」の主張は、同情を誘う戦略的なポーズである。</p>
+                        <p>観客／読者への依存の表明は、<span class="key-term">承認の政治</span>を示す。旧植民地支配者は、被支配者からの赦しと承認を必要とする。しかし、この要求自体が新たな権力関係を構築する。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section power-analysis">
+                    <h3>演劇的権力の解体</h3>
+                    <div class="analysis-content">
+                        <p>魔法から「自身の力」への移行は、<span class="key-term">カリスマ的権威</span>から<span class="key-term">個人的権威</span>への転換を示す。しかし、この「弱さ」の告白は、新たな形の権力行使である。</p>
+                        <p>観客による「閉じ込め」への言及は、<span class="key-term">主権の逆転</span>を演出する。しかし、この逆転を演出する者は依然としてプロスペローである。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「o'erthrown」：打倒、転覆の受動性</li>
+                    <li>「mine own」：所有の最小化</li>
+                    <li>「confined」：植民地的監禁の反転</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Line 4671-4682: Final Reflections -->
+        <div class="line-entry">
+            <span class="line-number">行 4671-4682</span>
+            <div class="original-text">
+                "As you from crimes would pardon'd be,<br>
+                Let your indulgence set me free."
+            </div>
+            <div class="japanese-translation">
+                あなた方が罪から赦されることを望むように、<br>
+                あなた方の寛容が私を自由にしますように。
+            </div>
+            
+            <div class="critical-analysis">
+                <div class="analysis-section postcolonial-analysis">
+                    <h3>赦しの政治経済学</h3>
+                    <div class="analysis-content">
+                        <p>プロスペローの最終的な懇願は、<span class="key-term">赦しの交換経済</span>を提案する。これは、デリダが『赦し』で論じた条件付き赦しの問題を提起する。</p>
+                        <p>植民地支配の「罪」を普遍的な人間の罪に一般化することで、特殊な歴史的責任が希釈される。<span class="key-term">和解</span>の言説は、しばしば正義の要求を回避する。</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section power-analysis">
+                    <h3>演劇と政治の相同性</h3>
+                    <div class="analysis-content">
+                        <p>観客の「寛容」への訴えは、<span class="key-term">美的判断</span>と<span class="key-term">政治的判断</span>の境界を曖昧にする。演劇的慣習（拍手）が政治的行為（赦し）に転換される。</p>
+                        <p>この結末は、シェイクスピア演劇全体の<span class="key-term">メタ演劇的</span>性質を示す。権力は常に演技され、観客の共犯によって維持される。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linguistic-notes">
+                <h4>言語学的注釈</h4>
+                <ul>
+                    <li>「crimes」：罪の複数形。普遍化の戦略</li>
+                    <li>「indulgence」：寛容、免罪符の両義性</li>
+                    <li>韻律：結束した対句による終結感</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Series Completion Message -->
+        <div class="series-completion">
+            <h2>シェイクスピア全集 N1シリーズ 完結</h2>
+            <p>これをもって、JLPT N1レベル学習者向けシェイクスピア全集全4巻が完結いたしました。</p>
+            <p>本シリーズでは、デリダの脱構築、ラカンの精神分析、フーコーの権力論、バトラーのジェンダー理論、サイードのポストコロニアル批評など、現代批評理論の最前線からシェイクスピアを読み解きました。</p>
+            <p>言語学習を超えて、文学が提起する根源的な問いに向き合い、批判的思考を深める一助となれば幸いです。</p>
+            <p>皆様の更なる知的探求の旅に、シェイクスピアの言葉が伴いますように。</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 シェイクスピア日本語訳プロジェクト N1シリーズ完結版</p>
+            <p>批評理論と文学の対話を通じて、新たな地平を切り開く</p>
+        </footer>
+    </div>
+</body>
+</html>

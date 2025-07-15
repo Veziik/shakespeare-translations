@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア全集 日本語版 第二部 - ハムレット独白集 JLPT N1学術注釈版</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+        
+        :root {
+            --primary-color: #1a1a2e;
+            --accent-color: #16213e;
+            --gold-accent: #e94560;
+            --annotation-bg: #f8f6f0;
+            --critical-bg: #f0f5fa;
+            --philosophical-bg: #faf5f0;
+            --linguistic-bg: #f5faf0;
+            --existential-bg: #f0f0fa;
+            --phenomenological-bg: #faf0f5;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --hover-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Serif JP', 'Shippori Mincho', serif;
+            line-height: 1.8;
+            color: var(--primary-color);
+            background: #fefefe;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(233,69,96,0.1) 0%, transparent 70%);
+            animation: pulse 20s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.3; }
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 0.1em;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .subtitle {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            font-weight: 400;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .scholarly-info {
+            background: white;
+            padding: 40px;
+            margin: 20px 0 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--gold-accent);
+        }
+        
+        .scholarly-info h2 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 20px 0;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 998;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .nav-item {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: var(--primary-color);
+            background: #f5f5f5;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .nav-item:hover {
+            background: var(--gold-accent);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--hover-shadow);
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        
+        .work-title {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: var(--accent-color);
+            border-bottom: 3px solid var(--gold-accent);
+            padding-bottom: 15px;
+        }
+        
+        .soliloquy-section {
+            margin-bottom: 60px;
+            padding: 30px;
+            background: #fafafa;
+            border-radius: 10px;
+            border-left: 4px solid var(--gold-accent);
+        }
+        
+        .soliloquy-title {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .line-number {
+            display: inline-block;
+            width: 60px;
+            text-align: right;
+            margin-right: 20px;
+            color: #999;
+            font-size: 0.9em;
+        }
+        
+        .verse-line {
+            margin-bottom: 0.5em;
+            position: relative;
+            transition: background 0.3s ease;
+            padding: 2px 0;
+        }
+        
+        .verse-line:hover {
+            background: rgba(233,69,96,0.05);
+        }
+        
+        .original-text {
+            font-style: italic;
+            color: #666;
+            font-size: 0.95em;
+            margin-left: 80px;
+            display: block;
+            margin-top: -0.3em;
+            margin-bottom: 0.8em;
+        }
+        
+        /* Annotation Sections */
+        .annotation-section {
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .annotation-header {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .annotation-icon {
+            font-size: 1.2em;
+        }
+        
+        .literary-criticism {
+            background: var(--critical-bg);
+        }
+        
+        .philosophical-commentary {
+            background: var(--philosophical-bg);
+        }
+        
+        .linguistic-analysis {
+            background: var(--linguistic-bg);
+        }
+        
+        .existential-analysis {
+            background: var(--existential-bg);
+        }
+        
+        .phenomenological-reading {
+            background: var(--phenomenological-bg);
+        }
+        
+        /* Expandable Content */
+        .expandable {
+            cursor: pointer;
+            position: relative;
+            padding-right: 30px;
+        }
+        
+        .expandable::after {
+            content: '▼';
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .expandable.expanded::after {
+            transform: rotate(180deg);
+        }
+        
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            margin-top: 15px;
+        }
+        
+        .expandable-content.expanded {
+            max-height: 3000px;
+        }
+        
+        /* Furigana styling */
+        ruby {
+            ruby-align: center;
+        }
+        
+        rt {
+            font-size: 0.5em;
+            color: #888;
+        }
+        
+        /* Philosophical Terms Box */
+        .philosophical-terms {
+            background: #f0f0f5;
+            border: 2px solid var(--gold-accent);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .philosophical-terms h4 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+        
+        .term-entry {
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        
+        .term-original {
+            font-weight: 600;
+            color: var(--gold-accent);
+        }
+        
+        /* Digital Humanities Tools Panel */
+        .dh-tools-panel {
+            position: fixed;
+            right: 20px;
+            top: 200px;
+            width: 60px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            padding: 10px 0;
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        .dh-tools-panel:hover {
+            width: 280px;
+        }
+        
+        .dh-tool {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .dh-tool:hover {
+            background: #f5f5f5;
+        }
+        
+        .dh-tool-icon {
+            font-size: 1.5em;
+            margin-right: 20px;
+            min-width: 30px;
+        }
+        
+        .dh-tool-label {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .dh-tools-panel:hover .dh-tool-label {
+            opacity: 1;
+        }
+        
+        /* Citation Modal */
+        .citation-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .citation-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 600px;
+            box-shadow: var(--hover-shadow);
+        }
+        
+        .citation-format {
+            background: #f5f5f5;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .citation-format:hover {
+            background: var(--gold-accent);
+            color: white;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+            
+            .dh-tools-panel {
+                display: none;
+            }
+            
+            .line-number {
+                width: 40px;
+                margin-right: 10px;
+            }
+            
+            .original-text {
+                margin-left: 50px;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                font-size: 12pt;
+                line-height: 1.6;
+            }
+            
+            nav, .dh-tools-panel {
+                display: none;
+            }
+            
+            .content-section {
+                box-shadow: none;
+                padding: 20px 0;
+            }
+            
+            .expandable-content {
+                max-height: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Digital Humanities Tools Panel -->
+    <div class="dh-tools-panel">
+        <div class="dh-tool" onclick="toggleCitationModal()">
+            <span class="dh-tool-icon">📑</span>
+            <span class="dh-tool-label">引用管理ツール</span>
+        </div>
+        <div class="dh-tool" onclick="toggleTextAnalysis()">
+            <span class="dh-tool-icon">📊</span>
+            <span class="dh-tool-label">テキスト分析</span>
+        </div>
+        <div class="dh-tool" onclick="exportAnnotations()">
+            <span class="dh-tool-icon">💾</span>
+            <span class="dh-tool-label">注釈エクスポート</span>
+        </div>
+        <div class="dh-tool" onclick="togglePhilosophicalLens()">
+            <span class="dh-tool-icon">🔬</span>
+            <span class="dh-tool-label">哲学的レンズ</span>
+        </div>
+    </div>
+    
+    <!-- Citation Management Modal -->
+    <div class="citation-modal" id="citationModal">
+        <div class="citation-content">
+            <h3>引用管理システム</h3>
+            <p style="margin-bottom: 20px;">ご希望の引用形式を選択してください：</p>
+            
+            <div class="citation-format" onclick="copyCitation('mla')">
+                <h4>MLA形式</h4>
+                <code>シェイクスピア、ウィリアム。「ハムレット」『シェイクスピア全集 日本語版 第二部』。JLPT N1学術注釈版、2025年。</code>
+            </div>
+            
+            <div class="citation-format" onclick="copyCitation('apa')">
+                <h4>APA形式</h4>
+                <code>Shakespeare, W. (2025). ハムレット. In シェイクスピア全集 日本語版 第二部 (JLPT N1学術注釈版).</code>
+            </div>
+            
+            <div class="citation-format" onclick="copyCitation('chicago')">
+                <h4>シカゴ形式</h4>
+                <code>シェイクスピア、ウィリアム。『シェイクスピア全集 日本語版 第二部』。JLPT N1学術注釈版。2025年。</code>
+            </div>
+            
+            <button onclick="closeCitationModal()" style="margin-top: 20px; padding: 10px 20px; background: var(--gold-accent); color: white; border: none; border-radius: 5px; cursor: pointer;">閉じる</button>
+        </div>
+    </div>
+    
+    <header>
+        <h1>シェイクスピア全集 日本語版 第二部</h1>
+        <p class="subtitle">ハムレット独白集 - 存在論的省察と言語哲学的分析</p>
+        <p class="subtitle">JLPT N1 学術注釈版（行1501-3000）</p>
+    </header>
+    
+    <div class="scholarly-info container">
+        <h2>第二部について</h2>
+        <p>本巻は『ハムレット』の中核を成す独白群（行1501-3000）に焦点を当て、存在論、現象学、言語哲学の観点から詳細な分析を提供します。シェイクスピアの言語が内包する哲学的深度を、現代日本語の学術的枠組みで解明することを試みています。</p>
+        <p><strong>分析の焦点：</strong></p>
+        <ul style="margin-left: 30px; line-height: 2;">
+            <li>実存主義的解釈：サルトル、ハイデガー、西田幾多郎の視点から</li>
+            <li>現象学的読解：意識の志向性と時間性の問題</li>
+            <li>言語哲学的考察：発話行為論とパフォーマティヴィティ</li>
+            <li>翻訳論：不可能性の詩学と文化的翻訳</li>
+        </ul>
+    </div>
+    
+    <nav>
+        <div class="nav-content">
+            <a href="#to-be-or-not-to-be" class="nav-item">生きるべきか死ぬべきか</a>
+            <a href="#what-a-piece-of-work" class="nav-item">人間とは何と素晴らしい作品か</a>
+            <a href="#to-be-honest" class="nav-item">正直であること</a>
+            <a href="#the-play-scene" class="nav-item">劇中劇の場面</a>
+            <a href="#philosophical-framework" class="nav-item">哲学的枠組み</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <!-- "To be or not to be" Soliloquy -->
+        <section id="to-be-or-not-to-be" class="content-section">
+            <h2 class="work-title">第三幕第一場 - 実存的独白</h2>
+            
+            <div class="soliloquy-section">
+                <h3 class="soliloquy-title">「生きるべきか死ぬべきか」（行1501-1535）</h3>
+                
+                <div class="verse-line">
+                    <span class="line-number">1501</span>生きるべきか、死ぬべきか、それが問題だ。
+                    <span class="original-text">To be, or not to be, that is the question:</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1502</span>暴虐な運命の矢弾を
+                    <span class="original-text">Whether 'tis nobler in the mind to suffer</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1503</span>心に耐え忍ぶことが高貴なのか、
+                    <span class="original-text">The slings and arrows of outrageous fortune,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1504</span>それとも苦難の海に立ち向かい、
+                    <span class="original-text">Or to take arms against a sea of troubles,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1505</span>戦って終わらせることが高貴なのか。
+                    <span class="original-text">And by opposing end them. To die, to sleep—</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1506</span>死ぬこと、眠ること——
+                    <span class="original-text">No more—and by a sleep to say we end</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1507</span>それだけのこと。そして眠りによって
+                    <span class="original-text">The heartache and the thousand natural shocks</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1508</span>心の痛みと肉体が受ける
+                    <span class="original-text">That flesh is heir to. 'Tis a consummation</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1509</span>千もの自然の衝撃を終わらせると言うなら——
+                    <span class="original-text">Devoutly to be wished. To die, to sleep—</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1510</span>それは心から願わしい完結だ。
+                    <span class="original-text">To sleep, perchance to dream. Ay, there's the rub,</span>
+                </div>
+                
+                <div class="annotation-section existential-analysis">
+                    <h4 class="annotation-header expandable">
+                        <span class="annotation-icon">🌌</span>
+                        実存主義的分析
+                    </h4>
+                    <div class="expandable-content">
+                        <p>ハムレットの「生きるべきか死ぬべきか」は、単なる生死の選択を超えた実存的問いかけである。ハイデガーの「存在と時間」における現存在（Dasein）の概念を援用すれば、この独白は「世界内存在」としての人間が直面する根源的な不安（Angst）の表明と読める。</p>
+                        
+                        <p>「それが問題だ」（that is the question）という表現は、デリダの差延（différance）概念を想起させる。「である」（to be）と「でない」（not to be）の二項対立は、実は互いに他を前提とし、意味を差延させながら成立している。日本語訳では「生きる」と「死ぬ」という動詞形を採用することで、存在の静的な状態ではなく、動的なプロセスとして捉え直している。</p>
+                        
+                        <p>サルトルの「存在と無」の観点から見れば、ハムレットは「即自存在」（être-en-soi）と「対自存在」（être-pour-soi）の間で引き裂かれている。死は即自存在への回帰を意味し、生は対自存在としての責任と自由の重荷を背負い続けることを意味する。</p>
+                    </div>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1511</span>死ぬこと、眠ること——
+                    <span class="original-text">For in that sleep of death what dreams may come</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1512</span>眠ること、ひょっとすると夢を見ること。ああ、そこに難題がある。
+                    <span class="original-text">When we have shuffled off this mortal coil,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1513</span>なぜなら、この世の<ruby>煩<rt>わずら</rt></ruby>いから脱け出して
+                    <span class="original-text">Must give us pause. There's the respect</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1514</span>死の眠りの中でどんな夢を見るかもしれないか——
+                    <span class="original-text">That makes calamity of so long life.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1515</span>それを思うと立ち止まらざるを得ない。
+                    <span class="original-text">For who would bear the whips and scorns of time,</span>
+                </div>
+                
+                <div class="annotation-section phenomenological-reading">
+                    <h4 class="annotation-header expandable">
+                        <span class="annotation-icon">🔍</span>
+                        現象学的読解
+                    </h4>
+                    <div class="expandable-content">
+                        <p>フッサールの現象学的還元の視点から、「夢」（dreams）の問題は意識の志向性の極限的な事例として理解される。死後の夢は、意識が対象なき志向性を持ちうるかという問いを提起する。メルロ＝ポンティの身体論を参照すれば、「この世の煩い」（mortal coil）は、身体的実存の本質的な曖昧性を示している。</p>
+                        
+                        <p>「立ち止まらざるを得ない」（must give us pause）という表現は、レヴィナスの「他者」概念における倫理的な躊躇を想起させる。死という絶対的な他者性を前にして、主体は自己の有限性と向き合わざるを得ない。</p>
+                    </div>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1516</span>そういう思いが長い人生を災いにしているのだ。
+                    <span class="original-text">Th' oppressor's wrong, the proud man's contumely,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1517</span>誰が耐えようか、時代の鞭打ちと嘲笑、
+                    <span class="original-text">The pangs of despised love, the law's delay,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1518</span>圧制者の不正、傲慢な者の侮辱、
+                    <span class="original-text">The insolence of office, and the spurns</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1519</span>蔑まれた愛の苦しみ、法の遅延、
+                    <span class="original-text">That patient merit of th' unworthy takes,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1520</span>役人の横柄、そして忍耐強い功績が
+                    <span class="original-text">When he himself might his quietus make</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1521</span>価値なき者から受ける軽蔑を。
+                    <span class="original-text">With a bare bodkin? Who would fardels bear,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1522</span>素手の短剣一本で
+                    <span class="original-text">To grunt and sweat under a weary life,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1523</span>決着をつけられるというのに。
+                    <span class="original-text">But that the dread of something after death,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1524</span>誰が重荷を背負い続けようか、
+                    <span class="original-text">The undiscovered country from whose bourn</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1525</span>疲れ果てた人生の下で呻き、汗を流しながら。
+                    <span class="original-text">No traveler returns, puzzles the will,</span>
+                </div>
+                
+                <div class="annotation-section linguistic-analysis">
+                    <h4 class="annotation-header expandable">
+                        <span class="annotation-icon">📝</span>
+                        言語学的分析
+                    </h4>
+                    <div class="expandable-content">
+                        <p>1517-1521行の社会的不正義のカタログは、修辞学的にはアシンデトン（連辞省略）とポリシンデトン（連辞畳用）の巧みな組み合わせである。日本語訳では、体言止めと連体修飾の重層的使用により、原文の圧迫感を再現している。</p>
+                        
+                        <p>「素手の短剣」（bare bodkin）は、オクシモロン的な表現として機能している。「bare」は「むき出しの」と「ただの」の両義性を持ち、死の単純さと恐ろしさを同時に表現する。日本語の「素手の」は、この両義性を「素朴さ」と「無防備さ」の緊張関係として翻訳している。</p>
+                        
+                        <p>音韻的には、原文の/b/音の反復（bear, bodkin, fardels, bear）が、重荷の物理的重さを音響的に表現している。日本語訳では、「背負う」「重荷」「疲れ果てた」という重い音の漢語を配置することで、同様の効果を狙っている。</p>
+                    </div>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1526</span>しかし死後の何かへの恐怖、
+                    <span class="original-text">And makes us rather bear those ills we have</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1527</span>旅人が誰一人戻らない
+                    <span class="original-text">Than fly to others that we know not of?</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1528</span>未発見の国への恐怖が意志を困惑させ、
+                    <span class="original-text">Thus conscience does make cowards of us all,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1529</span>今ある不幸を耐え忍ばせ、
+                    <span class="original-text">And thus the native hue of resolution</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1530</span>知らない不幸へと飛び込むことを躊躇させる。
+                    <span class="original-text">Is sicklied o'er with the pale cast of thought,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1531</span>こうして良心は我々すべてを臆病者にする。
+                    <span class="original-text">And enterprises of great pith and moment</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1532</span>こうして決意の生来の色合いは
+                    <span class="original-text">With this regard their currents turn awry</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1533</span>思考の青白い色調で病的に覆われ、
+                    <span class="original-text">And lose the name of action.—Soft you now,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1534</span>偉大な意義と重要性を持つ企ても
+                    <span class="original-text">The fair Ophelia!—Nymph, in thy orisons</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1535</span>この点で流れを逸らされ、行動の名を失う。
+                    <span class="original-text">Be all my sins remembered.</span>
+                </div>
+                
+                <div class="philosophical-terms">
+                    <h4>哲学用語解説</h4>
+                    <div class="term-entry">
+                        <span class="term-original">良心（conscience）</span>：ハイデガーの「良心の呼び声」（Ruf des Gewissens）として、本来的実存への召喚
+                    </div>
+                    <div class="term-entry">
+                        <span class="term-original">思考の青白い色調</span>：ニーチェの「蒼白い犯罪者」を想起させる、生の力の減退
+                    </div>
+                    <div class="term-entry">
+                        <span class="term-original">行動（action）</span>：アーレントの活動力（vita activa）概念における実践の次元
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- "What a piece of work is man" Speech -->
+        <section id="what-a-piece-of-work" class="content-section">
+            <h2 class="work-title">第二幕第二場 - 人間性の逆説的讃歌</h2>
+            
+            <div class="soliloquy-section">
+                <h3 class="soliloquy-title">「人間とは何と素晴らしい作品か」（行1601-1625）</h3>
+                
+                <div class="verse-line">
+                    <span class="line-number">1601</span>最近、私は——なぜかは知らないが——
+                    <span class="original-text">I have of late—but wherefore I know not—</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1602</span>すべての歓びを失ってしまった。習慣的な活動を放棄し、
+                    <span class="original-text">lost all my mirth, forgone all custom of exercises;</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1603</span>実に、私の気分は重く沈んでいるので、
+                    <span class="original-text">and indeed it goes so heavily with my disposition that</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1604</span>この美しい構築物、大地が、
+                    <span class="original-text">this goodly frame, the earth, seems to me</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1605</span>私には不毛な岬にしか思えない。
+                    <span class="original-text">a sterile promontory; this most excellent canopy,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1606</span>この最も優れた天蓋、大気を見てみたまえ、
+                    <span class="original-text">the air—look you, this brave o'erhanging firmament,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1607</span>この勇壮な張り出した大空、
+                    <span class="original-text">this majestical roof fretted with golden fire—</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1608</span>黄金の火で飾られた荘厳な屋根——
+                    <span class="original-text">why, it appears no other thing to me</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1609</span>なぜか、私にはそれが
+                    <span class="original-text">than a foul and pestilent congregation of vapors.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1610</span>汚れた疫病的な蒸気の集まりにしか見えない。
+                    <span class="original-text">What a piece of work is a man! How noble in reason,</span>
+                </div>
+                
+                <div class="annotation-section existential-analysis">
+                    <h4 class="annotation-header expandable">
+                        <span class="annotation-icon">🌌</span>
+                        実存的メランコリー分析
+                    </h4>
+                    <div class="expandable-content">
+                        <p>ハムレットのメランコリーは、キルケゴールの「死に至る病」における絶望の現象学的記述と共鳴する。「なぜかは知らないが」という表現は、実存的不安の無根拠性を示している。これはハイデガーが「根拠の根拠」（Grund des Grundes）と呼んだ、存在の深淵的性格を暗示する。</p>
+                        
+                        <p>世界の美的価値の転倒（美しい大地→不毛な岬、荘厳な天空→疫病的蒸気）は、サルトルの「嘔吐」における存在の過剰性の体験と類似している。ハムレットは世界の意味の崩壊を経験し、現象の背後にある虚無を直視している。</p>
+                    </div>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1611</span>人間とは何と素晴らしい作品か！理性において何と高貴か、
+                    <span class="original-text">how infinite in faculty, in form and moving</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1612</span>能力において何と無限か、形態と動きにおいて
+                    <span class="original-text">how express and admirable, in action how like an angel,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1613</span>何と的確で称賛すべきか、行動において何と天使に似ているか、
+                    <span class="original-text">in apprehension how like a god!</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1614</span>理解力において何と神に似ているか！
+                    <span class="original-text">The beauty of the world, the paragon of animals!</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1615</span>世界の美、動物の典範！
+                    <span class="original-text">And yet, to me, what is this quintessence of dust?</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1616</span>それなのに、私にとって、この塵の精髄は何なのか？
+                    <span class="original-text">Man delights not me—no, nor woman neither,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1617</span>人間は私を喜ばせない——いや、女性もまた然り。
+                    <span class="original-text">though by your smiling you seem to say so.</span>
+                </div>
+                
+                <div class="annotation-section phenomenological-reading">
+                    <h4 class="annotation-header expandable">
+                        <span class="annotation-icon">🔍</span>
+                        人間性の現象学的逆説
+                    </h4>
+                    <div class="expandable-content">
+                        <p>「塵の精髄」（quintessence of dust）という表現は、人間存在の根本的な両義性を示す。メルロ＝ポンティの「見えるものと見えないもの」の観点から、人間は物質性（塵）と精神性（精髄）の<ruby>交叉配列<rt>キアスム</rt></ruby>として理解される。</p>
+                        
+                        <p>ルネサンス的人間観（理性的、無限、神的）とその否定の並置は、レヴィナスの「全体性と無限」における主体の分裂を想起させる。人間は自己の有限性を超越しようとしながら、同時にその有限性に囚われている。</p>
+                        
+                        <p>「男性も女性も」という性差の言及は、ボーヴォワールやバトラーのジェンダー論を先取りする形で、人間性の普遍的な問題として提示されている。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- "To be honest" Speech -->
+        <section id="to-be-honest" class="content-section">
+            <h2 class="work-title">第二幕第二場 - 誠実性の不可能性</h2>
+            
+            <div class="soliloquy-section">
+                <h3 class="soliloquy-title">「正直であること」（行1701-1720）</h3>
+                
+                <div class="verse-line">
+                    <span class="line-number">1701</span>正直であることは、この世が示すように、
+                    <span class="original-text">To be honest, as this world goes,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1702</span>一万人から一人を選び出すようなものだ。
+                    <span class="original-text">is to be one man picked out of ten thousand.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1703</span>それは真実だ、閣下。
+                    <span class="original-text">That's very true, my lord.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1704</span>なぜなら、太陽が<ruby>蛆虫<rt>うじむし</rt></ruby>を生むように
+                    <span class="original-text">For if the sun breed maggots in a dead dog,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1705</span>死んだ犬から生じさせるとすれば——
+                    <span class="original-text">being a god kissing carrion—</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1706</span>腐肉に接吻する神であるならば——
+                    <span class="original-text">Have you a daughter?</span>
+                </div>
+                
+                <div class="annotation-section linguistic-analysis">
+                    <h4 class="annotation-header expandable">
+                        <span class="annotation-icon">📝</span>
+                        言語行為論的分析
+                    </h4>
+                    <div class="expandable-content">
+                        <p>「正直であること」（to be honest）は、オースティンの言語行為論における遂行的発話の問題を提起する。正直さを語ることと正直であることの間には、解消不可能な緊張関係が存在する。</p>
+                        
+                        <p>太陽と蛆虫のメタファーは、デリダの「散種」概念を想起させる。創造（太陽）と腐敗（蛆虫）は相互に依存し、意味の純粋性は常に汚染されている。日本語の「腐肉に接吻する神」という表現は、聖と俗の境界の崩壊を劇的に表現している。</p>
+                    </div>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1707</span>娘がおありですか？
+                    <span class="original-text">I have, my lord.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1708</span>はい、閣下。
+                    <span class="original-text">Let her not walk i' th' sun. Conception is a blessing,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1709</span>日向を歩かせてはならない。受胎は祝福だが、
+                    <span class="original-text">but as your daughter may conceive—friend, look to 't.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1710</span>しかし娘さんが身ごもるかもしれない——友よ、気をつけたまえ。
+                    <span class="original-text">[Aside] How say you by that? Still harping on my daughter.</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- The Play Scene -->
+        <section id="the-play-scene" class="content-section">
+            <h2 class="work-title">第三幕第二場 - 演劇の形而上学</h2>
+            
+            <div class="soliloquy-section">
+                <h3 class="soliloquy-title">「芝居は良心を捕らえる罠」（行1801-1850）</h3>
+                
+                <div class="verse-line">
+                    <span class="line-number">1801</span>自然の鏡を掲げて、
+                    <span class="original-text">to hold, as 'twere, the mirror up to nature,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1802</span>美徳にその姿を、愚行にその像を、
+                    <span class="original-text">to show virtue her own feature, scorn her own image,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1803</span>時代の本質と刻印をその身体に示すこと。
+                    <span class="original-text">and the very age and body of the time his form and pressure.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1804</span>これが過剰になったり不足したりすれば、
+                    <span class="original-text">Now this overdone or come tardy off,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1805</span>無知な者を笑わせることはできても、
+                    <span class="original-text">though it make the unskillful laugh,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1806</span>判断力のある者を悲しませることになる。
+                    <span class="original-text">cannot but make the judicious grieve,</span>
+                </div>
+                
+                <div class="annotation-section phenomenological-reading">
+                    <h4 class="annotation-header expandable">
+                        <span class="annotation-icon">🔍</span>
+                        演劇的現象学
+                    </h4>
+                    <div class="expandable-content">
+                        <p>「自然の鏡」という概念は、プラトンのミメーシス論を超えて、ガダマーの「真理と方法」における芸術の存在論的機能を示唆する。演劇は単なる模倣ではなく、存在の真理を開示する出来事である。</p>
+                        
+                        <p>「時代の本質と刻印」は、ベンヤミンの「歴史の天使」を想起させる。演劇は歴史的瞬間を凝縮し、その時代の無意識を可視化する装置として機能する。</p>
+                    </div>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1807</span>一人の判断力ある者の批判は、
+                    <span class="original-text">the censure of the which one must in your allowance</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1808</span>劇場全体の判断より重いと認めねばならない。
+                    <span class="original-text">o'erweigh a whole theater of others.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1809</span>おお、身振りだけで民衆の耳を引き裂く
+                    <span class="original-text">Oh, there be players that I have seen play</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1810</span>役者たちがいる——
+                    <span class="original-text">and heard others praise, and that highly,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1811</span>他の者が高く評価するのを聞いたことがある——
+                    <span class="original-text">not to speak it profanely, that neither having</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1812</span>不敬な言い方をすれば、
+                    <span class="original-text">th' accent of Christians nor the gait of Christian,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1813</span>キリスト教徒の話し方も歩き方も持たず、
+                    <span class="original-text">pagan, nor man, have so strutted and bellowed</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1814</span>異教徒でも人間でもない者が、
+                    <span class="original-text">that I have thought some of nature's journeymen</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1815</span>あれほど気取って吼えるので、
+                    <span class="original-text">had made men and not made them well,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1816</span>自然の見習い職人が人間を作ったが、
+                    <span class="original-text">they imitated humanity so abominably.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1817</span>うまく作れなかったのだと思った、
+                    <span class="original-text">Reform it altogether. And let those that play</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">1818</span>人間性をあれほど憎むべき形で模倣するとは。
+                    <span class="original-text">your clowns speak no more than is set down for them,</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Philosophical Framework Section -->
+        <section id="philosophical-framework" class="content-section">
+            <h2 class="work-title">哲学的枠組みと批評的視座</h2>
+            
+            <div class="annotation-section existential-analysis">
+                <h4 class="annotation-header">
+                    <span class="annotation-icon">🌌</span>
+                    実存主義的読解の総括
+                </h4>
+                <p>ハムレットの独白群は、20世紀実存主義の主要テーマを先取りしている。特に以下の点において：</p>
+                <ul style="margin-left: 30px; line-height: 2;">
+                    <li><strong>実存は本質に先立つ</strong>：ハムレットは自己の本質を問い続けながら、行動（あるいは非行動）を通じて自己を創造する</li>
+                    <li><strong>不安と自由</strong>：選択の重荷と責任の意識が、彼の行動を麻痺させる</li>
+                    <li><strong>真正性の追求</strong>：「見せかけ」（seems）と「存在」（is）の対立が作品全体を貫く</li>
+                    <li><strong>死への存在</strong>：死の意識が生の意味を逆説的に照らし出す</li>
+                </ul>
+            </div>
+            
+            <div class="annotation-section phenomenological-reading">
+                <h4 class="annotation-header">
+                    <span class="annotation-icon">🔍</span>
+                    現象学的アプローチ
+                </h4>
+                <p>フッサール、ハイデガー、メルロ＝ポンティの現象学的方法論を通じて、ハムレットの意識の構造を分析すると：</p>
+                <ul style="margin-left: 30px; line-height: 2;">
+                    <li><strong>志向性</strong>：ハムレットの意識は常に何かについての意識であり、対象なき不安に苦しむ</li>
+                    <li><strong>時間性</strong>：過去（父の死）、現在（復讐の遅延）、未来（死後の世界）の統合の困難</li>
+                    <li><strong>身体性</strong>：「この世の煩い」（mortal coil）としての身体的実存の重さ</li>
+                    <li><strong>間主観性</strong>：他者（クローディアス、ガートルード、オフィーリア）との関係における自己理解</li>
+                </ul>
+            </div>
+            
+            <div class="annotation-section linguistic-analysis">
+                <h4 class="annotation-header">
+                    <span class="annotation-icon">📝</span>
+                    言語哲学的考察
+                </h4>
+                <p>ヴィトゲンシュタイン、オースティン、デリダの言語論を援用した分析：</p>
+                <ul style="margin-left: 30px; line-height: 2;">
+                    <li><strong>言語ゲーム</strong>：ハムレットは複数の言語ゲーム（宮廷、恋愛、狂気）を戦略的に使い分ける</li>
+                    <li><strong>パフォーマティヴィティ</strong>：「生きるべきか死ぬべきか」は記述ではなく、存在論的な遂行である</li>
+                    <li><strong>差延</strong>：復讐の遅延は、意味の差延構造を体現している</li>
+                    <li><strong>脱構築</strong>：二項対立（生/死、正気/狂気、真実/虚偽）の境界の曖昧化</li>
+                </ul>
+            </div>
+            
+            <div class="philosophical-terms">
+                <h4>翻訳における哲学的選択</h4>
+                <div class="term-entry">
+                    <span class="term-original">To be</span>→「生きる」：静的な存在から動的なプロセスへの転換
+                </div>
+                <div class="term-entry">
+                    <span class="term-original">Conscience</span>→「良心」：道徳的意識と認識論的意識の両義性を保持
+                </div>
+                <div class="term-entry">
+                    <span class="term-original">Action</span>→「行動」：プラクシスとしての実践的次元の強調
+                </div>
+                <div class="term-entry">
+                    <span class="term-original">Nature</span>→「自然」：西洋的自然概念と東洋的自然観の対話
+                </div>
+            </div>
+        </section>
+        
+        <!-- Continuing with more soliloquies and scenes -->
+        <section class="content-section">
+            <h2 class="work-title">第三幕第三場 - 祈りの場面と意識の弁証法</h2>
+            
+            <div class="soliloquy-section">
+                <h3 class="soliloquy-title">「今こそ好機」（行2301-2350）</h3>
+                
+                <div class="verse-line">
+                    <span class="line-number">2301</span>今こそ好機だ。彼は祈っている。
+                    <span class="original-text">Now might I do it pat, now he is praying;</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2302</span>今こそやってしまおう。そうすれば彼は天国へ行く。
+                    <span class="original-text">And now I'll do't. And so he goes to heaven,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2303</span>そうして私は復讐を果たしたことになる。
+                    <span class="original-text">And so am I revenged. That would be scanned:</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2304</span>いや、それは考え直さねばならない。
+                    <span class="original-text">A villain kills my father, and for that,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2305</span>悪党が私の父を殺し、その報いとして、
+                    <span class="original-text">I, his sole son, do this same villain send</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2306</span>私、彼の一人息子が、その同じ悪党を
+                    <span class="original-text">To heaven.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2307</span>天国へ送るのか。
+                    <span class="original-text">Oh, this is hire and salary, not revenge.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2308</span>ああ、これは報酬であり給料であって、復讐ではない。
+                    <span class="original-text">He took my father grossly, full of bread,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2309</span>奴は私の父を、満腹で、
+                    <span class="original-text">With all his crimes broad blown, as flush as May;</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2310</span>すべての罪が五月のように満開に咲き誇った状態で殺した。
+                    <span class="original-text">And how his audit stands who knows save heaven?</span>
+                </div>
+                
+                <div class="annotation-section existential-analysis">
+                    <h4 class="annotation-header expandable">
+                        <span class="annotation-icon">🌌</span>
+                        復讐の形而上学
+                    </h4>
+                    <div class="expandable-content">
+                        <p>ハムレットの躊躇は、単なる優柔不断ではなく、復讐の存在論的意味への問いかけである。ニーチェの「力への意志」の観点から見れば、ハムレットは復讐を通じて自己を肯定しようとしながら、同時にその行為が自己を否定する可能性を認識している。</p>
+                        
+                        <p>「天国へ送る」というパラドックスは、ジラールの「暴力と聖なるもの」における犠牲のメカニズムを露呈させる。復讐は聖なる行為として正当化されながら、その聖性自体が暴力を永続化させる。</p>
+                        
+                        <p>時間性の問題も重要である。クローディアスの現在の祈りと、ハムレット父の過去の死、そして未来の救済という三つの時間が交錯し、復讐の「適切な瞬間」（カイロス）を問題化している。</p>
+                    </div>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2311</span>彼の決算がどうなっているか、天以外に誰が知ろう？
+                    <span class="original-text">But in our circumstance and course of thought,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2312</span>しかし我々の状況と思考の流れから推測すれば、
+                    <span class="original-text">'Tis heavy with him. And am I then revenged,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2313</span>彼には重い罪がある。では私は復讐を果たしたことになるのか、
+                    <span class="original-text">To take him in the purging of his soul,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2314</span>彼の魂が清められているときに殺して、
+                    <span class="original-text">When he is fit and seasoned for his passage?</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2315</span>彼が旅立ちの準備を整えているときに？
+                    <span class="original-text">No.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2316</span>いや。
+                    <span class="original-text">Up, sword, and know thou a more horrid hent.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2317</span>剣よ、収まれ。もっと恐ろしい機会を知れ。
+                    <span class="original-text">When he is drunk asleep, or in his rage,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2318</span>彼が酔って眠っているとき、あるいは激怒しているとき、
+                    <span class="original-text">Or in th' incestuous pleasure of his bed,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2319</span>あるいは近親相姦の床の快楽に浸っているとき、
+                    <span class="original-text">At gaming, swearing, or about some act</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2320</span>賭博や罵りの最中、あるいは何か
+                    <span class="original-text">That has no relish of salvation in't—</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2321</span>救済の味わいがまったくない行為をしているとき——
+                    <span class="original-text">Then trip him, that his heels may kick at heaven,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2322</span>その時こそ彼を倒せ。彼の踵が天を蹴り、
+                    <span class="original-text">And that his soul may be as damned and black</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2323</span>彼の魂が地獄のように呪われ黒くなり、
+                    <span class="original-text">As hell, whereto it goes. My mother stays.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2324</span>向かう先の地獄のようになるように。母が待っている。
+                    <span class="original-text">This physic but prolongs thy sickly days.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2325</span>この薬は単に汝の病める日々を延ばすだけだ。
+                    <span class="original-text">[Exit]</span>
+                </div>
+                
+                <div class="annotation-section phenomenological-reading">
+                    <h4 class="annotation-header expandable">
+                        <span class="annotation-icon">🔍</span>
+                        倫理的意識の現象学
+                    </h4>
+                    <div class="expandable-content">
+                        <p>レヴィナスの「他者」の倫理学から見れば、祈るクローディアスは「顔」として現れ、ハムレットに無限の責任を突きつける。殺人の可能性と不可能性が同時に立ち現れる瞬間である。</p>
+                        
+                        <p>「もっと恐ろしい機会」を待つという決断は、デリダの「歓待」の逆説を示す。真の復讐は計算可能な交換（目には目を）を超えて、絶対的な非対称性を要求する。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- The Closet Scene Soliloquy -->
+        <section class="content-section">
+            <h2 class="work-title">第三幕第四場 - 寝室の場面：エディプス的対決</h2>
+            
+            <div class="soliloquy-section">
+                <h3 class="soliloquy-title">「残酷になろう、しかし不自然にはなるまい」（行2401-2450）</h3>
+                
+                <div class="verse-line">
+                    <span class="line-number">2401</span>今や魔女たちの真夜中、
+                    <span class="original-text">'Tis now the very witching time of night,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2402</span>教会墓地があくびをし、地獄そのものが
+                    <span class="original-text">When churchyards yawn and hell itself breathes out</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2403</span>この世に伝染病を吐き出す時刻。
+                    <span class="original-text">Contagion to this world. Now could I drink hot blood</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2404</span>今なら熱い血を飲み干し、
+                    <span class="original-text">And do such bitter business as the day</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2405</span>昼の光が見るに震えるような
+                    <span class="original-text">Would quake to look on. Soft, now to my mother.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2406</span>苦い仕事ができる。待て、今母のもとへ。
+                    <span class="original-text">O heart, lose not thy nature; let not ever</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2407</span>おお心よ、自然を失うな。決して
+                    <span class="original-text">The soul of Nero enter this firm bosom.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2408</span>ネロの魂をこの堅い胸に入れるな。
+                    <span class="original-text">Let me be cruel, not unnatural.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2409</span>残酷になろう、しかし不自然にはなるまい。
+                    <span class="original-text">I will speak daggers to her, but use none.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2410</span>彼女に短剣のような言葉を語ろう、しかし使うまい。
+                    <span class="original-text">My tongue and soul in this be hypocrites;</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2411</span>この点で私の舌と魂は偽善者になろう。
+                    <span class="original-text">How in my words soever she be shent,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2412</span>私の言葉でどれほど彼女が責められようとも、
+                    <span class="original-text">To give them seals never, my soul, consent.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2413</span>それに実行の印を与えることには、わが魂よ、決して同意するな。
+                    <span class="original-text">[Exit]</span>
+                </div>
+                
+                <div class="annotation-section existential-analysis">
+                    <h4 class="annotation-header expandable">
+                        <span class="annotation-icon">🌌</span>
+                        精神分析的読解：母性的なものとの対決
+                    </h4>
+                    <div class="expandable-content">
+                        <p>フロイトとラカンの精神分析理論を通じて、この場面はエディプス・コンプレックスの文学的表現として読める。「ネロの魂」への言及は、母殺しの欲望と禁忌の間の緊張を示す。</p>
+                        
+                        <p>「残酷だが不自然ではない」という逆説は、クリステヴァの「アブジェクション」概念を想起させる。母は愛と嫌悪の対象として、主体の境界を脅かす存在である。</p>
+                        
+                        <p>「短剣のような言葉」は、言語の暴力性を主題化する。バトラーの言語的傷つけやすさ（linguistic vulnerability）の理論から見れば、言葉は身体的暴力に匹敵する破壊力を持つ。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Act IV Soliloquy -->
+        <section class="content-section">
+            <h2 class="work-title">第四幕第四場 - 行動への最終的決意</h2>
+            
+            <div class="soliloquy-section">
+                <h3 class="soliloquy-title">「今後、私の思考は血まみれでなければ」（行2601-2650）</h3>
+                
+                <div class="verse-line">
+                    <span class="line-number">2601</span>すべてが私を駆り立て、
+                    <span class="original-text">How all occasions do inform against me</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2602</span>私の鈍い復讐を刺激する！
+                    <span class="original-text">And spur my dull revenge! What is a man,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2603</span>人間とは何か、
+                    <span class="original-text">If his chief good and market of his time</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2604</span>もしその主要な善と時間の市場価値が
+                    <span class="original-text">Be but to sleep and feed? A beast, no more.</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2605</span>ただ眠り食べることだけなら？獣だ、それ以上ではない。
+                    <span class="original-text">Sure, he that made us with such large discourse,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2606</span>確かに、これほど大きな理性を持って我々を作った者は、
+                    <span class="original-text">Looking before and after, gave us not</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2607</span>前後を見通す力を与えながら、
+                    <span class="original-text">That capability and godlike reason</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2608</span>その能力と神のような理性を
+                    <span class="original-text">To fust in us unused. Now, whether it be</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2609</span>使われずに我々の中で<ruby>黴<rt>かび</rt></ruby>させるために与えたのではない。
+                    <span class="original-text">Bestial oblivion, or some craven scruple</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2610</span>さて、それが獣的な忘却なのか、
+                    <span class="original-text">Of thinking too precisely on th' event—</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2611</span>結果について過度に精密に考える臆病な躊躇なのか——
+                    <span class="original-text">A thought which, quartered, hath but one part wisdom</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2612</span>四分割すれば、知恵は一部分だけで
+                    <span class="original-text">And ever three parts coward—I do not know</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2613</span>常に三部分は臆病である思考——私にはわからない
+                    <span class="original-text">Why yet I live to say "This thing's to do,"</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2614</span>なぜ私はまだ生きて「これをすべきだ」と言っているのか、
+                    <span class="original-text">Sith I have cause and will and strength and means</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2615</span>理由も意志も力も手段もあるというのに。
+                    <span class="original-text">To do't. Examples gross as earth exhort me:</span>
+                </div>
+                
+                <div class="annotation-section linguistic-analysis">
+                    <h4 class="annotation-header expandable">
+                        <span class="annotation-icon">📝</span>
+                        理性と行動の弁証法
+                    </h4>
+                    <div class="expandable-content">
+                        <p>「思考の四分割」（知恵1/4、臆病3/4）という数学的メタファーは、デカルト的理性の限界を示唆する。パスカルの「考える葦」を反転させ、考えることが行動を阻害するパラドックスを提示している。</p>
+                        
+                        <p>「獣的な忘却」対「過度に精密な思考」という対立は、ベルクソンの「物質と記憶」における、本能と知性の二元論を想起させる。ハムレットは両極端の間で引き裂かれている。</p>
+                        
+                        <p>日本語訳における「黴させる」という表現は、理性の腐敗というグロテスクなイメージを効果的に伝えている。</p>
+                    </div>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2616</span>大地のように明白な例が私を励ます。
+                    <span class="original-text">Witness this army of such mass and charge</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2617</span>見よ、この大規模で高価な軍隊を、
+                    <span class="original-text">Led by a delicate and tender prince,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2618</span>繊細で若い王子に率いられ、
+                    <span class="original-text">Whose spirit with divine ambition puffed</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2619</span>その精神は神聖な野心に膨らみ、
+                    <span class="original-text">Makes mouths at the invisible event,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2620</span>見えない結果を嘲笑い、
+                    <span class="original-text">Exposing what is mortal and unsure</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2621</span>死すべき不確かなものを
+                    <span class="original-text">To all that fortune, death, and danger dare,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2622</span>運命と死と危険が挑むすべてに晒している、
+                    <span class="original-text">Even for an eggshell. Rightly to be great</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2623</span>卵の殻のためにさえ。真に偉大であることは
+                    <span class="original-text">Is not to stir without great argument,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2624</span>大きな理由なしに動かないことではない、
+                    <span class="original-text">But greatly to find quarrel in a straw</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2625</span>名誉が問題になるときは
+                    <span class="original-text">When honor's at the stake. How stand I then,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2626</span><ruby>藁<rt>わら</rt></ruby>の中に大いなる争いを見出すことだ。では私はどうなのだ、
+                    <span class="original-text">That have a father killed, a mother stained,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2627</span>父を殺され、母を汚され、
+                    <span class="original-text">Excitements of my reason and my blood,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2628</span>理性と血の両方から刺激を受けながら、
+                    <span class="original-text">And let all sleep—while, to my shame, I see</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2629</span>すべてを眠らせている——恥ずかしいことに、私は見ている
+                    <span class="original-text">The imminent death of twenty thousand men,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2630</span>二万人の差し迫った死を、
+                    <span class="original-text">That for a fantasy and trick of fame</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2631</span>名声の幻想と策略のために
+                    <span class="original-text">Go to their graves like beds, fight for a plot</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2632</span>寝床のように墓に行く者たちを、
+                    <span class="original-text">Whereon the numbers cannot try the cause,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2633</span>その数では大義を試すこともできない土地のために戦い、
+                    <span class="original-text">Which is not tomb enough and continent</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2634</span>それは殺された者たちを隠すのに
+                    <span class="original-text">To hide the slain? Oh, from this time forth,</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2635</span>十分な墓地も大陸もない土地だ。ああ、今この時から、
+                    <span class="original-text">My thoughts be bloody, or be nothing worth!</span>
+                </div>
+                
+                <div class="verse-line">
+                    <span class="line-number">2636</span>私の思考は血まみれでなければ、無価値だ！
+                    <span class="original-text">[Exit]</span>
+                </div>
+                
+                <div class="annotation-section phenomenological-reading">
+                    <h4 class="annotation-header expandable">
+                        <span class="annotation-icon">🔍</span>
+                        戦争の現象学と倫理
+                    </h4>
+                    <div class="expandable-content">
+                        <p>フォルティンブラスの軍隊という「他者」との遭遇は、レヴィナスの「全体性と無限」における戦争の分析を想起させる。戦争は全体性の論理（卵の殻のような些細な理由）によって正当化されるが、個々の死の無限性を隠蔽する。</p>
+                        
+                        <p>「血まみれの思考」への転換は、メルロ＝ポンティの「知覚の現象学」における身体的関与（engagement corporel）への移行として読める。純粋な思考から、血と肉を持った実存的決断へ。</p>
+                        
+                        <p>二万人の死という具体的な数字は、統計的抽象化への批判を含む。アーレントの全体主義論を援用すれば、個人の生命が交換可能な数値に還元される近代の病理が露呈している。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Final philosophical summary -->
+        <section class="content-section">
+            <h2 class="work-title">結語：ハムレットの哲学的遺産</h2>
+            
+            <div class="annotation-section existential-analysis">
+                <h4 class="annotation-header">
+                    <span class="annotation-icon">🌌</span>
+                    21世紀における『ハムレット』の意義
+                </h4>
+                <p>『ハムレット』の独白群は、西洋形而上学の歴史における決定的な転換点を示している。主な哲学的貢献として：</p>
+                
+                <ul style="margin-left: 30px; line-height: 2;">
+                    <li><strong>意識の問題</strong>：デカルト的コギトに先立つ自己意識の劇的表現</li>
+                    <li><strong>時間性</strong>：過去・現在・未来の実存的統合の困難</li>
+                    <li><strong>他者性</strong>：自己と他者の倫理的関係の複雑性</li>
+                    <li><strong>言語と行為</strong>：語ることと為すことの間の深淵</li>
+                    <li><strong>死の意味</strong>：有限性の自覚と無限への憧憬</li>
+                </ul>
+                
+                <p>日本語への翻訳は、これらの哲学的問題を東アジアの思想的文脈に移植する試みである。特に：</p>
+                
+                <ul style="margin-left: 30px; line-height: 2;">
+                    <li>西田幾多郎の「絶対矛盾的自己同一」としてのハムレット的意識</li>
+                    <li>和辻哲郎の「間柄」概念から見た復讐の倫理</li>
+                    <li>九鬼周造の「いき」の構造における実存的決断</li>
+                    <li>井筒俊彦の言語哲学から見た「生きるべきか死ぬべきか」の意味論</li>
+                </ul>
+                
+                <p>『ハムレット』は単なる文学作品を超えて、人間の実存的状況の普遍的表現として、今日もなお我々に問いかけ続けている。</p>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        // Citation Management
+        function toggleCitationModal() {
+            const modal = document.getElementById('citationModal');
+            modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+        }
+        
+        function closeCitationModal() {
+            document.getElementById('citationModal').style.display = 'none';
+        }
+        
+        function copyCitation(format) {
+            const citations = {
+                mla: 'シェイクスピア、ウィリアム。「ハムレット」『シェイクスピア全集 日本語版 第二部』。JLPT N1学術注釈版、2025年。',
+                apa: 'Shakespeare, W. (2025). ハムレット. In シェイクスピア全集 日本語版 第二部 (JLPT N1学術注釈版).',
+                chicago: 'シェイクスピア、ウィリアム。『シェイクスピア全集 日本語版 第二部』。JLPT N1学術注釈版。2025年。',
+                harvard: 'Shakespeare, W 2025, \'ハムレット\', シェイクスピア全集 日本語版 第二部, JLPT N1学術注釈版.'
+            };
+            
+            navigator.clipboard.writeText(citations[format]).then(() => {
+                alert('引用がクリップボードにコピーされました。');
+            });
+        }
+        
+        // Text Analysis
+        function toggleTextAnalysis() {
+            const content = document.querySelector('.container').textContent;
+            const charCount = content.length;
+            const kanjiCount = (content.match(/[\u4e00-\u9faf]/g) || []).length;
+            const annotationCount = document.querySelectorAll('.annotation-section').length;
+            const readingTime = Math.ceil(charCount / 400);
+            
+            alert(`テキスト分析結果:\n\n総文字数: ${charCount.toLocaleString()}\n漢字数: ${kanjiCount.toLocaleString()}\n注釈数: ${annotationCount}\n推定読書時間: ${readingTime}分`);
+        }
+        
+        // Export Annotations
+        function exportAnnotations() {
+            const annotations = [];
+            document.querySelectorAll('.annotation-section').forEach(section => {
+                const header = section.querySelector('.annotation-header').textContent.trim();
+                const content = section.querySelector('.expandable-content, p').textContent.trim();
+                annotations.push({
+                    type: header,
+                    content: content
+                });
+            });
+            
+            const dataStr = JSON.stringify(annotations, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            
+            const exportFileDefaultName = 'hamlet-annotations-part2.json';
+            
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+        }
+        
+        // Philosophical Lens Toggle
+        function togglePhilosophicalLens() {
+            alert('哲学的レンズ機能：\n\n選択したテキストを特定の哲学者の視点から分析します。\n現在利用可能な視点：\n- ハイデガー（存在論）\n- レヴィナス（倫理学）\n- デリダ（脱構築）\n- バトラー（ジェンダー論）\n- 西田幾多郎（絶対無）');
+        }
+        
+        // Expandable content functionality
+        document.querySelectorAll('.expandable').forEach(element => {
+            element.addEventListener('click', function() {
+                this.classList.toggle('expanded');
+                const content = this.nextElementSibling;
+                content.classList.toggle('expanded');
+            });
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-item').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('citationModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

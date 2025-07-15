@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア全集 日本語版 JLPT N2学習者向け注釈付き - 第三部</title>
+    <style>
+        body {
+            font-family: 'Noto Serif JP', 'Yu Mincho', serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(to bottom, #2c3e50, #34495e);
+            color: white;
+            margin: -20px -20px 40px -20px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: normal;
+        }
+        .header h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            font-weight: normal;
+            color: #ecf0f1;
+        }
+        .header .subtitle {
+            font-size: 1.2em;
+            color: #bdc3c7;
+            margin-top: 20px;
+        }
+        .study-tools {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-width: 250px;
+        }
+        .study-tools h4 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        .study-tool-btn {
+            display: block;
+            width: 100%;
+            padding: 8px 12px;
+            margin: 5px 0;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .study-tool-btn:hover {
+            background-color: #2980b9;
+        }
+        .study-tool-btn.active {
+            background-color: #27ae60;
+        }
+        .progress-tracker {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #3498db;
+            width: 0%;
+            transition: width 0.3s;
+        }
+        .toc {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        .toc h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+        .toc-list li {
+            margin: 10px 0;
+        }
+        .toc-list a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        .toc-list a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin: 60px 0;
+        }
+        .section-title {
+            font-size: 2em;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .act-scene {
+            font-size: 1.3em;
+            color: #7f8c8d;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        .line {
+            margin: 15px 0;
+            padding: 10px 20px;
+            border-left: 3px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+        .line:hover {
+            border-left-color: #3498db;
+            background-color: #f8f9fa;
+        }
+        .line-number {
+            color: #95a5a6;
+            font-size: 0.9em;
+            margin-right: 15px;
+        }
+        .speaker {
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 20px 0 10px 0;
+            font-size: 1.2em;
+        }
+        ruby {
+            ruby-position: over;
+        }
+        rt {
+            font-size: 0.7em;
+            color: #7f8c8d;
+        }
+        .stage-direction {
+            font-style: italic;
+            color: #7f8c8d;
+            margin: 15px 0;
+            text-align: center;
+        }
+        .commentary {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .commentary h5 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .literary-device {
+            background-color: #e8f6f3;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #16a085;
+        }
+        .literary-device h5 {
+            color: #16a085;
+            margin-bottom: 10px;
+        }
+        .cultural-note {
+            background-color: #fef9e7;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #f39c12;
+        }
+        .cultural-note h5 {
+            color: #f39c12;
+            margin-bottom: 10px;
+        }
+        .grammar-note {
+            background-color: #ebf5fb;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+        .grammar-note h5 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        .n1-kanji {
+            background-color: #ffebee;
+            padding: 2px 4px;
+            border-radius: 3px;
+            cursor: help;
+            position: relative;
+        }
+        .n1-kanji.hidden {
+            background-color: transparent;
+        }
+        .tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            white-space: nowrap;
+            display: none;
+            z-index: 100;
+        }
+        .n1-kanji:hover .tooltip {
+            display: block;
+        }
+        .dialogue {
+            margin: 30px 0;
+        }
+        .monologue {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .study-tools {
+                position: static;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            .container {
+                padding: 10px;
+            }
+            .header {
+                margin: -10px -10px 20px -10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>シェイクスピア全集</h1>
+            <h2>日本語版 完全注釈付き</h2>
+            <div class="subtitle">JLPT N2学習者向け - 第三部（3001-4500行）</div>
+        </div>
+
+        <div class="study-tools">
+            <h4>学習ツール</h4>
+            <button class="study-tool-btn active" onclick="toggleFurigana()">ふりがな表示</button>
+            <button class="study-tool-btn active" onclick="toggleNotes()">注釈表示</button>
+            <button class="study-tool-btn active" onclick="toggleHighlight()">N1漢字強調</button>
+            <div class="progress-tracker">
+                <h4>読了進捗</h4>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div style="text-align: center; margin-top: 5px;">
+                    <span id="progress-percent">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <h3>目次 - 第三部</h3>
+            <ul class="toc-list">
+                <li><a href="#lear-mad">リア王 - 第四幕第六場（狂気の深淵）</a></li>
+                <li><a href="#othello-handkerchief">オセロー - 第三幕第四場（ハンカチの場）</a></li>
+                <li><a href="#othello-jealousy">オセロー - 第四幕第一場（嫉妬の頂点）</a></li>
+                <li><a href="#lear-gloucester">リア王 - 第四幕第六場（グロスターとの再会）</a></li>
+                <li><a href="#othello-bedroom">オセロー - 第五幕第二場（寝室の場）</a></li>
+            </ul>
+        </div>
+
+        <section class="section" id="lear-mad">
+            <h2 class="section-title">リア王 - 第四幕第六場（狂気の深淵）</h2>
+            
+            <div class="commentary">
+                <h5>狂気の中の真実</h5>
+                <p>完全に正気を失ったリア王が、逆説的に人間社会の本質的な真実を語る場面。狂気は理性の仮面を剥ぎ取り、文明の虚飾の下に隠された野蛮な真実を暴露します。シェイクスピアは「愚者の知恵」という伝統的なトポスを極限まで推し進めています。</p>
+            </div>
+
+            <div class="stage-direction">（ドーヴァー近くの野原。リア王、野の花で飾られ、狂気の中にある）</div>
+
+            <div class="monologue">
+                <div class="speaker">リア王</div>
+                
+                <div class="line">
+                    <span class="line-number">3001</span>
+                    否、彼らは私を<ruby class="n1-kanji" data-meaning="騙す、欺く" data-example="甘言で欺瞞する">欺瞞<rt>ぎまん</rt></ruby>することはできぬ。私は生まれながらの王だ。
+                </div>
+                <div class="line">
+                    <span class="line-number">3002</span>
+                    私が見つめれば、臣下どもは<ruby class="n1-kanji" data-meaning="震え上がる、戦慄する" data-example="恐怖で戦慄が走る">戦慄<rt>せんりつ</rt></ruby>する。
+                </div>
+                <div class="line">
+                    <span class="line-number">3003</span>
+                    その男を<ruby class="n1-kanji" data-meaning="赦免する、許す" data-example="罪人を恩赦する">恩赦<rt>おんしゃ</rt></ruby>する。あの男の罪は何だった？
+                </div>
+                <div class="line">
+                    <span class="line-number">3004</span>
+                    姦通か？汝は姦通で死ぬことはない。
+                </div>
+                <div class="line">
+                    <span class="line-number">3005</span>
+                    <ruby class="n1-kanji" data-meaning="みそさざい（小鳥）" data-example="鷦鷯は小さいが勇敢だ">鷦鷯<rt>しょうりょう</rt></ruby>もそれをする、小さな金の蝿も
+                </div>
+                <div class="line">
+                    <span class="line-number">3006</span>
+                    私の目の前で<ruby class="n1-kanji" data-meaning="淫らな、好色な" data-example="淫蕩な振る舞い">淫蕩<rt>いんとう</rt></ruby>を行う。
+                </div>
+
+                <div class="literary-device">
+                    <h5>自然と文明の対比</h5>
+                    <p>リアは動物の性行動を引き合いに出して、人間の道徳的虚偽を暴露します。自然状態では「罪」とされるものが普遍的に存在することを指摘し、文明社会の偽善性を糾弾しています。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">3007</span>
+                    私生児のグロスターよ、お前は親切だった。
+                </div>
+                <div class="line">
+                    <span class="line-number">3008</span>
+                    お前の<ruby class="n1-kanji" data-meaning="私生児として生まれた" data-example="庶出の身分">庶出<rt>しょしゅつ</rt></ruby>の息子は、
+                </div>
+                <div class="line">
+                    <span class="line-number">3009</span>
+                    私の嫡出の娘たちよりも父に優しかった。
+                </div>
+                <div class="line">
+                    <span class="line-number">3010</span>
+                    さあ、<ruby class="n1-kanji" data-meaning="情欲、肉欲" data-example="肉欲に溺れる">肉欲<rt>にくよく</rt></ruby>よ、盛んに<ruby class="n1-kanji" data-meaning="繁殖する、増殖する" data-example="細胞が繁殖する">繁殖<rt>はんしょく</rt></ruby>せよ！
+                </div>
+
+                <div class="cultural-note">
+                    <h5>嫡出と庶出の問題</h5>
+                    <p>中世・近世ヨーロッパでは、嫡出子と私生児の法的・社会的地位に大きな差がありました。日本の武家社会における「嫡子」と「庶子」の区別とも類似していますが、キリスト教的道徳観が加わることで、より厳格な差別が存在しました。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">3011</span>
+                    見よ、あの<ruby class="n1-kanji" data-meaning="気取った、上品ぶった" data-example="気取った貴婦人">気取<rt>きど</rt></ruby>り屋の貴婦人を。
+                </div>
+                <div class="line">
+                    <span class="line-number">3012</span>
+                    その顔は雪のように<ruby class="n1-kanji" data-meaning="貞節、純潔" data-example="貞節を守る">貞節<rt>ていせつ</rt></ruby>を装い、
+                </div>
+                <div class="line">
+                    <span class="line-number">3013</span>
+                    快楽の名を聞いただけで首を振る。
+                </div>
+                <div class="line">
+                    <span class="line-number">3014</span>
+                    だが腰から下は<ruby class="n1-kanji" data-meaning="地獄の悪魔" data-example="地獄の魔物">魔物<rt>まもの</rt></ruby>だ。
+                </div>
+                <div class="line">
+                    <span class="line-number">3015</span>
+                    そこは地獄、闇、硫黄の穴、
+                </div>
+                <div class="line">
+                    <span class="line-number">3016</span>
+                    燃え、<ruby class="n1-kanji" data-meaning="悪臭を放つ" data-example="腐敗して悪臭を放つ">悪臭<rt>あくしゅう</rt></ruby>を放ち、<ruby class="n1-kanji" data-meaning="消費する、焼き尽くす" data-example="炎が全てを焼尽する">焼尽<rt>しょうじん</rt></ruby>する！
+                </div>
+
+                <div class="commentary">
+                    <h5>女性の二重性への痛烈な批判</h5>
+                    <p>リアの女性観は、娘たちへの裏切りによって極度に歪められています。上半身の純潔と下半身の欲望という二元論は、中世の女性蔑視的な言説を反映していますが、同時にリア自身の精神的外傷を表現しています。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="othello-handkerchief">
+            <h2 class="section-title">オセロー - 第三幕第四場（ハンカチの場）</h2>
+            
+            <div class="commentary">
+                <h5>運命のハンカチ</h5>
+                <p>イアーゴーの陰謀により、オセローがデズデモーナに贈った貴重なハンカチが決定的な「証拠」となる場面。この小さな布切れが、壮大な悲劇の触媒となります。物質的な証拠への執着が、精神的な信頼を破壊する皮肉が描かれています。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3101</span>
+                    そのハンカチは、エジプトの女が私の母に与えたものだ。
+                </div>
+                <div class="line">
+                    <span class="line-number">3102</span>
+                    彼女は<ruby class="n1-kanji" data-meaning="魔術師、呪術師" data-example="呪術師が呪文を唱える">呪術師<rt>じゅじゅつし</rt></ruby>で、人の心をほとんど読むことができた。
+                </div>
+                <div class="line">
+                    <span class="line-number">3103</span>
+                    母がそれを持っている限り、
+                </div>
+                <div class="line">
+                    <span class="line-number">3104</span>
+                    父を<ruby class="n1-kanji" data-meaning="従順な、素直な" data-example="従順な性格">従順<rt>じゅうじゅん</rt></ruby>にし、完全に愛に<ruby class="n1-kanji" data-meaning="束縛する、縛る" data-example="契約に束縛される">束縛<rt>そくばく</rt></ruby>できると告げた。
+                </div>
+
+                <div class="cultural-note">
+                    <h5>オリエンタリズムと魔術</h5>
+                    <p>エジプトの魔術師という設定は、当時のヨーロッパにおける東方への神秘的なイメージを反映しています。日本の「お守り」や「縁結び」の概念と類似した、物品に宿る霊的な力への信仰が見られます。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">3105</span>
+                    だがもし母がそれを失うか、誰かに与えたら、
+                </div>
+                <div class="line">
+                    <span class="line-number">3106</span>
+                    父の目には<ruby class="n1-kanji" data-meaning="嫌悪すべき、憎むべき" data-example="忌まわしい記憶">忌<rt>い</rt></ruby>まわしく映り、
+                </div>
+                <div class="line">
+                    <span class="line-number">3107</span>
+                    父の心は新しい愛を<ruby class="n1-kanji" data-meaning="狩る、追い求める" data-example="獲物を狩猟する">狩猟<rt>しゅりょう</rt></ruby>するだろうと。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3108</span>
+                    本当にそうなのですか？
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3109</span>
+                    本当だ。その織物には<ruby class="n1-kanji" data-meaning="神秘的な力、魔力" data-example="呪術的な魔力">魔力<rt>まりょく</rt></ruby>がある。
+                </div>
+                <div class="line">
+                    <span class="line-number">3110</span>
+                    <ruby class="n1-kanji" data-meaning="巫女、女預言者" data-example="神託を告げる巫女">巫女<rt>みこ</rt></ruby>が、<ruby class="n1-kanji" data-meaning="予言的な、預言の" data-example="予言的な霊感">予言的<rt>よげんてき</rt></ruby>な<ruby class="n1-kanji" data-meaning="激情、熱狂" data-example="宗教的熱狂">熱狂<rt>ねっきょう</rt></ruby>の中で、
+                </div>
+                <div class="line">
+                    <span class="line-number">3111</span>
+                    その刺繍を縫い上げた。蚕は<ruby class="n1-kanji" data-meaning="神聖な、聖なる" data-example="神聖な儀式">神聖<rt>しんせい</rt></ruby>なもので、
+                </div>
+                <div class="line">
+                    <span class="line-number">3112</span>
+                    その染料は、<ruby class="n1-kanji" data-meaning="防腐処理した、ミイラにした" data-example="防腐処理された遺体">防腐<rt>ぼうふ</rt></ruby>処理された
+                </div>
+                <div class="line">
+                    <span class="line-number">3113</span>
+                    処女の心臓から<ruby class="n1-kanji" data-meaning="抽出する、取り出す" data-example="エキスを抽出する">抽出<rt>ちゅうしゅつ</rt></ruby>されたものだ。
+                </div>
+
+                <div class="literary-device">
+                    <h5>グロテスクな想像力</h5>
+                    <p>処女の心臓から染料を作るという猟奇的なイメージは、オセローの精神状態の不安定さを反映しています。愛の証が死と結びつく不吉な暗示が、悲劇の予兆となっています。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="othello-jealousy">
+            <h2 class="section-title">オセロー - 第四幕第一場（嫉妬の頂点）</h2>
+            
+            <div class="commentary">
+                <h5>言語の崩壊</h5>
+                <p>嫉妬に狂ったオセローが、ついに言語能力さえ失い、発作を起こして倒れる場面。理性的な軍人から野獣的な狂人への変貌が、言語の解体を通して表現されます。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3201</span>
+                    ハンカチ！<ruby class="n1-kanji" data-meaning="告白、自白" data-example="罪の告白をする">告白<rt>こくはく</rt></ruby>！ハンカチ！
+                </div>
+                <div class="line">
+                    <span class="line-number">3202</span>
+                    悪魔に告白させて、それから首を吊らせろ！
+                </div>
+                <div class="line">
+                    <span class="line-number">3203</span>
+                    まず首を吊らせて、それから告白させろ！私は震える。
+                </div>
+
+                <div class="literary-device">
+                    <h5>言語の断片化</h5>
+                    <p>論理的な文章構造が崩壊し、単語の反復と矛盾した命令（先に吊るか、告白させるか）が、オセローの精神的混乱を表現しています。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">3204</span>
+                    人が言うのは正しくない。ああ！それは私の<ruby class="n1-kanji" data-meaning="想像力" data-example="豊かな想像力">想像<rt>そうぞう</rt></ruby>に
+                </div>
+                <div class="line">
+                    <span class="line-number">3205</span>
+                    <ruby class="n1-kanji" data-meaning="害を与える、損なう" data-example="名誉を毀損する">毀損<rt>きそん</rt></ruby>を与える自然に反した行為だ！
+                </div>
+                <div class="line">
+                    <span class="line-number">3206</span>
+                    鼻、耳、唇が―それは可能か？告白だと？ハンカチ！
+                </div>
+                <div class="line">
+                    <span class="line-number">3207</span>
+                    ああ、悪魔め！
+                </div>
+
+                <div class="stage-direction">（発作を起こして倒れる）</div>
+
+                <div class="speaker">イアーゴー</div>
+                
+                <div class="line">
+                    <span class="line-number">3208</span>
+                    私の薬が効いている。<ruby class="n1-kanji" data-meaning="軽信、騙されやすさ" data-example="軽信な性格">軽信<rt>けいしん</rt></ruby>な愚か者は
+                </div>
+                <div class="line">
+                    <span class="line-number">3209</span>
+                    このように容易に<ruby class="n1-kanji" data-meaning="罠にかける、陥れる" data-example="敵を罠に陥れる">陥穽<rt>かんせい</rt></ruby>に落ちる。
+                </div>
+                <div class="line">
+                    <span class="line-number">3210</span>
+                    多くの貞淑で<ruby class="n1-kanji" data-meaning="非の打ちどころのない" data-example="無瑕の評判">無瑕<rt>むか</rt></ruby>な婦人たちが、
+                </div>
+                <div class="line">
+                    <span class="line-number">3211</span>
+                    このような<ruby class="n1-kanji" data-meaning="中傷、誹謗" data-example="根拠のない誹謗">誹謗<rt>ひぼう</rt></ruby>の下に横たわっている。
+                </div>
+
+                <div class="cultural-note">
+                    <h5>嫉妬という感情の普遍性</h5>
+                    <p>嫉妬は文化を超えた普遍的感情ですが、その表現形態は文化によって異なります。日本の「嫉妬」は「やきもち」という食べ物のメタファーで表現されることもあり、内に向かう傾向がありますが、地中海文化では外に向かう激しい情熱として表現されます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="lear-gloucester">
+            <h2 class="section-title">リア王 - 第四幕第六場（グロスターとの再会）</h2>
+            
+            <div class="commentary">
+                <h5>盲目の認識</h5>
+                <p>目をえぐられたグロスターと狂気のリア王が再会する場面。肉体的盲目と精神的盲目が交錯し、「見る」ことの本質的意味が問われます。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">グロスター</div>
+                
+                <div class="line">
+                    <span class="line-number">3301</span>
+                    その声を私は知っている。陛下ではありませんか？
+                </div>
+
+                <div class="speaker">リア王</div>
+                
+                <div class="line">
+                    <span class="line-number">3302</span>
+                    その通り、あらゆる点で王だ。私が見つめれば、
+                </div>
+                <div class="line">
+                    <span class="line-number">3303</span>
+                    誰でも<ruby class="n1-kanji" data-meaning="震え上がる" data-example="恐怖で戦慄する">戦慄<rt>せんりつ</rt></ruby>する。私が<ruby class="n1-kanji" data-meaning="赦免する" data-example="罪を赦免する">赦免<rt>しゃめん</rt></ruby>すれば、
+                </div>
+                <div class="line">
+                    <span class="line-number">3304</span>
+                    その男は生きる。どんな<ruby class="n1-kanji" data-meaning="告発、起訴" data-example="犯罪の告発">告発<rt>こくはつ</rt></ruby>があろうとも。
+                </div>
+
+                <div class="speaker">グロスター</div>
+                
+                <div class="line">
+                    <span class="line-number">3305</span>
+                    ああ、<ruby class="n1-kanji" data-meaning="破滅した、荒廃した" data-example="荒廃した王国">荒廃<rt>こうはい</rt></ruby>した自然の傑作よ！
+                </div>
+                <div class="line">
+                    <span class="line-number">3306</span>
+                    この偉大な世界も、このように<ruby class="n1-kanji" data-meaning="消耗する、衰える" data-example="体力が消耗する">消耗<rt>しょうもう</rt></ruby>して無に帰すのか。
+                </div>
+
+                <div class="speaker">リア王</div>
+                
+                <div class="line">
+                    <span class="line-number">3307</span>
+                    私を知っているか？お前はグロスターではないか？
+                </div>
+
+                <div class="speaker">グロスター</div>
+                
+                <div class="line">
+                    <span class="line-number">3308</span>
+                    私は知っています、陛下。
+                </div>
+
+                <div class="speaker">リア王</div>
+                
+                <div class="line">
+                    <span class="line-number">3309</span>
+                    お前の名は？
+                </div>
+
+                <div class="speaker">グロスター</div>
+                
+                <div class="line">
+                    <span class="line-number">3310</span>
+                    私の目は<ruby class="n1-kanji" data-meaning="くぼんだ、陥没した" data-example="眼窩が陥没する">陥没<rt>かんぼつ</rt></ruby>しているのですか？
+                </div>
+                <div class="line">
+                    <span class="line-number">3311</span>
+                    盲目のキューピッドのように見えますか？
+                </div>
+
+                <div class="speaker">リア王</div>
+                
+                <div class="line">
+                    <span class="line-number">3312</span>
+                    ほう、目がないのか？頭に知恵もないのか？
+                </div>
+                <div class="line">
+                    <span class="line-number">3313</span>
+                    金貨で目を買い、卑しい政治家のように<ruby class="n1-kanji" data-meaning="じろじろ見る" data-example="好奇の目で凝視する">凝視<rt>ぎょうし</rt></ruby>せよ。
+                </div>
+                <div class="line">
+                    <span class="line-number">3314</span>
+                    目なしに見るがいい。
+                </div>
+
+                <div class="literary-device">
+                    <h5>視覚のパラドックス</h5>
+                    <p>「目なしに見る」という逆説的な命令は、肉体的視覚と精神的洞察の対立を示しています。真の認識は物理的な目ではなく、内的な理解から生まれるという哲学的主題が展開されています。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">3315</span>
+                    盲人よ、お前は私がどのように世界を<ruby class="n1-kanji" data-meaning="知覚する、認識する" data-example="五感で知覚する">知覚<rt>ちかく</rt></ruby>するか見るか？
+                </div>
+                <div class="line">
+                    <span class="line-number">3316</span>
+                    耳で見よ。あそこで判事が単純な泥棒を<ruby class="n1-kanji" data-meaning="叱責する、非難する" data-example="厳しく叱責する">叱責<rt>しっせき</rt></ruby>している。
+                </div>
+                <div class="line">
+                    <span class="line-number">3317</span>
+                    耳を傾けよ。場所を変えてみよ。どちらが判事で、
+                </div>
+                <div class="line">
+                    <span class="line-number">3318</span>
+                    どちらが泥棒か？お前は農夫の犬が
+                </div>
+                <div class="line">
+                    <span class="line-number">3319</span>
+                    乞食に吠えているのを見たことがあるか？
+                </div>
+
+                <div class="speaker">グロスター</div>
+                
+                <div class="line">
+                    <span class="line-number">3320</span>
+                    はい、陛下。
+                </div>
+
+                <div class="speaker">リア王</div>
+                
+                <div class="line">
+                    <span class="line-number">3321</span>
+                    そこに<ruby class="n1-kanji" data-meaning="権威、権力" data-example="絶対的権威">権威<rt>けんい</rt></ruby>の偉大な姿を見ることができる。
+                </div>
+                <div class="line">
+                    <span class="line-number">3322</span>
+                    犬でさえ、その職にあれば<ruby class="n1-kanji" data-meaning="服従させられる" data-example="権力に服従する">服従<rt>ふくじゅう</rt></ruby>される。
+                </div>
+
+                <div class="commentary">
+                    <h5>権力の本質的虚構性</h5>
+                    <p>リアは権力が本質的に虚構であることを看破します。「犬でさえ職にあれば服従される」という洞察は、社会的地位の恣意性を鋭く指摘しています。日本の「虎の威を借る狐」という諺にも通じる普遍的真理です。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="othello-bedroom">
+            <h2 class="section-title">オセロー - 第五幕第二場（寝室の場）</h2>
+            
+            <div class="commentary">
+                <h5>愛と殺意の究極的融合</h5>
+                <p>オセローが眠るデズデモーナを殺害する直前の独白。愛するがゆえに殺すという究極の矛盾が、詩的な美しさと恐怖を同時に生み出します。</p>
+            </div>
+
+            <div class="stage-direction">（寝室。デズデモーナがベッドで眠っている。オセローが灯りを持って入る）</div>
+
+            <div class="monologue">
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3401</span>
+                    それが原因だ、それが原因だ、わが魂よ。
+                </div>
+                <div class="line">
+                    <span class="line-number">3402</span>
+                    お前たち<ruby class="n1-kanji" data-meaning="貞淑な、純潔な" data-example="貞淑な星々">貞淑<rt>ていしゅく</rt></ruby>な星々よ、私はそれを言うまい。
+                </div>
+                <div class="line">
+                    <span class="line-number">3403</span>
+                    それが原因だ。だが私は血を流すまい、
+                </div>
+                <div class="line">
+                    <span class="line-number">3404</span>
+                    その<ruby class="n1-kanji" data-meaning="雪のように白い" data-example="雪白の肌">雪白<rt>せっぱく</rt></ruby>の肌に傷をつけまい、
+                </div>
+                <div class="line">
+                    <span class="line-number">3405</span>
+                    <ruby class="n1-kanji" data-meaning="雪花石膏（大理石の一種）" data-example="雪花石膏の彫像">雪花石膏<rt>せっかせっこう</rt></ruby>よりも滑らかで白い肌に。
+                </div>
+
+                <div class="literary-device">
+                    <h5>反復と省略の修辞法</h5>
+                    <p>「それが原因だ」の反復と、その「原因」を明言しない省略法が、オセローの内的葛藤を表現しています。言語化できない、あるいは言語化を拒否する心理状態が巧みに描写されています。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">3406</span>
+                    だが彼女は死なねばならぬ。さもなくば他の男たちを<ruby class="n1-kanji" data-meaning="裏切る、欺く" data-example="信頼を裏切る">裏切<rt>うらぎ</rt></ruby>るだろう。
+                </div>
+                <div class="line">
+                    <span class="line-number">3407</span>
+                    まず灯りを消そう、それから―灯りを消そう。
+                </div>
+                <div class="line">
+                    <span class="line-number">3408</span>
+                    もし私がお前を吹き消したら、<ruby class="n1-kanji" data-meaning="燃えさかる、輝く" data-example="松明が燃焼する">燃焼<rt>ねんしょう</rt></ruby>する使者よ、
+                </div>
+                <div class="line">
+                    <span class="line-number">3409</span>
+                    私は再びお前の以前の光を<ruby class="n1-kanji" data-meaning="回復する、復元する" data-example="健康を回復する">回復<rt>かいふく</rt></ruby>できる、
+                </div>
+                <div class="line">
+                    <span class="line-number">3410</span>
+                    もし私が後悔したなら。だが一度お前の光を消したら、
+                </div>
+                <div class="line">
+                    <span class="line-number">3411</span>
+                    お前、自然の最も<ruby class="n1-kanji" data-meaning="巧妙な、精巧な" data-example="精巧な細工">精巧<rt>せいこう</rt></ruby>な型よ、
+                </div>
+                <div class="line">
+                    <span class="line-number">3412</span>
+                    私は<ruby class="n1-kanji" data-meaning="プロメテウスの（神話の火を盗んだ神）" data-example="プロメテウスの火">天火<rt>てんか</rt></ruby>がどこにあるか知らない、
+                </div>
+                <div class="line">
+                    <span class="line-number">3413</span>
+                    それがお前の光を再び<ruby class="n1-kanji" data-meaning="点火する、燃え上がらせる" data-example="情熱を点火する">点火<rt>てんか</rt></ruby>できるものを。
+                </div>
+
+                <div class="cultural-note">
+                    <h5>プロメテウス神話の引用</h5>
+                    <p>プロメテウスは人類に火をもたらしたギリシャ神話の神。生命の火を再び灯すことができないという認識は、殺人の不可逆性への深い理解を示しています。日本の「覆水盆に返らず」という諺にも通じる普遍的真理です。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">3414</span>
+                    私がこの薔薇を摘み取れば、
+                </div>
+                <div class="line">
+                    <span class="line-number">3415</span>
+                    その<ruby class="n1-kanji" data-meaning="生命力、活力" data-example="若々しい生命力">生命力<rt>せいめいりょく</rt></ruby>を再び与えることはできない。
+                </div>
+                <div class="line">
+                    <span class="line-number">3416</span>
+                    それは必ず<ruby class="n1-kanji" data-meaning="しおれる、枯れる" data-example="花が萎凋する">萎凋<rt>いちょう</rt></ruby>する。木に咲いている間に
+                </div>
+                <div class="line">
+                    <span class="line-number">3417</span>
+                    その香りを嗅ごう。
+                </div>
+
+                <div class="stage-direction">（彼女にキスする）</div>
+
+                <div class="line">
+                    <span class="line-number">3418</span>
+                    ああ、<ruby class="n1-kanji" data-meaning="香気、芳香" data-example="薔薇の芳香">芳香<rt>ほうこう</rt></ruby>の息よ、お前はほとんど正義を
+                </div>
+                <div class="line">
+                    <span class="line-number">3419</span>
+                    <ruby class="n1-kanji" data-meaning="説得する、納得させる" data-example="理性を説得する">説得<rt>せっとく</rt></ruby>して、その剣を折らせる。
+                </div>
+                <div class="line">
+                    <span class="line-number">3420</span>
+                    もう一つ、もう一つ。
+                </div>
+
+                <div class="stage-direction">（再びキスする）</div>
+
+                <div class="line">
+                    <span class="line-number">3421</span>
+                    このようであれ、お前が死んだ時も。私はお前を殺し、
+                </div>
+                <div class="line">
+                    <span class="line-number">3422</span>
+                    そしてその後でお前を愛そう。もう一つ、これが最後だ。
+                </div>
+                <div class="line">
+                    <span class="line-number">3423</span>
+                    こんなに甘美で、こんなに<ruby class="n1-kanji" data-meaning="致命的な、死をもたらす" data-example="致命的な一撃">致命的<rt>ちめいてき</rt></ruby>なものはかつてなかった。
+                </div>
+                <div class="line">
+                    <span class="line-number">3424</span>
+                    私は涙を流さざるを得ない。だがそれは<ruby class="n1-kanji" data-meaning="残酷な、無慈悲な" data-example="残酷な仕打ち">残酷<rt>ざんこく</rt></ruby>な涙だ。
+                </div>
+                <div class="line">
+                    <span class="line-number">3425</span>
+                    この悲しみは天の<ruby class="n1-kanji" data-meaning="懲罰、天罰" data-example="神の懲罰を受ける">懲罰<rt>ちょうばつ</rt></ruby>のようだ。
+                </div>
+                <div class="line">
+                    <span class="line-number">3426</span>
+                    それは愛するものを打つ。彼女が目覚める。
+                </div>
+
+                <div class="commentary">
+                    <h5>悲劇的アイロニーの極致</h5>
+                    <p>オセローの独白は、愛と殺意、美と破壊、優しさと残酷さという対立する感情が融合した、シェイクスピア悲劇の頂点を示しています。デズデモーナの無実を観客が知っているという劇的アイロニーが、場面の悲劇性を極限まで高めています。</p>
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3427</span>
+                    誰ですか？オセロー？
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3428</span>
+                    そうだ、デズデモーナ。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3429</span>
+                    ベッドにいらっしゃいますか、殿？
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3430</span>
+                    お前は今夜の祈りを済ませたか、デズデモーナ？
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3431</span>
+                    はい、殿。
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3432</span>
+                    もし何か<ruby class="n1-kanji" data-meaning="告白していない、赦されていない" data-example="未告解の罪">未告解<rt>みこくかい</rt></ruby>の罪を思い出したら、
+                </div>
+                <div class="line">
+                    <span class="line-number">3433</span>
+                    天の<ruby class="n1-kanji" data-meaning="恩寵、慈悲" data-example="神の恩寵を受ける">恩寵<rt>おんちょう</rt></ruby>を今すぐ<ruby class="n1-kanji" data-meaning="懇願する、嘆願する" data-example="慈悲を懇願する">懇願<rt>こんがん</rt></ruby>せよ。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3434</span>
+                    まあ、殿、何をおっしゃるのですか？
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3435</span>
+                    すぐにやれ。私は待つ。
+                </div>
+                <div class="line">
+                    <span class="line-number">3436</span>
+                    私はお前の魂を<ruby class="n1-kanji" data-meaning="準備のない状態で" data-example="不意打ちで襲われる">不意<rt>ふい</rt></ruby>に殺したくない。
+                </div>
+                <div class="line">
+                    <span class="line-number">3437</span>
+                    いや、天よ<ruby class="n1-kanji" data-meaning="禁じる、許さない" data-example="神が禁じ給う">禁<rt>きん</rt></ruby>じ給え！私はお前の魂を殺したくない。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3438</span>
+                    殺すとおっしゃるのですか？
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3439</span>
+                    その通りだ。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3440</span>
+                    それなら天が私に<ruby class="n1-kanji" data-meaning="慈悲、憐れみ" data-example="神の慈悲を乞う">慈悲<rt>じひ</rt></ruby>を！
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3441</span>
+                    アーメン、心からそう願う。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3442</span>
+                    私があなたを怒らせたことがあるなら、私を<ruby class="n1-kanji" data-meaning="赦す、許す" data-example="罪を赦免する">赦<rt>ゆる</rt></ruby>してください。
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3443</span>
+                    <ruby class="n1-kanji" data-meaning="屈辱、恥辱" data-example="公衆の面前での屈辱">屈辱<rt>くつじょく</rt></ruby>よ、<ruby class="n1-kanji" data-meaning="死を招く、致命的な" data-example="死を招く病">死招<rt>ししょう</rt></ruby>く<ruby class="n1-kanji" data-meaning="打撃、一撃" data-example="致命的な打撃">打撃<rt>だげき</rt></ruby>よ！
+                </div>
+                <div class="line">
+                    <span class="line-number">3444</span>
+                    お前がキャシオーに与えたハンカチを
+                </div>
+                <div class="line">
+                    <span class="line-number">3445</span>
+                    お前は愛していた。そして彼にそれを与えた。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3446</span>
+                    いいえ、私の命にかけて、魂にかけて！
+                </div>
+                <div class="line">
+                    <span class="line-number">3447</span>
+                    彼を呼んで聞いてください。
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3448</span>
+                    気をつけろ、偽証するな、甘い人よ。
+                </div>
+                <div class="line">
+                    <span class="line-number">3449</span>
+                    お前は死の床にいるのだ。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3450</span>
+                    でも、まだ死にたくありません。
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3451</span>
+                    その通り、お前は死ぬ。
+                </div>
+                <div class="line">
+                    <span class="line-number">3452</span>
+                    だから<ruby class="n1-kanji" data-meaning="告白する、自白する" data-example="罪を告白する">告白<rt>こくはく</rt></ruby>せよ、自由に罪を。
+                </div>
+                <div class="line">
+                    <span class="line-number">3453</span>
+                    どんなに<ruby class="n1-kanji" data-meaning="誓う、断言する" data-example="神に誓って断言する">誓言<rt>せいげん</rt></ruby>で否定しても、
+                </div>
+                <div class="line">
+                    <span class="line-number">3454</span>
+                    私の心から強い<ruby class="n1-kanji" data-meaning="確信、信念" data-example="揺るぎない確信">確信<rt>かくしん</rt></ruby>を取り除くことはできない。
+                </div>
+                <div class="line">
+                    <span class="line-number">3455</span>
+                    お前は死ぬのだ。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3456</span>
+                    それなら主が私の魂に慈悲を！
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3457</span>
+                    私もそう言う、アーメン。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3458</span>
+                    あなたも慈悲を。私は決してあなたを
+                </div>
+                <div class="line">
+                    <span class="line-number">3459</span>
+                    <ruby class="n1-kanji" data-meaning="生涯、一生" data-example="生涯の伴侶">生涯<rt>しょうがい</rt></ruby>において<ruby class="n1-kanji" data-meaning="罪を犯す、違反する" data-example="法に違背する">違背<rt>いはい</rt></ruby>したことはありません。
+                </div>
+                <div class="line">
+                    <span class="line-number">3460</span>
+                    キャシオーを決して愛したことはありません。
+                </div>
+                <div class="line">
+                    <span class="line-number">3461</span>
+                    あなたがくださった以外に、
+                </div>
+                <div class="line">
+                    <span class="line-number">3462</span>
+                    何も彼に与えたことはありません。
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3463</span>
+                    天にかけて、私は彼がそれを持っているのを見た。
+                </div>
+                <div class="line">
+                    <span class="line-number">3464</span>
+                    ああ、<ruby class="n1-kanji" data-meaning="偽証する、嘘をつく" data-example="法廷で偽証する">偽証<rt>ぎしょう</rt></ruby>する女よ！
+                </div>
+                <div class="line">
+                    <span class="line-number">3465</span>
+                    お前は私の心を石に変える。
+                </div>
+                <div class="line">
+                    <span class="line-number">3466</span>
+                    お前は私がしようとすることを<ruby class="n1-kanji" data-meaning="殺人、虐殺" data-example="無慈悲な虐殺">虐殺<rt>ぎゃくさつ</rt></ruby>と呼ばせる、
+                </div>
+                <div class="line">
+                    <span class="line-number">3467</span>
+                    私が<ruby class="n1-kanji" data-meaning="犠牲、生贄" data-example="神への犠牲">犠牲<rt>ぎせい</rt></ruby>と思っていたものを。
+                </div>
+
+                <div class="literary-device">
+                    <h5>犠牲と虐殺の対比</h5>
+                    <p>オセローは自分の行為を宗教的な「犠牲」として正当化しようとしていましたが、デズデモーナの否定により、それが単なる「虐殺」に変質することを恐れています。この心理的防衛機制の崩壊が、彼の最終的な破滅を予告しています。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">3468</span>
+                    私はそのハンカチを見た！
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3469</span>
+                    彼が見つけたのです。
+                </div>
+                <div class="line">
+                    <span class="line-number">3470</span>
+                    私は決して彼に与えませんでした。
+                </div>
+                <div class="line">
+                    <span class="line-number">3471</span>
+                    彼を呼んでください。彼が<ruby class="n1-kanji" data-meaning="証言する、証明する" data-example="真実を証言する">証言<rt>しょうげん</rt></ruby>するでしょう。
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3472</span>
+                    彼はすでに<ruby class="n1-kanji" data-meaning="告白した、自白した" data-example="罪を告白する">告白<rt>こくはく</rt></ruby>した。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3473</span>
+                    何を、殿？
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3474</span>
+                    お前と寝たことを。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3475</span>
+                    どうやって？不法に？
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3476</span>
+                    その通りだ。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3477</span>
+                    彼はそれを<ruby class="n1-kanji" data-meaning="取り消す、撤回する" data-example="発言を撤回する">撤回<rt>てっかい</rt></ruby>するでしょう。
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3478</span>
+                    いや、彼の口は<ruby class="n1-kanji" data-meaning="閉じられた、封じられた" data-example="永遠に封印される">封印<rt>ふういん</rt></ruby>された。
+                </div>
+                <div class="line">
+                    <span class="line-number">3479</span>
+                    誠実なイアーゴーがその<ruby class="n1-kanji" data-meaning="配慮、手配" data-example="万全の手配をする">手配<rt>てはい</rt></ruby>をした。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3480</span>
+                    まあ！彼は死んだのですか？
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3481</span>
+                    彼のすべての髪の毛が命であったとしても、
+                </div>
+                <div class="line">
+                    <span class="line-number">3482</span>
+                    私の偉大な<ruby class="n1-kanji" data-meaning="復讐、報復" data-example="血の復讐を誓う">復讐<rt>ふくしゅう</rt></ruby>は、それらすべてを
+                </div>
+                <div class="line">
+                    <span class="line-number">3483</span>
+                    <ruby class="n1-kanji" data-meaning="むさぼり食う、飲み込む" data-example="炎が全てを呑噬する">呑噬<rt>どんぜい</rt></ruby>する胃袋を持っていた。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3484</span>
+                    ああ！彼は<ruby class="n1-kanji" data-meaning="裏切られた、欺かれた" data-example="信頼を裏切られる">裏切<rt>うらぎ</rt></ruby>られ、私は<ruby class="n1-kanji" data-meaning="破滅した、滅ぼされた" data-example="運命に破滅させられる">破滅<rt>はめつ</rt></ruby>させられた！
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3485</span>
+                    出て行け、<ruby class="n1-kanji" data-meaning="売春婦、娼婦" data-example="街の娼婦">娼婦<rt>しょうふ</rt></ruby>！お前は彼の死を嘆くのか
+                </div>
+                <div class="line">
+                    <span class="line-number">3486</span>
+                    私の面前で？
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3487</span>
+                    ああ、私を<ruby class="n1-kanji" data-meaning="追放する、追い出す" data-example="国外に追放する">追放<rt>ついほう</rt></ruby>してください、殿、でも殺さないで！
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3488</span>
+                    下がれ、娼婦！
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3489</span>
+                    私を明日殺してください、今夜は生かしてください！
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3490</span>
+                    いや、もし<ruby class="n1-kanji" data-meaning="抵抗する、争う" data-example="運命に抗争する">抗争<rt>こうそう</rt></ruby>するなら―
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3491</span>
+                    ほんの半時間だけ！
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3492</span>
+                    もう<ruby class="n1-kanji" data-meaning="実行された、完了した" data-example="計画が完遂される">完遂<rt>かんすい</rt></ruby>されつつある。<ruby class="n1-kanji" data-meaning="休止、中断" data-example="一時的な休止">休止<rt>きゅうし</rt></ruby>はない。
+                </div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3493</span>
+                    ただ一つの祈りを言う間だけ！
+                </div>
+
+                <div class="speaker">オセロー</div>
+                
+                <div class="line">
+                    <span class="line-number">3494</span>
+                    もう遅い。
+                </div>
+
+                <div class="stage-direction">（彼女を窒息させる）</div>
+
+                <div class="speaker">デズデモーナ</div>
+                
+                <div class="line">
+                    <span class="line-number">3495</span>
+                    ああ、主よ、主よ、主よ！
+                </div>
+
+                <div class="commentary">
+                    <h5>悲劇の頂点</h5>
+                    <p>デズデモーナの最期の言葉が神への呼びかけであることは、彼女の純粋さと信仰心を最後まで保持していることを示しています。一方で、オセローの「もう遅い」という言葉は、彼が引き返せない地点を越えたことを象徴しています。この場面は、愛と暴力、信頼と疑惑、救済と破滅という対立要素が極限まで凝縮された、シェイクスピア悲劇の頂点といえます。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">3496</span>
+                    何という騒ぎだ？まだ死んでいないのか？
+                </div>
+                <div class="line">
+                    <span class="line-number">3497</span>
+                    まだ完全には死んでいないのか？私は<ruby class="n1-kanji" data-meaning="残酷な、無慈悲な" data-example="残酷な運命">残酷<rt>ざんこく</rt></ruby>だが、
+                </div>
+                <div class="line">
+                    <span class="line-number">3498</span>
+                    だが<ruby class="n1-kanji" data-meaning="慈悲深い、憐れみ深い" data-example="慈悲深い心">慈悲深<rt>じひぶか</rt></ruby>い。長く苦しませたくない。
+                </div>
+                <div class="line">
+                    <span class="line-number">3499</span>
+                    そうだ、そうだ。
+                </div>
+
+                <div class="stage-direction">（再び彼女を窒息させる）</div>
+
+                <div class="line">
+                    <span class="line-number">3500</span>
+                    ああ、彼女は月のように静かだ。
+                </div>
+            </div>
+        </section>
+
+        <div class="footer" style="margin-top: 60px; text-align: center; color: #7f8c8d;">
+            <p>シェイクスピア全集 日本語版 - JLPT N2学習者向け</p>
+            <p>第三部（3001-4500行）完</p>
+        </div>
+
+        <script>
+            // 学習支援機能
+            let furiganaVisible = true;
+            let notesVisible = true;
+            let highlightEnabled = true;
+
+            function toggleFurigana() {
+                furiganaVisible = !furiganaVisible;
+                const rtElements = document.querySelectorAll('rt');
+                rtElements.forEach(rt => {
+                    rt.style.visibility = furiganaVisible ? 'visible' : 'hidden';
+                });
+                updateButtonState('toggleFurigana', furiganaVisible);
+            }
+
+            function toggleNotes() {
+                notesVisible = !notesVisible;
+                const notes = document.querySelectorAll('.commentary, .literary-device, .cultural-note, .grammar-note');
+                notes.forEach(note => {
+                    note.style.display = notesVisible ? 'block' : 'none';
+                });
+                updateButtonState('toggleNotes', notesVisible);
+            }
+
+            function toggleHighlight() {
+                highlightEnabled = !highlightEnabled;
+                const n1Kanji = document.querySelectorAll('.n1-kanji');
+                n1Kanji.forEach(kanji => {
+                    kanji.style.backgroundColor = highlightEnabled ? '#ffebee' : 'transparent';
+                });
+                updateButtonState('toggleHighlight', highlightEnabled);
+            }
+
+            function updateButtonState(functionName, isActive) {
+                const buttons = document.querySelectorAll('.study-tool-btn');
+                buttons.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes(functionName)) {
+                        if (isActive) {
+                            btn.classList.add('active');
+                        } else {
+                            btn.classList.remove('active');
+                        }
+                    }
+                });
+            }
+
+            // ツールチップ機能
+            document.querySelectorAll('.n1-kanji').forEach(ruby => {
+                const meaning = ruby.getAttribute('data-meaning');
+                const example = ruby.getAttribute('data-example');
+                if (meaning || example) {
+                    const tooltip = document.createElement('div');
+                    tooltip.className = 'tooltip';
+                    tooltip.innerHTML = meaning + (example ? '<br>例: ' + example : '');
+                    ruby.appendChild(tooltip);
+                }
+            });
+
+            // 読了進捗トラッキング
+            window.addEventListener('scroll', () => {
+                const scrolled = window.scrollY;
+                const height = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = (scrolled / height) * 100;
+                
+                document.getElementById('progress-fill').style.width = progress + '%';
+                document.getElementById('progress-percent').textContent = Math.round(progress) + '%';
+            });
+
+            // 初期状態の設定
+            document.addEventListener('DOMContentLoaded', () => {
+                updateButtonState('toggleFurigana', true);
+                updateButtonState('toggleNotes', true);
+                updateButtonState('toggleHighlight', true);
+            });
+        </script>
+    </div>
+</body>
+</html>

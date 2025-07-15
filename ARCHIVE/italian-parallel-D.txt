@@ -1,0 +1,4 @@
+# Italian Translation - Parallel D
+# Chunks 13-16 of Shakespeare's Complete Works
+# Translator: Italian_Parallel_D
+# Date: 2025-07-12

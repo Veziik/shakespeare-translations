@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェイクスピア全集 日本語版 JLPT N2学習者向け注釈付き - 第一部</title>
+    <style>
+        body {
+            font-family: 'Noto Serif JP', 'Yu Mincho', serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(to bottom, #2c3e50, #34495e);
+            color: white;
+            margin: -20px -20px 40px -20px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: normal;
+        }
+        .header h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            font-weight: normal;
+            color: #ecf0f1;
+        }
+        .header .subtitle {
+            font-size: 1.2em;
+            color: #bdc3c7;
+            margin-top: 20px;
+        }
+        .study-tools {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-width: 250px;
+        }
+        .study-tools h4 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        .study-tool-btn {
+            display: block;
+            width: 100%;
+            padding: 8px 12px;
+            margin: 5px 0;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .study-tool-btn:hover {
+            background-color: #2980b9;
+        }
+        .study-tool-btn.active {
+            background-color: #27ae60;
+        }
+        .progress-tracker {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #3498db;
+            width: 0%;
+            transition: width 0.3s;
+        }
+        .toc {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 1px solid #e9ecef;
+        }
+        .toc h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+        .toc li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .toc li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+        }
+        .toc a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .toc a:hover {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        .intro {
+            background-color: #e8f5e9;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border-left: 5px solid #4caf50;
+        }
+        .intro h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+        }
+        .legend {
+            background-color: #fff3e0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 1px solid #ffcc80;
+        }
+        .legend h4 {
+            color: #e65100;
+            margin-bottom: 15px;
+        }
+        .legend-item {
+            margin: 10px 0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .n1-kanji {
+            color: #c62828;
+            font-weight: bold;
+            cursor: help;
+            position: relative;
+            border-bottom: 2px dotted #c62828;
+            transition: all 0.3s;
+        }
+        .n1-kanji:hover {
+            background-color: #ffebee;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .n1-kanji ruby {
+            font-size: 0.8em;
+        }
+        .n1-kanji rt {
+            color: #c62828;
+            font-weight: normal;
+        }
+        .furigana-toggle .n1-kanji rt {
+            display: none;
+        }
+        .furigana-toggle.show-furigana .n1-kanji rt {
+            display: initial;
+        }
+        .section {
+            margin-bottom: 60px;
+            padding: 40px;
+            background-color: #fafafa;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+        }
+        .section-title {
+            font-size: 2em;
+            color: #1a237e;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #1a237e;
+        }
+        .sonnet {
+            margin-bottom: 50px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .sonnet-number {
+            font-size: 1.5em;
+            color: #1565c0;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .line {
+            margin: 15px 0;
+            font-size: 1.1em;
+            position: relative;
+            padding-left: 30px;
+            transition: background-color 0.3s;
+        }
+        .line.highlighted {
+            background-color: #fff9c4;
+            padding: 5px;
+            padding-left: 35px;
+            border-radius: 5px;
+        }
+        .line-number {
+            position: absolute;
+            left: 0;
+            color: #999;
+            font-size: 0.9em;
+            width: 25px;
+            text-align: right;
+        }
+        .commentary {
+            background-color: #e3f2fd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid #1976d2;
+            font-size: 0.95em;
+            line-height: 1.6;
+            transition: all 0.3s;
+        }
+        .commentary.collapsed {
+            max-height: 60px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .commentary.collapsed::after {
+            content: "▼ クリックして展開";
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            color: #1976d2;
+            font-size: 0.9em;
+        }
+        .commentary h5 {
+            color: #0d47a1;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .cultural-note {
+            background-color: #f3e5f5;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid #7b1fa2;
+            font-size: 0.95em;
+            transition: all 0.3s;
+        }
+        .cultural-note.collapsed {
+            max-height: 60px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .cultural-note.collapsed::after {
+            content: "▼ クリックして展開";
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            color: #7b1fa2;
+            font-size: 0.9em;
+        }
+        .cultural-note h5 {
+            color: #4a148c;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .grammar-note {
+            background-color: #fff8e1;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid #f57c00;
+            font-size: 0.95em;
+            transition: all 0.3s;
+        }
+        .grammar-note.collapsed {
+            max-height: 60px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .grammar-note.collapsed::after {
+            content: "▼ クリックして展開";
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            color: #f57c00;
+            font-size: 0.9em;
+        }
+        .grammar-note h5 {
+            color: #e65100;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .literary-device {
+            background-color: #e8f5e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 5px solid #388e3c;
+            font-size: 0.95em;
+            transition: all 0.3s;
+        }
+        .literary-device.collapsed {
+            max-height: 60px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .literary-device.collapsed::after {
+            content: "▼ クリックして展開";
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            color: #388e3c;
+            font-size: 0.9em;
+        }
+        .literary-device h5 {
+            color: #1b5e20;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .play-section {
+            margin-top: 60px;
+            padding: 40px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+        }
+        .play-title {
+            font-size: 2.2em;
+            color: #b71c1c;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .dramatis-personae {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .dramatis-personae h4 {
+            color: #1a237e;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        .character-list {
+            columns: 2;
+            column-gap: 40px;
+        }
+        .character {
+            margin: 10px 0;
+            break-inside: avoid;
+        }
+        .dialogue {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .speaker {
+            font-weight: bold;
+            color: #1565c0;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .stage-direction {
+            font-style: italic;
+            color: #666;
+            margin: 15px 0;
+            text-align: center;
+            font-size: 0.95em;
+        }
+        .tooltip {
+            position: absolute;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            z-index: 1000;
+            max-width: 350px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .tooltip.active {
+            display: block;
+        }
+        .tooltip h6 {
+            margin: 0 0 8px 0;
+            font-size: 1.1em;
+            color: #4fc3f7;
+        }
+        .tooltip .meaning {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .tooltip .example {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #b0bec5;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid #555;
+        }
+        .quiz-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 2000;
+        }
+        .quiz-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .quiz-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .quiz-question {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .quiz-options {
+            margin-bottom: 20px;
+        }
+        .quiz-option {
+            display: block;
+            padding: 10px 15px;
+            margin: 10px 0;
+            background-color: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .quiz-option:hover {
+            background-color: #e3f2fd;
+            border-color: #2196f3;
+        }
+        .quiz-option.correct {
+            background-color: #c8e6c9;
+            border-color: #4caf50;
+        }
+        .quiz-option.incorrect {
+            background-color: #ffcdd2;
+            border-color: #f44336;
+        }
+        .quiz-feedback {
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        .quiz-feedback.correct {
+            background-color: #c8e6c9;
+            color: #1b5e20;
+        }
+        .quiz-feedback.incorrect {
+            background-color: #ffcdd2;
+            color: #b71c1c;
+        }
+        .close-quiz {
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+        }
+        .close-quiz:hover {
+            color: #333;
+        }
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .header {
+                background: none;
+                color: black;
+                border-bottom: 3px solid black;
+            }
+            .header h1, .header h2, .header .subtitle {
+                color: black;
+            }
+            .study-tools {
+                display: none;
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .character-list {
+                columns: 1;
+            }
+            .study-tools {
+                position: static;
+                margin-bottom: 20px;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="furigana-toggle show-furigana">
+    <div class="study-tools">
+        <h4>学習ツール</h4>
+        <button class="study-tool-btn" id="furigana-toggle">ふりがな表示/非表示</button>
+        <button class="study-tool-btn" id="highlight-n1">N1漢字ハイライト</button>
+        <button class="study-tool-btn" id="collapse-notes">注釈を折りたたむ</button>
+        <button class="study-tool-btn" id="quiz-mode">クイズモード</button>
+        <button class="study-tool-btn" id="bookmark-section">現在位置をブックマーク</button>
+        <div class="progress-tracker">
+            <p style="margin: 0 0 5px 0; font-size: 14px;">読書進捗: <span id="progress-text">0%</span></p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quiz-modal" id="quiz-modal">
+        <div class="quiz-content">
+            <span class="close-quiz" id="close-quiz">&times;</span>
+            <h3>N1漢字クイズ</h3>
+            <div class="quiz-question" id="quiz-question"></div>
+            <div class="quiz-options" id="quiz-options"></div>
+            <div class="quiz-feedback" id="quiz-feedback"></div>
+            <button class="study-tool-btn" id="next-question" style="display:none;">次の問題</button>
+        </div>
+    </div>
+
+    <div class="tooltip" id="kanji-tooltip"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1>ウィリアム・シェイクスピア全集</h1>
+            <h2>日本語完全翻訳版 第一部</h2>
+            <p class="subtitle">JLPT N2学習者向け 学術的注釈版</p>
+        </div>
+
+        <div class="intro">
+            <h3>本注釈版について</h3>
+            <p>本書は、JLPT N2レベルの日本語学習者を対象とした、シェイクスピア作品の学術的注釈版です。文語体の美しさと現代日本語の理解のバランスを重視し、高度な文学的分析と文化的背景の解説を提供しています。</p>
+            <p>N1レベルの漢字には読み仮名と詳細な解説を付し、文学的表現技法、歴史的背景、文化的含意について深い洞察を提供します。各作品の韻律、修辞技法、象徴性についても詳しく解説しています。</p>
+        </div>
+
+        <div class="legend">
+            <h4>凡例</h4>
+            <div class="legend-item" style="background-color: #ffebee;">
+                <span class="n1-kanji">N1漢字</span> - JLPT N1レベルの漢字（赤字・読み仮名付き）
+            </div>
+            <div class="legend-item" style="background-color: #e3f2fd;">
+                文学的解説 - 詩的技法・修辞法の分析
+            </div>
+            <div class="legend-item" style="background-color: #f3e5f5;">
+                文化的背景 - 歴史的・文化的文脈の説明
+            </div>
+            <div class="legend-item" style="background-color: #fff8e1;">
+                文法解説 - 古典文法・文語体の説明
+            </div>
+        </div>
+
+        <div class="toc">
+            <h3>目次</h3>
+            <ul>
+                <li><a href="#introduction">翻訳者序文</a></li>
+                <li><a href="#sonnets">ソネット集（第1番〜第20番）</a></li>
+                <li><a href="#all-well">終わりよければ全てよし（抜粋）</a></li>
+                <li><a href="#antony">アントニウスとクレオパトラの悲劇（抜粋）</a></li>
+                <li><a href="#as-you-like">お気に召すまま（抜粋）</a></li>
+                <li><a href="#errors">間違いの喜劇（抜粋）</a></li>
+                <li><a href="#coriolanus">コリオレイナスの悲劇（抜粋）</a></li>
+                <li><a href="#hamlet">ハムレット（第一幕第二場）</a></li>
+            </ul>
+        </div>
+
+        <section class="section" id="introduction">
+            <h2 class="section-title">翻訳者序文</h2>
+            
+            <div class="commentary">
+                <h5>翻訳方針について</h5>
+                <p>本翻訳は、文語体（古典日本語）を基調とし、シェイクスピアの詩的美しさと劇的力強さを日本語の豊かな表現力によって再現することを目指しました。この翻訳方針には、以下の学術的意義があります：</p>
+                <ul>
+                    <li>シェイクスピアの時代（16-17世紀）の英語と、日本の古典文学の時代的対応</li>
+                    <li>韻文の持つリズムと音楽性の保持</li>
+                    <li>修辞技法（metaphor, alliteration, assonance等）の日本語的再現</li>
+                </ul>
+            </div>
+
+            <div class="cultural-note">
+                <h5>文語体使用の文化的意義</h5>
+                <p>日本における西洋古典の翻訳には長い伝統があり、明治期以降、森鷗外、坪内逍遥などの文豪たちがシェイクスピア翻訳に挑戦してきました。文語体の使用は、この伝統を継承しつつ、原文の格調高さを日本語で表現する試みです。</p>
+            </div>
+
+            <div class="line">
+                <span class="line-number">9</span>
+                本翻訳は、文語体（古典日本語）を<ruby class="n1-kanji" data-meaning="基本となる調子、基本的な性格" data-example="この楽曲の基調は明るい">基調<rt>きちょう</rt></ruby>とし、シェイクスピアの詩的美しさと劇的力強さを
+            </div>
+            <div class="line">
+                <span class="line-number">10</span>
+                日本語の豊かな表現力によって再現することを目指した。外国人名にはカタカナを、
+            </div>
+            <div class="line">
+                <span class="line-number">11</span>
+                文学的深みには<ruby class="n1-kanji" data-meaning="中国から伝来した言葉、主に音読みの熟語" data-example="漢語は日本語の語彙を豊かにした">漢語<rt>かんご</rt></ruby>を適切に配置し、文化的<ruby class="n1-kanji" data-meaning="環境や状況に合わせて変化すること" data-example="新しい環境への適応が必要だ">適応<rt>てきおう</rt></ruby>と原作の意味保持のバランスを図った。
+            </div>
+
+            <div class="grammar-note">
+                <h5>文語体の基本</h5>
+                <p>「目指した」は文語の連体形「目指したる」の現代的な表現。純粋な文語では「目指したり」（終止形）または「目指したる」（連体形）となります。本翻訳では読みやすさを考慮し、部分的に現代語を混用しています。</p>
+            </div>
+        </section>
+
+        <section class="section" id="sonnets">
+            <h2 class="section-title">ソネット集</h2>
+
+            <div class="commentary">
+                <h5>シェイクスピアのソネットについて</h5>
+                <p>シェイクスピアのソネット集（1609年出版）は、154編から成る詩集で、英文学史上最も重要な詩集の一つです。各ソネットは14行から成り、韻律は弱強五歩格（iambic pentameter）、押韻構成はABAB CDCD EFEF GGです。主題は愛、美、時間、死、不朽性など普遍的なテーマを扱っています。</p>
+            </div>
+
+            <div class="sonnet">
+                <h3 class="sonnet-number">第一番</h3>
+                
+                <div class="line">
+                    <span class="line-number">26</span>
+                    最も美しき者より我らは子孫を望む、
+                </div>
+                <div class="line">
+                    <span class="line-number">27</span>
+                    それにより美の<ruby class="n1-kanji" data-meaning="バラの花、美と愛の象徴" data-example="庭に薔薇が咲いている">薔薇<rt>ばら</rt></ruby>は決して枯れぬよう、
+                </div>
+                <div class="line">
+                    <span class="line-number">28</span>
+                    されど<ruby class="n1-kanji" data-meaning="十分に成長した、成熟した" data-example="熟した果実は甘い">熟<rt>じゅく</rt></ruby>したる者が時により逝くとも、
+                </div>
+                <div class="line">
+                    <span class="line-number">29</span>
+                    その優しき後継ぎがその記憶を担わん。
+                </div>
+
+                <div class="literary-device">
+                    <h5>修辞技法：薔薇の象徴性</h5>
+                    <p>「美の薔薇」（beauty's rose）は、西洋文学における美と儚さの典型的な象徴です。薔薇は美しさの極致を表すと同時に、その棘と短い開花期間により、美の危険性と儚さをも暗示します。日本文学における桜の象徴性と対比することができます。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">30</span>
+                    しかし汝は己が輝く<ruby class="n1-kanji" data-meaning="目の中心部分、瞳孔" data-example="彼女の瞳は美しく輝いていた">瞳<rt>ひとみ</rt></ruby>とのみ<ruby class="n1-kanji" data-meaning="約束、誓い" data-example="永遠の契りを結ぶ">契<rt>ちぎ</rt></ruby>り、
+                </div>
+                <div class="line">
+                    <span class="line-number">31</span>
+                    自らの本質より成る燃料で光の炎を養い、
+                </div>
+                <div class="line">
+                    <span class="line-number">32</span>
+                    豊かなる処に<ruby class="n1-kanji" data-meaning="食糧不足による飢え、飢饉" data-example="戦時中は飢饉に苦しんだ">飢饉<rt>ききん</rt></ruby>を作り出し、
+                </div>
+                <div class="line">
+                    <span class="line-number">33</span>
+                    己が敵となり、甘き己に余りに残酷なり。
+                </div>
+
+                <div class="cultural-note">
+                    <h5>自己愛のパラドックス</h5>
+                    <p>30-33行目は、ナルキッソス神話を想起させます。自己愛に溺れることで、かえって自己を破壊するという逆説は、東洋思想における「執着」の概念とも通じます。仏教では、自我への執着が苦しみの原因とされています。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">34</span>
+                    汝は今や世界の新鮮なる<ruby class="n1-kanji" data-meaning="飾り付けるための品物" data-example="部屋に装飾品を置く">装飾品<rt>そうしょくひん</rt></ruby>、
+                </div>
+                <div class="line">
+                    <span class="line-number">35</span>
+                    そして華やかなる春への唯一の使者なり、
+                </div>
+                <div class="line">
+                    <span class="line-number">36</span>
+                    己の<ruby class="n1-kanji" data-meaning="花のつぼみ、開花前の状態" data-example="桜の蕾がほころび始めた">蕾<rt>つぼみ</rt></ruby>の内に満足を葬り、
+                </div>
+                <div class="line">
+                    <span class="line-number">37</span>
+                    優しき<ruby class="n1-kanji" data-meaning="けちな人、出し惜しみする人" data-example="彼は吝嗇家として有名だ">吝嗇家<rt>りんしょくか</rt></ruby>よ、出し惜しみて浪費す。
+                </div>
+
+                <div class="grammar-note">
+                    <h5>文語体の語彙</h5>
+                    <p>「吝嗇家」は「けちな人」の漢語的表現。「出し惜しみて浪費す」は撞着語法（オクシモロン）で、相反する概念を組み合わせることで、若者の美を独占しようとする矛盾した態度を表現しています。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">38</span>
+                    世を<ruby class="n1-kanji" data-meaning="あわれむ、同情する" data-example="弱者を憐れむ心を持つ">憐<rt>あわ</rt></ruby>れめ、さもなくば<ruby class="n1-kanji" data-meaning="欲深い人、強欲な人" data-example="貪欲者は満足を知らない">貪欲者<rt>どんよくしゃ</rt></ruby>となれ、
+                </div>
+                <div class="line">
+                    <span class="line-number">39</span>
+                    墓と汝により世の分を食い尽くすべし。
+                </div>
+
+                <div class="commentary">
+                    <h5>結句（couplet）の技法</h5>
+                    <p>シェイクスピアのソネットは、最後の2行（結句）で主題を総括し、新たな洞察を提供します。ここでは「世を憐れめ」という道徳的命令と、「貪欲者となれ」という皮肉な選択肢を提示し、読者に深い思索を促しています。</p>
+                </div>
+            </div>
+
+            <div class="sonnet">
+                <h3 class="sonnet-number">第二番</h3>
+                
+                <div class="line">
+                    <span class="line-number">43</span>
+                    四十の冬が汝の額を<ruby class="n1-kanji" data-meaning="取り囲む、包囲する" data-example="敵軍が城を包囲した">包囲<rt>ほうい</rt></ruby>せし時、
+                </div>
+                <div class="line">
+                    <span class="line-number">44</span>
+                    汝の美の野に深き<ruby class="n1-kanji" data-meaning="戦場で掘る溝、防御用の溝" data-example="兵士たちは塹壕を掘った">塹壕<rt>ざんごう</rt></ruby>を掘らん時、
+                </div>
+
+                <div class="literary-device">
+                    <h5>軍事的メタファー</h5>
+                    <p>「包囲」「塹壕」という軍事用語を用いて、時間の経過を戦争に喩えています。美しさが時間という敵に攻撃される城塞として描かれ、老化の不可避性を劇的に表現しています。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">45</span>
+                    今かくも見つめられし汝の若さの誇らしき衣は、
+                </div>
+                <div class="line">
+                    <span class="line-number">46</span>
+                    価値なき<ruby class="n1-kanji" data-meaning="ぼろ布、破れた衣服" data-example="襤褸を纏った乞食">襤褸<rt>らんる</rt></ruby>として扱われん。
+                </div>
+
+                <div class="cultural-note">
+                    <h5>衣服のメタファー</h5>
+                    <p>若さを「誇らしき衣」、老いを「襤褸」に喩える表現は、日本の無常観とも通じます。『平家物語』の「盛者必衰」の理念や、能楽における「花」の概念（世阿弥）と比較できます。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">50</span>
+                    全てを食い尽くす恥と無益なる賛美なり。
+                </div>
+                <div class="line">
+                    <span class="line-number">51</span>
+                    汝の美の使用がいかに多くの賛美に値せしか、
+                </div>
+                <div class="line">
+                    <span class="line-number">52</span>
+                    もし汝が答え得るならば「この美しき我が子が
+                </div>
+                <div class="line">
+                    <span class="line-number">53</span>
+                    我が<ruby class="n1-kanji" data-meaning="計算、会計、勘定書き" data-example="月末に勘定を締める">勘定<rt>かんじょう</rt></ruby>を総計し、老いたる我が弁明となる」と
+                </div>
+
+                <div class="grammar-note">
+                    <h5>会計のメタファー</h5>
+                    <p>「勘定」「総計」という商業用語を用いて、人生を帳簿に喩えています。子孫を持つことが、人生の収支決算における資産として描かれています。シェイクスピア時代の商業都市ロンドンの雰囲気を反映しています。</p>
+                </div>
+            </div>
+
+            <div class="sonnet">
+                <h3 class="sonnet-number">第三番</h3>
+                
+                <div class="line">
+                    <span class="line-number">60</span>
+                    汝の鏡を見て、見ゆる顔に告げよ、
+                </div>
+                <div class="line">
+                    <span class="line-number">61</span>
+                    今こそその顔が別の顔を形作る時なりと、
+                </div>
+
+                <div class="literary-device">
+                    <h5>鏡の象徴性</h5>
+                    <p>鏡は自己認識と真実の象徴です。西洋文学では「vanitas」（虚栄）の象徴でもあり、日本の神話では三種の神器の一つとして神聖視されます。ここでは自己省察の道具として機能しています。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">64</span>
+                    いずこに<ruby class="n1-kanji" data-meaning="田畑を耕す、農作業をする" data-example="春になったら畑を耕す">耕<rt>たがや</rt></ruby>されぬ<ruby class="n1-kanji" data-meaning="女性の生殖器官、子宮" data-example="子宮は生命を育む場所だ">子宮<rt>しきゅう</rt></ruby>を持ちて
+                </div>
+                <div class="line">
+                    <span class="line-number">65</span>
+                    汝の夫婦の営みを<ruby class="n1-kanji" data-meaning="軽く見る、軽視する" data-example="努力を軽んじてはいけない">軽<rt>かろ</rt></ruby>んずるほど美しき女ありや。
+                </div>
+
+                <div class="cultural-note">
+                    <h5>農業のメタファー</h5>
+                    <p>「耕されぬ子宮」という表現は、農業社会における豊穣と生殖の密接な関係を示します。日本の古代信仰における「産霊（むすび）」の概念や、豊穣神への信仰と通じる普遍的な象徴です。</p>
+                </div>
+
+                <div class="line">
+                    <span class="line-number">69</span>
+                    己の美しき四月の盛りを呼び戻す、
+                </div>
+                <div class="line">
+                    <span class="line-number">70</span>
+                    かくして汝も老いの窓を通して見ん、
+                </div>
+                <div class="line">
+                    <span class="line-number">71</span>
+                    <ruby class="n1-kanji" data-meaning="皮膚のしわ、老化の印" data-example="年を重ねて皺が増えた">皺<rt>しわ</rt></ruby>にも関わらず、この黄金の時を。
+                </div>
+
+                <div class="commentary">
+                    <h5>時間の循環性</h5>
+                    <p>「四月の盛り」は青春の比喩。西洋では四月が春の盛りとされ、日本の「花の盛り」に相当します。親が子を通して自分の若き日を見るという概念は、東西を問わず普遍的な人間の願望を表現しています。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="play-section" id="all-well">
+            <h2 class="play-title">終わりよければ全てよし</h2>
+            
+            <div class="dramatis-personae">
+                <h4>登場人物</h4>
+                <div class="character-list">
+                    <div class="character">フランス王</div>
+                    <div class="character">フィレンツェ公爵</div>
+                    <div class="character">ベルトラム、ルシヨン伯爵</div>
+                    <div class="character">ラフュー、老貴族</div>
+                    <div class="character">パロルス、ベルトラムの従者</div>
+                    <div class="character">ルシヨン伯爵夫人、ベルトラムの母</div>
+                    <div class="character">ヘレナ、伯爵夫人に<ruby class="n1-kanji" data-meaning="保護する、守る" data-example="弱者を庇護する責任がある">庇護<rt>ひご</rt></ruby>される淑女</div>
+                    <div class="character">フィレンツェの未亡人</div>
+                    <div class="character">ダイアナ、未亡人の娘</div>
+                </div>
+            </div>
+
+            <div class="cultural-note">
+                <h5>身分制社会の構造</h5>
+                <p>シェイクスピア時代のヨーロッパは厳格な身分制社会でした。「伯爵」は貴族の称号で、日本の律令制における「五位」以上に相当します。ヘレナが「庇護される淑女」という立場は、経済的に依存しながらも教養ある女性を指し、日本の平安時代の「女房」に類似した立場です。</p>
+            </div>
+
+            <div class="stage-direction">第一幕 第一場<br>ルシヨン。伯爵の宮殿</div>
+            <div class="stage-direction">ベルトラム、ルシヨン伯爵夫人、ヘレナ、ラフュー登場、全員喪服にて</div>
+
+            <div class="dialogue">
+                <div class="speaker">伯爵夫人</div>
+                <div class="line">息子を私より送り出すことにより、我は二度目の夫を葬る。</div>
+            </div>
+
+            <div class="literary-device">
+                <h5>冒頭の象徴性</h5>
+                <p>劇の冒頭から死と別離のテーマが提示されます。「二度目の夫を葬る」という表現は、息子の旅立ちを夫の死に重ね合わせる詩的な誇張法（hyperbole）です。喪服という視覚的象徴も重要です。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">ベルトラム</div>
+                <div class="line">そして我が行くにあたり、母上、父の死を新たに悲しみ申す。</div>
+                <div class="line">しかれど我は陛下の御命令に従わねばならず、我は今や陛下の</div>
+                <div class="line"><ruby class="n1-kanji" data-meaning="法的に保護される未成年者" data-example="未成年者は被後見人として保護される">被後見人<rt>ひこうけんにん</rt></ruby>として、永遠に服従の身なれば。</div>
+            </div>
+
+            <div class="grammar-note">
+                <h5>敬語の使用</h5>
+                <p>「悲しみ申す」は謙譲語。息子が母に対して敬語を使うのは、身分制社会における礼儀作法を反映しています。「被後見人」は法的な保護下にある未成年者を指し、封建制度下での君臣関係を示しています。</p>
+            </div>
+        </section>
+
+        <section class="play-section" id="antony">
+            <h2 class="play-title">アントニウスとクレオパトラの悲劇</h2>
+
+            <div class="commentary">
+                <h5>歴史的背景</h5>
+                <p>本作は紀元前1世紀のローマとエジプトを舞台とする歴史劇です。三頭政治（トリウムウィラートゥス）の一人マルクス・アントニウスと、エジプト女王クレオパトラ7世の恋愛と政治的破滅を描いています。プルタルコスの『英雄伝』が主要な典拠です。</p>
+            </div>
+
+            <div class="stage-direction">第一幕 第一場<br>アレクサンドリア。クレオパトラの宮殿</div>
+
+            <div class="dialogue">
+                <div class="speaker">フィロ</div>
+                <div class="line">見よ、我らが将軍の高貴なる心がいかに</div>
+                <div class="line"><ruby class="n1-kanji" data-meaning="売春婦、身を売る女性" data-example="売女という言葉は差別的だ">売女<rt>ばいた</rt></ruby>の恋の炎となりしかを。見よ、その<ruby class="n1-kanji" data-meaning="目の中心部分、瞳孔" data-example="彼の瞳には決意が宿っていた">瞳<rt>ひとみ</rt></ruby>を、</div>
+                <div class="line">かつては戦の<ruby class="n1-kanji" data-meaning="きらめく、光り輝く" data-example="星が煌めく夜空">煌<rt>きら</rt></ruby>めきに輝き、鋼鉄の如く</div>
+                <div class="line">彼の敵の眉を脅かし、今や折れて</div>
+                <div class="line">くすんだ扇の如く、<ruby class="n1-kanji" data-meaning="茶褐色、褐色" data-example="褐色の肌を持つ人々">褐色<rt>かっしょく</rt></ruby>の美神の顔を扇ぐことしかせず。</div>
+            </div>
+
+            <div class="cultural-note">
+                <h5>東洋的他者としてのクレオパトラ</h5>
+                <p>「褐色の美神」という表現は、西洋から見た東洋的エキゾチシズムを表します。クレオパトラは実際にはギリシャ系のプトレマイオス朝の女王でしたが、シェイクスピアは彼女を官能的で神秘的な東洋の女性として描いています。</p>
+            </div>
+
+            <div class="stage-direction">鼓笛の音。アントニウス、クレオパトラ、侍女たち、<ruby class="n1-kanji" data-meaning="去勢された男性、宮廷に仕える者" data-example="中国の宮廷には宦官がいた">宦官<rt>かんがん</rt></ruby>たち、扇を持つ者たち登場</div>
+
+            <div class="dialogue">
+                <div class="speaker">クレオパトラ</div>
+                <div class="line">もし愛がまことならば、どれほど愛すかを告げよ。</div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">アントニウス</div>
+                <div class="line">愛の<ruby class="n1-kanji" data-meaning="物乞い、乞食" data-example="街角に乞食が座っていた">乞食<rt>こじき</rt></ruby>なる者あらば、新たなる天と地を見出すべし。</div>
+            </div>
+
+            <div class="literary-device">
+                <h5>誇張法と宇宙的イメージ</h5>
+                <p>アントニウスの返答は、愛の無限性を宇宙的スケールで表現しています。「新たなる天と地」は黙示録的なイメージで、愛が世界を再創造する力を持つことを示唆しています。</p>
+            </div>
+        </section>
+
+        <section class="play-section" id="as-you-like">
+            <h2 class="play-title">お気に召すまま</h2>
+
+            <div class="commentary">
+                <h5>牧歌的喜劇の伝統</h5>
+                <p>本作は牧歌的喜劇（pastoral comedy）の傑作です。アーデンの森は、都市の腐敗から離れた理想郷として描かれ、そこでは身分や性別の境界が曖昧になります。日本の「桃源郷」や「隠れ里」の概念と比較できます。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">オーランドー</div>
+                <div class="line">詩人の言う如く、全ての世界は舞台なれど、</div>
+                <div class="line">我が運命の役は余りに貧しき。兄オリヴァーよ、</div>
+                <div class="line">汝は父の<ruby class="n1-kanji" data-meaning="死後に残す言葉、遺言" data-example="父の遺言を守る">遺言<rt>ゆいごん</rt></ruby>により我が教育の管理人なるに、</div>
+                <div class="line">まことに兄らしき待遇をしてくれる。</div>
+            </div>
+
+            <div class="literary-device">
+                <h5>メタシアター的要素</h5>
+                <p>「全ての世界は舞台」は、シェイクスピア作品に頻出するメタシアター的言及です。演劇の中で演劇性を意識させることで、現実と虚構の境界を曖昧にし、人生そのものの演劇性を示唆しています。</p>
+            </div>
+
+            <div class="cultural-note">
+                <h5>長子相続制度</h5>
+                <p>オリヴァーとオーランドーの確執は、長子相続制度（primogeniture）に起因します。この制度では、財産の大部分が長男に相続され、次男以下は不利な立場に置かれました。日本の武家社会における嫡子相続と類似しています。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">公爵</div>
+                <div class="line">さて、我が共の兄弟たちよ、我らは</div>
+                <div class="line">古き風習の森にあり、この生活は</div>
+                <div class="line"><ruby class="n1-kanji" data-meaning="ねたみ、嫉妬心" data-example="彼の成功に嫉妬を感じる">嫉妬<rt>しっと</rt></ruby>に満ちし宮廷の生活よりも甘くあらずや？</div>
+                <div class="line">ここには毒ある蛇はなく、笑顔の奥に</div>
+                <div class="line"><ruby class="n1-kanji" data-meaning="落とし穴、罠" data-example="敵の陥穽に落ちた">陥穽<rt>かんせい</rt></ruby>を隠す者もなし。</div>
+            </div>
+
+            <div class="grammar-note">
+                <h5>反語法の使用</h5>
+                <p>「甘くあらずや？」は反語法で、「甘いではないか」の意。文語体では、否定の助動詞「ず」に係助詞「や」を付けて反語を表します。これは漢文訓読の影響を受けた表現です。</p>
+            </div>
+        </section>
+
+        <section class="play-section" id="errors">
+            <h2 class="play-title">間違いの喜劇</h2>
+
+            <div class="commentary">
+                <h5>プラウトゥスの影響</h5>
+                <p>シェイクスピアの最初期の作品で、ローマ喜劇作家プラウトゥスの『メナエクムス兄弟』を下敷きにしています。双子の取り違えという古典的な喜劇の仕掛けを、さらに複雑化させています。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">公爵</div>
+                <div class="line">シラクサの商人よ、弁解せよ、</div>
+                <div class="line">何ゆえ法の罰を受けるべき理由なきかを。</div>
+                <div class="line">汝の人生の安全を願うならば―</div>
+                <div class="line">なぜならば汝は我らが公然の敵の土地より来たりしゆえ―</div>
+                <div class="line">汝は千マルクをもて汝の命を<ruby class="n1-kanji" data-meaning="買い戻す、身代金を払う" data-example="罪を贖うために働く">贖<rt>あがな</rt></ruby>わねばならぬ、</div>
+                <div class="line">さもなくば太陽が西に沈む前に死なねばならぬ。</div>
+            </div>
+
+            <div class="cultural-note">
+                <h5>都市国家間の対立</h5>
+                <p>エフェソスとシラクサの対立は、古代地中海世界の都市国家間の競争を反映しています。商業都市間の経済的対立が、個人の運命に影響を与える様子は、日本の戦国時代の商人の境遇とも比較できます。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">イージーオン</div>
+                <div class="line">公爵よ、命を求めて弁解するは無駄なり、</div>
+                <div class="line">我が話が悲しみ以外に何を産むと言えようぞ。</div>
+                <div class="line">されど汝が求むるゆえ、我が話を聞き給え。</div>
+                <div class="line">我はシラクサにて生まれ、そこに住まい、</div>
+                <div class="line">商売を営み、<ruby class="n1-kanji" data-meaning="富裕な、金持ちの" data-example="裕福な家庭に育った">裕福<rt>ゆうふく</rt></ruby>なりし者なり。</div>
+            </div>
+
+            <div class="literary-device">
+                <h5>劇中劇的な語り</h5>
+                <p>イージーオンの長い独白は、劇中劇的な機能を持ちます。過去の出来事を物語ることで、観客に背景情報を提供すると同時に、運命の皮肉と偶然の重要性というテーマを導入しています。</p>
+            </div>
+        </section>
+
+        <section class="play-section" id="coriolanus">
+            <h2 class="play-title">コリオレイナスの悲劇</h2>
+
+            <div class="commentary">
+                <h5>政治劇としての側面</h5>
+                <p>本作は、貴族的価値観と民主的価値観の衝突を描く政治劇です。主人公コリオレイナスの傲慢さと、民衆の移り気な性質の両方が批判的に描かれ、統治の難しさを浮き彫りにしています。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">第一市民</div>
+                <div class="line">さあ、行こう！我らは皆、死ぬまで決意せり！</div>
+                <div class="line">むしろ<ruby class="n1-kanji" data-meaning="飢えて死ぬこと" data-example="戦時中は多くの人が餓死した">餓死<rt>がし</rt></ruby>するより復讐の方がましじゃ！</div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">第二市民</div>
+                <div class="line">復讐！復讐！最初にガイウス・マーシアスを殺せ！</div>
+            </div>
+
+            <div class="cultural-note">
+                <h5>民衆蜂起の歴史的文脈</h5>
+                <p>ローマ共和政期の穀物不足による民衆蜂起は、シェイクスピア時代のイングランドでも起きていた食糧暴動と重なります。日本では江戸時代の百姓一揆と比較できます。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">メニニウス</div>
+                <div class="line">昔、体の他の部分が皆、胃に対して反乱を起こした。</div>
+                <div class="line">手も、足も、歯も、唇も、舌も、まことに全身の器官が、</div>
+                <div class="line">怠け者の胃を<ruby class="n1-kanji" data-meaning="批判する、責める" data-example="彼の行動を非難する">非難<rt>ひなん</rt></ruby>した。</div>
+            </div>
+
+            <div class="literary-device">
+                <h5>身体政治論</h5>
+                <p>メニニウスの「胃の寓話」は、国家を人体に喩える身体政治論（body politic）の典型例です。支配層（胃）と民衆（他の器官）の相互依存関係を説く保守的な論理で、日本の「君臣一体」の思想と類似しています。</p>
+            </div>
+        </section>
+
+        <section class="play-section" id="hamlet">
+            <h2 class="play-title">ハムレット　デンマーク王子の悲劇</h2>
+
+            <div class="commentary">
+                <h5>復讐悲劇の最高峰</h5>
+                <p>『ハムレット』は、シェイクスピアの四大悲劇の一つで、復讐悲劇のジャンルを哲学的・心理的深みへと高めた作品です。「生きるべきか死ぬべきか」の独白に代表される、人間の実存的苦悩を描いています。</p>
+            </div>
+
+            <div class="stage-direction">第一幕 第二場<br>エルシノア。国王の宮殿内の広間</div>
+
+            <div class="dialogue">
+                <div class="speaker">クローディアス</div>
+                <div class="line">我が愛しき兄にして前国王の死について、</div>
+                <div class="line">それを嘆き悲しむは当然なれど、</div>
+                <div class="line">我らが悲しみに沈みて、我ら自身を忘れるは</div>
+                <div class="line">適切ならず。従って我が兄ハムレットを、</div>
+                <div class="line">永遠の記憶にとどめつつ、かつ</div>
+                <div class="line">死すべき定めの我らは自然の<ruby class="n1-kanji" data-meaning="規則、法則、定め" data-example="自然の掟に従う">掟<rt>おきて</rt></ruby>に従い、</div>
+                <div class="line">智慧と共に悲しみ、記憶と共に忘却し、</div>
+            </div>
+
+            <div class="literary-device">
+                <h5>政治的レトリック</h5>
+                <p>クローディアスの開幕演説は、巧妙な政治的レトリックの見本です。相反する概念（悲しみと喜び、記憶と忘却）を並置し、バランスを取ることで、兄の死後すぐに王位と王妃を得た行為を正当化しています。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">ハムレット</div>
+                <div class="line">（傍白）親族以上、しかし親族未満。</div>
+            </div>
+
+            <div class="grammar-note">
+                <h5>言葉遊びと皮肉</h5>
+                <p>原文"A little more than kin, and less than kind"は、kinとkindの音の類似を利用した言葉遊び。「親族（kin）以上に近い関係になったが、親切（kind）ではない」という皮肉を込めています。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">ハムレット</div>
+                <div class="line">ああ、余りに<ruby class="n1-kanji" data-meaning="汚れた、不浄な" data-example="穢れた手で触れてはならない">穢<rt>けが</rt></ruby>れた肉が溶け、</div>
+                <div class="line">融け、露と消え去ればよいのに！</div>
+                <div class="line">または永遠なる神が自殺に対し</div>
+                <div class="line">禁令を定めていなければ！神よ、神よ、</div>
+                <div class="line">この世界は何と疲れ、<ruby class="n1-kanji" data-meaning="ありふれた、平凡な" data-example="陳腐な表現を避ける">陳腐<rt>ちんぷ</rt></ruby>で、</div>
+                <div class="line">平板で、無益に見えることか！</div>
+            </div>
+
+            <div class="cultural-note">
+                <h5>自殺の禁忌</h5>
+                <p>キリスト教では自殺は大罪とされ、自殺者は教会墓地に埋葬されませんでした。ハムレットの苦悩は、生きることの苦痛と、宗教的戒律の間での葛藤を表しています。日本の武士道における「切腹」の概念との文化的差異が顕著です。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">ハムレット</div>
+                <div class="line">たった二月前のこと！いや、二月にもならぬ！</div>
+                <div class="line">かくも優秀な王が、この王に比べれば</div>
+                <div class="line">ハイペリオンがサテュロスに対するが如きであった！</div>
+            </div>
+
+            <div class="literary-device">
+                <h5>神話的対比</h5>
+                <p>ハイペリオン（太陽神）とサテュロス（半人半獣の好色な生物）の対比は、先王とクローディアスの道徳的差異を極端に表現しています。古典的教養を示すと同時に、ハムレットの父への理想化された愛情を表しています。</p>
+            </div>
+
+            <div class="commentary">
+                <h5>亡霊の出現</h5>
+                <p>以下の場面では、父王の亡霊が現れます。シェイクスピア時代の観客にとって、亡霊の実在性は現代よりもはるかに信じられていました。プロテスタントは煉獄を否定しましたが、カトリック的な亡霊観も根強く残っていました。</p>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">ホレーシオ</div>
+                <div class="line">殿下、私は昨夜彼を見たと思います。</div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">ハムレット</div>
+                <div class="line">見た？誰を？</div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">ホレーシオ</div>
+                <div class="line">殿下、死んだ王を、父君を。</div>
+            </div>
+
+            <div class="cultural-note">
+                <h5>亡霊と能楽の類似性</h5>
+                <p>死者の霊が現世に現れて過去を語るという構造は、日本の能楽における「夢幻能」と類似しています。特に、武人の霊が戦装束で現れる点は、『平家物語』を題材とした修羅能を想起させます。</p>
+            </div>
+        </section>
+
+        <div class="commentary" style="margin-top: 60px;">
+            <h5>結語</h5>
+            <p>以上、シェイクスピア作品の第一部1500行について、JLPT N2学習者向けの学術的注釈を提供しました。文語体の美しさ、詩的技法の巧みさ、そして普遍的な人間性の描写において、シェイクスピアは時代と文化を超えて私たちに語りかけています。</p>
+            <p>日本語への翻訳という営みは、単なる言語の置き換えではなく、二つの文化の対話です。本注釈が、その対話をより豊かなものとする一助となれば幸いです。</p>
+        </div>
+    </div>
+
+    <script>
+        // Furigana toggle functionality
+        const furiganaToggle = document.getElementById('furigana-toggle');
+        const body = document.body;
+        
+        furiganaToggle.addEventListener('click', function() {
+            body.classList.toggle('show-furigana');
+            this.classList.toggle('active');
+            const isShowing = body.classList.contains('show-furigana');
+            this.textContent = isShowing ? 'ふりがな非表示' : 'ふりがな表示';
+        });
+
+        // N1 Kanji highlighting
+        const highlightN1 = document.getElementById('highlight-n1');
+        let isHighlighting = false;
+        
+        highlightN1.addEventListener('click', function() {
+            isHighlighting = !isHighlighting;
+            this.classList.toggle('active');
+            const n1Kanji = document.querySelectorAll('.n1-kanji');
+            
+            n1Kanji.forEach(kanji => {
+                if (isHighlighting) {
+                    kanji.style.backgroundColor = '#ffebee';
+                    kanji.style.padding = '2px 4px';
+                    kanji.style.borderRadius = '3px';
+                } else {
+                    kanji.style.backgroundColor = '';
+                    kanji.style.padding = '';
+                    kanji.style.borderRadius = '';
+                }
+            });
+        });
+
+        // Collapse/expand notes
+        const collapseNotes = document.getElementById('collapse-notes');
+        let notesCollapsed = false;
+        
+        collapseNotes.addEventListener('click', function() {
+            notesCollapsed = !notesCollapsed;
+            this.classList.toggle('active');
+            const notes = document.querySelectorAll('.commentary, .cultural-note, .grammar-note, .literary-device');
+            
+            notes.forEach(note => {
+                if (notesCollapsed) {
+                    note.classList.add('collapsed');
+                    note.style.position = 'relative';
+                } else {
+                    note.classList.remove('collapsed');
+                    note.style.position = '';
+                }
+            });
+            
+            this.textContent = notesCollapsed ? '注釈を展開' : '注釈を折りたたむ';
+        });
+
+        // Click to expand individual notes
+        document.addEventListener('click', function(e) {
+            if (notesCollapsed && (e.target.classList.contains('commentary') || 
+                e.target.classList.contains('cultural-note') || 
+                e.target.classList.contains('grammar-note') || 
+                e.target.classList.contains('literary-device') ||
+                e.target.closest('.commentary, .cultural-note, .grammar-note, .literary-device'))) {
+                const note = e.target.classList.contains('commentary') || 
+                            e.target.classList.contains('cultural-note') || 
+                            e.target.classList.contains('grammar-note') || 
+                            e.target.classList.contains('literary-device') 
+                            ? e.target 
+                            : e.target.closest('.commentary, .cultural-note, .grammar-note, .literary-device');
+                note.classList.remove('collapsed');
+            }
+        });
+
+        // Interactive tooltips for N1 kanji
+        const tooltip = document.getElementById('kanji-tooltip');
+        const n1KanjiElements = document.querySelectorAll('.n1-kanji');
+
+        n1KanjiElements.forEach(kanji => {
+            kanji.addEventListener('mouseenter', function(e) {
+                const meaning = this.getAttribute('data-meaning');
+                const example = this.getAttribute('data-example');
+                const reading = this.querySelector('rt') ? this.querySelector('rt').textContent : '';
+                
+                tooltip.innerHTML = `
+                    <h6>${this.textContent.replace(reading, '')} (${reading})</h6>
+                    <div class="meaning">${meaning}</div>
+                    ${example ? `<div class="example">例: ${example}</div>` : ''}
+                `;
+                
+                const rect = this.getBoundingClientRect();
+                tooltip.style.left = rect.left + 'px';
+                tooltip.style.top = (rect.bottom + 5) + 'px';
+                tooltip.classList.add('active');
+            });
+            
+            kanji.addEventListener('mouseleave', function() {
+                tooltip.classList.remove('active');
+            });
+        });
+
+        // Quiz mode
+        const quizMode = document.getElementById('quiz-mode');
+        const quizModal = document.getElementById('quiz-modal');
+        const closeQuiz = document.getElementById('close-quiz');
+        const quizQuestion = document.getElementById('quiz-question');
+        const quizOptions = document.getElementById('quiz-options');
+        const quizFeedback = document.getElementById('quiz-feedback');
+        const nextQuestion = document.getElementById('next-question');
+
+        const quizData = [
+            {
+                kanji: '基調',
+                reading: 'きちょう',
+                meaning: '基本となる調子、基本的な性格',
+                options: ['きちょう', 'きてい', 'きほん', 'きそく'],
+                correct: 0
+            },
+            {
+                kanji: '薔薇',
+                reading: 'ばら',
+                meaning: 'バラの花、美と愛の象徴',
+                options: ['そうび', 'ばら', 'しょうび', 'ばび'],
+                correct: 1
+            },
+            {
+                kanji: '包囲',
+                reading: 'ほうい',
+                meaning: '取り囲む、包囲する',
+                options: ['ほうい', 'ほうき', 'ほうよう', 'ほうじ'],
+                correct: 0
+            },
+            {
+                kanji: '飢饉',
+                reading: 'ききん',
+                meaning: '食糧不足による飢え',
+                options: ['きけん', 'きじん', 'ききん', 'きえん'],
+                correct: 2
+            },
+            {
+                kanji: '吝嗇家',
+                reading: 'りんしょくか',
+                meaning: 'けちな人、出し惜しみする人',
+                options: ['りんしょくか', 'けんやくか', 'りんしゃか', 'けんしょくか'],
+                correct: 0
+            }
+        ];
+
+        let currentQuizIndex = 0;
+
+        quizMode.addEventListener('click', function() {
+            quizModal.classList.add('active');
+            showQuestion();
+        });
+
+        closeQuiz.addEventListener('click', function() {
+            quizModal.classList.remove('active');
+            currentQuizIndex = 0;
+        });
+
+        function showQuestion() {
+            const question = quizData[currentQuizIndex];
+            quizQuestion.textContent = `「${question.kanji}」の読み方は？`;
+            quizOptions.innerHTML = '';
+            quizFeedback.style.display = 'none';
+            nextQuestion.style.display = 'none';
+
+            question.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.className = 'quiz-option';
+                button.textContent = option;
+                button.addEventListener('click', () => checkAnswer(index));
+                quizOptions.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selectedIndex) {
+            const question = quizData[currentQuizIndex];
+            const options = quizOptions.querySelectorAll('.quiz-option');
+            
+            options.forEach((option, index) => {
+                option.disabled = true;
+                if (index === question.correct) {
+                    option.classList.add('correct');
+                } else if (index === selectedIndex) {
+                    option.classList.add('incorrect');
+                }
+            });
+
+            if (selectedIndex === question.correct) {
+                quizFeedback.textContent = `正解！「${question.kanji}」は「${question.reading}」と読みます。意味：${question.meaning}`;
+                quizFeedback.className = 'quiz-feedback correct';
+            } else {
+                quizFeedback.textContent = `不正解。「${question.kanji}」は「${question.reading}」と読みます。意味：${question.meaning}`;
+                quizFeedback.className = 'quiz-feedback incorrect';
+            }
+            
+            quizFeedback.style.display = 'block';
+            
+            if (currentQuizIndex < quizData.length - 1) {
+                nextQuestion.style.display = 'block';
+            }
+        }
+
+        nextQuestion.addEventListener('click', function() {
+            currentQuizIndex++;
+            showQuestion();
+        });
+
+        // Bookmark functionality
+        const bookmarkSection = document.getElementById('bookmark-section');
+        let bookmark = null;
+
+        bookmarkSection.addEventListener('click', function() {
+            const scrollPosition = window.pageYOffset;
+            bookmark = scrollPosition;
+            localStorage.setItem('shakespeareBookmark', scrollPosition);
+            this.classList.add('active');
+            this.textContent = 'ブックマーク済み';
+            
+            setTimeout(() => {
+                this.classList.remove('active');
+                this.textContent = '現在位置をブックマーク';
+            }, 2000);
+        });
+
+        // Load bookmark on page load
+        window.addEventListener('load', function() {
+            const savedBookmark = localStorage.getItem('shakespeareBookmark');
+            if (savedBookmark) {
+                bookmark = parseInt(savedBookmark);
+                // Add a "return to bookmark" button
+                const returnButton = document.createElement('button');
+                returnButton.className = 'study-tool-btn';
+                returnButton.textContent = 'ブックマークに戻る';
+                returnButton.addEventListener('click', function() {
+                    window.scrollTo({ top: bookmark, behavior: 'smooth' });
+                });
+                bookmarkSection.parentNode.insertBefore(returnButton, bookmarkSection.nextSibling);
+            }
+        });
+
+        // Progress tracking
+        const progressFill = document.getElementById('progress-fill');
+        const progressText = document.getElementById('progress-text');
+
+        function updateProgress() {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPosition = window.pageYOffset;
+            const progress = (scrollPosition / scrollHeight) * 100;
+            
+            progressFill.style.width = progress + '%';
+            progressText.textContent = Math.round(progress) + '%';
+            
+            // Save progress
+            localStorage.setItem('shakespeareProgress', progress);
+        }
+
+        window.addEventListener('scroll', updateProgress);
+
+        // Load saved progress
+        window.addEventListener('load', function() {
+            const savedProgress = localStorage.getItem('shakespeareProgress');
+            if (savedProgress) {
+                progressFill.style.width = savedProgress + '%';
+                progressText.textContent = Math.round(savedProgress) + '%';
+            }
+        });
+
+        // Line highlighting on click
+        const lines = document.querySelectorAll('.line');
+        lines.forEach(line => {
+            line.addEventListener('click', function() {
+                // Remove highlight from all lines
+                lines.forEach(l => l.classList.remove('highlighted'));
+                // Add highlight to clicked line
+                this.classList.add('highlighted');
+            });
+        });
+    </script>
+</body>
+</html>
